@@ -1,0 +1,21 @@
+\begin{abstract}
+
+Monitoring building construction sites requires comparing the \textit{as-planned} design with the \textit{as-built} state, which can be estimated in real time using Simultaneous Localization and Mapping (SLAM) \change{to reconstruct the scene and localize the sensor}{techniques}. 
+% however, visual SLAM, despite its lightweight and cost-effective hardware, is prone to trajectory drift in construction environments due to repetitive layouts, occlusions, and low texture structures.
+\change{however, visual SLAM, despite its lightweight and cost-effective hardware, is prone to trajectory drift in construction environments due to repetitive layouts, occlusions, and low texture structures.}
+{However, visual SLAM is prone to trajectory drift in construction environments, producing maps that are geometrically inaccurate with the actual environment.}
+To address this limitation, we augment an existing RGB-D SLAM system with structural priors derived from the Building Information Model (BIM). The system associates detected walls with their BIM counterparts and includes these correspondences as geometric constraints in the back-end optimization, reducing drift and enhancing global consistency.
+The proposed method operates in real time and is validated on multiple real construction sites, achieving an average trajectory error reduction of 25.23\% and a 7.14\% improvement in map accuracy over state-of-the-art baselines. Robustness analyses further demonstrate resilience to incomplete BIM data and geometric discrepancies between \textit{as-planned} models and the \textit{as-built} environment.
+
+\noindent \textbf{Video:} \href{https://www.youtube.com/watch?v=jO3rq93ZRtM}{https://www.youtube.com/watch?v=jO3rq93ZRtM}
+
+% Code Availability  
+\noindent Code: \url{https://github.com/snt-arg/BIM_informed_visual_sgraphs}.
+% \href{https://anonymous.4open.science/r/visual_sgraphs}{https://anonymous.4open.science/r/visual\_sgraphs} 
+
+\end{abstract}
+
+\vspace{-0.1cm}
+\begin{IEEEkeywords}
+SLAM, Robotics and Automation in Construction, RGB-D Perception
+\end{IEEEkeywords}

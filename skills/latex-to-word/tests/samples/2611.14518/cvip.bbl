@@ -1,0 +1,131 @@
+\begin{thebibliography}{10}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{URL }
+\providecommand{\doi}[1]{https://doi.org/#1}
+
+\bibitem{emdetr}
+Bhat, S., Georgescu, B., Panambur, A.B., et~al.: {Exemplar Med-DETR: Toward
+  Generalized and Robust Lesion Detection in Mammogram Images and Beyond}. In:
+  Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025
+  (2025), arXiv:2507.19621
+
+\bibitem{bhat2023aucreshaping}
+Bhat, S., Mansoor, A., Georgescu, B., et~al.: Aucreshaping: improved
+  sensitivity at high-specificity. Scientific Reports  \textbf{13}(1),  21097
+  (2023)
+
+\bibitem{cai2022bigdetection}
+Cai, L., Zhang, Z., Zhu, Y., et~al.: Bigdetection: A large-scale benchmark for
+  improved object detector pre-training. In: {CVPR}. pp. 4777--4787 (2022)
+
+\bibitem{chen2019mmdetection}
+Chen, K., Wang, J., Pang, J., Cao, Y., et~al.: Mmdetection: Open mmlab
+  detection toolbox and benchmark. arXiv preprint arXiv:1906.07155  (2019)
+
+\bibitem{chen2015microsoft}
+Chen, X., Fang, H., Lin, T.Y., et~al.: {Microsoft Coco Captions: Data
+  Collection and Evaluation Server}. arXiv preprint arXiv:1504.00325  (2015)
+
+\bibitem{ghesu2022contrastive}
+Ghesu, F.C., Georgescu, B., Mansoor, A., et~al.: Contrastive self-supervised
+  learning from 100 million medical images with optional supervision. JMI
+  \textbf{9}(6),  064503--064503 (2022)
+
+\bibitem{ghosh2024mammo}
+Ghosh, S., Poynton, C.B., Visweswaran, S., Batmanghelich, K.: {Mammo-clip: A
+  Vision Language Foundation model to Enhance Data Efficiency and Robustness in
+  Mammography}. In: {International conference on medical image computing and
+  computer-assisted intervention}. pp. 632--642. Springer (2024)
+
+\bibitem{kim2023region}
+Kim, D., Angelova, A., Kuo, W.: {Region-aware Pretraining for Open-vocabulary
+  Object Detection with Vision Transformers}. In: {CVPR}. pp. 11144--11154
+  (2023)
+
+\bibitem{krishna2017visual}
+Krishna, R., Zhu, Y., Groth, O., Johnson, J., et~al.: {Visual Genome:
+  Connecting Language and Vision using Crowdsourced Dense Image Annotations}.
+  {International Journal of Computer Vision}  \textbf{123}(1),  32--73 (2017)
+
+\bibitem{li2022grounded}
+Li, L.H., Zhang, P., Zhang, H., Yang, J., et~al.: {Grounded Language-image
+  Pre-training}. In: {CVPR}. pp. 10965--10975 (2022)
+
+\bibitem{7837683}
+Li, X., Shen, L., Luo, S.: {A Solitary Feature-Based Lung Nodule Detection
+  Approach for Chest X-Ray Radiographs}. {IEEE Journal of Biomedical and Health
+  Informatics}  \textbf{22}(2),  516--524 (2018).
+  \doi{10.1109/JBHI.2017.2661805}
+
+\bibitem{li2019light}
+Li, Y., Ren, F.: {Light-weight Retinanet for Object Detection}. arXiv preprint
+  arXiv:1905.10011  (2019)
+
+\bibitem{9395510}
+Lian, J., Liu, J., Zhang, S., et~al.: {A Structure-Aware Relation Network for
+  Thoracic Diseases Detection and Segmentation}. {IEEE TMI}  \textbf{40}(8),
+  2042--2052 (2021). \doi{10.1109/TMI.2021.3070847}
+
+\bibitem{liu2024grounding}
+Liu, S., Zeng, Z., Ren, T., et~al.: {Grounding Dino: Marrying Dino with
+  Grounded Pretraining for Open-Set Object Detection}. In: ECCV. Springer
+  (2024)
+
+\bibitem{liu2021swin}
+Liu, Z., Lin, Y., Cao, Y., Hu, H., Wei, Y., Zhang, Z., Lin, S., Guo, B.: {Swin
+  transformer: Hierarchical Vision Transformer Using Shifted Windows}. In:
+  {ICCV}. pp. 10012--10022 (2021)
+
+\bibitem{minderer2023scaling}
+Minderer, M., Gritsenko, A., Houlsby, N.: {Scaling Open-vocabulary Object
+  Detection}. {NeurIPS}  \textbf{36},  72983--73007 (2023)
+
+\bibitem{minderer2022simple}
+Minderer, M., Gritsenko, A.A., Stone, A., et~al.: Simple open-vocabulary object
+  detection with vision transformers. arxiv abs/2205.06230 (2022) (2022)
+
+\bibitem{nguyen2022vindr}
+Nguyen, H.Q., Lam, K., Le, L.T., et~al.: Vindr-cxr: An open dataset of chest
+  x-rays with radiologist’s annotations. Scientific Data  \textbf{9}(1), ~429
+  (2022)
+
+\bibitem{NguyenMammo}
+Nguyen, H.T., Nguyen, H.Q., Pham, H.H., et~al.: {VinDr-Mammo: A Large-scale
+  Benchmark Dataset for CAD in Full-field Digital Mammography}. medRxiv  (2022)
+
+\bibitem{pham2022accurate}
+Pham, H.H., Nguyen, H.Q., Nguyen, H.T., Le, L.T., Khanh, L.: {An Accurate and
+  Explainable Deep Learning System Improves Interobserver Agreement in the
+  Interpretation of Chest Radiograph}. {IEEE Access}  \textbf{10},
+  104512--104531 (2022)
+
+\bibitem{fasterrcnn}
+Ren, S., He, K., Girshick, R., Sun, J.: {Faster R-CNN: Towards Real-time Object
+  Detection with Region Proposal Networks}. PAMI  \textbf{39}(6) (2016)
+
+\bibitem{rueckel2021pneumothorax}
+Rueckel, J., Huemmer, C., Fieselmann, A., et~al.: Pneumothorax detection in
+  chest radiographs: optimizing artificial intelligence system for accuracy and
+  confounding bias reduction using in-image annotations in algorithm training.
+  European radiology  \textbf{31}(10),  7888--7900 (2021)
+
+\bibitem{schuhmann2021laion}
+Schuhmann, C., Vencu, R., Beaumont, R., Kaczmarczyk, R., et~al.: {Laion-400m:
+  Open dataset of clip-filtered 400 million image-text pairs}. arXiv preprint
+  arXiv:2111.02114  (2021)
+
+\bibitem{tian2020fcos}
+Tian, Z., Shen, C., Chen, H., He, T.: {FCOS: A Simple and Strong Anchor-free
+  Object Detector}. {IEEE TPAMI}  \textbf{44}(4),  1922--1933 (2020)
+
+\bibitem{zhang2022dino}
+Zhang, H., Li, F., Liu, S., et~al.: {Dino: Detr with Improved Denoising Anchor
+  Boxes for End-to-end Object Detection}. arXiv preprint arXiv:2203.03605
+  (2022)
+
+\bibitem{zhao2020object}
+Zhao, X., Schulter, S., Sharma, G., et~al.: Object detection with a unified
+  label space from multiple datasets. In: ECCV 2020: 16th European Conference.
+  pp. 178--193. Springer (2020)
+
+\end{thebibliography}

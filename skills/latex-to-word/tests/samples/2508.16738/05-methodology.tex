@@ -1,0 +1,26 @@
+\section{Methodology}
+\label{sec:Methodology}
+We use Catapult HLS 2024 to generate the RTL for Montgomery multipliers with arbitrary primes (as in prior work~\cite{szkp, zkspeed2025}) and fixed primes~\cite{BLS12_381_paper, BLS12_381_web}, fully-pipelined PADD units, modular inverse units, and the SumCheck PEs.
+We use the same elliptic curve as HyperPlonk (BLS12-381), where all MLE datatypes (e.g., in the SumCheck unit) are 255-bit, and all elliptic curve points (e.g., in the PADD) are 381-bit.
+For logic synthesis, we use Design Compiler with TSMC 22nm. 
+We explore the use of both arbitrary and fixed-prime modular multipliers (as done in \cite{nocap}); the latter saves us roughly 50\% on area and improves our computational density by roughly $2\times$.
+Our 255b modular multipliers are 0.478/0.264 mm$^2$ (arbitrary/fixed); our 381b modular multipliers are 1.13/0.582 mm$^2$ (arbitrary/fixed).
+We use Synopsys 22nm Memory Compiler for SRAM estimation.
+For SHA3, we use an IP block from OpenCores \cite{opencores_sha3}.
+To match prior work, we use scale factors of $3.6$ for area and $3.3$ for power to scale to 7nm ~\cite{szkp, zkspeed2025, 22nm_TSMC_web, 16nm_TSMC_paper, 7nm_TSMC_paper}.
+We use a 1GHz clock for zkPHIRE.
+For workload and sparsity, we use the same statistics from prior work~\cite{szkp, gzkp, pipezk, libsnark}.
+
+The HyperPlonk CPU performance is measured on an AMD EPYC 7502 32-core processor running up to 3.35GHz, and the total die size is 296 mm$^2$~\cite{cpu_amd1, cpu_amd2, cpu_amd3}. 
+We benchmark the GPU performance on an NVIDIA A100 GPU with 40GB memory and 1.6 TB/s bandwidth~\cite{NVIDIA-A100-40-GPU}.
+We benchmark our SumCheck unit performance relative to prior work \cite{zkspeed2025} and a 4-threaded CPU implementation.
+We then use workloads from prior work \cite{hyperplonk, libsnark} to model the performance of our full architecture vs. 32 CPU threads, up to problem sizes of $2^{30}$ nominal gates. We show these results in Section~\ref{sec:Evaluation}. 
+
+
+We use HLS tools to simulate core modules (modular multipliers, product lanes, extension engines, etc.) and use HLS-generated RTL to extract exact cycle counts, initiation intervals, and pipeline depths.
+We use cycle-accurate simulators with analytical models of bandwidth constraints to estimate runtimes for MSMs and for the traversal-dependent behavior of the Multifunction Forest \cite{mo2025mtu}.
+For SumCheck, we integrate HLS-generated cycle counts into a higher-level model (the automated scheduler in \autoref{fig:scheduler}) and then simulate runtimes analytically (accounting for off-chip bandwidth).
+This approach is similar to prior work on accelerating cryptographic computing \cite{zkspeed2025, szkp, samardzic2021_F1, craterlake}.
+
+
+

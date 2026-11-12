@@ -1,0 +1,59 @@
+
+\begin{table}[t!]
+  \vspace{0.25cm}
+    \centering
+    \footnotesize 
+    \setlength{\tabcolsep}{2.2pt} 
+    \caption{\acf{ATE} in meters ($\mathrm{m}$) for the evaluated 
+    \acs{VSLAM} algorithms. The best and second-best results are 
+    \textbf{boldfaced} and \underline{underlined}, respectively. 
+    Values are averaged over five runs. The minimum completion rate 
+    of each sequence is set to 50\%, and dashes indicate unavailable 
+    data due to tracking failure. The \textit{Diff.} column reports 
+    the improvement of \textit{ivS-Graphs} over \textit{vS-Graphs} 
+    baseline\add{, and final column Prec. (\%) reports the wall-matching precision}.}
+    \resizebox{\columnwidth}{!}{
+    % \begin{tabular}{l|ccccc|c|c}
+    \begin{tabular}{l|ccccc|c||c}
+        \toprule
+            \multirow{4}{*}{{\textbf{Sequence}}} & 
+            \multicolumn{6}{c|}{\textbf{ATE ($\mathrm{m}$)}} &
+            % \multirow{4}{*}{\shortstack{\textbf{Prec.}\\\textbf{(\%)}}} \\
+            \multirow{4}{*}{\shortstack{\textbf{Prec.}\\(\%)\\(ours)}} \\
+        \cmidrule{2-7}
+            & {\shortstack{\textit{BAD} \\ \textit{SLAM} \\ 
+            \cite{badslam}}} 
+            & {\shortstack{\textit{ORB-} \\ \textit{SLAM3} \\ 
+            \cite{orb3}}} 
+            & {\shortstack{\textit{DROID-} \\ \textit{SLAM} \\ 
+            \cite{droidslam}}}
+            & {\shortstack{\textit{\vgraphs} \\ 
+            \cite{tourani2025vsgraphs}}} 
+            & {\shortstack{\textit{\ivgraphs}\\(ours)}} 
+            & \textit{Diff. (\%)} & \\
+        \midrule
+           office1-1 & -     & 0.462 & 0.541 & \underline{0.343} & \textbf{0.226} & {+33.99\%} & 90 \\
+           office1-2 & 1.653 & 0.365 & 0.533 & \underline{0.353} & \textbf{0.183} & {+48.15\%} & 100 \\
+           office1-3 & -     & 0.272 & 0.360 & \underline{0.253} & \textbf{0.175} & {+30.83\%} & 91 \\
+           office1-4 & -     & \underline{0.101} & 0.109 & \textbf{0.090} & 0.120 & {-33.33\%} & 100 \\
+         \midrule
+            office2-1 & 1.879 & \textbf{0.160} & 0.395 & 0.223 & \underline{0.214} & {+4.04\%} & 100 \\
+            office2-2 & -     & 0.461 & 0.634 & \underline{0.348} & \textbf{0.224} & {+35.76\%} & 90 \\
+            office2-3 & -     & 0.393 & \textbf{0.158} & 0.280 & \underline{0.176} & {+36.85\%} & 90 \\
+            office2-4 & 7.926 & 0.553 & \underline{0.192} & 0.386 & \textbf{0.123} & {+68.10\%} & 100 \\
+        \midrule
+            CS1       & 2.798 & 0.136 & 0.179 & \underline{0.112} & \textbf{0.100} & {+10.51\%} & 92 \\
+        \midrule
+            CS2-Mid   & 1.383 & 0.213 & 0.494 & \underline{0.158} & \textbf{0.156} & {+1.22\%} & 100 \\
+        \midrule
+            CS3-Furn  & -     & 0.241 & \underline{0.205} & 0.254 & \textbf{0.149} & {+41.38\%} & 78 \\
+        \midrule
+             \textbf{Mean} & - & 0.305 & 0.346 & \underline{0.254} & \textbf{0.168} & {+25.23\%} & \textbf{92.8} \\
+        \bottomrule
+    \end{tabular}
+    }
+    \label{tbl_eval}
+\end{table}
+
+
+

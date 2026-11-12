@@ -1,0 +1,12 @@
+yt-dlp>=2026.10.26
+faster-whisper>=1.2.0
+rapidocr-onnxruntime>=1.2.3
+opencv-python-headless
+pillow
+numpy
+
+# 以下为可选依赖，不随包分发源码，需用户自行安装：
+#   pip install yutto      # B 站回退；GPL-3.0，https://github.com/yutto-dev/yutto
+#   pip install you-get    # 末位回退；MIT，https://github.com/soimort/you-get
+# BBDown（https://github.com/nilaoda/BBDown）仓库已归档，不作为推荐；
+# 若本机 PATH 上已有 BBDown 可执行文件，脚本会在 B 站回退链里尝试调用。

@@ -1,0 +1,12 @@
+
+
+\subsubsection{\textbf{Interconnect and Memory}}
+HyperPlonk’s stage-level data obliviousness enables static scheduling of computation and communication via a centralized controller. 
+zkPHIRE comprises six major modules connected by a multi-channel shared bus, provisioned to meet peak data movement demands. 
+During Wiring Identity, where bidirectional transfers occur between the 
+SumCheck unit and Multifunction Forest, and one-way from Permutation Quotient Generator to MSM unit, up to three channels are needed to avoid stalls.
+At our 294mm$^2$ design point, the peak bandwidth requirement reaches 19~TB/s, comparable to state-of-the-art accelerators ~\cite{samardzic2021_F1, kim2022_BTS}.
+
+Each module includes local SRAM scratchpads to buffer intermediate data. Smaller buffers (6 MB) serve the Permutation Quotient Generator, MLE Combine, and the Multifunction Forest modules. Heftier modules—MSM (43~MB) and SumCheck (6~MB)—use highly banked SRAM to support multiple PEs and exploit data reuse. For instance, MSM stores elliptic curve points, while SumCheck stores frequently accessed MLE tiles. All modules connect to off-chip PHYs via the shared bus, coordinated to avoid contention and sustain peak throughput.
+
+

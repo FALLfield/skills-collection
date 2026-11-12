@@ -1,0 +1,10 @@
+# 本机 Python 依赖（Python 3.9+）
+# 系统里若已有这些包，不必再装。
+lxml>=4.9
+# 可选：生成三栏对比图时需要
+Pillow>=9.0
+# 另外必须安装（非 pip）：
+#   - pandoc 3.x（https://pandoc.org/installing.html，须带内置 citeproc）
+#   - poppler-utils（pdftocairo、pdftoppm、pdftotext；PDF 图转 PNG、验收计数、可视化）
+#   - LibreOffice（soffice；只在生成 visuals/ 对比图时需要，转换本身不需要）
+# 不用 GPU，不登录账号，运行时不访问网络。

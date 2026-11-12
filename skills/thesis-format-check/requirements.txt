@@ -1,0 +1,4 @@
+python-docx>=1.2.0
+lxml>=4.9
+# 仅 visuals/generate_visual.py 出图时需要；检查脚本本身不用
+Pillow>=10.0

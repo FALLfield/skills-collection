@@ -1,0 +1,13 @@
+参考文献（示例，可直接粘贴到核查工具里）
+
+1. Aune, D., Sen, A., ó'Hartaigh, B., Janszky, I., Romundstad, P. R., Tonstad, S., & Vatten, L. J. (2017). Resting heart rate and the risk of cardiovascular disease, total cancer, and all-cause mortality – A systematic review and dose–response meta-analysis of prospective studies. Nutrition, Metabolism and Cardiovascular Diseases, 27(6), 504–517. https://doi.org/10.1016/j.numecd.2017.04.004
+
+2. He, K., Zhang, X., Ren, S., & Sun, J. (2018). Deep residual learning for image recognition. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 770–778). https://doi.org/10.1109/cvpr.2016.90
+
+3. Kesselheim AS, Cresswell K. Implementing learning health systems in the UK NHS. BMJ. 2017; 357: j2449. doi: 10.1136/bmj.j2449
+
+4. Chen, A. C., Martin, A. J., Choy, B., Fernandez-Penas, P., & Dalziell, R. A. (2021). A systematic review of the relationship between sunscreen use and the prevention of melanoma and non-melanoma skin cancer. European Journal of Dermatology, 31(1), 1-9. PMID: 33635047
+
+5. Telfer, N. R., Colver, G. B., Morton, C. A., & British Association of Dermatologists Therapy Guidelines and Audit Subcommittee. (2009). Guidelines for the management of basal cell carcinoma. British Journal of Dermatology, 161(4), 643-659. PMID: 19663808
+
+6. 梁鳳珍、洪媛媛、林英輝. 心率偏低是否影響身心健康？. 華人心臟雜誌, 2017, 29(3)：221-228.

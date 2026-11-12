@@ -1,0 +1,45 @@
+{
+  "batch": 1,
+  "seed": "20261111",
+  "started": "2026-11-11 14:27:05 Asia/Macau（UTC+8）",
+  "note": "本构造脚本不调用 check_refs.py；gold 依据库中原始记录和条目构造方式，不依据工具输出。",
+  "fetch": "skipped; loaded pool.json",
+  "pmid_attached": 0,
+  "counts": {
+    "n": 100,
+    "group": {
+      "real": 50,
+      "tampered": 30,
+      "public_ai_fake": 15,
+      "self_fabricated": 5
+    },
+    "expected": {
+      "verified": 50,
+      "field_mismatch": 32,
+      "suspected_fabricated": 14,
+      "not_found": 4
+    },
+    "field": {
+      "medicine": 16,
+      "cs": 16,
+      "physics": 13,
+      "biology": 13,
+      "social": 13,
+      "chinese": 9,
+      "public_or_self": 20
+    },
+    "language": {
+      "en": 87,
+      "zh": 13
+    },
+    "format": {
+      "doi_only": 9,
+      "gbt": 10,
+      "vancouver": 10,
+      "apa": 45,
+      "title_only": 6,
+      "as_published": 20
+    }
+  },
+  "finished": "2026-11-11 14:27:17 Asia/Macau（UTC+8）"
+}

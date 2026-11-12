@@ -1,0 +1,241 @@
+{
+  "when": "2026-11-11 23:54:40 Asia/Macau（UTC+8）",
+  "html": "ref-check.html",
+  "chrome": "/usr/bin/google-chrome-stable",
+  "url": "http://127.0.0.1:39619/ref-check.html",
+  "all_ok": true,
+  "scenarios": [
+    {
+      "id": "01_doi_only",
+      "title": "仅 DOI（doi.org 链接）",
+      "input": "https://doi.org/10.1038/nature16961",
+      "intercept": null,
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "已验证 1"
+      ],
+      "cardStatus": "已验证",
+      "cardClass": "card verified",
+      "raw": "https://doi.org/10.1038/nature16961",
+      "found": "数据库中的对应/相近记录（不是替你编造的新条目）\n《Mastering the game of Go with deep neural networks and tree search》（2016，Nature）\nhttps://doi.org/10.1038/nature16961",
+      "notes": [],
+      "reportText": "共 1 条。\n\n已验证 1\n✓\n第 1 条\n已验证\n\nhttps://doi.org/10.1038/nature16961\n\n数据库中的对应/相近记录（不是替你编造的新条目）\n《Mastering the game of Go with deep neural networks and tree search》（2016，Nature）\nhttps://doi.org/10.1038/nature16961",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 (File not found)"
+        }
+      ],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/01_doi_only.png",
+      "ok": true
+    },
+    {
+      "id": "02_fake_doi",
+      "title": "假 DOI",
+      "input": "10.99999/acceptance-fake-doi-does-not-exist-20261111",
+      "intercept": null,
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "查无此文 1"
+      ],
+      "cardStatus": "查无此文",
+      "cardClass": "card not_found",
+      "raw": "10.99999/acceptance-fake-doi-does-not-exist-20261111",
+      "found": null,
+      "notes": [
+        "所给 DOI（10.99999/acceptance-fake-doi-does-not-exist-20261111）无法解析。",
+        "在公开库中未找到足够相似的记录。未找到并不等于一定是假的，尤其是书籍、学位论文、新刊和未收录的会议论文。"
+      ],
+      "reportText": "共 1 条。\n\n查无此文 1\n×\n第 1 条\n查无此文\n\n10.99999/acceptance-fake-doi-does-not-exist-20261111\n\n所给 DOI（10.99999/acceptance-fake-doi-does-not-exist-20261111）无法解析。\n在公开库中未找到足够相似的记录。未找到并不等于一定是假的，尤其是书籍、学位论文、新刊和未收录的会议论文。",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 ()"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 404 ()"
+        }
+      ],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/02_fake_doi.png",
+      "ok": true
+    },
+    {
+      "id": "03_pmid_only",
+      "title": "仅 PMID",
+      "input": "PMID: 26826612",
+      "intercept": null,
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "已验证 1"
+      ],
+      "cardStatus": "已验证",
+      "cardClass": "card verified",
+      "raw": "PMID: 26826612",
+      "found": "数据库中的对应/相近记录（不是替你编造的新条目）\n《Laparoscopic cholecystectomy during pregnancy: A systematic review of 590 patients.》（2016，Int J Surg）\nhttps://doi.org/10.1016/j.ijsu.2016.01.070",
+      "notes": [],
+      "reportText": "共 1 条。\n\n已验证 1\n✓\n第 1 条\n已验证\n\nPMID: 26826612\n\n数据库中的对应/相近记录（不是替你编造的新条目）\n《Laparoscopic cholecystectomy during pregnancy: A systematic review of 590 patients.》（2016，Int J Surg）\nhttps://doi.org/10.1016/j.ijsu.2016.01.070",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/03_pmid_only.png",
+      "ok": true
+    },
+    {
+      "id": "04_http429",
+      "title": "HTTP 429（浏览器请求拦截）",
+      "input": "He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 770–778). https://doi.org/10.1109/cvpr.2016.90",
+      "intercept": "429",
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "核查失败/无法下结论 1"
+      ],
+      "cardStatus": "核查失败/无法下结论",
+      "cardClass": "card error",
+      "raw": "He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 770–778). https://doi.org/10.1109/cvpr.2016.90",
+      "found": null,
+      "notes": [
+        "所给 DOI（10.1109/cvpr.2016.90）查询因网络或接口错误失败，本次不能据此判断该 DOI 是否存在。",
+        "Crossref 检索失败：HTTP 429",
+        "OpenAlex 检索失败：HTTP 429",
+        "因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。"
+      ],
+      "reportText": "共 1 条。\n\n核查失败/无法下结论 1\n!\n第 1 条\n核查失败/无法下结论\n\nHe, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 770–778). https://doi.org/10.1109/cvpr.2016.90\n\n所给 DOI（10.1109/cvpr.2016.90）查询因网络或接口错误失败，本次不能据此判断该 DOI 是否存在。\nCrossref 检索失败：HTTP 429\nOpenAlex 检索失败：HTTP 429\n因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        },
+        {
+          "type": "error",
+          "text": "Failed to load resource: the server responded with a status of 429 (Too Many Requests)"
+        }
+      ],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/04_http429.png",
+      "ok": true
+    },
+    {
+      "id": "05_quoted_title_real_doi",
+      "title": "真实文献题名含弯引号+DOI",
+      "input": "Bisikalo, D. V., & Cherenkov, A. A. (2016). The influence of coronal mass ejections on the gas dynamics of the atmosphere of a “hot Jupiter” exoplanet. Astronomy Reports, 60(2), 183-192. https://doi.org/10.1134/s1063772916020013",
+      "intercept": null,
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "已验证 1"
+      ],
+      "cardStatus": "已验证",
+      "cardClass": "card verified",
+      "raw": "Bisikalo, D. V., & Cherenkov, A. A. (2016). The influence of coronal mass ejections on the gas dynamics of the atmosphere of a “hot Jupiter” exoplanet. Astronomy Reports, 60(2), 183-192. https://doi.org/10.1134/s1063772916020013",
+      "found": "数据库中的对应/相近记录（不是替你编造的新条目）\n《The influence of coronal mass ejections on the gas dynamics of the atmosphere of a “hot Jupiter” exoplanet》（2016，Astronomy Reports）\nhttps://doi.org/10.1134/s1063772916020013",
+      "notes": [],
+      "reportText": "共 1 条。\n\n已验证 1\n✓\n第 1 条\n已验证\n\nBisikalo, D. V., & Cherenkov, A. A. (2016). The influence of coronal mass ejections on the gas dynamics of the atmosphere of a “hot Jupiter” exoplanet. Astronomy Reports, 60(2), 183-192. https://doi.org/10.1134/s1063772916020013\n\n数据库中的对应/相近记录（不是替你编造的新条目）\n《The influence of coronal mass ejections on the gas dynamics of the atmosphere of a “hot Jupiter” exoplanet》（2016，Astronomy Reports）\nhttps://doi.org/10.1134/s1063772916020013",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/05_quoted_title_real_doi.png",
+      "ok": true
+    },
+    {
+      "id": "06_title_only_quotes",
+      "title": "仅题名含弯引号",
+      "input": "Donald Trump’s “Political Incorrectness”: Neoliberalism as Frontstage Racism on Social Media",
+      "intercept": null,
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "已验证 1"
+      ],
+      "cardStatus": "已验证",
+      "cardClass": "card verified",
+      "raw": "Donald Trump’s “Political Incorrectness”: Neoliberalism as Frontstage Racism on Social Media",
+      "found": "数据库中的对应/相近记录（不是替你编造的新条目）\n《Donald Trump’s “Political Incorrectness”: Neoliberalism as Frontstage Racism on Social Media》（2017，Social Media + Society）\nhttps://doi.org/10.1177/2056305117733226",
+      "notes": [],
+      "reportText": "共 1 条。\n\n已验证 1\n✓\n第 1 条\n已验证\n\nDonald Trump’s “Political Incorrectness”: Neoliberalism as Frontstage Racism on Social Media\n\n数据库中的对应/相近记录（不是替你编造的新条目）\n《Donald Trump’s “Political Incorrectness”: Neoliberalism as Frontstage Racism on Social Media》（2017，Social Media + Society）\nhttps://doi.org/10.1177/2056305117733226",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/06_title_only_quotes.png",
+      "ok": true
+    },
+    {
+      "id": "07_cjk_name_order",
+      "title": "中文姓名字序+DOI",
+      "input": "佳 李. 分析中医内科治疗胃食管反流病的临床效果[J]. 内科诊疗与进展, 2022, 3(1): 52-54. DOI: 10.37155/2717-5693-0301-22",
+      "intercept": null,
+      "onclick_ok": true,
+      "statusBar": "核查完成。可以打印或另存为 PDF。",
+      "pills": [
+        "已验证 1"
+      ],
+      "cardStatus": "已验证",
+      "cardClass": "card verified",
+      "raw": "佳 李. 分析中医内科治疗胃食管反流病的临床效果[J]. 内科诊疗与进展, 2022, 3(1): 52-54. DOI: 10.37155/2717-5693-0301-22",
+      "found": "数据库中的对应/相近记录（不是替你编造的新条目）\n《分析中医内科治疗胃食管反流病的临床效果》（2022，内科诊疗与进展）\nhttps://doi.org/10.37155/2717-5693-0301-22",
+      "notes": [],
+      "reportText": "共 1 条。\n\n已验证 1\n✓\n第 1 条\n已验证\n\n佳 李. 分析中医内科治疗胃食管反流病的临床效果[J]. 内科诊疗与进展, 2022, 3(1): 52-54. DOI: 10.37155/2717-5693-0301-22\n\n数据库中的对应/相近记录（不是替你编造的新条目）\n《分析中医内科治疗胃食管反流病的临床效果》（2022，内科诊疗与进展）\nhttps://doi.org/10.37155/2717-5693-0301-22",
+      "page_errors": [],
+      "console_errors": [],
+      "network_console": [],
+      "console_warnings": [],
+      "screenshot": "tests/html_browser/07_cjk_name_order.png",
+      "ok": true
+    }
+  ]
+}

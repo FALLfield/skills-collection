@@ -1,0 +1,16 @@
+\section{Limitations and Future Work}\label{sec:limitations}
+\myparab{Engineering complexity.} Fully fused, persistent kernels demand deep GPU + distributed-systems expertise;
+future work may investigate compiler/DSL abstractions to lower this barrier.
+
+\myparab{FP16 inefficiency.} Our FP16 path is suboptimal (\S\ref{sec:fp16-memory-throughput})
+due to insufficient tuning.
+We anticipate addressing this gap with autotuned GEMM operators like cuBLASDx~\cite{cudx} or
+CUTLASS builders.
+
+\myparab{Training support.} This work targets inference;
+enabling training will require fusing backward computation and gradient communication with new bookkeeping and
+task descriptors.
+
+
+
+

@@ -1,0 +1,866 @@
+@techreport{hbm3,
+  title        = {High Bandwidth Memory DRAM (HBM3)},
+  institution  = {JEDEC},
+  year         = {2023},
+  number       = {JESD238A},
+  type         = {Technical Report},
+  note         = {[Online]. Available: \url{https://www.jedec.org/standards-documents/docs/jesd238a}}
+}
+@misc{icicle, 
+title={Icicle: A hardware acceleration library for compute intensive cryptography}, 
+url={https://github.com/ingonyama-zk/icicle}, journal={GitHub}, author={Ingonyama}, year={2025}, month={Jul} 
+}
+@misc{NVIDIA-A100-40-GPU, 
+title={NVIDIA A100 Tensor Core GPU}, 
+url={https://www.nvidia.com/en-us/data-center/a100}, journal={Nvidia}, author={Nvidia}, year={2021}, month={Jul} 
+}
+@misc{hbm2,
+  author       = {Rambus Inc.},
+  title        = {White Paper: HBM2E and GDDR6: Memory Solutions for AI},
+  year         = {2020},
+  howpublished = {White Paper},
+  organization = {Rambus Inc.}
+}
+@inproceedings{mo2023towards,
+  title={Towards fast and scalable private inference},
+  author={Mo, Jianqiao and Garimella, Karthik and Neda, Negar and Ebel, Austin and Reagen, Brandon},
+  booktitle={Proceedings of the 20th ACM International Conference on Computing Frontiers},
+  pages={322--328},
+  year={2023}
+}
+
+@inproceedings{reagen2021cheetah,
+  title={Cheetah: Optimizing and accelerating homomorphic encryption for private inference},
+  author={Reagen, Brandon and Choi, Woo-Seok and Ko, Yeongil and Lee, Vincent T and Lee, Hsien-Hsin S and Wei, Gu-Yeon and Brooks, David},
+  booktitle={2021 IEEE International Symposium on High-Performance Computer Architecture (HPCA)},
+  pages={26--39},
+  year={2021},
+  organization={IEEE}
+}
+@inproceedings{mo2025mtu,
+author = {Mo, Jianqiao and Daftardar, Alhad and Ah-Kiow, Joey and Guo, Kaiyue and B\"{u}nz, Benedikt and Garg, Siddharth and Reagen, Brandon},
+title = {MTU: The Multifunction Tree Unit for Accelerating Zero-Knowledge Proofs},
+year = {2025},
+isbn = {9798400721984},
+publisher = {Association for Computing Machinery},
+url = {https://doi.org/10.1145/3768725.3768737},
+doi = {10.1145/3768725.3768737},
+booktitle = {Proceedings of the 14th International Workshop on Hardware and Architectural Support for Security and Privacy},
+pages = {19–27},
+numpages = {9},
+series = {HASP '25}
+}
+@inproceedings{zkspeed2025,
+author = {Daftardar, Alhad and Mo, Jianqiao and Ah-kiow, Joey and B\"{u}nz, Benedikt and Karri, Ramesh and Garg, Siddharth and Reagen, Brandon},
+title = {Need for zkSpeed: Accelerating HyperPlonk for Zero-Knowledge Proofs},
+year = {2025},
+isbn = {9798400712616},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3695053.3731021},
+doi = {10.1145/3695053.3731021},
+abstract = {Zero-Knowledge Proofs (ZKPs) are a rapidly growing technique for privacy-preserving and verifiable computation. ZKPs enable one party (a prover: ( mathcal {P} )) to prove to another (a verifier: ( mathcal {V} )) that a statement is true or correct without revealing any additional information. This powerful capability has led to ZKPs being applied and proposed for application in blockchain technologies, verifiable machine learning, and electronic voting. However, ZKPs have yet to see widespread, ubiquitous adoption due to the exceptionally high computational complexity of the proving process. Naturally, there has been recent work to accelerate ZKP primitives and protocols using GPUs and ASICs. However, the protocols considered so far face one of two challenges: they require a trusted setup for each new application or generate large proofs with high verification costs, limiting their applicability in scenarios with numerous verifiers or strict verification time constraints. HyperPlonk is a state-of-the-art ZKP protocol that supports both one-time, universal setup and small proof sizes/verification costs expected by publicly verifiable, consensus-based systems (e.g., blockchain). While HyperPlonk’s setup and verifier properties are highly desirable, the proving phase is costly. A HyperPlonk prover must compute on large bitwidths (e.g., 255-381b) and polynomials (e.g., of degree 224), employs computationally (e.g., MSM) and bandwidth (e.g., SumCheck) intensive kernels, and the complete protocol comprises many steps, each constituting distinct kernels. We present an accelerator, zkSpeed, to address these challenges and effectively accelerate HyperPlonk. zkSpeed provides hardware support for all major primitives (e.g., SumCheck and Multi-Scalar Multiplications (MSMs)) and judiciously schedules each protocol phase onto the allocated hardware. We leverage high-level synthesis to thoroughly explore and optimize the hardware design tradeoffs of each unit. These are then input into a full-chip simulator for large-scale design space exploration to optimize all aspects of the architecture in unison. Our Pareto analysis demonstrates that with a 366mm2 chip and 2 TB/s of off-chip bandwidth, zkSpeed is able to accelerate the entire proof generation by 801 \texttimes{} (geomean) over a CPU baseline.},
+booktitle = {Proceedings of the 52nd Annual International Symposium on Computer Architecture},
+pages = {1986–2001},
+numpages = {16},
+keywords = {Zero-Knowledge Proofs, Cryptography, Hardware Acceleration},
+location = {
+},
+series = {ISCA '25}
+}
+
+@misc{halo2, title={Elliptic curve cryptography - The halo2 Book}, url={https://zcash.github.io/halo2/design/gadgets/ecc.html}, journal={Github}, author={Zcash}, year={2025} }
+
+@article{BLS12_381_paper,
+  title={Bandersnatch: a fast elliptic curve built over the BLS12-381 scalar field},
+  author={Masson, Simon and Sanso, Antonio and Zhang, Zhenfei},
+  journal={Designs, Codes and Cryptography},
+  volume={92},
+  number={12},
+  pages={4131--4143},
+  year={2024},
+  publisher={Springer}
+}
+@misc{cpu_amd1, title={AMD Doubles Down – And Up – With Rome Epyc Server Chips}, url={https://www.nextplatform.com/2019/08/07/amd-doubles-down-and-up-with-rome-epyc-server-chips/}, journal={The Next Platform}, author={Morgan, Timothy Prickett}, year={2019}, month={Aug} }
+@misc{cpu_amd2, title={Server Processor Specifications}, url={https://www.amd.com/en/products/specifications/server-processor.html}, journal={AMD}, author={AMD, Product}, year={2024}, month={Mar} }
+@misc{cpu_amd3, title={AMD EPYC 7502 Specs}, url={https://www.techpowerup.com/cpu-specs/epyc-7502.c2250}, journal={TechPowerUp}, publisher={TechPowerUp}, author={tech, powerup}, year={2024}, month={Sep} }
+@misc{BLS12_381_web, title={BLS12-381: New zk-SNARK Elliptic Curve Construction}, url={https://electriccoin.co/blog/new-snark-curve/}, journal={Electric Coin Company}, author={Bowe, Sean}, year={2017}, month={Mar} }
+@inproceedings{haac,
+  title={Haac: A hardware-software co-design to accelerate garbled circuits},
+  author={Mo, Jianqiao and Gopinath, Jayanth and Reagen, Brandon},
+  booktitle={Proceedings of the 50th Annual International Symposium on Computer Architecture},
+  pages={1--13},
+  year={2023}
+}
+@misc{osiris,
+      title={Osiris: A Systolic Approach to Accelerating Fully Homomorphic Encryption}, 
+      author={Austin Ebel and Brandon Reagen},
+      year={2024},
+      eprint={2408.09593},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR},
+      url={https://arxiv.org/abs/2408.09593}, 
+}
+
+@INPROCEEDINGS{ark,
+  author={Kim, Jongmin and Lee, Gwangho and Kim, Sangpyo and Sohn, Gina and Rhu, Minsoo and Kim, John and Ahn, Jung Ho},
+  booktitle={2022 55th IEEE/ACM International Symposium on Microarchitecture (MICRO)}, 
+  title={ARK: Fully Homomorphic Encryption Accelerator with Runtime Data Generation and Inter-Operation Key Reuse}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1237-1254},
+  doi={10.1109/MICRO56248.2022.00086}}
+@inproceedings{sharp,
+  title={SHARP: A short-word hierarchical accelerator for robust and practical fully homomorphic encryption},
+  author={Kim, Jongmin and Kim, Sangpyo and Choi, Jaewan and Park, Jaiyoung and Kim, Donghwan and Ahn, Jung Ho},
+  booktitle={Proceedings of the 50th Annual International Symposium on Computer Architecture},
+  pages={1--15},
+  year={2023}
+}
+@article{micron_ddr5,
+  title={Introducing Micron{\textregistered} DDR5 SDRAM: More than a generational update},
+  author={Schlachter, Scott and Drake, Brian},
+  journal={XP055844818},
+  volume={31},
+  pages={6},
+  year={2019}
+}
+
+@inproceedings{samardzic2021_F1,
+  title={F1: A fast and programmable accelerator for fully homomorphic encryption},
+  author={Samardzic, Nikola and Feldmann, Axel and Krastev, Aleksandar and Devadas, Srinivas and Dreslinski, Ronald and Peikert, Christopher and Sanchez, Daniel},
+  booktitle={MICRO-54: 54th Annual IEEE/ACM International Symposium on Microarchitecture},
+  pages={238--252},
+  year={2021}
+}
+@inproceedings{szkp,
+  title={SZKP: A scalable accelerator architecture for zero-knowledge proofs},
+  author={Daftardar, Alhad and Reagen, Brandon and Garg, Siddharth},
+  booktitle={Proceedings of the 2024 International Conference on Parallel Architectures and Compilation Techniques},
+  pages={271--283},
+  year={2024}
+}
+@inproceedings{7nm_TSMC_paper,
+  title={A 7nm CMOS platform technology featuring 4 th generation FinFET transistors with a 0.027 um 2 high density 6-T SRAM cell for mobile SoC applications},
+  author={Wu, Shien-Yang and Lin, CY and Chiang, MC and Liaw, JJ and Cheng, JY and Yang, SH and Tsai, CH and Chen, PN and Miyashita, T and Chang, CH and others},
+  booktitle={2016 IEEE International Electron Devices Meeting (IEDM)},
+  pages={2--6},
+  year={2016},
+  organization={IEEE}
+}
+@inproceedings{16nm_TSMC_paper,
+  title={A 16nm FinFET CMOS technology for mobile SoC and computing applications},
+  author={Wu, Shien-Yang and Lin, Colin Yu and Chiang, MC and Liaw, JJ and Cheng, JY and Yang, SH and Liang, Ming and Miyashita, Tadakazu and Tsai, CH and Hsu, BC and others},
+  booktitle={2013 IEEE International Electron Devices Meeting},
+  pages={9--1},
+  year={2013},
+  organization={IEEE}
+}
+@article{22nm_TSMC_web,
+  title={TSMC 22nm Technology},
+  author={Taiwan Semiconductor Manufacturing Company},
+  url = "https://www.tsmc.com/english/dedicatedFoundry/technology/logic/l_22nm",year = {2021},
+}
+
+@inproceedings{kim2022_BTS,
+  title={Bts: An accelerator for bootstrappable fully homomorphic encryption},
+  author={Kim, Sangpyo and Kim, Jongmin and Kim, Michael Jaemin and Jung, Wonkyung and Kim, John and Rhu, Minsoo and Ahn, Jung Ho},
+  booktitle={Proceedings of the 49th annual international symposium on computer architecture},
+  pages={711--725},
+  year={2022}
+}
+@article{kwan2024verifying,
+  title={Verifying jolt zkVM lookup semantics},
+  author={Kwan, Carl and Dao, Quang and Thaler, Justin},
+  journal={Cryptology ePrint Archive},
+  year={2024}
+}
+@inproceedings{hyperplonk,
+  title={Hyperplonk: Plonk with linear-time prover and high-degree custom gates},
+  author={Chen, Binyi and B{\"u}nz, Benedikt and Boneh, Dan and Zhang, Zhenfei},
+  booktitle={Annual International Conference on the Theory and Applications of Cryptographic Techniques},
+  pages={499--530},
+  year={2023},
+  organization={Springer}
+}
+
+@article{berrut2004barycentric,
+  title={Barycentric lagrange interpolation},
+  author={Berrut, Jean-Paul and Trefethen, Lloyd N},
+  journal={SIAM review},
+  volume={46},
+  number={3},
+  pages={501--517},
+  year={2004},
+  publisher={SIAM}
+}
+
+@article{Montgomery_1987,
+	title        = {Speeding the Pollard and elliptic curve methods of factorization},
+	author       = {Montgomery, Peter L.},
+	year         = 1987,
+	journal      = {Mathematics of Computation},
+	volume       = 48,
+	number       = 177,
+	pages        = {243–264},
+	doi          = {10.1090/S0025-5718-1987-0866113-7},
+	issn         = {0025-5718, 1088-6842},
+	abstractnote = {Advancing research. Creating connections.},
+	language     = {en}
+}
+@misc{google_zkp,
+  author       = {Alan Stapelberg},
+  title        = {Opening up ‘Zero‑Knowledge Proof’ Technology to Promote Privacy in Age Assurance},
+  howpublished = {Google Blog (The Keyword)},
+  year         = {2025},
+  month        = {Jul},
+  day          = {3},
+  note         = {“Safety \& Security / Google in Europe” blog post},
+}
+
+@misc{strawman,
+      author = {Andrew J.  Blumberg and Justin Thaler and Victor Vu and Michael Walfish},
+      title = {Verifiable computation using multiple provers},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2014/846},
+      year = {2014},
+      url = {https://eprint.iacr.org/2014/846}
+}
+@InProceedings{fiat_shamir,
+author="Fiat, Amos
+and Shamir, Adi",
+editor="Odlyzko, Andrew M.",
+title="How To Prove Yourself: Practical Solutions to Identification and Signature Problems",
+booktitle="Advances in Cryptology --- CRYPTO' 86",
+year="1987",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="186--194",
+abstract="In this paper we describe simple identification and signature schemes which enable any user to prove his identity and the authenticity of his messages to any other user without shared or public keys. The schemes are provably secure against any known or chosen message attack if factoring is difficult, and typical implementations require only 1{\%} to 4{\%} of the number of modular multiplications required by the RSA scheme. Due to their simplicity, security and speed, these schemes are ideally suited for microprocessor-based devices such as smart cards, personal computers, and remote control systems.",
+isbn="978-3-540-47721-1"
+}
+@inproceedings{basefold,
+  title={BaseFold: efficient field-agnostic polynomial commitment schemes from foldable codes},
+  author={Zeilberger, Hadas and Chen, Binyi and Fisch, Ben},
+  booktitle={Annual International Cryptology Conference},
+  pages={138--169},
+  year={2024},
+  organization={Springer}
+}
+@inproceedings{whir,
+  title={WHIR: Reed--Solomon proximity testing with super-fast verification},
+  author={Arnon, Gal and Chiesa, Alessandro and Fenzi, Giacomo and Yogev, Eylon},
+  booktitle={Annual International Conference on the Theory and Applications of Cryptographic Techniques},
+  pages={214--243},
+  year={2025},
+  organization={Springer}
+}
+@article{goldwasser2015delegating,
+  title={Delegating computation: interactive proofs for muggles},
+  author={Goldwasser, Shafi and Kalai, Yael Tauman and Rothblum, Guy N},
+  journal={Journal of the ACM (JACM)},
+  volume={62},
+  number={4},
+  pages={1--64},
+  year={2015},
+  publisher={ACM New York, NY, USA}
+}
+@InProceedings{kzg_pcs,
+author="Kate, Aniket
+and Zaverucha, Gregory M.
+and Goldberg, Ian",
+editor="Abe, Masayuki",
+title="Constant-Size Commitments to Polynomials and Their Applications",
+booktitle="Advances in Cryptology - ASIACRYPT 2010",
+year="2010",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="177--194",
+abstract="We introduce and formally define polynomial commitment schemes, and provide two efficient constructions. A polynomial commitment scheme allows a committer to commit to a polynomial with a short string that can be used by a verifier to confirm claimed evaluations of the committed polynomial. Although the homomorphic commitment schemes in the literature can be used to achieve this goal, the sizes of their commitments are linear in the degree of the committed polynomial. On the other hand, polynomial commitments in our schemes are of constant size (single elements). The overhead of opening a commitment is also constant; even opening multiple evaluations requires only a constant amount of communication overhead. Therefore, our schemes are useful tools to reduce the communication cost in cryptographic protocols. On that front, we apply our polynomial commitment schemes to four problems in cryptography: verifiable secret sharing, zero-knowledge sets, credentials and content extraction signatures.",
+isbn="978-3-642-17373-8"
+}
+
+@INPROCEEDINGS{nocap,
+  author={Samardzic, Nikola and Langowski, Simon and Devadas, Srinivas and Sanchez, Daniel},
+  booktitle={2024 57th IEEE/ACM International Symposium on Microarchitecture (MICRO)}, 
+  title={Accelerating Zero-Knowledge Proofs Through Hardware-Algorithm Co-Design}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={366-379},
+  keywords={Microarchitecture;Organizations;Machine learning;Parallel processing;Blockchains;Servers;Vector processors;Electronic voting;Optimization;Hardware acceleration;Zero-Knowledge Proofs;hardware acceleration;verifiable computation},
+  doi={10.1109/MICRO61859.2024.00035}}
+
+@InProceedings{spartan,
+author="Setty, Srinath",
+editor="Micciancio, Daniele
+and Ristenpart, Thomas",
+title="Spartan: Efficient and General-Purpose zkSNARKs Without Trusted Setup",
+booktitle="Advances in Cryptology -- CRYPTO 2020",
+year="2020",
+publisher="Springer International Publishing",
+address="Cham",
+pages="704--737",
+isbn="978-3-030-56877-1"
+}
+@article{passas2012crossbar,
+  title={Crossbar NoCs are scalable beyond 100 nodes},
+  author={Passas, Giorgos and Katevenis, Manolis and Pnevmatikatos, Dionisios},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems},
+  volume={31},
+  number={4},
+  pages={573--585},
+  year={2012},
+  publisher={IEEE}
+}
+@InProceedings{groth16,
+author="Groth, Jens",
+editor="Fischlin, Marc
+and Coron, Jean-S{\'e}bastien",
+title="On the Size of Pairing-Based Non-interactive Arguments",
+booktitle="Advances in Cryptology -- EUROCRYPT 2016",
+year="2016",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="305--326",
+abstract="Non-interactive arguments enable a prover to convince a verifier that a statement is true. Recently there has been a lot of progress both in theory and practice on constructing highly efficient non-interactive arguments with small size and low verification complexity, so-called succinct non-interactive arguments (SNARGs) and succinct non-interactive arguments of knowledge (SNARKs).",
+isbn="978-3-662-49896-5"
+}
+
+@INPROCEEDINGS{sumcheck,
+  author={Lund, C. and Fortnow, L. and Karloff, H. and Nisan, N.},
+  booktitle={Proceedings [1990] 31st Annual Symposium on Foundations of Computer Science}, 
+  title={Algebraic methods for interactive proof systems}, 
+  year={1990},
+  volume={},
+  number={},
+  pages={2-10 vol.1},
+  keywords={Polynomials;Context},
+  doi={10.1109/FSCS.1990.89518}}
+
+@misc{opencores_sha3,
+  title        = {SHA-3 IP Core},
+  author       = {{OpenCores}},
+  year         = {2013},
+  howpublished = {\url{https://opencores.org/projects/sha3}},
+  note         = {Accessed: November 16, 2024},
+}
+
+@INPROCEEDINGS{pippenger,
+  author={Pippenger, Nicholas},
+  booktitle={17th Annual Symposium on Foundations of Computer Science (sfcs 1976)}, 
+  title={On the evaluation of powers and related problems}, 
+  year={1976},
+  volume={},
+  number={},
+  pages={258-263},
+  doi={10.1109/SFCS.1976.21}}
+
+@article{cuzk,
+	title        = {cuZK: Accelerating Zero-Knowledge Proof with A Faster Parallel Multi-Scalar Multiplication Algorithm on GPUs},
+	author       = {Lu, Tao and Wei, Chengkun and Yu, Ruijing and Chen, Chaochao and Fang, Wenjing and Wang, Lei and Wang, Zeke and Chen, Wenzhi},
+	year         = 2023,
+	month        = {Jun.},
+	journal      = {IACR Transactions on Cryptographic Hardware and Embedded Systems},
+	volume       = 2023,
+	number       = 3,
+	pages        = {194–220},
+	doi          = {10.46586/tches.v2023.i3.194-220},
+	url          = {https://tches.iacr.org/index.php/TCHES/article/view/10961}
+}
+
+@inproceedings{gzkp,
+author = {Ma, Weiliang and Xiong, Qian and Shi, Xuanhua and Ma, Xiaosong and Jin, Hai and Kuang, Haozhao and Gao, Mingyu and Zhang, Ye and Shen, Haichen and Hu, Weifang},
+title = {GZKP: A GPU Accelerated Zero-Knowledge Proof System},
+year = {2023},
+isbn = {9781450399166},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3575693.3575711},
+doi = {10.1145/3575693.3575711},
+booktitle = {Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2},
+pages = {340–353},
+numpages = {14},
+keywords = {GPU acceleration, zero-knowledge proof},
+location = {Vancouver, BC, Canada},
+series = {ASPLOS 2023}
+}
+
+@inproceedings{distmsm,
+author = {Ji, Zhuoran and Zhang, Zhiyuan and Xu, Jiming and Ju, Lei},
+title = {Accelerating Multi-Scalar Multiplication for Efficient Zero Knowledge Proofs with Multi-GPU Systems},
+year = {2024},
+isbn = {9798400703867},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3620666.3651364},
+doi = {10.1145/3620666.3651364},
+booktitle = {Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3},
+pages = {57–70},
+numpages = {14},
+keywords = {zero knowledge proof, multi-scalar multiplication, multi-GPU systems, pippenger's algorithm},
+location = {La Jolla, CA, USA},
+series = {ASPLOS '24}
+}
+
+@inproceedings{pipezk,
+  author = "Ye Zhang and Shuo Wang and Xian Zhang and Jiangbin Dong and Xingzhong Mao and Fan Long and Cong Wang and Dong Zhou and Mingyu Gao and and Guangyu Sun",
+  title = "PipeZK: Accelerating Zero-Knowledge Proof with a Pipelined Architecture",
+  year = "2021",
+  booktitle = "2021 ACM/IEEE 48th Annual International Symposium on Computer Architecture (ISCA)"
+}
+
+@article{priormsm,
+author = {Liu, Changxu and Zhou, Hao and Dai, Patrick and Shang, Li and Yang, Fan},
+title = {PriorMSM: An Efficient Acceleration Architecture for Multi-Scalar Multiplication},
+year = {2024},
+issue_date = {September 2024},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {29},
+number = {5},
+issn = {1084-4309},
+url = {https://doi.org/10.1145/3678006},
+doi = {10.1145/3678006},
+journal = {ACM Trans. Des. Autom. Electron. Syst.},
+month = aug,
+articleno = {77},
+numpages = {26},
+keywords = {Multi-scalar&nbsp;multiplication, zero-knowledge proof, privacy-preserving&nbsp;computing, ASIC&nbsp;design}
+}
+
+@article{reZK,
+  title={ReZK: A Highly Reconfigurable Accelerator for Zero-Knowledge Proof},
+  author={Zhou, Hao and Liu, Changxu and Yang, Lan and Shang, Li and Yang, Fan},
+  journal={IEEE Transactions on Circuits and Systems I: Regular Papers},
+  year={2024},
+  publisher={IEEE}
+}
+@software{libsnark,
+  title = "libsnark: a C++ library for zkSNARK proofs.",
+  year = "2018",
+  url = "https://github.com/scipr-lab/libsnark"
+}
+@article{chu2023uniplonk,
+  title={Uniplonk: Plonk with universal verifier},
+  author={Chu, Shumo and Gomes, Brandon H and Iglesias, Francisco Hernandez and Norton, Todd and Tebbs, Duncan},
+  journal={Cryptology ePrint Archive},
+  year={2023}
+}
+@inproceedings{xiong2023verizexe,
+  title={$\{$VeriZexe$\}$: Decentralized Private Computation with Universal Setup},
+  author={Xiong, Alex Luoyuan and Chen, Binyi and Zhang, Zhenfei and B{\"u}nz, Benedikt and Fisch, Ben and Krell, Fernando and Camacho, Philippe},
+  booktitle={32nd USENIX Security Symposium (USENIX Security 23)},
+  pages={4445--4462},
+  year={2023}
+}
+@article{gabizon2019plonk,
+  title={Plonk: Permutations over lagrange-bases for oecumenical noninteractive arguments of knowledge},
+  author={Gabizon, Ariel and Williamson, Zachary J and Ciobotaru, Oana},
+  journal={Cryptology ePrint Archive},
+  year={2019}
+}
+
+@inproceedings{r1cs,
+author = {Ben-Sasson, Eli and Chiesa, Alessandro and Tromer, Eran and Virza, Madars},
+title = {Succinct non-interactive zero knowledge for a von Neumann architecture},
+year = {2014},
+isbn = {9781931971157},
+publisher = {USENIX Association},
+address = {USA},
+booktitle = {Proceedings of the 23rd USENIX Conference on Security Symposium},
+pages = {781–796},
+numpages = {16},
+location = {San Diego, CA},
+series = {SEC'14}
+}
+
+@inproceedings{orion,
+author = {Xie, Tiancheng and Zhang, Yupeng and Song, Dawn},
+title = {Orion: Zero Knowledge Proof with Linear Prover Time},
+year = {2022},
+isbn = {978-3-031-15984-8},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-031-15985-5_11},
+doi = {10.1007/978-3-031-15985-5_11},
+booktitle = {Advances in Cryptology – CRYPTO 2022: 42nd Annual International Cryptology Conference, CRYPTO 2022, Santa Barbara, CA, USA, August 15–18, 2022, Proceedings, Part IV},
+pages = {299–328},
+numpages = {30},
+location = {Santa Barbara, CA, USA}
+}
+
+
+
+@inproceedings{craterlake,
+author = {Samardzic, Nikola and Feldmann, Axel and Krastev, Aleksandar and Manohar, Nathan and Genise, Nicholas and Devadas, Srinivas and Eldefrawy, Karim and Peikert, Chris and Sanchez, Daniel},
+title = {CraterLake: A Hardware Accelerator for Efficient Unbounded Computation on Encrypted Data},
+year = {2022},
+isbn = {9781450386104},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3470496.3527393},
+doi = {10.1145/3470496.3527393},
+booktitle = {Proceedings of the 49th Annual International Symposium on Computer Architecture},
+pages = {173–187},
+numpages = {15},
+keywords = {fully homomorphic encryption, hardware acceleration},
+location = {New York, New York},
+series = {ISCA '22}
+}
+
+
+
+@INPROCEEDINGS{rpu,
+  author={Soni, Deepraj and Neda, Negar and Zhang, Naifeng and Reynwar, Benedict and Gamil, Homer and Heyman, Benjamin and Nabeel, Mohammed and Badawi, Ahmad Al and Polyakov, Yuriy and Canida, Kellie and Pedram, Massoud and Maniatakos, Michail and Cousins, David Bruce and Franchetti, Franz and French, Matthew and Schmidt, Andrew and Reagen, Brandon},
+  booktitle={2023 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)}, 
+  title={RPU: The Ring Processing Unit}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={272-282},
+  keywords={Privacy;Spirals;Microarchitecture;Instruction sets;Parallel processing;Software;Hardware},
+  doi={10.1109/ISPASS57527.2023.00034}}
+
+@INPROCEEDINGS{ciflow,
+  author={Neda, Negar and Ebel, Austin and Reynwar, Benedict and Reagen, Brandon},
+  booktitle={2024 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)}, 
+  title={CiFlow: Dataflow Analysis and Optimization of Key Switching for Homomorphic Encryption}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={61-72},
+  keywords={Processor scheduling;Random access memory;Bandwidth;Switches;Throughput;Software;System-on-chip;Fully Homomorphic Encryption;Key-switching;Accelerator},
+  doi={10.1109/ISPASS61541.2024.00016}}
+
+@inproceedings{karthik1,
+author = {Garimella, Karthik and Ghodsi, Zahra and Jha, Nandan Kumar and Garg, Siddharth and Reagen, Brandon},
+title = {Characterizing and Optimizing End-to-End Systems for Private Inference},
+year = {2023},
+isbn = {9781450399180},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3582016.3582065},
+doi = {10.1145/3582016.3582065},
+booktitle = {Proceedings of the 28th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 3},
+pages = {89–104},
+numpages = {16},
+keywords = {cryptography, machine learning, private inference protocols, systems for machine learning},
+location = {Vancouver, BC, Canada},
+series = {ASPLOS 2023}
+}
+@inproceedings{karthik2,
+  title={Orion: A Fully Homomorphic Encryption Framework for Deep Learning},
+  author={Ebel, Austin and Garimella, Karthik and Reagen, Brandon},
+  booktitle={Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2},
+  pages={734--749},
+  year={2025}
+}
+@INPROCEEDINGS {legozk,
+author = {Yang, Zhengbang and Zhao, Lutan and Li, Peinan and Liu, Han and Li, Kai and Zhao, Boyan and Meng, Dan and Hou, Rui },
+booktitle = { 2025 IEEE International Symposium on High Performance Computer Architecture (HPCA) },
+title = {{ LegoZK: A Dynamically Reconfigurable Accelerator for Zero-Knowledge Proof }},
+year = {2025},
+volume = {},
+ISSN = {},
+pages = {113-126},
+keywords = {Power demand;Heuristic algorithms;Pipelines;Graphics processing units;Dynamic scheduling;System-on-chip;Resource management;Galois fields;Hardware acceleration;Arithmetic},
+doi = {10.1109/HPCA61900.2025.00020},
+url = {https://doi.ieeecomputersociety.org/10.1109/HPCA61900.2025.00020},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =mar}
+
+@inproceedings{unizk,
+author = {Wang, Cheng and Gao, Mingyu},
+title = {UniZK: Accelerating Zero-Knowledge Proof with Unified Hardware and Flexible Kernel Mapping},
+year = {2025},
+isbn = {9798400706981},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3669940.3707228},
+doi = {10.1145/3669940.3707228},
+booktitle = {Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1},
+pages = {1101–1117},
+numpages = {17},
+keywords = {domain-specific acceleration, mapping, zero-knowledge proof},
+location = {Rotterdam, Netherlands},
+series = {ASPLOS '25}
+}
+
+@misc{ceremony, 
+    title = "What is the ZCash Ceremony? The Complete Beginners Guide",
+    year = {2023},
+    howpublished = {\url{https://coinbureau.com/education/zcash-ceremony/}}
+}
+
+@inproceedings{batchzk,
+author = {Lu, Tao and Chen, Yuxun and Wang, Zonghui and Wang, Xiaohang and Chen, Wenzhi and Zhang, Jiaheng},
+title = {BatchZK: A Fully Pipelined GPU-Accelerated System for Batch Generation of Zero-Knowledge Proofs},
+year = {2025},
+isbn = {9798400706981},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3669940.3707270},
+doi = {10.1145/3669940.3707270},
+booktitle = {Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 1},
+pages = {100–115},
+numpages = {16},
+keywords = {gpu acceleration, linear-time encoder, merkle tree, pipeline, sumcheck protocol, zero-knowledge proof},
+location = {Rotterdam, Netherlands},
+series = {ASPLOS '25}
+}
+@inproceedings{wahby2018doubly,
+  title={Doubly-efficient zkSNARKs without trusted setup},
+  author={Wahby, Riad S and Tzialla, Ioanna and Shelat, Abhi and Thaler, Justin and Walfish, Michael},
+  booktitle={2018 IEEE Symposium on Security and Privacy (SP)},
+  pages={926--943},
+  year={2018},
+  organization={IEEE}
+}
+@INPROCEEDINGS{verifiable_asics,
+  author={Wahby, Riad S. and Howald, Max and Garg, Siddharth and Shelat, Abhi and Walfish, Michael},
+  booktitle={2016 IEEE Symposium on Security and Privacy (SP)}, 
+  title={Verifiable ASICs}, 
+  year={2016},
+  volume={},
+  number={},
+  pages={759-778},
+  keywords={Hardware;Foundries;Protocols;Manufacturing;Throughput;Hardware design languages;Trojan horses},
+  doi={10.1109/SP.2016.51}}
+
+@misc{scribe,
+      author = {Anubhav Baweja and Pratyush Mishra and Tushar Mopuri and Karan Newatia and Steve Wang},
+      title = {Scribe: Low-memory {SNARKs} via Read-Write Streaming},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2024/1970},
+      year = {2024},
+      url = {https://eprint.iacr.org/2024/1970}
+}
+
+@misc{brakedown,
+      author = {Alexander Golovnev and Jonathan Lee and Srinath Setty and Justin Thaler and Riad S.  Wahby},
+      title = {Brakedown: Linear-time and field-agnostic {SNARKs} for {R1CS}},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2021/1043},
+      year = {2021},
+      url = {https://eprint.iacr.org/2021/1043}
+}
+
+@misc{blaze,
+      author = {Martijn Brehm and Binyi Chen and Ben Fisch and Nicolas Resch and Ron D. Rothblum and Hadas Zeilberger},
+      title = {Blaze: Fast {SNARKs} from Interleaved {RAA} Codes},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2024/1609},
+      year = {2024},
+      url = {https://eprint.iacr.org/2024/1609}
+}
+
+@misc{libra,
+      author = {Tiancheng Xie and Jiaheng Zhang and Yupeng Zhang and Charalampos Papamanthou and Dawn Song},
+      title = {Libra: Succinct Zero-Knowledge Proofs with Optimal Prover Computation},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2019/317},
+      year = {2019},
+      url = {https://eprint.iacr.org/2019/317}
+}
+
+@misc{jolt,
+      author = {Arasu Arun and Srinath Setty and Justin Thaler},
+      title = {Jolt: {SNARKs} for Virtual Machines via Lookups},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2023/1217},
+      year = {2023},
+      url = {https://eprint.iacr.org/2023/1217}
+}
+
+@misc{pianist,
+      author = {Tianyi Liu and Tiancheng Xie and Jiaheng Zhang and Dawn Song and Yupeng Zhang},
+      title = {Pianist: Scalable {zkRollups} via Fully Distributed Zero-Knowledge Proofs},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2023/1271},
+      year = {2023},
+      url = {https://eprint.iacr.org/2023/1271}
+}
+
+@misc{twist,
+      author = {Srinath Setty and Justin Thaler},
+      title = {Twist and Shout: Faster memory checking arguments via one-hot addressing and increments},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2025/105},
+      year = {2025},
+      url = {https://eprint.iacr.org/2025/105}
+}
+
+@misc{hypernova,
+      author = {Abhiram Kothapalli and Srinath Setty},
+      title = {{HyperNova}: Recursive arguments for customizable constraint systems},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2023/573},
+      year = {2023},
+      url = {https://eprint.iacr.org/2023/573}
+}
+
+@misc{cyclonemsm,
+      author = {Kaveh Aasaraai and Don Beaver and Emanuele Cesena and Rahul Maganti and Nicolas Stalder and Javier Varela},
+      title = {{FPGA} Acceleration of Multi-Scalar Multiplication: {CycloneMSM}},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2022/1396},
+      year = {2022},
+      url = {https://eprint.iacr.org/2022/1396}
+}
+
+@inproceedings{nova,
+author = {Kothapalli, Abhiram and Setty, Srinath and Tzialla, Ioanna},
+title = {Nova: Recursive Zero-Knowledge Arguments from Folding Schemes},
+year = {2022},
+isbn = {978-3-031-15984-8},
+publisher = {Springer-Verlag},
+address = {Berlin, Heidelberg},
+url = {https://doi.org/10.1007/978-3-031-15985-5_13},
+doi = {10.1007/978-3-031-15985-5_13},
+abstract = {We introduce a new approach to realize incrementally verifiable computation (IVC), in which the prover recursively proves the correct execution of incremental computations of the form y=F(ℓ)(x), where F is a (potentially non-deterministic) computation, x is the input, y is the output, and ℓ>0. Unlike prior approaches to realize IVC, our approach avoids succinct non-interactive arguments of knowledge&nbsp;(SNARKs) entirely and arguments of knowledge in general. Instead, we introduce and employ folding schemes, a weaker, simpler, and more efficiently-realizable primitive, which reduces the task of checking two instances in some relation to the task of checking a single instance. We construct a folding scheme for a characterization of NP and show that it implies an IVC scheme with improved efficiency characteristics: (1) the “recursion overhead” (i.e., the number of steps that the prover proves in addition to proving the execution of F) is a constant and it is dominated by two group scalar multiplications expressed as a circuit (this is the smallest recursion overhead in the literature), and (2) the prover’s work at each step is dominated by two multiexponentiations of size O(|F|), providing the fastest prover in the literature. The size of a proof is O(|F|) group elements, but we show that using a variant of an existing zkSNARK, the prover can prove the knowledge of a valid proof succinctly and in zero-knowledge with O(log|F|) group elements. Finally, our approach neither requires a trusted setup nor FFTs, so it can be instantiated efficiently with any cycles of elliptic curves where DLOG is hard.},
+booktitle = {Advances in Cryptology – CRYPTO 2022: 42nd Annual International Cryptology Conference, CRYPTO 2022, Santa Barbara, CA, USA, August 15–18, 2022, Proceedings, Part IV},
+pages = {359–388},
+numpages = {30},
+location = {Santa Barbara, CA, USA}
+}
+
+@inproceedings{MSMAC,
+author = {Qiu, Pengcheng and Wu, Guiming and Chu, Tingqiang and Wei, Changzheng and Luo, Runzhou and Yan, Ying and Wang, Wei and Zhang, Hui},
+title = {MSMAC: Accelerating Multi-Scalar Multiplication for Zero-Knowledge Proof},
+year = {2024},
+isbn = {9798400706011},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3649329.3655672},
+doi = {10.1145/3649329.3655672},
+abstract = {Multi-scalar multiplication (MSM) is the most computation-intensive part in proof generation of Zero-knowledge proof (ZKP). In this paper, we propose MSMAC, an FPGA accelerator for large-scale MSM. MSMAC adopts a specially designed Instruction Set Architecture (ISA) for MSM and optimizes pipelined Point Addition Unit (PAU) with hybrid Karatsuba multiplier. Moreover, a runtime system is proposed to split MSM tasks with the optimal sub-task size and orchestrate execution of Processing Elements (PEs). Experimental results show that MSMAC achieves up to 328X and 1.96X speedups compared to the state-of-the-art implementation on CPU (one core) and GPU, respectively, outperforming the state-of-the-art ASIC accelerator by 1.79X. On 4 FPGAs, MSMAC performs 1,261X faster than a single CPU core.},
+booktitle = {Proceedings of the 61st ACM/IEEE Design Automation Conference},
+articleno = {66},
+numpages = {6},
+location = {San Francisco, CA, USA},
+series = {DAC '24}
+}
+
+@inproceedings{gypso,
+author = {Liu, Changxu and Zhou, Hao and Yang, Lan and Xu, Jiamin and Dai, Patrick and Yang, Fan},
+title = {Gypsophila: A Scalable and Bandwidth-Optimized Multi-Scalar Multiplication Architecture},
+year = {2024},
+isbn = {9798400706011},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3649329.3658259},
+doi = {10.1145/3649329.3658259},
+booktitle = {Proceedings of the 61st ACM/IEEE Design Automation Conference},
+articleno = {94},
+numpages = {6},
+keywords = {multi-scalar multiplication, zero-knowledge proofs, hardware acceleration, parallel computing},
+location = {San Francisco, CA, USA},
+series = {DAC '24}
+}
+
+
+@article{tches_ntt_msm, title={A High-performance NTT/MSM Accelerator for Zero-knowledge Proof Using Load-balanced Fully-pipelined Montgomery Multiplier}, volume={2025},  url={https://tches.iacr.org/index.php/TCHES/article/view/11930},  DOI={10.46586/tches.v2025.i1.275-313}, abstractNote={Zero-knowledge proof (ZKP) is an attractive cryptographic paradigm that allows a party to prove the correctness of a given statement without revealing any additional information. It offers both computation integrity and privacy, witnessing many celebrated deployments, such as computation outsourcing and cryptocurrencies. Recent general-purpose ZKP schemes, e.g., zero-knowledge succinct non-interactive argument of knowledge (zk-SNARK), suffer from time-consuming proof generation, which is mainly bottlenecked by the large-scale number theoretic transformation (NTT) and multi-scalar point multiplication (MSM). To boost its wide application, great interest has been shown in expediting the proof generation on various platforms like GPU, FPGA and ASIC.So far as we know, current works on the hardware designs for ZKP employ two separated data-paths for NTT and MSM, overlooking the potential of resource reusage. In this work, we particularly explore the feasibility and profit of implementing both NTT and MSM with a unified and high-performance hardware architecture. For the crucial operator design, we propose a dual-precision, load-balanced and fully-pipelined Montgomery multiplier (LBFP MM) by introducing the new mixed-radix technique and improving the prior quotient-decoupled strategy. Collectively, we also integrate orthogonal ideas to further enhance the performance of LBFP MM, including the customized constant multiplication, truncated LSB/MSB multiplication/addition and Karatsuba technique. On top of that, we present the unified, scalable and highperformance hardware architecture that conducts both NTT and MSM in a versatile pipelined execution mechanism, intensively sharing the common computation and memory resource. The proposed accelerator manages to overlap the on-chip memory computation with off-chip memory access, considerably reducing the overall cycle counts for NTT and MSM.We showcase the implementation of modular multiplier and overall architecture on the BLS12-381 elliptic curve for zk-SNARK. Extensive experiments are carried out under TSMC 28nm synthesis and similar simulation set, which demonstrate impressive improvements: (1) the proposed LBFP MM obtains 1.8x speed-up and 1.3x less area cost versus the state-of-the-art design; (2) the unified accelerator achieves 12.1x and 5.8x acceleration for NTT and MSM while also consumes 4.3x lower overall on-chip area overhead, when compared to the most related and advanced work PipeZK.}, number={1}, journal={IACR Transactions on Cryptographic Hardware and Embedded Systems}, author={Chen, Xiangren and Yang, Bohan and Zhu, Wenping and Wang, Hanning and Tao, Qichao and Yin, Shuying and Zhu, Min and Wei, Shaojun and Liu, Leibo}, year={2024}, month={Dec.}, pages={275–313} }
+
+@inproceedings{zhang2025code,
+author = {Zhang, Naifeng and Franchetti, Franz},
+title = {Code Generation for Cryptographic Kernels using Multi-word Modular Arithmetic on GPU},
+year = {2025},
+isbn = {9798400712753},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3696443.3708948},
+doi = {10.1145/3696443.3708948},
+booktitle = {Proceedings of the 23rd ACM/IEEE International Symposium on Code Generation and Optimization},
+pages = {476–492},
+numpages = {17},
+keywords = {BLAS, Multi-word modular arithmetic, code generation, cryptography, number theoretic transform, rewrite system},
+location = {Las Vegas, NV, USA},
+series = {CGO '25}
+}
+
+
+@article{jha2024deepreshape,
+title={DeepReShape: Redesigning  Neural Networks for Efficient Private Inference},
+author={Nandan Kumar Jha and Brandon Reagen},
+journal={Transactions on Machine Learning Research (TMLR)},
+year={2024},
+}
+
+@inproceedings{zhang2025micro,
+author = {Zhang, Naifeng and Fu, Sophia and Franchetti, Franz},
+title = {Towards Closing the Performance Gap for Cryptographic Kernels Between CPUs and Specialized Hardware},
+year = {2025},
+isbn = {9798400715730},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3725843.3756120},
+doi = {10.1145/3725843.3756120},
+abstract = {Specialized hardware like application-specific integrated circuits (ASICs) remains the primary accelerator type for cryptographic kernels based on large integer arithmetic. Prior work has shown that commodity and server-class GPUs can achieve near-ASIC performance for these workloads. However, achieving comparable performance on CPUs remains an open challenge. This work investigates the following question: How can we narrow the performance gap between CPUs and specialized hardware for key cryptographic kernels like basic linear algebra subprograms (BLAS) operations and the number theoretic transform (NTT)? To this end, we develop an optimized scalar implementation of these kernels for x86 CPUs at the per-core level. We utilize SIMD instructions—specifically AVX2 and AVX-512—to further improve performance, achieving an average speedup of 38 times and 62 times over state-of-the-art CPU baselines for NTTs and BLAS operations, respectively. To narrow the gap further, we propose a small AVX-512 extension, dubbed multi-word extension (MQX), which delivers substantial speedup with only three new instructions and minimal proposed hardware modifications. MQX cuts the slowdown relative to ASICs to as low as 35 times on a single CPU core. Finally, we perform a roofline analysis to evaluate the peak performance achievable with MQX when scaled across an entire multi-core CPU. Our results show that, with MQX, top-tier server-grade CPUs can approach the performance of state-of-the-art ASICs for cryptographic workloads.},
+booktitle = {Proceedings of the 58th IEEE/ACM International Symposium on Microarchitecture},
+pages = {1704–1718},
+numpages = {15},
+keywords = {Cryptography, large integer arithmetic, SIMD, ISA extension, performance modeling},
+location = {
+},
+series = {MICRO '25}
+}
+
+
+@misc{elastic_msm,
+      author = {Xudong Zhu and Haoqi He and Zhengbang Yang and Yi Deng and Lutan Zhao and Rui Hou},
+      title = {Elastic {MSM}: A Fast, Elastic and Modular Preprocessing Technique for Multi-Scalar Multiplication Algorithm on {GPUs}},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2024/057},
+      year = {2024},
+      url = {https://eprint.iacr.org/2024/057}
+}
+
+@INPROCEEDINGS{sam,
+  author={Wang, Cheng and Gao, Mingyu},
+  booktitle={2023 IEEE/ACM International Conference on Computer Aided Design (ICCAD)}, 
+  title={SAM: A Scalable Accelerator for Number Theoretic Transform Using Multi-Dimensional Decomposition}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-9},
+  keywords={Design automation;Layout;Transforms;Throughput;Hardware;System-on-chip;Task analysis;NTT;accelerator;FPGA},
+  doi={10.1109/ICCAD57390.2023.10323744}}
+
+@INPROCEEDINGS{anaheim,
+  author={Kim, Jongmin and Yun, Sungmin and Ji, Hyesung and Choi, Wonseok and Kim, Sangpyo and Ahn, Jung Ho},
+  booktitle={2025 IEEE International Symposium on High Performance Computer Architecture (HPCA)}, 
+  title={Anaheim: Architecture and Algorithms for Processing Fully Homomorphic Encryption in Memory}, 
+  year={2025},
+  volume={},
+  number={},
+  pages={1158-1173},
+  keywords={Software algorithms;Layout;Random access memory;Computer architecture;Bandwidth;Transforms;Software;Energy efficiency;Hardware;Homomorphic encryption},
+  doi={10.1109/HPCA61900.2025.00089}}
+
+
+@ARTICLE{myosotis,
+  author={Liu, Changxu and Zhou, Hao and Yang, Lan and Wu, Zheng and Dai, Patrick and Li, Yinlong and Wu, Shiyong and Yang, Fan},
+  journal={IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems}, 
+  title={Myosotis: An Efficiently Pipelined and Parameterized Multi-Scalar Multiplication Architecture via Data Sharing}, 
+  year={2024},
+  volume={},
+  number={},
+  pages={1-1},
+  keywords={Bandwidth;Design automation;Computational efficiency;Optimization;Windows;Runtime;Pipelines;Space exploration;Scalability;Hardware;Multi-Scalar Multiplication;Zero-knowledge proofs;Customed circuit design;Pipelined Computing},
+  doi={10.1109/TCAD.2024.3524364}}
+
+@misc{graz,
+      author = {Florian Hirner and Florian Krieger and Sujoy Sinha Roy},
+      title = {Chiplet-Based Techniques for Scalable and Memory-Aware Multi-Scalar Multiplication},
+      howpublished = {Cryptology {ePrint} Archive, Paper 2025/252},
+      year = {2025},
+      url = {https://eprint.iacr.org/2025/252}
+}
+
+@INPROCEEDINGS {prophet,
+author = { Verma, Tarunesh and Yuan, Yichao and Talati, Nishil and Austin, Todd },
+booktitle = { 2025 IEEE International Symposium on Workload Characterization (IISWC) },
+title = {{ ZKProphet: Understanding Performance of Zero-Knowledge Proofs on GPUs }},
+year = {2025},
+volume = {},
+ISSN = {},
+pages = {142-154},
+abstract = { Zero-Knowledge Proofs (ZKP) are protocols which construct cryptographic proofs to demonstrate knowledge of a secret input in a computation without revealing any information about the secret. ZKPs enable novel applications in private and verifiable computing such as anonymized cryptocurrencies and blockchain scaling and have seen adoption in several real-world systems. Prior work has accelerated ZKPs on GPUs by leveraging the inherent parallelism in core computation kernels like Multi-Scalar Multiplication (MSM). However, we find that a systematic characterization of execution bottlenecks in ZKPs, as well as their scalability on modern GPU architectures, is missing in the literature.This paper presents ZKProphet, a comprehensive performance study of Zero-Knowledge Proofs on GPUs. Following massive speedups of MSM, we find that ZKPs are bottlenecked by kernels like Number-Theoretic Transform (NTT), as they account for up to 90% of the proof generation latency on GPUs when paired with optimized MSM implementations. Available NTT implementations under-utilize GPU compute resources and often do not employ architectural features like asynchronous compute and memory operations. We observe that the arithmetic operations underlying ZKPs execute exclusively on the GPU’s 32-bit integer pipeline and exhibit limited instruction-level parallelism due to data dependencies. Their performance is thus limited by the available integer compute units. While one way to scale the performance of ZKPs is adding more compute units, we discuss how runtime parameter tuning for optimizations like precomputed inputs and alternative data representations can extract additional speedup. With this work, we provide the ZKP community a roadmap to scale performance on GPUs and construct definitive GPU-accelerated ZKPs for their application requirements and available hardware resources. },
+keywords = {Systematics;Runtime;Protocols;Scalability;Graphics processing units;Transforms;Parallel processing;Libraries;Kernel;Tuning},
+doi = {10.1109/IISWC66894.2025.00021},
+url = {https://doi.ieeecomputersociety.org/10.1109/IISWC66894.2025.00021},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month =Oct}

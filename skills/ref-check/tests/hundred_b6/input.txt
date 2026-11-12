@@ -1,0 +1,199 @@
+1. Ahmed MA, Khodry MM. Modified Triple P Approach by Gynecologic Oncologist-Led Team for Placenta Accreta Spectrum Improves the Outcome: Non-Randomized Controlled Trial[J]. Open Journal of Obstetrics and Gynecology, 2019, 09(07): 1039-1049. DOI: 10.4236/ojog.2019.97101
+
+2. Dale A, Slade E, Heneghan C. Outcomes reporting of the FAME trial[J]. The Lancet, 2016, 387(10035): 2292. DOI: 10.1016/s0140-6736(16)30690-0
+
+3. Durgam S, Kozauer S, Earley W, Chen C, Huo J, Stahl S, et al. Lumateperone treatment for major depressive episodes with mixed features in major depressive disorder and bipolar I or bipolar II disorder. Neuroscience Applied. 2023;2:102953. doi: 10.1016/j.nsa.2023.102953
+
+4. Devi S. Fears over health of doctor imprisoned without trial in Iran[J]. The Lancet, 2017, 389(10076): 1285. DOI: 10.1016/s0140-6736(17)30825-5
+
+5. https://doi.org/10.1186/s12872-019-1262-5
+
+6. Wang Q, Tian S, Zhao P, Cao Q, Lu Q, Yao Z. Association Between Antidepressant Efficacy and Interactions of Three Core Depression-Related Brain Networks in Major Depressive Disorder. Frontiers in Psychiatry. 2022;13. doi: 10.3389/fpsyt.2022.862507
+
+7. Rogers, N., & Wyburn, K. (2020). COMPARE trial: new hope for organ preservation. The Lancet, 396(10263), 1609-1611. https://doi.org/10.1016/s0140-6736(20)32440-5
+
+8. TANAKA A, NODE K, INVESTIGATORS ET. 448-P: Secondary Analyses to Assess the Profound Effect of Empagliflozin on Endothelial Function in Patients with Type 2 Diabetes and Established Cardiovascular Diseases: The Placebo-Controlled Double-Blind Randomized EMBLEM Trial[J]. Diabetes, 2020, 69(Supplement_1). DOI: 10.2337/db20-448-p
+
+9. Effect of Perioperative Neuromuscular Electrical Stimulation in Patients Undergoing Cardiovascular Surgery: A Pilot Randomized Controlled Trial
+
+10. Yirmiya R. Depressive Disorder–Associated Microglia as a Target for a Personalized Antidepressant Approach. Biological Psychiatry. 2023;94(8):602-604. doi: 10.1016/j.biopsych.2023.07.002
+
+11. Hafiz, A. M., Bhat, R. A., & Hassaballah, M. (2023). Image classification using convolutional neural network tree ensembles. Multimedia Tools and Applications, 82(5), 6867-6884. https://doi.org/10.1007/s11042-022-13604-6
+
+12. Li Z. Distributed robust consensus of linear multi‐agent systems with switching topologies. The Journal of Engineering. 2015;2015(1):17-24. doi: 10.1049/joe.2014.0288
+
+13. https://doi.org/10.1504/ijcnds.2023.10050235
+
+14. https://doi.org/10.1049/wss2.12016
+
+15. Moos T, Moradi A, Richter B. Static Power Side-Channel Analysis—An Investigation of Measurement Factors[J]. IEEE Transactions on Very Large Scale Integration (VLSI) Systems, 2020, 28(2): 376-389. DOI: 10.1109/tvlsi.2019.2948141
+
+16. https://doi.org/10.1109/jsyst.2014.2318054
+
+17. https://doi.org/10.1109/tifs.2016.2639446
+
+18. https://doi.org/10.1016/j.nlp.2024.100104
+
+19. Distributed impulsive group consensus in second-order multi-agent systems under directed topology
+
+20. Calheiros, R. N., & Buyya, R. (2014). Meeting Deadlines of Scientific Workflows in Public Clouds with Tasks Replication. IEEE Transactions on Parallel and Distributed Systems, 25(7), 1787-1796. https://doi.org/10.1109/tpds.2013.238
+
+21. Model-independent search for anisotropies in stochastic gravitational-wave backgrounds and application to LIGO-Virgo’s first three observing runs
+
+22. https://doi.org/10.1088/1361-6382/ac4b98
+
+23. Manghi F. Correlated electrons in a crystalline topological insulator[J]. Physical Review B, 2021, 103(11). DOI: 10.1103/physrevb.103.115114
+
+24. Carrasco JA, Finkel F, González-López A, Rodríguez MA, Tempesta P. Generalized isotropic Lipkin–Meshkov–Glick models: ground state entanglement and quantum entropies. Journal of Statistical Mechanics: Theory and Experiment. 2016;2016(3):033114. doi: 10.1088/1742-5468/2016/03/033114
+
+25. Ming, J., Papa, M. A., Krishnan, B., Prix, R., Beer, C., Zhu, S. J., Eggenstein, H. B., Bock, O., & Machenschalk, B. (2018). Optimally setting up directed searches for continuous gravitational waves in Advanced LIGO O1 data. Physical Review D, 97(2). https://doi.org/10.1103/physrevd.97.024051
+
+26. Overview and Status of Advanced Interferometers for Gravitational Wave Detection
+
+27. Li YP, Zhang J, Xu BW, Zhou L, Zhong W, Sheng YB. Entanglement-assisted noiseless linear amplification for arbitrary two-photon polarization–time-bin hyperentanglement. Quantum Information Processing. 2020;19(8). doi: 10.1007/s11128-020-02762-x
+
+28. Redd, N. (2020). An Exoplanet with Evolving Clouds of Salts. Eos, 101. https://doi.org/10.1029/2020eo140776
+
+29. Xu H, Jia J. Single‐Cell RNA Sequencing of Peripheral Blood Reveals Immune Cell Signatures in Alzheimer’s Disease. Alzheimer's & Dementia. 2023;19(S1). doi: 10.1002/alz.060629
+
+30. https://doi.org/10.1007/s11120-019-00670-5
+
+31. Schefzik R. SimBPDD: Simulating differential distributions in Beta-Poisson models, in particular for single-cell RNA sequencing data. Annales Mathematicae et Informaticae. 2021;53:283-298. doi: 10.33039/ami.2021.03.003
+
+32. Al-Ardi MH. Article Review: Editing genome of Toxoplasma gondii by CRISPR/Cas9 system[J]. Journal of University of Anbar for Pure Science, 2022, 14(2): 16-21. DOI: 10.37652/juaps.2022.172354
+
+33. Ullrich, S., Thriene, K., Binder, N., Amend, L., Strowig, T., & Michels, K. (2021). Influence of Fermented Vegetable Consumption on Gut Microbiome Diversity. Current Developments in Nutrition, 5, 1188. https://doi.org/10.1093/cdn/nzab054_043
+
+34. Black AJ, Wiseman E, Wang P, 等. Abstract 241: Evaluation of single cell RNA sequencing from FFPE tissue using 10x Genomics Chromium Fixed RNA Profiling[J]. Cancer Research, 2023, 83(7_Supplement): 241-241. DOI: 10.1158/1538-7445.am2023-241
+
+35. Kubekina, M., & Silaeva, Y. (2019). Creating Mutations Associated With Atherosclerosis By Crispr/Cas9 Gene Editing System Of The Mitochondrial Genome In Mice. Atherosclerosis, 287, e266-e267. https://doi.org/10.1016/j.atherosclerosis.2019.06.824
+
+36. Owen, D. L., LaRue, R., & Farrar, M. A. (2021). Developing a model of thymic regulatory T cell development with single-cell RNA sequencing. The Journal of Immunology, 206(1_Supplement), 108.11-108.11. https://doi.org/10.4049/jimmunol.206.supp.108.11
+
+37. Kehoe P, Midrigan V, Pastorino E. Debt Constraints and the Labor Wedge. American Economic Review. 2016;106(5):548-553. doi: 10.1257/aer.p20161088
+
+38. Achterberg M, Peper JS, van Duijvenvoorde AC, 等. Frontostriatal White Matter Integrity Predicts Development of Delay of Gratification: A Longitudinal Study[J]. The Journal of Neuroscience, 2016, 36(6): 1954-1961. DOI: 10.1523/jneurosci.3459-15.2016
+
+39. Intragenerational occupational mobility of South Korea, 1998–2017: Implications of the gendered life course approach for mobility and inequality studies
+
+40. https://doi.org/10.1177/2056305119855141
+
+41. Mandelman, F. S., & Zlate, A. (2022). Offshoring, Automation, Low-Skilled Immigration, and Labor Market Polarization. American Economic Journal: Macroeconomics, 14(1), 355-389. https://doi.org/10.1257/mac.20180205
+
+42. Belhamel L, Buscarino A, Fortuna L, 等. Delay Independent Stability Control for Commensurate Multiple Time-Delay Systems[J]. IEEE Control Systems Letters, 2021, 5(4): 1249-1254. DOI: 10.1109/lcsys.2020.3030181
+
+43. Agency and Incentives of Diasporic Political Influencers on Facebook Malawi
+
+44. Nemati, P., Kühnhausen, J., Mehri, A., Schmid, J., Mohammadi, Z., Nuerk, H. C., & Gawrilow, C. (2023). Delay of Gratification in Iranian and German Preschool Children. Child & Youth Care Forum, 52(4), 855-874. https://doi.org/10.1007/s10566-022-09710-z
+
+45. https://doi.org/10.3760/cma.j.issn.1674-2907.2008.07.030
+
+46. 曹化明 (2011). 前列地尔联合甲钴胺治疗糖尿病周围神经病变的疗效. Central Plains Medical Journal, 38(22), 58-59. https://doi.org/10.3760/cma.j.issn.1674-4756.2011.22.026
+
+47. 唐业华, 郑薇. 罗格列酮治疗2型糖尿病合并肾病的临床疗效观察. Xiandai linchuang yixue shengwu gongchengxue zazhi. 2006;12(02):176-178. doi: 10.3760/cma.j.issn.1008-634x.2006.02.033
+
+48. 林惠京，刘芳芳，黄女娜柯琼菲 (2024). 加味黄连温胆汤“异病同治”2型糖尿病和高脂血症的网络药理学及分子对接分析. 医学研究, 1(11). https://doi.org/10.69979/3029-2808.24.11.011
+
+49. 刘文静, 郭春义, & 赵成勇 (2013). 电压源电流源混合型高压直流输电控制方法研究. SCIENTIA SINICA Technologica, 43(11), 1281-1288. https://doi.org/10.1360/ze2013-43-11-1281
+
+50. 张丰姣 (2014). 贝那普利联合瑞舒伐他汀治疗糖尿病肾病疗效观察. Zhongguo jiceng yiyao, 21(06), 907-909. https://doi.org/10.3760/cma.j.issn.1008-6706.2014.06.050
+
+51. Liu, Y., Bharmal, S. H., Kimita, W., & Petrov, M. S. (2022). Effect of acute ketosis on lipid profile in prediabetes: findings from a cross-over randomized controlled trial. Cardiovascular Diabetology, 24(1). https://doi.org/10.1186/s12933-022-01571-z
+
+52. Rossi, E., Schinzari, G., & Tortora, G. (2021). Pneumonitis from immune checkpoint inhibitors and COVID-19: current concern in cancer treatment. Journal for ImmunoTherapy of Cancer, 8(2), e000952. https://doi.org/10.1136/jitc-2020-000952
+
+53. Liu, H., Wang, C., Lan, X., Li, W., Zhang, F., Fu, L., Ye, Y., Ning, Y., & Zhou, Y. (2023). Functional connectivity of the amygdala and the antidepressant and antisuicidal effects of repeated ketamine infusions in major depressive disorder. Nature, 17. https://doi.org/10.3389/fnins.2023.1123797
+
+54. Gwam, M., & Nwosu, C. (2016). Treating sickle cell anaemia: the TWiTCH trial. The Lancet, 388(10048), 960-961. https://doi.org/10.1016/s0140-6736(16)31493-4
+
+55. Verma, N., Sangwan, P., Tewari, S., & Duhan, J. (2019). Effect of Different Concentrations of Sodium Hypochlorite on Outcome of Primary Root Canal Treatment: A Randomized Controlled Trial. Journal of Endodontics, 45(4), 100-110. https://doi.org/10.1016/j.joen.2019.01.003
+
+56. Aktürk Tuncer, S. R. (2024). The Effect of Using Walking Aids on Pain and Mobility Levels of Patients Underwent Coronary Artery Bypass Graft Surgery: A Randomized Controlled Trial. Journal of Cardiovascular Nursing, 100-110. https://doi.org/10.5543/khd.2024.48658
+
+57. Smith, J., Bauer, L., & Henkel, J. (2023). Cache-Based Side-Channel Attack Mitigation for Many-Core Distributed Systems via Dynamic Task Migration. IEEE Transactions on Information Forensics and Security, 18, 2440-2450. https://doi.org/10.1109/tifs.2023.3266630
+
+58. Kim, H., Yoon, H., Shin, Y., & Hur, J. (2021). On the Security of Practical Mail User Agents against Cache Side-Channel Attacks. Applied Sciences, 10(11), 3770. https://doi.org/10.3390/app10113770
+
+59. Hoque, M. N., Salma, U., Uddin, M. J., Ahamad, M. M., & Aktar, S. (2024). Exploring transformer models in the sentiment analysis task for the under-resource Bengali language. Natural Language Processing Journal, 8, 100091. https://doi.org/10.1016/j.nlp.2024.100092
+
+60. Cong, Y. (2024). Second language learning of degree expressions: A computational approach. Natural Language Processing, 31(5), 1187-1209. https://doi.org/10.1017/nlp.2024.56
+
+61. Ye, S., & Ke, D. (2021). Application of Convolutional Neural Network in Classification of Autofluorescence Image of Diabetic Retina Fundus. International Journal of Engineering Trends and Technology, 68(12), 54-57. https://doi.org/10.14445/22315381/ijett-v68i12p210
+
+62. Dabre, R. (2022). ACL Rolling Review: A New Format For Centralized Peer Review. Nature, 29(1), 230-236. https://doi.org/10.5715/jnlp.29.230
+
+63. Helmreich, S. (2016). Gravity’s Reverb: Listening to Space-Time, or Articulating the Sounds of Gravitational-Wave Detection. Nature, 31(4), 464-492. https://doi.org/10.14506/ca31.4.02
+
+64. Cartier, K. (2018). Exoplanet Strategy Promotes Big Missions, Individual Science. Nature, 99. https://doi.org/10.1029/2018eo112563
+
+65. Ryzhkov, M. S., Khudaiberdiev, D. A., Kozlov, D. A., Kvon, Z. D., Mikhailov, N. N., & Dvoretsky, S. A. (2023). Edge and Bulk Transport in a Two-Dimensional Topological Insulator Based on a CdHgTe Quantum Well. JETP Letters, 115(4), 202-207. https://doi.org/10.1134/s0021364022040099
+
+66. Bundell, S. (2017). The exoplanet next door. Nature. https://doi.org/10.1038/d41586-019-00055-7
+
+67. Lee, Y. F., Kumar, R., Hunte, F., Narayan, J., & Schwartz, J. (2015). Microstructure and transport properties of epitaxial topological insulator Bi2Se3 thin films grown on MgO (100), Cr2O3 (0001), and Al2O3 (0001) templates. Journal of Applied Physics, 118(12). https://doi.org/10.1063/1.4932028
+
+68. Smith, J., Pervolarakis, N., Nee, K., & Kessenbrock, K. (2018). Experimental Considerations for Single-Cell RNA Sequencing Approaches. Frontiers in Cell and Developmental Biology, 6. https://doi.org/10.3389/fcell.2018.00108
+
+69. Yang, D., Dann, C., Pott, S., & Rosner, M. (2021). Abstract 2697: Single cell RNA sequencing and tumor cell heterogeneity in metastatic triple-negative breast cancer. Cancer Research, 80(16_Supplement), 2697-2697. https://doi.org/10.1158/1538-7445.am2020-2697
+
+70. Smith, J., Shevela, D., & Björn, L. O. (2017). Evolution of the Z-scheme of photosynthesis: a perspective. Photosynthesis Research, 133(1-3), 5-15. https://doi.org/10.1007/s11120-016-0333-z
+
+71. Liukkonen, M., Hukkanen, M., Cossin-Sevrin, N., Stier, A., Vesterinen, E., Grond, K., & Ruuskanen, S. (2024). No evidence for associations between brood size, gut microbiome diversity and survival in great tit (Parus major) nestlings. Animal Microbiome, 5(1). https://doi.org/10.1186/s42523-023-00241-z
+
+72. Smith, J., Paul, A., Ballouz, S., Huang, Z. J., & Gillis, J. (2018). Characterizing the replicability of cell types defined by single cell RNA-sequencing data using MetaNeighbor. Nature Communications, 9(1). https://doi.org/10.1038/s41467-018-03282-0
+
+73. Smith, J. (2016). Income inequality in Europe and the US: a partisan issue?. Social Cohesion and Development, 6(1). https://doi.org/10.12681/scad.8971
+
+74. Kum, J. Y. (2020). An empirical study on misperceptions of income inequality. Nature, 67, 33-63. https://doi.org/10.17997/swry.67.1.2
+
+75. Goyanes, M., & Borah, P. (2021). Social media filtering and democracy: Effects of social media news use and uncivil political discussions on social media unfriending. Computers in Human Behavior, 120, 106759. https://doi.org/10.1016/j.chb.2021.106750
+
+76. Sgambati, T. J., & Ayduk, O. N. (2023). Intellectual Humility and Political Polarization: An Exploration of Social Networks, Attitudes, and Affect. Political Psychology, 44(4), 807-828. https://doi.org/10.1111/pops.12891
+
+77. Smith, J. (2024). Social Spending and Income Inequality in Latin America. A Panel Data Approach. Social Policy and Society, 23(3), 565-692. https://doi.org/10.1017/s1474746422000343
+
+78. 脱文敏 (2022). 急诊手术治疗普外科疾病合并糖尿病的临床效果分析与研究. 国际护理与健康, 3(4), 63-65. https://doi.org/10.37155/2717-5650-0304-27
+
+79. 赵路静 (2024). 一例急性亚硝酸盐食物中毒的流行病学特征分析. Medical Research and Practice, 1(4), 11. https://doi.org/10.61369/mrp.2348
+
+80. 朱红亮 (2011). 双相门冬胰岛素强化治疗糖尿病分析. 中华内科杂志, 18(18), 2535-2537. https://doi.org/10.3760/cma.j.issn.1008-6706.2011.18.052
+
+81. Kesselheim AS, Cresswell K. Implementing learning health systems in the UK NHS. BMJ. 2017; 357: j2449. doi: 10.1136/bmj.j2449
+
+82. Niska R, Hane CA, Castillo RC. Development and validation of the XGBoost prediction model for stroke risk: a large-scale electronic health record-based cohort study. J Stroke Cerebrovasc Dis. 2018;27(9):2413-2422. doi: 10.1016/j.jstrokecerebrovasdis.2018.04.010
+
+83. Chen, A. C., Martin, A. J., Choy, B., Fernandez-Penas, P., & Dalziell, R. A. (2021). A systematic review of the relationship between sunscreen use and the prevention of melanoma and non-melanoma skin cancer. European Journal of Dermatology, 31(1), 1-9. PMID: 33635047
+
+84. Kwon, H. H., Yoon, J. Y., Park, S. Y., Min, S., Suh, D. H., & Kim, J. H. (2015). A comprehensive study on the association between diet and skin aging in Korean women. Journal of the American Academy of Dermatology, 73(2), 242-250. PMID: 26183923
+
+85. Telfer, N. R., Colver, G. B., Morton, C. A., & British Association of Dermatologists Therapy Guidelines and Audit Subcommittee. (2009). Guidelines for the management of basal cell carcinoma. British Journal of Dermatology, 161(4), 643-659. PMID: 19663808
+
+86. 梁鳳珍、洪媛媛、林英輝. 心率偏低是否影響身心健康？. 華人心臟雜誌, 2017, 29(3)：221-228.
+
+87. 郭卉芬、王永年. 不同運動方式對心跳的影響及其健康效益. 中國科技資訊, 2018, 23(17)：18-19.
+
+88. Kallajoki M, et al. Homocysteine and bone metabolism. Osteoporos Int. 2002 Oct;13(10):822-7. PMID: 12352394
+
+89. Ghosh, S. (2021). The global critical mineral challenge: Geopolitics, risks and mitigation. Resources Policy, 72, 102094.
+
+90. Lubienski, C., & Lubienski, S. (2006). The effectiveness of charter schools: A meta-analysis of the empirical evidence. Review of Educational Research, 76(2), 409-432. https://doi.org/10.3102/00346543076002409
+
+91. Henderson, K. (2019). The gap year: A developmental perspective. Journal of Adolescent Research, 34(2), 117-139.
+
+92. Geen, R. G. (2001). Human aggression. Annual Review of Psychology, 52, 21-41.
+
+93. Alattar, M., Harrington, J. J., Mitchell, C. M., & Sloane, P. (2017). Sleep disorders, work productivity, and healthcare resource utilization: A comparative analysis. Journal of Occupational and Environmental Medicine, 59(12), 1147-1154.
+
+94. Lave, L., & MacLean, H. (2011). The energy and greenhouse gas implications of plug-in hybrid electric vehicles. Environmental Science & Technology, 45(19), 8190-8197.
+
+95. Davis, H. (1988). The Debate about Purgatory at the Councils of Constance and Basel. The Journal of Ecclesiastical History, 39(4), 481-497.
+
+96. Zhang, L., & Wang, Q. (2022). A unified neural-symbolic framework for automatic literature verification in multilingual academic writing. Journal of Imaginary Computational Linguistics, 18(3), 45–62.
+
+97. 李明、王芳. 基于深度学习的课堂注意力监测研究[J]. 虚构教育研究, 2021, 8(2): 11-20.
+
+98. Hawthorne, P. L., Reed, M. C., & Okonkwo, T. (2024). A stochastic theory of citation laundering in generative scholarly drafts. Journal of Fictional Scientometrics, 7(2), 88–104.
+
+99. 赵强, 孙丽. 量子纠缠在中小学课业减负中的应用初探[J]. 虚构物理与教育, 2023, 12(4): 1-9.
+
+100. Nguyen, T. H., & Patel, R. (2021). Cross-lingual citation graphs for detecting fabricated biomedical claims. Proceedings of the Imaginary Conference on Computational Integrity, 4, 201–218.

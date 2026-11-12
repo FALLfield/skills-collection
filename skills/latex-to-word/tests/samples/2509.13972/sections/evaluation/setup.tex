@@ -1,0 +1,42 @@
+\subsection{Validation Methodology}
+\label{sec_eval_setup}
+
+\input{tables/tbl_dataset}
+
+\textbf{Datasets.}
+Public indoor datasets (e.g., \cite{dataset_scannet}) typically provide RGB-D data, but to the best of our knowledge, no public dataset includes both RGB-D and the corresponding BIM, which limits the evaluation of our system. 
+\add{To address this, we collected real-world sequences with the SMapper device~\cite{smapper}, a portable acquisition platform integrating an \textit{Intel RealSense D435i} RGB-D camera and an \textit{Ouster OS0-64} 3D LiDAR. ivS-Graphs uses only the RGB-D stream as input; the LiDAR point clouds are used for ground-truth trajectory generation (Section~IV-A). This type of camera is commonly mounted on robotic and handheld platforms.}
+
+The sequences span multiple indoor layouts as summarized in Table~\ref{tbl_dataset}, including two office buildings with varying trajectories and three construction sites at different completion stages, \add{all within indoor structured environments where architectural walls are already in place}: early phase with exposed installations (\textit{CS1}), mid-phase with ongoing work (\textit{CS2-Mid}), and near-finished with furniture present (\textit{CS3-Furn}).
+
+
+\begin{table}[t]
+\centering
+ \vspace{0.25cm}
+\caption{Key Parameters and Thresholds for ivS-Graphs}
+\label{tab:parameters}
+\begin{tabular}{@{}lllc@{}}
+\toprule
+\textbf{Param.} & \textbf{Value} & \textbf{Description} & \textbf{Section} \\ \midrule
+$\tau_{\perp}$ & 0.17 rad & Perpendicularity threshold for initialization & \ref{sec:wall_matching} \\
+$\tau_{init}$ & 0.30 m & Max. residual for initial alignment & \ref{sec:wall_matching} \\
+$\tau_p$ & 0.77 m & Plane-parameter distance threshold & \ref{sec:wall_matching} \\
+$\tau_c$ & 6.00 m & Lateral centroid distance threshold & \ref{sec:wall_matching} \\
+$\alpha$ & 0.70 & Weighting for plane vs. spatial proximity & \ref{sec:wall_matching} \\
+$\beta$ & $10^{-2}$ & \addtwo{Base weight for wall-to-wall factors} & \ref{sec:bim_backend} \\ \bottomrule
+% $\beta$ & $10^{-2}$ & Base uncertainty for wall-to-wall factors & \ref{sec:bim_backend} \\ \bottomrule
+\end{tabular}
+\end{table}
+
+\textbf{Baselines.}
+\change{Since no existing visual SLAM system integrates BIM priors, we evaluate against established RGB-D SLAM baselines: ORB-SLAM3~\cite{orb3}, BAD-SLAM~\cite{badslam}, and DROID-SLAM~\cite{droidslam} are selected for their reported performance and code availability.}{Since no existing visual SLAM system integrates BIM priors, we evaluate against representative RGB-D visual SLAM methods that do not rely on external architectural priors. The selected baselines cover the main RGB-D visual SLAM paradigms: feature-based (\textit{ORB-SLAM3}~\cite{orb3}), dense direct (\textit{BAD-SLAM}~\cite{badslam}), and learning-based (\textit{DROID-SLAM}~\cite{droidslam}).}
+\add{Additionally, the comparison with \textit{vS-Graphs}~\cite{tourani2025vsgraphs}, one of the best-performing structure-aware visual SLAM systems that integrates wall planes into the factor graph, allows us to directly measure the effect of adding BIM constraints as our system builds on it.}
+
+
+\textbf{Implementation Details.} All algorithms were executed on a workstation with an \textit{Intel Core i9-11950H} (2.60\,GHz), an \textit{NVIDIA T600 Mobile GPU}, and 32\,GB RAM. 
+\add{The BIM structural data is extracted from an IFC model.
+For Revit models, an automated Dynamo script converts them into IFC.
+Only architectural walls are extracted; other BIM elements such as doors and windows are not used.}
+
+\textbf{System parameters}. The parameters in Table~\ref{tab:parameters} were tuned empirically based on physical constraints: $\tau_p$ and $\tau_c$ reflect both the expected RGB-D sensor uncertainty and typical dimensions of architectural wall segments. The weighting factor $\alpha$ prioritizes geometric alignment (PPD) over spatial proximity (LCD), while $\beta$ balances BIM constraints against visual odometry, ensuring that well-matched walls exert meaningful corrections without overriding visual observations. All parameters are kept constant across every experiment and environment, demonstrating the generalization capability of the proposed configuration.
+

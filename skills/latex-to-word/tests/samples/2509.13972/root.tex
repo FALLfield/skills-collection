@@ -1,0 +1,132 @@
+% \documentclass[letterpaper, 10 pt, conference]{ieeeconf}
+\documentclass[letterpaper, 10pt, journal, twoside]{ieeetran}
+\usepackage[utf8]{inputenc}
+
+
+\IEEEoverridecommandlockouts
+
+% Packages
+\usepackage{cite}
+\usepackage{ulem}
+\usepackage{xcolor}
+\usepackage{acronym}
+\usepackage{caption}
+\usepackage{leftidx}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{subcaption}
+% \usepackage{algorithmic}
+\usepackage{amsmath,amssymb,amsfonts}
+\newcommand{\rms}[1]{\textcolor{blue}{#1}}
+\newcommand{\rsout}[1]{\textcolor{red}{{\sout{#1}}}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{savesym}
+\savesymbol{checkmark}
+\usepackage{dingbat}
+\usepackage{bbding}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+\usepackage{csquotes}
+\usepackage{soul}
+\usepackage{svg}
+
+\usepackage{algorithm}      % for floating algorithm environment
+% \usepackage{algorithm2e}      % for floating algorithm environment
+\usepackage{algpseudocode}  % for \begin{algorithmic} ... \end{algorithmic
+% \usepackage{comment}
+% \usepackage{fontawesome5}
+% \usepackage{censor}
+
+% \newcommand{\change}[2]{\textcolor{red}{\st{#1}} \textcolor{blue}{#2}}
+\newcommand{\change}[2]{\textcolor{black}{#2}}
+\newcommand{\add}[1]{\textcolor{black}{#1}}
+\newcommand{\remove}[1]{\textcolor{black}{\st{#1}}}
+
+% Second-round (revise-and-resubmit) changes, distinguished in blue from the first-round (reject-and-resubmit) changes above.
+\newcommand{\changetwo}[2]{\textcolor{black}{#2}}
+\newcommand{\addtwo}[1]{\textcolor{black}{#1}}
+\newcommand{\removetwo}[1]{\textcolor{black}{\st{#1}}}
+
+
+
+% \overrideIEEEmargins
+
+% \usepackage[utf8]{inputenc}
+% \usepackage{pgfplots}
+% \DeclareUnicodeCharacter{2212}{−}
+% \usepgfplotslibrary{groupplots,dateplot}
+% \usetikzlibrary{patterns,shapes.arrows}
+% \pgfplotsset{compat=newest}
+
+\usepackage{hyperref}
+\usepackage{cleveref}
+\DeclareMathOperator*{\argmax}{argmax} % thin space, limits underneath in displays
+
+\input{headers}
+
+% \captionsetup[table]{position=below}   %% or below
+
+
+\title{\LARGE \bf BIM-Informed Visual SLAM for Construction Environments}
+% \title{BIM-Informed Visual SLAM for Construction Environments}
+
+\markboth{IEEE Robotics and Automation Letters. Preprint Version. Accepted September, 2026}%
+{Bikandi-Noya \MakeLowercase{\textit{et al.}}: BIM-Informed Visual SLAM for Construction Environments}
+
+
+% \blackout{
+\author{
+    Asier Bikandi-Noya$^{1}$, Miguel Fernandez-Cortizas$^{1}$, Muhammad Shaheer$^{1}$,\\ Ali Tourani$^{1}$, Holger Voos$^{1}$, and Jose Luis Sanchez-Lopez$^{1}$  
+
+    \thanks{Manuscript received: May 31, 2026; Revised: July 29, 2026; Accepted: September 7, 2026.}%Use only for final RAL version
+    \thanks{This paper was recommended for publication by Ayoung Kim upon evaluation of the Associate Editor and Reviewers’ comments.}
+    \thanks{$^{1}$Authors are with the Automation and Robotics Research Group, Interdisciplinary Centre for Security, Reliability and Trust (SnT), University of Luxembourg. Holger Voos is also associated with the Faculty of Science, Technology and Medicine, University of Luxembourg, Luxembourg.
+    \tt{\small{\{asier.bikandi, muhammad.shaheer, miguel.fernandez, ali.tourani, holger.voos, joseluis.sanchezlopez\}}@uni.lu}}
+    \thanks{*
+    This work was partially funded by the Fonds National de la Recherche of Luxembourg (FNR) under the project C22/IS/17387634/DEUS and BRIDGES/2025-1/IS/19685965/BARCODE}
+    % \thanks{Digital Object Identifier (DOI): see top of this page.}
+    \thanks{*
+    We would like to thank CLK S.A.R.L for granting us access to test this work in their construction sites.
+    }
+    \thanks{*
+    For the purpose of Open Access, and in fulfillment of the obligations arising from the grant agreement, the authors have applied a Creative Commons Attribution 4.0 International (CC BY 4.0) license to any Author Accepted Manuscript version arising from this submission.}
+} 
+% }
+
+% \author{Authors
+% \thanks{Authors affiliations and acknowledgements}}
+
+\setlength{\belowcaptionskip}{-3pt}
+
+
+\begin{document}
+
+\maketitle
+% \thispagestyle{empty}
+% \pagestyle{empty}
+
+\input{sections/00-abstract}
+\input{sections/01-introduction}
+\input{sections/02-sota}
+\input{sections/03-proposed}
+\input{sections/04-evaluation}
+\input{sections/05-conclusion}
+
+
+% \section*{ACKNOWLEDGMENT}
+
+
+% References (reads from the bibliography file
+\bibliographystyle{IEEEtran}
+\bibliography{root}
+
+% \input{sections/06-RebuttalLetter}
+
+\end{document}

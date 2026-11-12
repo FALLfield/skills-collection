@@ -1,0 +1,36 @@
+{
+  "ran_at": "2026-11-12 16:52:56",
+  "timezone": "Asia/Macau (UTC+8)",
+  "command": [
+    "python3",
+    "check_thesis.py",
+    "--rules",
+    "rules/example_rules.json",
+    "--input",
+    "tests/sample_thesis.docx",
+    "--output",
+    "tests/recorded_run/annotated.docx",
+    "--summary",
+    "tests/recorded_run/summary.md",
+    "--findings",
+    "tests/recorded_run/findings.json"
+  ],
+  "data_stays_local": true,
+  "external_calls": [],
+  "gpu": false,
+  "rerun": false,
+  "note": "这一次在检查前冻结样例后只跑一遍，未重跑凑数。findings.json 在收录进本目录时把绝对路径改成了相对路径，因此该文件哈希与跑次当场写出的不同；检查结果条目本身未改。annotated.docx 与 summary.md 是跑次原件。",
+  "input_hashes_match_freeze": true,
+  "outputs": {
+    "annotated.docx": "1addda9ccec0a6025dc5d26e0587041ce3ac599b9ca232328d9eb04b272e9e81",
+    "findings.json": "610e729d10c113ce887493e472bb015d1e28fc78fc811ca0a969f959d863c00e",
+    "summary.md": "111e63a4d692c40163d512ffecee30e0d056482928f85709377d286eb6dced10",
+    "compare.json": "6f99558585f26c01112e1b0309f1a2d83c442efa9079b0c2b6755027344a5355"
+  },
+  "result": {
+    "n_gold": 20,
+    "n_hit": 20,
+    "n_miss": 0,
+    "n_false_positive": 0
+  }
+}

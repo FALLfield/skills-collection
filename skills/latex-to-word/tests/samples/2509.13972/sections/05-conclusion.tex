@@ -1,0 +1,6 @@
+\section{Conclusions and Future Work}
+\label{sec:conclusions}
+We presented \textit{ivS-Graphs}, the first visual SLAM system to integrate BIM priors for construction environments, producing drift-bounded \textit{as-built} maps with correspondences to the \textit{as-planned} design. Experimental results show a 25.23\% ATE reduction and 7.14\% map RMSE improvement over the visual SLAM backbone, with the largest gain on longer trajectories where drift accumulates more.
+The system stays robust under 30\% BIM wall omission (5.3\% error increase) and handles geometric deviations via the uncertainty-aware back-end.
+
+In future work, we aim to integrate additional BIM elements, such as windows, columns, and pipes, to further enhance the alignment between the \textit{as-built} and \textit{as-planned} maps. \changetwo{Building on this, we plan to investigate}{We also plan to investigate} \changetwo{alternative initialization strategies that leverage these additional semantic cues to provide more informative initial alignment, reducing the need for the manual initial wall correspondence}{automatically detecting an incorrect initialization}. 

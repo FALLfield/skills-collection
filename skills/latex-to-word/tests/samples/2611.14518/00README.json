@@ -1,0 +1,25 @@
+{
+   "sources" : [
+      {
+         "usage" : "toplevel",
+         "filename" : "cvip.tex"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "cvip.bbl"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "cvip.bib"
+      },
+      {
+         "usage" : "ignore",
+         "filename" : "splncs04.bst"
+      }
+   ],
+   "spec_version" : 1,
+   "texlive_version" : "2025",
+   "process" : {
+      "compiler" : "pdflatex"
+   }
+}

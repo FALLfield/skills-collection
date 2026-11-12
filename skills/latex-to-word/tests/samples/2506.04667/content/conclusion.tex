@@ -1,0 +1,12 @@
+%! Date = 4/23/25
+\section{Conclusion}\label{sec:conclusion-and-future-work}
+We introduce \sysname, the first work to fuse the entire Distributed MoE operator into a
+single persistent GPU kernel that unifies computation,
+communication, and scheduling via actor-style concurrency, warp specialization, and async (R)DMA\@.
+We address two dominant bottlenecks in prior systems—CPU-managed synchronous communication and fragmented multi-kernel execution.
+Empirically, FlashMoE achieves up to \textbf{6×} speedup, \textbf{9×} higher GPU utilization, and \textbf{5.7×}
+throughput for distributed MoE. Looking ahead, we see a shift from CPU orchestration to fully autonomous,
+GPU-native pipelines—extending this fusion approach to training and beyond.
+
+
+

@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>参考文献真伪核查</title>
+<style>
+:root { --fg:#1a1a1a; --muted:#5c5c5c; --line:#e6e2d8; --bg:#f7f4ee; }
+* { box-sizing: border-box; }
+body { margin:0; font: 16px/1.55 "Noto Sans CJK SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+       color:var(--fg); background:var(--bg); }
+main { max-width: 920px; margin: 0 auto; padding: 28px 18px 72px; }
+h1 { font-size: 1.55rem; margin: 0 0 6px; }
+.lead { color: var(--muted); margin: 0 0 16px; }
+textarea { width:100%; min-height:220px; padding:12px; border:1px solid var(--line); border-radius:12px;
+           font: 14px/1.5 ui-monospace,monospace; background:#fff; }
+.row { display:flex; gap:10px; flex-wrap:wrap; margin:12px 0 8px; align-items:center; }
+  label.mail { font-size:13px; color:#444; display:flex; gap:6px; align-items:center; }
+  label.mail input { min-width:200px; padding:6px 8px; border:1px solid #ccc; border-radius:8px; }
+button { background:#1b7f3a; color:#fff; border:0; border-radius:10px; padding:10px 18px; font-size:15px; cursor:pointer; }
+button:disabled { background:#9aa; cursor:not-allowed; }
+button.secondary { background:#fff; color:#1a1a1a; border:1px solid var(--line); }
+#status { color:var(--muted); font-size:14px; }
+.pills { display:flex; flex-wrap:wrap; gap:8px; margin: 12px 0 16px; }
+.pill { border-radius:999px; padding:4px 12px; font-size:14px; }
+.pill.verified { background:#e8f7ee; color:#1b7f3a; }
+.pill.field_mismatch { background:#fff6e0; color:#8a5a00; }
+.pill.not_found, .pill.suspected_fabricated { background:#fdecea; color:#8b1111; }
+  .error, .pill.error { background:#eef0f6; color:#2c3a6b; }
+.card { background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 18px; margin:0 0 14px; border-left:6px solid #ccc; }
+.card.verified { border-left-color:#1b7f3a; }
+.card.field_mismatch { border-left-color:#d89000; }
+.card.not_found, .card.suspected_fabricated { border-left-color:#c42b1c; }
+  .card.error { border-left-color:#4a5c8c; }
+header { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+.mark { font-weight:700; font-size:1.2rem; }
+.card.verified .mark, .card.verified .status { color:#1b7f3a; }
+.card.field_mismatch .mark, .card.field_mismatch .status { color:#8a5a00; }
+.card.not_found .mark, .card.not_found .status,
+.card.suspected_fabricated .mark, .card.suspected_fabricated .status { color:#8b1111; }
+  .card.error .mark, .card.error .status { color:#2c3a6b; }
+.idx { color:var(--muted); font-size:13px; }
+.status { font-weight:700; }
+.raw { background:#faf8f3; padding:10px 12px; border-radius:8px; }
+table.cmp { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+table.cmp th, table.cmp td { border:1px solid var(--line); padding:6px 8px; vertical-align:top; }
+table.cmp th { background:#faf8f3; text-align:left; }
+.bad { color:#8b1111; }
+.found { background:#e8f7ee; padding:10px 12px; border-radius:8px; margin:8px 0; }
+.found .label { font-size:12px; color:#1b7f3a; margin-bottom:4px; }
+.notes { color:#3a3a3a; }
+.nearby, footer { color:var(--muted); font-size:13px; }
+a { color:#0b57d0; }
+.warn { background:#fff6e0; border-radius:10px; padding:10px 12px; font-size:13px; color:#5c4a20; margin:0 0 14px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>英文参考文献核查</h1>
+  <p class="lead">把参考文献列表粘贴到下面，点「开始核查」。工具会对照 Crossref、OpenAlex、Europe PMC，标出已验证、信息部分不符、查无此文、疑似编造或核查失败。查不到时<b>不会编造</b>一条看起来正确的文献来替代。只给 DOI 或 DOI 链接且能解析时，会标「已验证」并展示库中记录。本工具面向以英文文献为主的理工或医学学生；<b>以中文文献为主的人不是目标客户</b>。</p>
+  <div class="warn">请保持联网。浏览器会把题名、DOI 或 PMID 发送到上述公开学术数据库查询，不上传全文。<br>
+  不支持知网、万方。中文期刊常常只能标「查无此文」，不能确认它是假的（例如公开报道过的不存在中文期刊，在这里也只能标查无此文）。网络或接口失败（超时、连不上或 HTTP 429）会标「核查失败/无法下结论」，不会写成「查无此文」。这不是能拦住一切编造文献的工具。</div>
+  <textarea id="input" placeholder="在这里粘贴参考文献，一条一行或按 1. 2. 3. 编号都可以……"></textarea>
+  <div class="row">
+    <button id="run">开始核查</button>
+    <button class="secondary" id="demo" type="button">填入示例</button>
+    <button class="secondary" id="print" type="button">打印 / 另存为 PDF</button>
+    <label class="mail">联系邮箱（可选）
+      <input id="mailto" type="email" placeholder="you@school.edu" autocomplete="email">
+    </label>
+    <span id="status"></span>
+  </div>
+  <div id="report"></div>
+  <footer>对照来源：api.crossref.org、api.openalex.org、www.ebi.ac.uk/europepmc（均免费、无需密钥）。查询时会把题名或 DOI 发给这些公开库，不上传全文。不支持知网、万方。浏览器不允许网页修改 User-Agent，因此 Crossref 的礼貌标识无法按脚本那样放进请求头；OpenAlex 请求会附带 mailto 参数（可在上方填写，默认 refcheck@localhost）。</footer>
+</main>
+<script>
+const STRONG = 0.86, RELATED = 0.70;
+const FIELD_ZH = {title:"题名",authors:"作者",year:"年份",journal:"期刊/会议",volume:"卷号",issue:"期号",pages:"页码",doi:"DOI",pmid:"PMID"};
+const STATUS_ZH = {verified:"已验证",field_mismatch:"信息部分不符",not_found:"查无此文",suspected_fabricated:"疑似编造",error:"核查失败/无法下结论"};
+const MARK = {verified:"✓",field_mismatch:"△",not_found:"×",suspected_fabricated:"×",error:"!"};
+const DEMO = `1. Aune, D., Sen, A., ó'Hartaigh, B., Janszky, I., Romundstad, P. R., Tonstad, S., & Vatten, L. J. (2017). Resting heart rate and the risk of cardiovascular disease, total cancer, and all-cause mortality – A systematic review and dose–response meta-analysis of prospective studies. Nutrition, Metabolism and Cardiovascular Diseases, 27(6), 504–517. https://doi.org/10.1016/j.numecd.2017.04.004
+
+2. He, K., Zhang, X., Ren, S., & Sun, J. (2018). Deep residual learning for image recognition. In 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR) (pp. 770–778). https://doi.org/10.1109/cvpr.2016.90
+
+3. Kesselheim AS, Cresswell K. Implementing learning health systems in the UK NHS. BMJ. 2017; 357: j2449. doi: 10.1136/bmj.j2449
+
+4. Chen, A. C., Martin, A. J., Choy, B., Fernandez-Penas, P., & Dalziell, R. A. (2021). A systematic review of the relationship between sunscreen use and the prevention of melanoma and non-melanoma skin cancer. European Journal of Dermatology, 31(1), 1-9. PMID: 33635047
+
+5. Telfer, N. R., Colver, G. B., Morton, C. A., & British Association of Dermatologists Therapy Guidelines and Audit Subcommittee. (2009). Guidelines for the management of basal cell carcinoma. British Journal of Dermatology, 161(4), 643-659. PMID: 19663808
+
+6. 梁鳳珍、洪媛媛、林英輝. 心率偏低是否影響身心健康？. 華人心臟雜誌, 2017, 29(3)：221-228.`;
+
+const DOI_RE = /(10\.\d{4,9}\/[-._;()/:A-Z0-9]+)/i;
+const PMID_RE = /\bPMID\s*[:：]?\s*(\d{5,9})/i;
+const VOL_RE = /\b(\d{1,5})\s*[（(]\s*([A-Za-z]?\d{1,5}(?:[_-][A-Za-z0-9]+)?(?:\s*[-–—/]\s*[A-Za-z]?\d{1,5}(?:[_-][A-Za-z0-9]+)?)?(?:\s*[（(]\s*\d{1,5}\s*[）)])?)\s*[）)]/;
+const PAGE_RE = /\b(?:pp?\.\s*)?(\d{1,6}(?:\.\d+)?)\s*[-–—]\s*(\d{1,6}(?:\.\d+)?)\b/;
+const NUM_RE = /^\s*(?:\[\d+\]|\d+\s*[\.\)、]|（\d+）)\s+/;
+
+function norm(s){
+  if(!s) return "";
+  s=String(s).replace(/<[^>]+>/g," ").replace(/\$[^$]*\$/g," ");
+  const ta=document.createElement("textarea"); ta.innerHTML=s; s=ta.value;
+  return s.toLowerCase().replace(/[–—]/g,"-").replace(/[“”]/g,'"').replace(/[‘’]/g,"'").replace(/[^\w\u4e00-\u9fff]+/g," ").replace(/\b(the|a|an|of|and|in|on|for|to|with)\b/g," ").replace(/\s+/g," ").trim();
+}
+function bibliographicRemainderHint(raw){ return bibliographicRemainder(raw||""); }
+function isWeakTitle(title, raw){
+  const nt=norm(title);
+  if(!nt) return true;
+  const rem=norm(bibliographicRemainder(raw||""));
+  const rawN=norm(raw||"");
+  const short=nt.length<16 || nt.split(" ").filter(Boolean).length<=3;
+  if(!short) return false;
+  const longer=rem||rawN;
+  if(longer && longer.length>nt.length+20) return true;
+  if(rawN && rawN.length<=nt.length+15) return false;
+  return true;
+}
+function recordSupportedByCite(cited, rec){
+  if(!rec||!rec.title) return false;
+  const keys=[];
+  if(cited.title && !isWeakTitle(cited.title, cited.raw)) keys.push(cited.title);
+  const rem=bibliographicRemainder(cited.raw||"");
+  if(rem) keys.push(rem);
+  if(cited.raw) keys.push(cited.raw);
+  const recN=norm(rec.title);
+  for(const k of keys){
+    if(titleSim(k, rec.title)>=0.75) return true;
+    const kn=norm(k);
+    if(recN && recN.length>=16 && kn.includes(recN)) return true;
+  }
+  return false;
+}
+function cjkBag(s){
+  const chars=[...String(s||"")].filter(ch=>/[\u4e00-\u9fff]/.test(ch)).sort();
+  return chars.length>=2 ? chars.join("") : "";
+}
+function protectAbbrev(s){
+  const sen="\u2044";
+  s=s.replace(/\[[^\]]*\]/g, m=>m.replace(/\./g,sen));
+  s=s.replace(/\b(Phys|Rev|Prof|Dr|Mr|Ms|Mrs|St|Vol|No|Nos|al|eds?|Ed|U\.S|Inc|Ltd|Jr|Sr|Fig|Eq)\./gi, (m,a)=> a.toLowerCase()==="al" ? a+sen+"." : a+sen);
+  s=s.replace(/\b([A-Z]\d{2,4}|[A-Z]{2,3}\d{1,4})\./g, (m,a)=>a+sen);
+  return s;
+}
+function unprotectAbbrev(s){ return s.replace(/\u2044/g,"."); }
+function tokens(s){ return new Set(norm(s).split(" ").filter(Boolean)); }
+function seqRatio(a,b){
+  if(a===b) return 1;
+  if(!a||!b) return 0;
+  const m=a.length, n=b.length;
+  const dp = Array.from({length:m+1},()=>new Array(n+1).fill(0));
+  for(let i=0;i<m;i++) for(let j=0;j<n;j++) dp[i+1][j+1] = a[i]===b[j] ? dp[i][j]+1 : Math.max(dp[i][j+1], dp[i+1][j]);
+  return (2*dp[m][n])/(m+n);
+}
+function titleSim(a,b){
+  if(!a||!b) return 0;
+  const na=norm(a), nb=norm(b);
+  if(!na||!nb) return 0;
+  if(na===nb) return 1;
+  const seq=seqRatio(na,nb);
+  const ta=tokens(a), tb=tokens(b);
+  const uni=new Set([...ta,...tb]);
+  const inter=[...ta].filter(x=>tb.has(x)).length;
+  const jacc=uni.size? inter/uni.size : 0;
+  const [short,long] = na.length<=nb.length ? [na,nb]:[nb,na];
+  const prefix=seqRatio(short, long.slice(0, short.length+8));
+  let contain=0;
+  const [sm,lg] = ta.size<=tb.size ? [ta,tb]:[tb,ta];
+  if(sm.size>=6 && [...sm].filter(x=>lg.has(x)).length/sm.size>=0.9) contain=0.92;
+  return Math.max(seq,jacc,prefix*0.98,contain);
+}
+function normDoi(s){ if(!s) return null; return s.replace(/^https?:\/\/(dx\.)?doi\.org\//i,"").replace(/^doi:/i,"").replace(/[).,;]+$/,"").trim().toLowerCase()||null; }
+function cleanBiblio(v){ if(v==null) return null; const s=String(v).trim(); if(!s || /^(null|none|n\/?a|na|undefined|nil)$/i.test(s)) return null; return s; }
+function normPages(s){ return s ? s.replace(/[–—\s]/g,"-").toLowerCase() : null; }
+function pagesCompatible(a,b){
+  const na=normPages(a), nb=normPages(b);
+  if(!na||!nb||na===nb) return true;
+  const stem=s=>{
+    s=s.replace(/\.e\d+$/i,"");
+    const m=s.match(/^(\d+(?:\.\d+)?)-\1$/);
+    return m? m[1] : s;
+  };
+  const sa=stem(na), sb=stem(nb);
+  return sa===sb || sa===nb || sb===na;
+}
+function looksLikeRomanizedCjkJournal(name){
+  if(!name || /[\u4e00-\u9fff]/.test(name)) return false;
+  const toks=(name.match(/[A-Za-z]+/g)||[]).filter(w=>w.length>=2);
+  if(toks.length<2) return false;
+  const markers=new Set(["journal","review","letters","proceedings","transactions","international","research","studies","bulletin","medicine","medical","med","chin","chinese","asian","european","american","british","annals","acta","rev","int","sci","science","biol","bio","phys","chem","nurs","health","clinic","clinical","postgrad","postgraduate","j"]);
+  if(toks.some(w=>markers.has(w.toLowerCase()))) return false;
+  return toks.every(w=>/^[A-Za-z]{2,10}$/.test(w));
+}
+const NAME_PARTICLES=new Set(["van","von","de","der","den","da","di","do","dos","du","la","le","del","della","dello","st","ste","ter","bin","al","el","ibn","mac","mc"]);
+function significantNameTokens(text){
+  const out=[];
+  for(const p of text.trim().split(/\s+/)){
+    let tok=p.replace(/[^A-Za-zÀ-ÖØ-öø-ÿ\u4e00-\u9fff\-']/g,"").toLowerCase().replace(/^[-']+|[-']+$/g,"");
+    if(!tok || ["and","et","al","jr","sr","ii","iii","iv"].includes(tok)) continue;
+    if(tok.length===1) continue;
+    if(NAME_PARTICLES.has(tok)) continue;
+    out.push(tok);
+  }
+  return out;
+}
+function familyCandidates(raw, bothEnds){
+  raw=(raw||"").trim();
+  if(!raw) return new Set();
+  const compact=raw.replace(/[\s,;，、]+/g,"");
+  if(/^[\u4e00-\u9fff]{2,4}$/.test(compact)) return new Set([compact]);
+  if(/[\u4e00-\u9fff]/.test(raw)){
+    const cjkParts=[];
+    for(const part of raw.split(/[,;，、;；\s]+/)){
+      const p=part.replace(/[\s]*[（(]?(?:1[89]\d{2}|20\d{2})[）)]?[\s.。]*$/,"").trim();
+      const chars=(p.match(/[\u4e00-\u9fff]/g)||[]).join("");
+      if(chars.length>=2 && chars.length<=4 && !/[A-Za-z]{3,}/.test(p)) cjkParts.push(chars);
+    }
+    if(cjkParts.length>=2) return new Set(cjkParts);
+  }
+  if(raw.replace(/，/g,",").includes(",")){
+    const family=raw.replace(/，/g,",").split(",")[0].trim();
+    const toks=significantNameTokens(family);
+    return new Set(toks.length? [toks[toks.length-1]] : []);
+  }
+  const parts=raw.trim().split(/\s+/);
+  const lastRaw=(parts[parts.length-1]||"").replace(/[^A-Za-z]/g,"");
+  let toks;
+  if(lastRaw && lastRaw===lastRaw.toUpperCase() && lastRaw.length>=1 && lastRaw.length<=4 && parts.length>=2 && !raw.replace(/，/g,",").includes(",")){
+    toks=significantNameTokens(parts.slice(0,-1).join(" "));
+    if(!toks.length) toks=significantNameTokens(raw);
+  }else toks=significantNameTokens(raw);
+  if(!toks.length) return new Set();
+  if(toks.length>=3) return new Set(toks);
+  if(bothEnds && toks.length>=2) return new Set([toks[0], toks[toks.length-1]]);
+  return new Set([toks[toks.length-1]]);
+}
+function lastNames(authors, bothEnds){
+  const out=new Set();
+  for(const raw of (authors||[])){
+    for(const n of familyCandidates(raw, !!bothEnds)) out.add(n);
+  }
+  return out;
+}
+function bibliographicRemainder(raw){
+  return (raw||"").replace(DOI_RE," ").replace(PMID_RE," ").replace(/https?:\/\/\S+/gi," ").replace(/\b(?:doi|pmid)\s*[:：]?\s*/gi," ").replace(/\s+/g," ").trim().replace(/^[ .;,:/]+|[ .;,:/]+$/g,"");
+}
+function isIdentifierOnly(ref){
+  if(!(ref.doi||ref.pmid)) return false;
+  if(ref.title && norm(ref.title).length>=8) return false;
+  return bibliographicRemainder(ref.raw).length<8;
+}
+function journalSimilar(a,b){
+  if(!a||!b) return true;
+  const na=norm(a), nb=norm(b);
+  if(!na||!nb) return true;
+  if(na===nb || na.includes(nb) || nb.includes(na) || titleSim(a,b)>=0.72) return true;
+  return false;
+}
+function looksCjk(s){ return ((s||"").match(/[\u4e00-\u9fff]/g)||[]).length>=4; }
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+function splitRefs(text){
+  text=text.replace(/\r\n/g,"\n").trim();
+  const lines=text.split("\n");
+  if(lines[0] && /^\s*(参考文献|references|works cited|bibliography)\s*[:：]?\s*$/i.test(lines[0]))
+    text=lines.slice(1).join("\n").trim();
+  if(text.split("\n").some(l=>NUM_RE.test(l))){
+    const blocks=[]; let cur=[];
+    for(const line of text.split("\n")){
+      if(NUM_RE.test(line) && cur.length){ blocks.push(cur.join(" ").trim()); cur=[line.replace(NUM_RE,"")]; }
+      else if(NUM_RE.test(line)) cur=[line.replace(NUM_RE,"")];
+      else cur.push(line);
+    }
+    if(cur.length) blocks.push(cur.join(" ").trim());
+    return blocks.filter(b=>b.length>8);
+  }
+  const paras=text.split(/\n\s*\n/).map(p=>p.replace(/\s+/g," ").trim()).filter(p=>p.length>8);
+  if(paras.length>=2) return paras;
+  const rows=text.split("\n").map(l=>l.trim()).filter(Boolean);
+  if(rows.length>=2 && rows.every(r=>r.length>20)) return rows;
+  return text? [text]:[];
+}
+
+function parseAuthorString(head){
+  head=head.replace(/^\[\d+\]\s*/,"").replace(/\s+and\s+/ig,", ").replace(/\s*&\s*/g,", ").replace(/,?\s*(?:et al\.?|等)\s*$/i,"").replace(/[ .,;，。；&]+$/," ").trim();
+  if(!head) return [];
+  const ieee=[...head.matchAll(/\b((?:[A-Z]\.\s*)+[A-Z][A-Za-zÀ-ÖØ-öø-ÿ'\-]+)/g)].map(x=>x[1].trim());
+  if(ieee.length>=2 && !looksCjk(head)) return ieee.slice(0,12);
+  if(looksCjk(head) && !/[A-Za-z]{3,}/.test(head))
+    return head.split(/[、,，;；]/).map(s=>s.replace(/[\s]*[（(]?(?:1[89]\d{2}|20\d{2})[）)]?[\s.。]*$/,"").replace(/[ .,;，。；]+$/g,"").trim()).filter(s=>s && s.length<40);
+  const parts=head.split(/\s*,\s*/).map(s=>s.replace(/\.$/,"").trim()).filter(Boolean);
+  const vanc=[];
+  for(const part of parts){
+    const m=part.match(/^([A-ZÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+|[\u4e00-\u9fff]{2,4})\s+([A-Z]{1,4})$/);
+    if(m) vanc.push(m[1]+" "+m[2]);
+  }
+  if(vanc.length && vanc.length===parts.length) return vanc.slice(0,12);
+  const apa=[];
+  const re=/([A-ZÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'\-]+|[\u4e00-\u9fff]{2,4}),\s*((?:[A-Z]\.?(?:-[A-Z]\.?)?\s*){1,3})/g;
+  let m; while((m=re.exec(head))) apa.push(m[1]+", "+m[2].trim());
+  return apa.slice(0,12);
+}
+
+function fillFromBibtex(raw, ref){
+  if(!/@\w+\s*\{/.test(raw||"")) return;
+  function field(name){
+    const re=new RegExp("\\b"+name+"\\s*=\\s*(?:\{([^{}]+)\}|\"([^\"]+)\"|(\\d+))","i");
+    const m=raw.match(re);
+    if(!m) return null;
+    return (m[1]||m[2]||m[3]||"").trim()||null;
+  }
+  if(field("title") && !ref.title) ref.title=field("title");
+  const authors=field("author");
+  if(authors){
+    const parsed=authors.split(/\s+and\s+/i).map(s=>s.trim()).filter(Boolean).slice(0,12);
+    if(parsed.length) ref.authors=parsed;
+  }
+  const year=field("year");
+  if(year && /^\d+$/.test(year) && !ref.year){
+    const y=+year; if(y>=1900 && y<=2026) ref.year=y;
+  }
+  const journal=field("journal")||field("booktitle");
+  if(journal && !ref.journal) ref.journal=journal;
+  if(field("volume") && !ref.volume) ref.volume=field("volume");
+  if(field("number") && !ref.issue) ref.issue=field("number");
+  if(field("pages") && !ref.pages) ref.pages=field("pages").replace(/--/g,"-").replace(/[–—\s]/g,"");
+  if(field("doi") && !ref.doi) ref.doi=normDoi(field("doi"));
+}
+function parseOne(raw){
+  raw=raw.replace(/\s+/g," ").trim().replace(/<[^>]+>/g,"");
+  const ta=document.createElement("textarea"); ta.innerHTML=raw; raw=ta.value;
+  const ref={raw,authors:[],year:null,title:null,journal:null,volume:null,issue:null,pages:null,doi:null,pmid:null,language_hint:"en"};
+  let m=DOI_RE.exec(raw); if(m) ref.doi=normDoi(m[1]);
+  m=PMID_RE.exec(raw); if(m) ref.pmid=m[1];
+  const rangeYears=new Set();
+  for(const rm of raw.matchAll(/(?<!\d)(1[89]\d{2}|20\d{2})\s*[-–—]\s*(1[89]\d{2}|20\d{2})(?!\d)/g)){
+    rangeYears.add(+rm[1]); rangeYears.add(+rm[2]);
+  }
+  m=raw.match(/[（(](1[89]\d{2}|20\d{2})[）)]/);
+  if(m && !rangeYears.has(+m[1])) ref.year=+m[1];
+  else {
+    const tail=raw.replace(DOI_RE," ").replace(/https?:\/\/\S+/gi," ");
+    const near=[...tail.matchAll(/\.\s*(1[89]\d{2}|20\d{2})\b/g)].map(x=>+x[1]).filter(y=>y>=1900&&y<=2026&&!rangeYears.has(y));
+    if(near.length) ref.year=near[near.length-1];
+    else {
+      let ieeeY=tail.match(/\b(?:vol\.|no\.|nos\.|pp?\.)[^\n]{0,60}?,\s*(1[89]\d{2}|20\d{2})\b/i);
+      if(!ieeeY) ieeeY=tail.match(/,\s*(1[89]\d{2}|20\d{2})(?:\s*[,.]\s*(?:doi|https?:\/\/)|\s*$)/i);
+      if(ieeeY && !rangeYears.has(+ieeeY[1]) && +ieeeY[1]>=1900 && +ieeeY[1]<=2026) ref.year=+ieeeY[1];
+      else {
+        const ys=[...tail.matchAll(/\b(1[89]\d{2}|20\d{2})\b/g)].map(x=>+x[1]).filter(y=>y>=1900&&y<=2026&&!rangeYears.has(y));
+        if(ys.length) ref.year=ys[0];
+      }
+    }
+  }
+  const body=bibliographicRemainder(raw);
+  m=VOL_RE.exec(body); if(m){ ref.volume=m[1]; ref.issue=m[2]; }
+  else {
+    const nm=body.match(/\b(?:null|none|n\/?a|undefined)\s*[（(]\s*([A-Za-z]?\d{1,5})\s*[）)]/i);
+    if(nm) ref.issue=nm[1];
+  }
+  let ranges=[...body.matchAll(new RegExp(PAGE_RE.source,"g"))];
+  ranges=ranges.filter(mm=>{
+    if(!/^\d+$/.test(mm[1]) || !/^\d+$/.test(mm[2])) return true;
+    const a=+mm[1], b=+mm[2];
+    return !(a>=1900&&a<=2026&&b>=1900&&b<=2026&&b-a>=0&&b-a<=80);
+  });
+  if(!ref.volume && ranges.length>=2){ ref.volume=ranges[0][1]+"-"+ranges[0][2]; ref.pages=ranges[ranges.length-1][1]+"-"+ranges[ranges.length-1][2]; }
+  else if(ranges.length) ref.pages=ranges[ranges.length-1][1]+"-"+ranges[ranges.length-1][2];
+  const isYearTok=x=>/^(?:1[89]\d{2}|20\d{2})$/.test((x||"").replace(/\s+/g,""));
+  const apaArt=body.match(/,\s*(\d{1,5})(?:\s*[（(]([^）)]{1,30})[）)])?\s*,\s*([A-Za-z]?\d{1,6}(?:\.\d+)?(?:\s*[-–—]\s*[A-Za-z]?\d{1,6}(?:\.\d+)?)?)(?:\s*(?:\.|$|https?:\/\/|doi))/i);
+  if(apaArt && !isYearTok(apaArt[3])){
+    const first=apaArt[1], iss=apaArt[2], second=apaArt[3];
+    const secondN=(second||"").replace(/[–—]/g,"-").replace(/\s+/g,"");
+    const yearThenVol=isYearTok(first) && (ref.year==null || +first===ref.year);
+    if(yearThenVol){
+      if(!ref.volume) ref.volume=(secondN.includes("-") && !iss) ? secondN.split("-")[0] : secondN;
+      if(iss && !ref.issue) ref.issue=iss.trim();
+    }else{
+      if(!ref.volume || ref.volume===secondN || ref.volume===secondN.split("-")[0] || ref.volume===second)
+        ref.volume=first;
+      if(iss && !ref.issue) ref.issue=iss.trim();
+      if(!ref.pages) ref.pages=secondN;
+    }
+  }
+  if(!ref.volume){
+    const vm2=body.match(/,\s*(\d{1,4})(?:\s*[-–—]\s*(\d{1,4}))?(?:\s*\.(?:\s|$|https?:\/\/|doi)|\s*$)/i);
+    if(vm2){
+      const cand=vm2[2]? vm2[1]+"-"+vm2[2] : vm2[1];
+      if(!ref.pages || cand!==ref.pages) ref.volume=cand;
+    }
+  }
+  const vm3=body.match(/\bvols?\.\s*(\d{1,5})\b/i);
+  if(vm3) ref.volume=vm3[1];
+  if(!ref.issue){
+    const im3=body.match(/\b(?:no|nos|number)\.\s*([A-Za-z]?\d{1,5}[A-Za-z0-9_\-]*)\b/i);
+    if(im3) ref.issue=im3[1];
+  }
+  const pm3=body.match(/\bpp?\.\s*([A-Za-z]?\d{1,6}(?:\.\d+)?(?:\s*[-–—]\s*[A-Za-z]?\d{1,6}(?:\.\d+)?)?)/i);
+  if(pm3 && (!ref.pages || (ref.volume && ref.pages===ref.volume)))
+    ref.pages=(pm3[1]||"").replace(/[–—]/g,"-").replace(/\s+/g,"");
+  m=raw.match(/《([^》]{6,})》/); if(m) ref.title=m[1].trim();
+  if(!ref.title){
+    const protected=protectAbbrev(raw);
+    m=protected.match(/[（(](?:1[89]\d{2}|20\d{2})[）)]\s*\.?\s*(.+?)\.\s+([A-Z《].+)$/);
+    if(m){ ref.title=unprotectAbbrev(m[1]).trim(); const j=unprotectAbbrev(m[2]).split(/[,，]\s*\d|\s+\d{1,4}\s*[（(]|https?:\/\/|\b10\.\d{4}/)[0]; ref.journal=(j||"").replace(/[ .,;；]+$/,""); }
+  }
+  if(!ref.title){
+    m=raw.match(/\.\s*([^.]{6,}?)\s*\[J\]\s*\.\s*([^,，]+)/);
+    if(m){ ref.title=m[1].trim(); ref.journal=m[2].trim(); }
+  }
+  if(!ref.title){
+    const cleaned=bibliographicRemainder(protectAbbrev(raw));
+    m=cleaned.trim().match(/^(.+?)\.\s+(.+?)\.\s+(.+?)\.\s+(1[89]\d{2}|20\d{2})(?:\s+[A-Za-z]{3,9})?\s*(?:[;:]|\.\s*|$)/);
+    if(m && unprotectAbbrev(m[2]).trim().length>=8){
+      ref.title=unprotectAbbrev(m[2]).trim(); if(!ref.journal) ref.journal=unprotectAbbrev(m[3]).trim(); if(!ref.year) ref.year=+m[4];
+      if(!ref.authors.length) ref.authors=parseAuthorString(unprotectAbbrev(m[1]));
+    }
+  }
+  {
+    const qm=raw.match(/[“"「](.+?)[”"」]/);
+    if(qm){
+      const qt=qm[1].replace(/[ .,;，。；]+$/g,"").trim();
+      const ieeeLike=/\bvols?\./i.test(raw);
+      if(qt && qt.length>=6 && (looksCjk(qt) || ieeeLike || !isWeakTitle(qt, raw))){
+        if(!ref.title || isWeakTitle(ref.title, raw) || (ieeeLike && looksCjk(qt))) ref.title=qt;
+      }else if(!ref.title && qt.length>8 && !isWeakTitle(qt, raw)) ref.title=qt;
+    }
+  }
+  if((!ref.title || !ref.journal) && /[\u4e00-\u9fff]/.test(raw)){
+    const cm=raw.match(/(?:^|[.。]\s*)(?:\()?((?:19|20)\d{2})(?:\))?[.。]\s*(.+?)[.。]\s*([^,，]{2,80}?)\s*[,，]\s*(\d{1,4})(?:\s*[（(]\s*(\d{1,5})\s*[）)])?/);
+    if(cm && cm[2].trim().length>=4){
+      if(!ref.year) ref.year=+cm[1];
+      if(!ref.title) ref.title=cm[2].trim();
+      if(!ref.journal) ref.journal=cm[3].trim();
+      if(!ref.volume) ref.volume=cm[4];
+      if(cm[5] && !ref.issue) ref.issue=cm[5];
+    }
+  }
+  if(ref.title && raw.includes(ref.title)){
+    const after=raw.split(ref.title).pop();
+    const jm=after.match(/^[,"\s「」“”]+([^,，]{2,80}?)\s*[,，]\s*(?:vol\.|vols\.|\d)/i);
+    if(jm){
+      const cand=jm[1].replace(/[ .,;；"“”「」']+$/g,"").replace(/^[ .,;；"“”「」']+/g,"").trim();
+      if(cand && !/\bvols?\./i.test(cand) && !/^\d+$/.test(cand)) ref.journal=cand;
+    }
+    if(ref.authors.length && ref.authors.some(a=> (ref.title && a.includes(ref.title)) || /\bvols?\.?\b/i.test(a) || !a.replace(/["“”\s]/g,"")))
+      ref.authors=[];
+  }
+  fillFromBibtex(raw, ref);
+  if(!ref.year && !ref.doi && !ref.pmid){
+    ref.title=raw.replace(/\s+/g," ").trim().replace(/[.。]+$/,"");
+    ref.authors=[]; ref.journal=null; ref.volume=null; ref.issue=null; ref.pages=null;
+  }
+  const remainder=bibliographicRemainder(raw);
+  if((ref.doi||ref.pmid) && !ref.title && remainder.length<8){
+    ref.authors=[];
+    ref.year=null; ref.volume=null; ref.issue=null; ref.pages=null;
+  }else if(!ref.authors.length && !(ref.title && !ref.year && !ref.doi && !ref.pmid && !ref.journal)){
+    let head=raw;
+    if(ref.title && raw.includes(ref.title)) head=raw.split(ref.title)[0];
+    else if(ref.year) head=raw.split(new RegExp("[（(]"+ref.year))[0];
+    ref.authors=parseAuthorString(head);
+  }
+  if(ref.title) ref.title=ref.title.replace(/[ .,;，；]+$/, "")||null;
+  if(ref.journal){
+    ref.journal=ref.journal.replace(/[,，]?\s*(?:null|none|n\/?a|undefined)\s*[（(][^）)]*[）)]/ig,"").replace(/[ .,;；]+$/,"" )||null;
+  }
+  ref.volume=cleanBiblio(ref.volume); ref.issue=cleanBiblio(ref.issue);
+  const probe=[ref.title,ref.journal].filter(Boolean).join(" ")||raw;
+  const cjk=(probe.match(/[\u4e00-\u9fff]/g)||[]).length, latin=(probe.match(/[A-Za-z]/g)||[]).length;
+  ref.language_hint=(cjk>=4 && cjk>=latin)?"zh":"en";
+  return ref;
+}
+function looksComplete(ref){
+  if(isIdentifierOnly(ref)) return false;
+  return !!(ref.authors.length && (ref.journal||ref.doi||ref.pmid) && ref.year && ref.title && ref.title.length>=8);
+}
+function isLowValue(rec){
+  const typ=(rec.typ||"").toLowerCase();
+  if(["dataset","peer-review","component","grant","journal-issue"].includes(typ)) return true;
+  const t=(rec.title||"").toLowerCase();
+  if(t.startsWith("faculty opinions recommendation of")||t.startsWith("review for ")) return true;
+  return (rec.journal||"").toLowerCase().includes("faculty opinions");
+}
+function recUrl(rec){ if(!rec) return null; if(rec.doi) return "https://doi.org/"+rec.doi; if(rec.pmid) return "https://pubmed.ncbi.nlm.nih.gov/"+rec.pmid+"/"; return rec.url||null; }
+function fromCrossref(item){
+  const year=(item["published-print"]||item.published||item.issued||{})["date-parts"];
+  return {
+    source:"crossref",
+    title:(item.title&&item.title[0])||null,
+    authors:(item.author||[]).map(a=>((a.family||"")+" "+(a.given||"")).trim()).filter(Boolean),
+    year: year? year[0][0]:null,
+    journal:(item["container-title"]&&item["container-title"][0])||null,
+    volume:cleanBiblio(item.volume), issue:cleanBiblio(item.issue), pages:cleanBiblio(item.page),
+    doi:normDoi(item.DOI), typ:item.type, score:item.score||0, url:null
+  };
+}
+function fromOpenAlex(item){
+  const loc=item.primary_location||{}, src=loc.source||{}, b=item.biblio||{};
+  const pages=(b.first_page&&b.last_page)? b.first_page+"-"+b.last_page : (b.first_page||null);
+  let pmid=null; const id=(item.ids||{}).pmid; if(id){ const m=String(id).match(/(\d+)$/); if(m) pmid=m[1]; }
+  return {
+    source:"openalex", title:item.title||item.display_name||null,
+    authors:(item.authorships||[]).map(a=>(a.author&&a.author.display_name)||"").filter(Boolean),
+    year:item.publication_year||null, journal:src.display_name||null,
+    volume:cleanBiblio(b.volume), issue:cleanBiblio(b.issue), pages:cleanBiblio(pages), doi:normDoi(item.doi), typ:item.type,
+    pmid, url:loc.landing_page_url||null, score:0
+  };
+}
+function fromEpmc(item){
+  return {
+    source:"europepmc", title:(item.title||"").replace(/<[^>]+>/g,""),
+    authors:(item.authorString||"").split(/\s*;\s*/).filter(Boolean),
+    year: item.pubYear? +item.pubYear:null, journal:item.journalTitle||null,
+    volume:item.journalVolume||null, issue:item.issue||null, pages:item.pageInfo||null,
+    doi:normDoi(item.doi), pmid:String(item.pmid||item.id||""), typ:"journal-article", url:null, score:0
+  };
+}
+
+function mailtoValue(){
+  const el=document.getElementById("mailto");
+  const v=(el && el.value || "").trim();
+  return v || "refcheck@localhost";
+}
+function withMailto(url){
+  const join=url.includes("?")?"&":"?";
+  return url+join+"mailto="+encodeURIComponent(mailtoValue());
+}
+async function getJson(url){
+  // ok=true 表示拿到了正常 HTTP 响应（含 404「无此记录」）；ok=false 表示超时、断网、429、5xx 等，不能当成查无此文
+  let last={ok:false, error:"request failed", data:null};
+  for(let attempt=0; attempt<3; attempt++){
+    try{
+      const resp=await fetch(url, {headers:{Accept:"application/json"}});
+      if(resp.status===404) return {ok:true, notFound:true, status:404, data:null};
+      if(resp.status===429 || resp.status>=500){
+        last={ok:false, error:"HTTP "+resp.status, status:resp.status, data:null};
+        if(attempt<2){ await sleep(1500*(attempt+1)); continue; }
+        return last;
+      }
+      if(!resp.ok) return {ok:false, error:"HTTP "+resp.status, status:resp.status, data:null};
+      return {ok:true, data:await resp.json(), status:resp.status};
+    }catch(e){
+      last={ok:false, error:e.message||String(e), data:null, network:true};
+      if(attempt<2){ await sleep(1500*(attempt+1)); continue; }
+      return last;
+    }
+  }
+  return last;
+}
+
+function compareFields(cited, rec){
+  const mismatches=[];
+  if(cited.title && rec.title && titleSim(cited.title, rec.title)<STRONG)
+    mismatches.push({field:"title", cited:cited.title, found:rec.title, similarity:+titleSim(cited.title,rec.title).toFixed(3)});
+  if(cited.year && rec.year && cited.year!==rec.year)
+    mismatches.push({field:"year", cited:cited.year, found:rec.year});
+  if(cited.authors.length && rec.authors.length){
+    const a=lastNames(cited.authors), b=lastNames(rec.authors, true);
+    const citedBags=new Set(cited.authors.map(cjkBag).filter(Boolean));
+    const recBags=new Set(rec.authors.map(cjkBag).filter(Boolean));
+    const firstBag=cjkBag(cited.authors[0]||"");
+    let firstCjkOk=!!(firstBag && recBags.has(firstBag));
+    const cjkCompact=t=>(String(t||"").match(/[\u4e00-\u9fff]/g)||[]).join("");
+    const firstCjk=cjkCompact(cited.authors[0]||"");
+    const recCjkBlob=rec.authors.map(cjkCompact).join("");
+    const citedCjkBlob=cited.authors.map(cjkCompact).join("");
+    if(firstCjk && recCjkBlob.includes(firstCjk)) firstCjkOk=true;
+    let jammedOk=false;
+    if(citedCjkBlob && recCjkBlob){
+      const cs=new Set(citedCjkBlob), rs=new Set(recCjkBlob);
+      const uni=new Set([...cs,...rs]);
+      const inter=[...cs].filter(x=>rs.has(x)).length;
+      if(uni.size && inter/uni.size>=0.8 && firstCjkOk) jammedOk=true;
+    }
+    if(jammedOk){ /* same CJK author group despite dirty fields */ }
+    else if(a.size && b.size){
+      const firstFams=lastNames(cited.authors.slice(0,1));
+      const overlap=[...a].filter(x=>b.has(x)).length/a.size;
+      const firstFail=[...firstFams].length && ![...firstFams].some(x=>b.has(x)) && !firstCjkOk;
+      const overlapFail=overlap<0.4 && ![...citedBags].some(x=>recBags.has(x));
+      if(firstFail || overlapFail)
+        mismatches.push({field:"authors", cited:cited.authors.slice(0,6).join(", "), found:rec.authors.slice(0,6).join(", ")});
+    }
+  }
+  const doiLocked=cited.doi && rec.doi && cited.doi===rec.doi;
+  const titleLocked=cited.title && rec.title && titleSim(cited.title,rec.title)>=STRONG;
+  if(cited.journal && rec.journal && !journalSimilar(cited.journal, rec.journal)){
+    let ignore=false;
+    if(doiLocked&&titleLocked){
+      const cjkA=/[\u4e00-\u9fff]/.test(cited.journal), cjkB=/[\u4e00-\u9fff]/.test(rec.journal);
+      if(cjkA!==cjkB && !(looksLikeRomanizedCjkJournal(cited.journal)||looksLikeRomanizedCjkJournal(rec.journal)))
+        ignore=true;
+      if(!ignore){
+        const stop=new Set(["journal","review","letters","proceedings","transactions","international","research","studies","bulletin"]);
+        const words=s=>norm(s).split(/\s+/).filter(w=>w.length>=4 && !stop.has(w));
+        const wa=new Set(words(cited.journal)), wb=new Set(words(rec.journal));
+        if([...wa].some(w=>wb.has(w))) ignore=true;
+      }
+    }
+    if(!ignore) mismatches.push({field:"journal", cited:cited.journal, found:rec.journal});
+  }
+  const normVol=v=>{ const s=String(v).trim(); return /^\d+$/.test(s)? String(+s): s.toLowerCase(); };
+  const cv=cleanBiblio(cited.volume), rv=cleanBiblio(rec.volume);
+  const ci=cleanBiblio(cited.issue), ri=cleanBiblio(rec.issue);
+  if(cv && rv && normVol(cv)!==normVol(rv) && !(ci==null && ri && normVol(cv)===normVol(ri)))
+    mismatches.push({field:"volume", cited:cited.volume, found:rec.volume});
+  if(ci && ri && normVol(ci)!==normVol(ri))
+    mismatches.push({field:"issue", cited:cited.issue, found:rec.issue});
+  if(cited.pages && rec.pages && !pagesCompatible(cited.pages, rec.pages))
+    mismatches.push({field:"pages", cited:cited.pages, found:rec.pages});
+  if(cited.doi && rec.doi && cited.doi!==rec.doi)
+    mismatches.push({field:"doi", cited:cited.doi, found:rec.doi});
+  if(cited.pmid && rec.pmid && String(cited.pmid)!==String(rec.pmid))
+    mismatches.push({field:"pmid", cited:cited.pmid, found:rec.pmid});
+  return mismatches;
+}
+function isClearlyOtherWork(cited, rec, fields, titleIsStrong){
+  const doiLocked=cited.doi && rec.doi && cited.doi===rec.doi;
+  const pmidLocked=cited.pmid && rec.pmid && String(cited.pmid)===String(rec.pmid);
+  if(doiLocked||pmidLocked) return false;
+  if(!titleIsStrong){
+    return (fields.has("authors") && (fields.has("journal")||fields.has("year")))
+      || (fields.has("journal") && fields.has("year") && (!cited.authors.length || !(rec.authors&&rec.authors.length)))
+      || (fields.has("title") && fields.has("journal") && fields.has("year"));
+  }
+  if(!fields.has("authors")) return false;
+  if(!(cited.journal && rec.journal && journalSimilar(cited.journal, rec.journal))) return false;
+  return ["year","volume","pages"].filter(f=>fields.has(f)).length>=2;
+}
+function pickBest(cited, records){
+  const key=cited.title||cited.raw;
+  for(const rec of records){
+    rec.title_sim=titleSim(key, rec.title);
+    if(!cited.title) rec.title_sim=Math.max(rec.title_sim, titleSim(cited.raw, rec.title));
+  }
+  records.sort((r,s)=>{
+    const low=(isLowValue(r)?1:0)-(isLowValue(s)?1:0);
+    if(low) return low;
+    if(s.title_sim!==r.title_sim) return s.title_sim-r.title_sim;
+    const rDoi=(cited.doi&&r.doi&&cited.doi===r.doi)?0:1;
+    const sDoi=(cited.doi&&s.doi&&cited.doi===s.doi)?0:1;
+    if(rDoi!==sDoi) return rDoi-sDoi;
+    const rY=(cited.year&&r.year)?Math.abs(cited.year-r.year):99;
+    const sY=(cited.year&&s.year)?Math.abs(cited.year-s.year):99;
+    return rY-sY;
+  });
+  return records[0]||null;
+}
+
+async function classifyOne(cited, onnote){
+  const notes=[]; let doiRecord=null, pmidRecord=null, candidates=[];
+  let hardFailures=[];
+  function noteFail(msg){ hardFailures.push(msg); notes.push(msg); }
+
+  if(cited.doi){
+    let crFailed=false, oaFailed=false;
+    const cr=await getJson("https://api.crossref.org/works/"+encodeURIComponent(cited.doi));
+    if(cr.ok && cr.data && cr.data.message) doiRecord=fromCrossref(cr.data.message);
+    else if(!cr.ok){ crFailed=true; }
+    if(!doiRecord){
+      const oa=await getJson(withMailto("https://api.openalex.org/works/doi:"+cited.doi));
+      if(oa.ok && oa.data && oa.data.id) doiRecord=fromOpenAlex(oa.data);
+      else if(!oa.ok){ oaFailed=true; }
+    }
+    if(doiRecord) candidates.push(doiRecord);
+    else if(crFailed || oaFailed) noteFail("所给 DOI（"+cited.doi+"）查询因网络或接口错误失败，本次不能据此判断该 DOI 是否存在。");
+    else notes.push("所给 DOI（"+cited.doi+"）无法解析。");
+    await sleep(350);
+  }
+  if(cited.pmid){
+    const q="EXT_ID:"+cited.pmid+" AND SRC:MED";
+    const data=await getJson("https://www.ebi.ac.uk/europepmc/webservices/rest/search?query="+encodeURIComponent(q)+"&format=json");
+    if(!data.ok){
+      noteFail("所给 PMID（"+cited.pmid+"）查询因网络或接口错误失败，本次不能据此判断该 PMID 是否存在。");
+    }else{
+      const hits=(data.data&&data.data.resultList&&data.data.resultList.result)||[];
+      if(hits[0]) { pmidRecord=fromEpmc(hits[0]); candidates.push(pmidRecord); }
+      else notes.push("所给 PMID（"+cited.pmid+"）未找到对应记录。");
+    }
+    await sleep(350);
+  }
+  const biblio=bibliographicRemainder(cited.raw);
+  if(biblio.length>=8){
+    const cr=await getJson("https://api.crossref.org/works?query.bibliographic="+encodeURIComponent(biblio.slice(0,400))+"&rows=5");
+    if(!cr.ok) noteFail("Crossref 检索失败："+(cr.error||""));
+    else for(const it of (cr.data&&cr.data.message&&cr.data.message.items)||[]) candidates.push(fromCrossref(it));
+    await sleep(350);
+    const q=cited.title||biblio;
+    const oa=await getJson(withMailto("https://api.openalex.org/works?search="+encodeURIComponent(q.slice(0,400))+"&per-page=5"));
+    if(!oa.ok) noteFail("OpenAlex 检索失败："+(oa.error||""));
+    else for(const it of (oa.data&&oa.data.results)||[]) candidates.push(fromOpenAlex(it));
+  }
+
+  const uniq=[], seen=new Set();
+  for(const rec of candidates){
+    const key=rec.doi|| (norm(rec.title||"")+String(rec.year||""));
+    if(!key||seen.has(key)) continue; seen.add(key); uniq.push(rec);
+  }
+  let titleKey=cited.title||"";
+  if((isWeakTitle(titleKey, cited.raw) || norm(titleKey).length<8) && !isIdentifierOnly(cited)){
+    const rem=bibliographicRemainder(cited.raw);
+    if(norm(rem).length>=8) titleKey=rem;
+    else if(cited.raw) titleKey=cited.raw;
+  }
+  function conflicts(rec){
+    if(isIdentifierOnly(cited)) return false;
+    if(!rec||!rec.title) return false;
+    if(recordSupportedByCite(cited, rec)) return false;
+    if(!titleKey || norm(titleKey).length<8) return false;
+    return titleSim(titleKey, rec.title)<0.75;
+  }
+  let doiConflict=conflicts(doiRecord);
+  let pmidConflict=conflicts(pmidRecord);
+  if(doiConflict) notes.push("你提供的 DOI 是真实的，但指向另一篇文章：《"+(doiRecord.title||"")+"》（"+(doiRecord.year||"年份不详")+"，"+(doiRecord.journal||"")+"）。验证链接："+recUrl(doiRecord));
+  if(pmidConflict) notes.push("你提供的 PMID 是真实的，但指向另一篇文章：《"+(pmidRecord.title||"")+"》（"+(pmidRecord.year||"年份不详")+"，"+(pmidRecord.journal||"")+"）。验证链接："+recUrl(pmidRecord));
+
+  let best=pickBest(cited, uniq);
+  if(best && isLowValue(best) && best.title_sim<0.95){
+    const alt=uniq.filter(r=>!isLowValue(r));
+    const ab=pickBest(cited, alt);
+    if(ab && ab.title_sim>=RELATED-0.02) best=ab;
+  }
+  if(doiRecord && recordSupportedByCite(cited, doiRecord)){
+    doiConflict=false; best=doiRecord; doiRecord.title_sim=1;
+  }else if(doiRecord && !doiConflict){
+    if(isIdentifierOnly(cited)){
+      best=doiRecord; doiRecord.title_sim=1;
+    }else{
+      const key=cited.title||bibliographicRemainder(cited.raw);
+      doiRecord.title_sim=titleSim(key, doiRecord.title);
+      if(doiRecord.title_sim>=STRONG) best=doiRecord;
+    }
+  }
+  if(pmidRecord && !pmidConflict && isIdentifierOnly(cited)){
+    if(!best || best===pmidRecord){ best=pmidRecord; pmidRecord.title_sim=1; }
+  }
+
+  let status="not_found", match=null, mismatches=[], verify_url=null, nearby=null;
+  if(best && best.title_sim>=STRONG){
+    match=best; mismatches=compareFields(cited,best);
+    if(doiConflict && !mismatches.some(m=>m.field==="doi")) mismatches.push({field:"doi",cited:cited.doi,found:best.doi||"（不一致）"});
+    if(pmidConflict && !mismatches.some(m=>m.field==="pmid")) mismatches.push({field:"pmid",cited:cited.pmid,found:best.pmid||"（不一致）"});
+    const strongFields=new Set(mismatches.map(m=>m.field));
+    if(isClearlyOtherWork(cited,best,strongFields,true)){
+      nearby={title:best.title,year:best.year,journal:best.journal,doi:best.doi,url:recUrl(best),title_sim:+best.title_sim.toFixed(3)};
+      match=null; mismatches=[]; verify_url=null;
+      if(hardFailures.length){
+        status="error";
+        notes.push("因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。");
+      }else if(doiConflict||pmidConflict){
+        status="suspected_fabricated";
+        notes.push("题名与库中一篇记录相同或极近，但作者、年份或页码对不上，且所给 DOI 或 PMID 指向的是另一篇文献。请核对该记录原文。相近记录："+(recUrl(nearby)||""));
+      }else if(looksComplete(cited) && cited.language_hint!=="zh"){
+        status="suspected_fabricated";
+        notes.push("题名与库中一篇记录相同或极近，但作者和年份/卷期/页码均不符，更像是同刊或同题的另一篇，不能视为同一篇。条目看起来信息完整，因此标为「疑似编造」。请核对该记录原文："+(nearby.url||"")+"。这不等于最终宣判。");
+      }else{
+        status="not_found";
+        notes.push("题名与库中一篇记录相同或极近，但作者和年份/卷期/页码均不符，不能视为同一篇。请核对该记录原文："+(nearby.url||"")+"。未找到并不等于一定是假的。");
+      }
+    }else{
+      status=mismatches.length? "field_mismatch":"verified";
+      verify_url=recUrl(match);
+    }
+  }else if(best && best.title_sim>=RELATED){
+    const tmp=compareFields(cited,best);
+    const fields=new Set(tmp.map(m=>m.field));
+    const clearlyOther=isClearlyOtherWork(cited,best,fields,false);
+    if(clearlyOther){
+      nearby={title:best.title,year:best.year,journal:best.journal,doi:best.doi,url:recUrl(best),title_sim:+best.title_sim.toFixed(3)};
+      match=null; mismatches=[]; verify_url=null;
+      if(hardFailures.length){
+        status="error";
+        notes.push("因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。");
+      }else if(doiConflict||pmidConflict){
+        status="suspected_fabricated";
+        notes.push("按题名未找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。");
+      }else if(looksComplete(cited) && cited.language_hint!=="zh"){
+        status="suspected_fabricated";
+        notes.push("数据库中只有题名相近、但作者和来源都不符的记录，不能视为同一篇。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。");
+      }else{
+        status="not_found";
+        notes.push("数据库中只有题名相近、但并非同一篇的记录。未找到并不等于一定是假的。");
+      }
+    }else{
+      match=best; mismatches=tmp;
+      if(!mismatches.some(m=>m.field==="title"))
+        mismatches.unshift({field:"title",cited:cited.title||cited.raw.slice(0,180),found:best.title,similarity:+best.title_sim.toFixed(3),note:"题名相近，但不能视为同一篇"});
+      status="field_mismatch"; verify_url=recUrl(match);
+      notes.push("数据库中存在题名相近的记录，但并非完全同一篇。下面列出的是相近记录，不是替你编造的「正确参考文献」。");
+    }
+  }else{
+    if(hardFailures.length){
+      status="error";
+      notes.push("因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。");
+    }else if(doiConflict||pmidConflict){
+      status="suspected_fabricated";
+      notes.push("按题名未找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。");
+    }else if(looksComplete(cited) && cited.language_hint!=="zh"){
+      status="suspected_fabricated";
+      notes.push("在公开库中没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。");
+    }else{
+      status="not_found";
+      notes.push(cited.language_hint==="zh"
+        ? "在 Crossref / OpenAlex 中未找到足够相似的记录。这两个库对中文期刊、学位论文、书籍的覆盖明显不足，「查无此文」不能等同于「一定是假的」，也不能据此确认是假的。请再查学校图书馆或 Google Scholar。本工具不支持需授权的中文商业文献库（不支持知网、万方）。"
+        : "在公开库中未找到足够相似的记录。未找到并不等于一定是假的，尤其是书籍、学位论文、新刊和未收录的会议论文。");
+    }
+    if(status!=="error" && best && best.title_sim>=0.55)
+      nearby={title:best.title,year:best.year,journal:best.journal,doi:best.doi,url:recUrl(best),title_sim:+best.title_sim.toFixed(3)};
+    match=null; verify_url=null;
+  }
+  const strongId=(doiRecord && recordSupportedByCite(cited, doiRecord))? doiRecord
+    : ((pmidRecord && recordSupportedByCite(cited, pmidRecord))? pmidRecord : null);
+  if(strongId && (status==="suspected_fabricated" || status==="not_found")){
+    match=strongId; mismatches=compareFields(cited, strongId);
+    status=mismatches.length? "field_mismatch":"verified";
+    verify_url=recUrl(strongId);
+    notes.push("所给 DOI 或 PMID 已指向这篇文献，按同一篇核对字段，不以「疑似编造」或「查无此文」下结论。验证链接："+(verify_url||""));
+  }
+  return {raw:cited.raw, parsed:cited, status, status_zh:STATUS_ZH[status], mismatched_fields:mismatches, notes, match, verify_url, nearby};
+}
+
+
+function esc(s){ return String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"}[c])); }
+
+function render(results){
+  const counts={};
+  for(const r of results) counts[r.status]=(counts[r.status]||0)+1;
+  const pills=Object.entries(STATUS_ZH).filter(([k])=>counts[k]).map(([k,lab])=>`<span class="pill ${k}">${esc(lab)} ${counts[k]}</span>`).join("");
+  const cards=results.map((r,i)=>{
+    let mism="";
+    if(r.mismatched_fields && r.mismatched_fields.length){
+      const rows=r.mismatched_fields.map(m=>{
+        const extra=m.similarity!=null? `<div style="color:#888;font-size:12px">相似度 ${m.similarity}${m.note? "；"+esc(m.note):""}</div>`:"";
+        return `<tr><td>${esc(FIELD_ZH[m.field]||m.field)}</td><td>${esc(m.cited)}</td><td>${esc(m.found)}</td><td class="bad">不符${extra}</td></tr>`;
+      }).join("");
+      mism=`<table class="cmp"><thead><tr><th>字段</th><th>你提供的</th><th>数据库中的记录</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+    }
+    let found="";
+    if(r.match && (r.status==="verified"||r.status==="field_mismatch")){
+      const url=r.verify_url||"";
+      found=`<div class="found"><div class="label">数据库中的对应/相近记录（不是替你编造的新条目）</div>
+        <div>《${esc(r.match.title||"")}》（${esc(r.match.year||"")}，${esc(r.match.journal||"")}）</div>
+        ${url? `<div><a href="${esc(url)}" target="_blank" rel="noopener">${esc(url)}</a></div>`:""}</div>`;
+    }
+    const notes=(r.notes||[]).map(n=>`<li>${esc(n)}</li>`).join("");
+    const nearby=r.nearby? `<div class="nearby">相近记录仅供参考（相似度 ${r.nearby.title_sim}），不是替你生成的正确引用：《${esc(r.nearby.title||"")}》${r.nearby.url? ` <a href="${esc(r.nearby.url)}" target="_blank" rel="noopener">打开</a>`:""}</div>`:"";
+    return `<article class="card ${esc(r.status)}"><header><span class="mark">${MARK[r.status]}</span>
+      <span class="idx">第 ${i+1} 条</span><span class="status">${esc(r.status_zh)}</span></header>
+      <p class="raw">${esc(r.raw)}</p>${mism}${found}${notes? `<ul class="notes">${notes}</ul>`:""}${nearby}</article>`;
+  }).join("");
+  document.getElementById("report").innerHTML = `<p class="lead">共 ${results.length} 条。</p><div class="pills">${pills}</div>${cards}`;
+}
+
+document.getElementById("demo").onclick=()=>{ document.getElementById("input").value=DEMO; };
+document.getElementById("print").onclick=()=>window.print();
+document.getElementById("run").onclick=async()=>{
+  const text=document.getElementById("input").value;
+  const blocks=splitRefs(text);
+  const btn=document.getElementById("run"), st=document.getElementById("status");
+  if(!blocks.length){ st.textContent="没有读到参考文献。"; return; }
+  btn.disabled=true; const results=[];
+  try{
+    for(let i=0;i<blocks.length;i++){
+      st.textContent=`正在核查 ${i+1}/${blocks.length}…`;
+      const parsed=parseOne(blocks[i]);
+      results.push(await classifyOne(parsed));
+    }
+    render(results);
+    st.textContent="核查完成。可以打印或另存为 PDF。";
+  }catch(e){
+    st.textContent="出错了："+e.message;
+  }finally{ btn.disabled=false; }
+};
+</script>
+</body>
+</html>

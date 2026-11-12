@@ -1,0 +1,291 @@
+{
+  "batch": 6,
+  "seed": "20261111-b6",
+  "started": "2026-11-11 16:53:27 Asia/Macau（UTC+8）",
+  "note": "本构造脚本不调用 check_refs.py；gold 依据库中原始记录和条目构造方式，不依据工具输出。",
+  "queries": [
+    {
+      "field": "medicine",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=randomized+controlled+trial+cardiovascular+outcome&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2024&rows=25&offset=140",
+      "when": "2026-11-11 16:53:27 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 25,
+      "n_kept": 25,
+      "total_results": 807238
+    },
+    {
+      "field": "medicine",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=cancer+immunotherapy+checkpoint&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2024&rows=20&offset=140",
+      "when": "2026-11-11 16:53:32 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 20,
+      "n_kept": 16,
+      "total_results": 1155826
+    },
+    {
+      "field": "medicine",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:53:38 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 11,
+      "total_results": 4072
+    },
+    {
+      "field": "medicine",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:53:42 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 304982
+    },
+    {
+      "field": "cs",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=140",
+      "when": "2026-11-11 16:53:45 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 20,
+      "n_kept": 20,
+      "total_results": 785976
+    },
+    {
+      "field": "cs",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:53:50 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 966802
+    },
+    {
+      "field": "cs",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=140",
+      "when": "2026-11-11 16:53:54 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 20,
+      "n_kept": 14,
+      "total_results": 3399863
+    },
+    {
+      "field": "cs",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=computer+security+side+channel&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:53:59 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 614483
+    },
+    {
+      "field": "physics",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:05 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 481950
+    },
+    {
+      "field": "physics",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=quantum+entanglement+photon+experiment&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:10 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 270357
+    },
+    {
+      "field": "physics",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=topological+insulator+electronic+transport&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=140",
+      "when": "2026-11-11 16:54:15 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 577374
+    },
+    {
+      "field": "physics",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=exoplanet+transit+atmosphere&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:21 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 7,
+      "total_results": 41320
+    },
+    {
+      "field": "biology",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=CRISPR+Cas9+genome+editing+mammalian&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:26 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 160500
+    },
+    {
+      "field": "biology",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:31 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 13,
+      "total_results": 862423
+    },
+    {
+      "field": "biology",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:37 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 1033607
+    },
+    {
+      "field": "biology",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=photosynthesis+protein+structure&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:41 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 655945
+    },
+    {
+      "field": "social",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=income+inequality+social+mobility&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:47 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 1139629
+    },
+    {
+      "field": "social",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=140",
+      "when": "2026-11-11 16:54:52 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 14,
+      "total_results": 1335084
+    },
+    {
+      "field": "social",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=self-control+delay+of+gratification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=140",
+      "when": "2026-11-11 16:54:56 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 963144
+    },
+    {
+      "field": "social",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query.container-title=American+Economic+Review&query=labor+market&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=12&offset=140",
+      "when": "2026-11-11 16:55:01 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 12,
+      "n_kept": 12,
+      "total_results": 19772
+    },
+    {
+      "field": "chinese",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=%E9%AB%98%E8%A1%80%E5%8E%8B+%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2012%2Cuntil-pub-date%3A2024&rows=20&offset=140",
+      "when": "2026-11-11 16:55:06 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 20,
+      "n_kept": 8,
+      "total_results": 251092
+    },
+    {
+      "field": "chinese",
+      "api": "crossref",
+      "url": "https://api.crossref.org/works?query=%E5%86%A0%E7%8A%B6%E5%8A%A8%E8%84%89+%E4%BB%8B%E5%85%A5%E6%B2%BB%E7%96%97&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2012%2Cuntil-pub-date%3A2024&rows=15&offset=140",
+      "when": "2026-11-11 16:55:11 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 2,
+      "total_results": 85191
+    },
+    {
+      "field": "chinese",
+      "api": "openalex",
+      "url": "https://api.openalex.org/works?search=%E7%B3%96%E5%B0%BF%E7%97%85+%E6%B2%BB%E7%96%97+%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%85%A7&per-page=20&mailto=refcheck%40localhost&page=6",
+      "when": "2026-11-11 16:55:16 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 20,
+      "n_kept": 20,
+      "total_results": 5539
+    },
+    {
+      "field": "chinese",
+      "api": "openalex",
+      "url": "https://api.openalex.org/works?search=%E4%B8%AD%E5%8C%BB%E8%8D%AF+%E4%B8%B4%E5%BA%8A+%E7%96%97%E6%95%88&per-page=15&mailto=refcheck%40localhost&page=6",
+      "when": "2026-11-11 16:55:16 Asia/Macau（UTC+8）",
+      "ok": true,
+      "n_items": 15,
+      "n_kept": 15,
+      "total_results": 21558
+    }
+  ],
+  "n_pool": 342,
+  "excluded_from_prior": {
+    "dois": 396,
+    "titles": 398
+  },
+  "pmid_attached": 0,
+  "counts": {
+    "n": 100,
+    "group": {
+      "real": 50,
+      "tampered": 30,
+      "public_ai_fake": 15,
+      "self_fabricated": 5
+    },
+    "expected": {
+      "verified": 50,
+      "field_mismatch": 32,
+      "suspected_fabricated": 14,
+      "not_found": 4
+    },
+    "field": {
+      "medicine": 16,
+      "cs": 16,
+      "physics": 13,
+      "biology": 13,
+      "social": 13,
+      "chinese": 9,
+      "public_or_self": 20
+    },
+    "language": {
+      "en": 87,
+      "zh": 13
+    },
+    "format": {
+      "gbt": 10,
+      "vancouver": 10,
+      "doi_only": 10,
+      "apa": 44,
+      "title_only": 6,
+      "as_published": 20
+    }
+  },
+  "finished": "2026-11-11 16:55:56 Asia/Macau（UTC+8）"
+}

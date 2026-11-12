@@ -1,0 +1,9 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+cookies.txt
+*.cookies
+.DS_Store
+models/

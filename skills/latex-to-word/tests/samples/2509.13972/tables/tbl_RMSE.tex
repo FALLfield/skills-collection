@@ -1,0 +1,43 @@
+
+\begin{table}[t!]
+ \vspace{0.25cm}
+    \centering
+    \footnotesize
+    \setlength{\tabcolsep}{2.2pt}
+    \caption{Root Mean Square Error (RMSE) in meters of reconstructed point clouds for the evaluated \acs{VSLAM} algorithms. The best and second-best results are \textbf{boldfaced} and \underline{underlined}, respectively. Values are averaged over 5 runs. The minimum completion rate of each sequence is set to 50\%, and dashes indicate missing data due to tracking failure. The final column reports the improvement of \textit{ivS-Graphs} over \textit{vS-Graphs}.
+    }
+    
+    \resizebox{\columnwidth}{!}{
+    \begin{tabular}{l|ccccc|c}
+        \toprule
+            \multirow{4}{*}{{\textbf{Sequence}}} & \multicolumn{6}{c}{\textbf{Point Cloud RMSE ($\mathrm{m}$)}} \\
+        \cmidrule{2-7}
+            & {\shortstack{\textit{BAD} \\ \textit{SLAM} \\ \cite{badslam}}} 
+            & {\shortstack{\textit{ORB-} \\ \textit{SLAM 3} \\ \cite{orb3}}} 
+            & {\shortstack{\textit{DROID-} \\ \textit{SLAM} \\ \cite{droidslam}}} 
+            & {\shortstack{\textit{\vgraphs} \\ \cite{tourani2025vsgraphs}}} 
+            & {\shortstack{\textit{\ivgraphs}\\(ours)}} 
+            & \textit{Diff. (\%)} \\
+        \midrule
+           office1-1  & -     & 0.416 & 0.430 & \underline{0.403} & \textbf{0.331} & {+17.88\%} \\
+           office1-2  & 0.442 & 0.537 & \underline{0.435} & 0.444 & \textbf{0.396} & {+10.72\%} \\
+           office1-3  & -     & 0.360 & 0.395 & \textbf{0.340} & \underline{0.354} & {-4.15\%} \\
+           office1-4  & -     & 0.349 & \underline{0.323} & 0.327 & \textbf{0.306} & {+6.35\%} \\
+         \midrule
+            office2-1 & 0.394 & 0.407 & \textbf{0.371} & 0.432 & \underline{0.382} & {+11.55\%} \\
+            office2-2 & -     & 0.487 & \textbf{0.404} & \underline{0.470} & 0.473 & {-0.80\%} \\
+            office2-3 & -     & \underline{0.412} & 0.466 & 0.481 & \textbf{0.411} & {+14.60\%} \\
+            office2-4 & -     & \textbf{0.386} & \underline{0.460} & 0.546 & 0.504 & {+7.64\%} \\
+        \midrule
+            CS1       & 0.299 & 0.282 & \textbf{0.252} & 0.307 & \underline{0.277} & {+9.63\%} \\
+        \midrule
+            CS2-Mid & \textbf{0.357} & 0.425 & 0.268 & 0.378 & \underline{0.374} & {+0.99\%} \\
+        \midrule
+            CS3-Furn  & -     & 0.588 & \underline{0.296} & 0.298 & \textbf{0.287} & {+3.62\%} \\
+        \midrule
+             \textbf{Mean} & - & 0.422 & \underline{0.373} & 0.402 & \textbf{0.371} & \multicolumn{1}{c}{{+7.14\%}} \\
+        \bottomrule
+    \end{tabular}
+    }
+    \label{tbl_RMSE}
+\end{table}

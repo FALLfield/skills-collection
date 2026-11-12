@@ -1,0 +1,22 @@
+{
+  "frozen_at": "2026-11-12 16:52:56",
+  "timezone": "Asia/Macau (UTC+8)",
+  "files": {
+    "tests/sample_thesis.docx": {
+      "sha256": "1b0cfddb7dc8fc40c90981cd8fe5d49381f829226d416361b8444d13f0932940",
+      "bytes": 41619
+    },
+    "tests/gold_errors.json": {
+      "sha256": "5517272076522c8b30fa7e30205c6b2858cf42a68996a9aaebd31bafb75f534f",
+      "bytes": 5952
+    },
+    "tests/sample_errors.md": {
+      "sha256": "e0bd3c3137849815841dce9d6d21e2e4f67d23535d8da9f493e3ebc6603944bf",
+      "bytes": 2515
+    },
+    "rules/example_rules.json": {
+      "sha256": "ffd40e3c042195232d1a295c81f8c17543d1e19e8a06149c602aa8e714ff2c38",
+      "bytes": 2353
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# virtualenv and models (downloaded on first ASR run, ~145 MB)
+.venv/
+venv/
+env/
+models/
+
+# generated outputs
+out/
+**/audio.wav
+**/_source/
+
+# user drop folder: keep the readme, ignore media and cookies
+inbox/*
+!inbox/README.md
+
+# caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.cache/
+.pytest_cache/
+.DS_Store
+*.log
+
+# do not commit secrets
+cookies.txt
+**/cookies.txt
+*.netscape

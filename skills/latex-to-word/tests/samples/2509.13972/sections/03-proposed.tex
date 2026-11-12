@@ -1,0 +1,206 @@
+\section{Methodology}
+\label{sec_proposed}
+
+\subsection{System Overview}
+\label{sec:system_architecture}
+
+\change{Our system builds upon an existing visual SLAM backbone that integrates structural walls into its map representation. Accurate wall estimation is essential for our approach, and for this we leverage RGB-D sensors, which provide immediate metric scale and geometric reliability on the textureless surfaces common in construction sites, where stereo matching often fails~\cite{rgbd_survey}.}
+{Our system builds upon an existing visual SLAM backbone that integrates structural walls into its map representation. }
+The overall architecture is illustrated in Fig.~\ref{fig:system_architecture}.
+
+\textbf{Inputs.} The system takes three inputs: (i) RGB-D data from the camera, (ii) architectural walls extracted from the BIM, and 
+(iii) the correspondences between two BIM walls and their detected counterparts, established through a human interface (Section~III-C).
+Both detected and BIM-extracted walls are represented as:
+% 
+\begin{equation}
+w_i = 
+\begin{cases}
+\mathrm{id}_i, & \text{unique wall identifier} \\
+\pi_i = (\mathbf{n}_i, d_i), & \text{supporting plane: normal and distance} \\
+% \pi_i = (\mathbf{n}_i, d_i), & \text{supporting plane: normal and 
+% \change{distance}{signed distance from origin}} \\
+\mathbf{c}_i, & \text{centroid position} \\
+l_i, t_i, & \text{length and thickness of the wall}
+\end{cases}
+\end{equation}
+\change{Here, $\mathbf{n}_i \in \mathbb{R}^3$ and $d_i \in \mathbb{R}$ 
+define the plane via the Hessian normal form $\mathbf{n}_i^\top \mathbf{p} + d_i = 0$, where $\mathbf{p} \in \mathbb{R}^3$ is any point on the plane and $d_i$ represents the signed distance from the origin}{Here, $\mathbf{n}_i$ is the unit normal of the plane and $d_i$ is the signed perpendicular  distance from the SLAM frame origin (the first keyframe) to the plane}.
+\change{While $l_i$ and $t_i$ represent the length and thickness of the wall extracted from the BIM, they are used to compute the centroid $\mathbf{c}_i$ for spatial data association and to derive opposing boundary planes, respectively.}
+{The length $l_i$ and thickness $t_i$ are used to compute the centroid $\mathbf{c}_i$ for data association and to derive opposing boundary planes, respectively.}
+We denote $\mathbf{W}$ as a set of walls, with $\mathbf{W_{\text{BIM}}}$ referring to BIM walls and $\mathbf{W_S}$ to detected walls, and use $\pi$ to refer specifically to the planar component of a wall in the back-end optimization.
+\add{For $\mathbf{W}_{\text{BIM}}$, the wall parameters $(\mathbf{n}_i, d_i, \mathbf{c}_i, l_i, t_i)$ are extracted offline from the BIM, where this geometry is directly encoded.}
+Three primary modules comprise the architecture: the SLAM Backbone (Section \ref{sec:vS-Graph}), Wall Matching (Section \ref{sec:wall_matching}), and the BIM-Constrained Back-End (Section \ref{sec:bim_backend}).
+
+
+\subsection{SLAM Backbone}
+\label{sec:vS-Graph}
+Our system utilizes \textit{vS-Graphs}~\cite{tourani2025vsgraphs} as a backbone, which provides a feature-based front-end derived from \textit{ORB-SLAM3}~\cite{orb3} and a hierarchical graph-based back-end for structural mapping.
+For full details on these base modules, we refer the reader to the original works.
+The front-end maintains local consistency by processing RGB-D frames. 
+\change{Key components include the \textit{Scene Segmentor} from 
+\textit{vS-Graphs}~\cite{tourani2025vsgraphs}, which leverages YOSO~\cite{yoso} 
+to extract observed $\mathbf{W_S}$ from depth data, and the \textit{ATLAS} 
+map manager from \textit{ORB-SLAM3}~\cite{orb3}, which maintains the evolving 
+map and the BIM reference.}
+{The \textit{Scene Segmentor} module applies 
+panoptic semantic segmentation~\cite{yoso} to identify wall pixels in the 
+RGB frame and fits wall planes $\pi_i = (\mathbf{n}_i, d_i)$ via RANSAC on 
+the corresponding depth point cloud, producing the observed wall set 
+$\mathbf{W_S}$.
+\addtwo{Restricting RANSAC to wall-classified points ensures the resulting planes correspond to actual walls, avoiding false wall detections on non-wall planar regions such as cabinets or panels, common in cluttered construction sites}.} 
+The back-end employs a factor graph encoding geometric and structural scene information:
+% The back-end employs a factor graph where entities encode both geometric and structural scene information:
+
+\begin{itemize}
+    \item \textbf{Keyframes $\mathbf{X}$:} Camera poses as $\mathrm{SE}(3)$ nodes connected via visual odometry and loop-closure constraints.
+    \item \textbf{Map points $\mathbf{P}$:} 3D landmarks constrained by reprojection factors linking them to keyframes.
+    \item \textbf{Walls $\mathbf{W_S}$:} Structural wall planes extracted by the \textit{Scene Segmentor}. These are mathematically tied to the map points that define their surface, ensuring geometric consistency between landmarks and structural planes.
+\end{itemize}
+
+\subsection{Wall Matching}
+
+
+
+
+\label{sec:wall_matching}
+The procedure is detailed in Algorithm~\ref{alg:plane_matching}, organized into two stages: (1) initial alignment and (2) continuous matching. First, the module initializes alignment by estimating the transformation \addtwo{$\leftidx{^S}{\hat{T}}_{BIM}$} between the BIM frame and SLAM frame $\mathcal{S}$. All BIM walls $\mathbf{W_{\text{BIM}}}$  are then transformed to $\mathcal{S}$ and stored in the Atlas Manager. Expressing both detected walls $\mathbf{W_S}$ and BIM walls $\mathbf{W_{\text{BIM}}}$  in this common frame enables \addtwo{their} continuous association \addtwo{into the matched set $\mathcal{M}$}.
+
+
+\begin{algorithm}[h]
+\caption{Wall Matching Procedure}
+\label{alg:plane_matching}
+\begin{algorithmic}[1]
+\State \textbf{Input:} $\mathbf{W_{\text{BIM}}}$, $\mathbf{W_S}$, $(id_k, id_l)$
+\State \textbf{Output:} $\leftidx{^S}{\hat{T}}_{BIM}$, $\mathcal{M}$
+
+\medskip
+\State \textbf{Step 1: Initial Alignment}
+\Repeat
+   \State Find $w_{S_i}, w_{S_j}$ with $|\theta(\mathbf{n}_{S_i}, \mathbf{n}_{S_j}) - 90^\circ| < \tau_\perp$
+    % \State Match $w_{S_i}, w_{S_j}$ $\to$ $w_{BIM_k}, w_{BIM_l}$
+    \State Estimate $\leftidx{^S}{\hat{T}}_{BIM}$ via Least Square Method
+\Until{residual $< \tau_{init}$}
+
+\medskip
+\State \textbf{Step 2: Continuous Matching}
+\For{each $w_S \in \mathbf{W_S}$ }
+    \For{each $w_{\text{BIM}} \in \mathbf{W_{\text{BIM}}}$ satisfying: \State $d_\text{plane} \le \tau_p$ \& $d_\text{lat} \le \tau_c$}
+    \State Compute combined score: $s(w_S,w_{\text{BIM}})$
+    \State Best result: $w_{\text{BIM}}^\ast = \arg\min s(w_S,w_{\text{BIM}})$
+    \State $\mathcal{M} \leftarrow (w_S, w_{\text{BIM}}^\ast)$
+    \EndFor  
+\EndFor
+\end{algorithmic}
+\end{algorithm}
+
+
+\subsubsection*{\textbf{Initial Alignment}}
+\addtwo{The system requires a human operator to specify, via the BIM IDs $id_k$ and $id_l$, the two perpendicular BIM walls corresponding to the first two walls the system will observe. This is a design choice that allows site personnel using the BIM to identify these walls directly from the model, enabling immediate operation at construction sites without extensive prior mapping. The system then continues running the SLAM backbone until two detected walls $(w_{S_i}, w_{S_j})$ whose supporting planes are nearly perpendicular (within $\tau_\perp$, Table~\ref{tab:parameters}) are found and paired with the two specified BIM walls.}
+Two perpendicular walls provide a linearly independent system sufficient to estimate the transformation $\leftidx{^S}{\hat{T}}_{BIM} \in \mathrm{SE}(3)$ between coordinate frames by minimizing residuals between corresponding planes via least squares:
+% 
+\begin{equation}
+\leftidx{^S}{\hat{T}}_{BIM} = \arg\min_{T \in \mathrm{SE}(3)} 
+\sum_{k=1}^{2} \big\| f(T, \pi_{BIM_k}) - \pi_{S_k} \big\|^2
+\end{equation}
+% 
+\noindent where $f(T,\pi_{BIM})$ applies the transform $T=(R,\mathbf{t})$ to the BIM plane $\pi_{BIM}$ . After $\leftidx{^S}{\hat{T}}_{BIM}$ is estimated, applying it to $\mathbf{W_{\text{BIM}}}$ yields the transformed set $\mathbf{\leftidx{^S}{{W}}_{BIM}}$.
+The transformation is accepted once its residual falls below $\tau_{init}$ (Table~\ref{tab:parameters}). Since BIM walls are vertical, their plane equations constrain rotation and translation primarily within the horizontal plane; the vertical component is instead assumed fixed at system setup, aligning the BIM and SLAM frames.
+
+\add{The role of this initial transformation is to bring the \textit{as-planned} and \textit{as-built} models close enough to enable subsequent wall matches. These matches, introduced as wall-to-wall factors (Section~\ref{sec:bim_backend}), continuously refine the alignment between the two models throughout the trajectory.}
+
+
+\subsubsection*{\textbf{Continuous Matching}}
+After initialization, the system updates wall associations as new walls are detected, refining the alignment between the SLAM map and the BIM. For each detected wall $w_{S_i}$, two complementary measures are evaluated against each candidate BIM wall $w_{BIM_j}$:
+
+\textbf{1) Plane-parameter distance (PPD).}  
+The distance between a detected plane $\pi_{S_i}$ and a BIM plane $\pi_{BIM_j}$ is computed using their minimal parameter vectors as:
+\begin{equation}
+\label{eq:ppd}
+d_\text{plane}(\pi_{S_i},\pi_{BIM_j}) = \sqrt{(\pi_{S_i} \ominus \pi_{BIM_j})^\top (\pi_{S_i} \ominus \pi_{BIM_j})} 
+\end{equation}
+\change{where $\ominus$ computes the minimal distance between plane parameters, accounting for sign ambiguity in the Hessian normal form. This metric evaluates infinite surface alignment.}
+{where $\ominus$ is the plane difference operator: $\pi_a \ominus \pi_b = (\phi_b, \theta_b, d_a - d_b)^\top$, with $\phi_b, \theta_b$ the azimuth and elevation of $R_a^\top \mathbf{n}_b$, and $R_a = R_z(\phi_a) R_y(-\theta_a)$ aligning the $x$-axis with $\mathbf{n}_a$ via its azimuth $\phi_a$ and elevation $\theta_a$. This metric combines the angular and distance residuals between the planes.}
+
+\textbf{2) Lateral Centroid Distance (LCD).}
+\change{Plane-based similarity alone is insufficient for data association, since accumulated drift can cause the infinite plane of a detected wall to align with an incorrect BIM wall located in a different room.}{
+Plane-based similarity alone is insufficient for data association: in environments with repetitive layouts, walls in different rooms often share similar plane equations, and accumulated drift can further cause the infinite plane of a detected wall to align with an incorrect BIM wall located in a different room. 
+To disambiguate walls with similar plane parameters, we enforce spatial consistency of the finite wall segments by measuring the tangential displacement between their centroids.}
+
+Specifically, we define the lateral centroid distance $d_\text{lat}$ as the Euclidean distance between centroids projected onto the supporting plane of the detected wall:
+\begin{equation}
+d_{\mathrm{lat}}(w_{S_i}, w_{\text{BIM}_j}) =
+\sqrt{
+\|\Delta\mathbf{c}\|^2 -
+\left(\Delta\mathbf{c}^\top \mathbf{n}_{S_i}\right)^2
+},
+\end{equation}
+This metric favors the closest architectural counterpart over lateral offsets, even for similar plane equations.
+
+
+\textbf{3) Combined score.}  
+PPD and LCD are combined into a normalized weighted score $s(w_{S_i},w_{BIM_j})$ to determine the best match:
+\begin{equation}
+s(w_{S_i}, w_{\text{BIM}_j}) = \alpha 
+\frac{d_\text{plane}(\pi_{S_i}, \pi_{\text{BIM}_j})}{\tau_p} + 
+(1-\alpha) \frac{d_{\text{lat}}(w_{S_i}, w_{\text{BIM}_j})}{\tau_c}
+\end{equation}
+where $\tau_p$ and $\tau_c$ are normalization constants that ensure the two metrics are comparable, and $\alpha \in [0,1]$ controls the relative importance of surface alignment versus spatial proximity. The score is normalized such that $s = 0$ indicates perfect alignment ($d_\text{plane} = 0$, $d_\text{lat} = 0$), and $s = 1$ represents the maximum acceptable deviation.
+To ensure data association robustness, only pairs satisfying $d_\text{plane} < \tau_p$ and $d_\text{lat} < \tau_c$ are considered. The candidate $w_{BIM_j}$ with the lowest score $s(w_{S_i},w_{BIM_j})$ is selected, and all associations are collected into the set $\mathcal{M} = \{ (w_{S_i}, w_{BIM_j}) \}$.
+\add{Once a detected wall is associated with a BIM wall, the match is fixed for the remainder of the sequence and is not re-evaluated in subsequent frames. The matching procedure therefore fires only when a new wall is detected.}
+
+
+\subsection{BIM-Constrained Back-End Integration}
+\label{sec:bim_backend}
+\change{This module incorporates matched walls into the factor graph 
+as additional nodes. By establishing edges between corresponding wall 
+pairs, the system constrains the evolving map to the 
+\textit{as-planned} layout.}{This module corrects drift in the \textit{as-built} map by constraining it to the \textit{as-planned} layout.}
+
+\subsubsection*{\textbf{Graph Construction}}
+\change{The back-end factor graph integrates keyframes $\mathbf{X}$, 
+map points $\mathbf{P}$, and detected structural walls $\mathbf{W_S}$. 
+After the initial alignment (Section~\ref{sec:wall_matching}), BIM 
+walls $\mathbf{W_{\text{BIM}}}$ are introduced as fixed wall nodes in 
+the graph as they represent the trusted \textit{as-planned} reference, 
+while detected walls $\mathbf{W_S}$ remain optimizable.}
+{After the initial alignment (Section~\ref{sec:wall_matching}), ivS-Graphs constructs a global graph that integrates the matched wall pairs into the back-end optimization. 
+The graph contains two types of wall nodes: BIM walls $\mathbf{W_{\text{BIM}}}$, held fixed as the \textit{as-planned} reference, and their matched detected walls $\mathbf{W_S}$, which are jointly optimized with the keyframes $\mathbf{X}$. Edges constrain each matched pair $(w_{S_i}, w_{\text{BIM}_j}) \in \mathcal{M}$ as well as the detected walls to their associated keyframes.}
+
+Wall-to-wall factors are created from the associations $\mathcal{M}$ found during matching. The cost function is:
+\begin{equation}
+c_{\text{wall-wall}}(w_{S_i},w_{BIM_j}) = \big\| w_{S_i} \ominus w_{BIM_j} \big\|^2_{\mathrm{\Lambda}_{w_{ij}}}
+\label{eq:plane_to_plane_cost}
+\end{equation}
+\add{where $\ominus$ is the plane difference operator defined after Equation~\ref{eq:ppd}}
+and $\mathrm{\Lambda}_{w_{ij}}$ is the \addtwo{information matrix} associated with the uncertainty of the plane association. This uncertainty is derived from the wall matching score $s(w_{S_i},w_{BIM_j})$ defined in Section~\ref{sec:wall_matching}. Since lower matching scores indicate better alignment (where $s = 0$ represents perfect match), $\mathrm{\Lambda}_{w_{ij}}$ \addtwo{grows inversely with $s$ to assign larger information to high-confidence matches and smaller information to uncertain ones}:
+\begin{equation}
+\mathrm{\Lambda}_{w_{ij}} = \addtwo{\dfrac{\mathrm{I} \cdot \beta}{\max(s(w_{S_i}, w_{BIM_j}),\ s_{\min})}}
+\end{equation}
+where $\mathbf{I}$ is the identity matrix and $\beta$ is a global weighting parameter that balances architectural constraints against visual odometry\addtwo{, and $s_{\min} = 10^{-3}$ is a floor for numerical stability, bounding the maximum information as $s \to 0$ for a near-perfect match}. This formulation ensures well-aligned walls (low $s$, large $\mathrm{\Lambda}_{w_{ij}}$) exert stronger constraints, while ambiguous associations (high $s$, small $\mathrm{\Lambda}_{w_{ij}}$) are automatically down-weighted in the optimization.
+
+\subsubsection*{\textbf{Graph Optimization}}
+The factor graph is periodically optimized to maintain consistency and incorporate BIM wall constraints as new associations become available.  
+
+The total cost function of the system is composed of three types of residuals: visual reprojection errors, pose-to-wall constraints, and BIM wall-to-wall factors (our contribution):
+% 
+\begin{align}
+c_{\text{total}} = \sum_{x,p} c_{\text{reproj}}&(x,p) 
++ \sum_{x,w_{S}} \big\| (x \cdot w_{S}) \ominus \tilde{w}_{S} 
+\big\|^2_{\Lambda_{\tilde{w}}} \nonumber \\
+&+ \sum_{(w_{S},w_{BIM}) \in \mathcal{M}} 
+\big\| w_{S} \ominus w_{BIM} \big\|^2_{\Lambda_{w}}
+\end{align}
+\add{where the second term constrains each keyframe pose $x \in SE(3)$ 
+by transforming the globally estimated wall $w_S$ into the keyframe 
+frame and comparing it with the locally observed wall $\tilde{w}_S$, 
+with $\ominus$ defined in Equation~\ref{eq:ppd}.} The optimizer adjusts 
+the variables $\{\mathbf{X},\mathbf{P},\mathbf{W_S}\}$ to minimize 
+$c_{\text{total}}$. The gradient of each residual propagates corrections 
+to the connected keyframes and map points, ensuring that matched BIM 
+walls influence the SLAM map according to their confidence. 
+\add{After optimization, keyframe poses and map points are updated in the map, while BIM walls remain fixed. The wall-to-wall factors therefore correct keyframe poses globally, refining the alignment between the \textit{as-planned} and \textit{as-built} models throughout the trajectory and bounding the drift accumulated during operation}. 
+
+Associations with large residuals are automatically down-weighted using a robust Huber kernel~\cite{GALLEGO2021174}, which reduces their influence on the optimization.  
+This is particularly important in construction environments, where partial structures or occlusions can cause incorrect wall detections and, consequently, erroneous wall associations.
+
+

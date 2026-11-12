@@ -1,0 +1,39 @@
+
+\section{Introduction}
+\label{sec:Introduction}
+Zero-Knowledge Proofs (ZKPs) are cryptographic protocols that allow a prover to convince one or more verifiers that a claim is correct without revealing any information beyond the validity of the claim. For example, a prover can demonstrate possession of a valid authentication key without disclosing the key itself. 
+ZKPs have many compelling applications, including privacy-preserving authentication, trustworthy AI, blockchain scalability, and recently, private age verification \cite{google_zkp}.
+A major limitation of state-of-the-art ZKP protocols is their high computational cost--generating a single proof on a CPU can take minutes to hours. As a result, there is growing interest in accelerating ZKPs, both with programmable solutions (e.g., GPUs~\cite{gzkp, distmsm}), and ASICs~\cite{pipezk, szkp, rezk, nocap, zkspeed2025}.
+
+ZKP protocols continue to evolve and improve.
+Many have been proposed, offering different trade-offs in runtime, proof size, verifier time, setup (universal vs. application-specific), and security guarantees.
+A major family of ZKP protocols relies on the SumCheck protocol\cite{sumcheck}. 
+SumCheck-based protocols have $O(N)$ prover time, as compared to NTT-based protocols (a popular alternative\cite{groth16,gabizon2019plonk}), which require $O(N \log(N))$ prover complexity.
+The SumCheck protocol is highly flexible and is at the core of many classic and modern ZKP protocols~\cite{goldwasser2015delegating,spartan,wahby2018doubly,hyperplonk,orion,whir,basefold}, which have relatively fast prover time.
+ While SumChecks were part of previously accelerated systems~\cite{verifiable_asics,nocap,zkspeed2025}, they studied specific instantiations of the SumCheck protocol rather than the protocol family more generally. 
+Another major distinguishing factor between protocols is the type of polynomial commitment scheme\cite{kzg_pcs} that is used. 
+ Some of these protocols, such as  
+\textbf{Spartan}~\cite{spartan}\textbf{+Orion}~\cite{orion}, use more lightweight Merkle tree commitments at the cost of large proofs (many MBs), while
+\textbf{HyperPlonk}~\cite{hyperplonk} uses a more computationally demanding commitment scheme that produces
+significantly smaller proofs (a few kBs). 
+
+ZKP protocols typically encode computations as arithmetic circuits (ACs) -- directed acyclic graphs where each node (or gate) enforces a local algebraic constraint, such as addition ($f = a+b$) or multiplication ($f = a\cdot b$) over a finite field. We generally denote the number of gates by $N$. These circuits are then arithmetized by translating gates into polynomial constraints, which are later verified using polynomial checks for correctness. The SumCheck protocol is used to reduce checking $N$ gates to checking a single, randomized gate formula.
+A key feature of newer SumCheck-based protocols is the use of \textit{custom, high-degree gates} that encapsulate more computation per gate by using higher-degree polynomial constraints (e.g., $f = a\cdot b^5 + c^2$).
+This reduces the overall number of gates needed to represent a computation, resulting in large efficiency gains. The move to custom gates is exemplified in the Halo2 arithmetization language\cite{halo2}. Halo2 enables a circuit designer to specify the types of gates they want to use \emph{per circuit}. 
+
+However, this level of customizability introduces significant hardware challenges. Unlike NTTs, which have fixed, regular dataflows, SumCheck computations vary with each gate’s structure and polynomial degree. High-degree polynomials require more modular multiplications and reductions, leading to increased bandwidth pressure, varied memory access patterns, and more complex scheduling. Designing efficient SumCheck hardware thus involves a trade-off: either build fixed-function units for specific gates, or develop a general, programmable architecture that can dynamically adapt to diverse polynomials without significantly compromising performance. 
+
+zkSpeed~\cite{zkspeed2025} exemplifies the first approach, using dedicated hardware for Vanilla gates (additions and multiplications) within the HyperPlonk protocol. While this provides good performance for a fixed gate set, it limits flexibility: zkSpeed’s SumCheck unit cannot easily handle complex custom gates like those seen in the Halo2 arithmetization, reducing its applicability across general ZKP workloads. Furthermore, zkSpeed's reliance on large on-chip scratchpads limits scalability, as its memory footprint grows with the number of gates, becoming impractical beyond $2^{24}$ gates, a scale increasingly common in emerging ZKP applications.
+
+Generalizable SumCheck cores are needed beyond ZKPs, too. In verifiable computing, SumCheck serves as the core verification mechanism in protocols that provide integrity guarantees without requiring zero knowledge. However, previous work in this area, including verifiable ASICs~\cite{verifiable_asics}, has also relied on custom SumCheck units with fixed function, again restricting applicability and reuse.
+
+In this work, we adopt the second approach with \textit{\textbf{zkPHIRE}}, introducing a programmable SumCheck accelerator that supports arbitrary polynomial structures and gate types. zkPHIRE addresses the irregularity and data reuse challenges intrinsic to SumCheck with fused compute pipelines, tree-based interconnects for efficient reductions, and flexible scheduling to handle diverse polynomial structures and degrees. This flexibility opens the door to a wide range of applications across ZKP and verifiable computing. We evaluate our programmable SumCheck unit on a diverse array of gate types, and then embed it into a full-system accelerator, zkPHIRE. zkPHIRE improves upon zkSpeed with more efficient memory organization and module abstraction that allows hardware to be reused across protocol steps. We conduct a protocol-level evaluation using the HyperPlonk with custom gates as a representative case study.
+Our key contributions are:
+\begin{itemize}
+    \item A novel, programmable SumCheck unit that supports arbitrary high-degree multilinear polynomials, enabling compatibility with custom gate types.
+    \item The \textit{first} hardware evaluation of high-degree gates that offer significant performance and scalability benefits.
+    \item A unified Multifunction Forest and optimized modular inverse unit that (respectively) save 15.2\% and 4.2$\times$ area with improved utilization compared to prior work~\cite{zkspeed2025}.
+    \item A full-system accelerator, zkPHIRE, that achieves $11.87\times$ geomean speedup over zkSpeed, $1486\times$ geomean speedup over CPU, and supports succinct proofs for problem sizes up to $2^{30}$ nominal constraints.
+
+\end{itemize}
+

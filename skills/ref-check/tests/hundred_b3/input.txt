@@ -1,0 +1,202 @@
+1. V D, S J N, M AR. Impact of Nested Vark (Visual, Auditory, Read, Kinesthetic) Strategies on Parental Attachment, Anxiety, Maternal and Fetal Outcome Among First Time Childbearing Couples: A Randomized Controlled Trial[J]. Cureus, 2022. DOI: 10.7759/cureus.29257
+
+2. https://doi.org/10.2217/imt-2020-0283
+
+3. https://doi.org/10.1097/jcn.0000000000000991
+
+4. Galling B, Sangroula D, Ferrer AC, 等. Antidepressant augmentation and co-initiation treatment in acute major depressive disorder: a systematic review, meta-analysis and metaregression analysis[J]. European Neuropsychopharmacology, 2016, 26: S459. DOI: 10.1016/s0924-977x(16)31452-3
+
+5. Afdaliza A. MAJOR DEPRESSIVE DISORDER PADA LANSIA (DIBAHAS DENGAN SUDUT PANDANG PSIKOLOGI)[J]. PSIKOLOGI  KONSELING, 2020, 11(2): 678-694. DOI: 10.24114/konseling.v17i2.22070
+
+6. Farrell, B. (2019). Trial (management) and error. The Lancet, 393(10184), 1935-1936. https://doi.org/10.1016/s0140-6736(19)30029-7
+
+7. Aitken, E., Jackson, A., & Kearns, R. (2016). Effect of Regional Versus Local Anesthesia on Outcome After Arteriovenous Fistula Creation: A Randomized Controlled Trial. Journal of Vascular Surgery, 64(6), 1891. https://doi.org/10.1016/j.jvs.2016.10.068
+
+8. Tamura, T., Hayashida, K., Sano, M., Onuki, S., & Suzuki, M. (2017). Efficacy of inhaled HYdrogen on neurological outcome following BRain Ischemia During post-cardiac arrest care (HYBRID II trial): study protocol for a randomized controlled trial. Trials, 18(1). https://doi.org/10.1186/s13063-017-2246-3
+
+9. Haddad FG, Kattan C, Kattan J. Should Immune Checkpoint Inhibitors be Contraindicated in Lung Cancer Patients with Latent Tuberculosis?[J]. Immunotherapy, 2020, 12(11): 759-762. DOI: 10.2217/imt-2020-0069
+
+10. Muttair RY. Advances in Immunotherapy Targeting Cancer with Next-Generation Checkpoint Inhibitors[J]. South Asian Journal of Life Sciences, 2024, 12. DOI: 10.17582/journal.sajls/2024/12.20.30
+
+11. https://doi.org/10.4018/ijsst.2019010104
+
+12. Takawane G, Phaltankar A, Patwardhan V, 等. Language augmentation approach for code-mixed text classification[J]. Natural Language Processing Journal, 2023, 5: 100042. DOI: 10.1016/j.nlp.2023.100042
+
+13. Remote data integrity checking with server-side repair1
+
+14. Xie, Y., & Ma, Q. (2023). Consensus Analysis of Fractional Multi-Agent Systems with Delayed Distributed PI Controller. Journal of Systems Science and Complexity, 36(1), 205-221. https://doi.org/10.1007/s11424-022-1256-8
+
+15. Wagh, C. (2023). Earthquake Damage Assessment using Hyperspectral Images and Convolutional Neural Network Classification. International Journal of Science and Research (IJSR), 12(4), 1140-1145. https://doi.org/10.21275/sr23417194110
+
+16. Pan K, Chi H. Research on Printmaking Image Classification and Creation Based on Convolutional Neural Network[J]. International Journal of Image and Graphics, 2025, 25(03). DOI: 10.1142/s0219467825500196
+
+17. https://doi.org/10.5715/jnlp.31.1786
+
+18. Najibzadeh, M., Mahmoodzadeh, A., & Khishe, M. (2023). Active Sonar Image Classification Using Deep Convolutional Neural Network Evolved by Robust Comprehensive Grey Wolf Optimizer. Neural Processing Letters, 55(7), 8689-8712. https://doi.org/10.1007/s11063-023-11173-9
+
+19. Zhao H, Peng L, Yu H. Distributed Model-Free Bipartite Consensus Tracking for Unknown Heterogeneous Multi-Agent Systems with Switching Topology. Sensors. 2020;20(15):4164. doi: 10.3390/s20154164
+
+20. Shen Q, Shi P. Distributed command filtered backstepping consensus tracking control of nonlinear multiple-agent systems in strict-feedback form[J]. Automatica, 2015, 53: 120-124. DOI: 10.1016/j.automatica.2014.12.046
+
+21. Parisiades P, Bremholm M, Mezouar M. High-pressure structural anomalies and electronic transitions in the topological Kondo insulator SmB
+                    <sub>6</sub>. EPL (Europhysics Letters). 2015;110(6):66002. doi: 10.1209/0295-5075/110/66002
+
+22. Abbott, B. P. (2016). Publisher’s Note: Observing gravitational-wave transient GW150914 with minimal assumptions [Phys. Rev. D<b>93</b>, 122004 (2016)]. Physical Review D, 94(6). https://doi.org/10.1103/physrevd.94.069903
+
+23. Bisikalo, D. V., & Cherenkov, A. A. (2016). The influence of coronal mass ejections on the gas dynamics of the atmosphere of a “hot Jupiter” exoplanet. Astronomy Reports, 60(2), 183-192. https://doi.org/10.1134/s1063772916020013
+
+24. Mei X, Yu P. Did LIGO Really Detect Gravitational Waves?—The Existence of Electromagnetic Interaction Made the Experiments of LIGO Invalid. Journal of Modern Physics. 2016;07(10):1098-1104. doi: 10.4236/jmp.2016.710098
+
+25. Hot Exoplanet Atmospheres Resolved with Transit Spectroscopy (HEARTS)
+
+26. Davis, D., Littenberg, T. B., Romero-Shaw, I. M., Millhouse, M., McIver, J., Di Renzo, F., & Ashton, G. (2022). Subtracting glitches from gravitational-wave detector data during the third LIGO-Virgo observing run. Classical and Quantum Gravity, 39(24), 245013. https://doi.org/10.1088/1361-6382/aca238
+
+27. https://doi.org/10.1063/pt.3.3123
+
+28. https://doi.org/10.1088/1742-6596/880/1/012030
+
+29. Bortesi L, Fischer R. The CRISPR/Cas9 system for plant genome editing and beyond. Biotechnology Advances. 2015;33(1):41-52. doi: 10.1016/j.biotechadv.2014.12.006
+
+30. Ebrahimi V, Hashemi A. Challenges of in vitro genome editing with CRISPR/Cas9 and possible solutions: A review. Gene. 2020;753:144813. doi: 10.1016/j.gene.2020.144813
+
+31. Integration of Bulk RNA Sequencing and Single-Cell RNA Sequencing to Reveal Uveal Melanoma Tumor Heterogeneity and Cells Related to Survival
+
+32. Zhou, J., & Dunker, A. K. (2018). Regulating Protein Function by Delayed Folding. Structure, 26(5), 679-681. https://doi.org/10.1016/j.str.2018.04.011
+
+33. https://doi.org/10.20517/mrr.2022.13
+
+34. Laughlin, T. G., Bayne, A., Trempe, J. F., Savage, D., & Davies, K. (2020). Structure of the Cyanobacterial NAD(P)H Dehydrogenase-Like Complex of Oxygenic Photosynthesis. Biophysical Journal, 118(3), 295a. https://doi.org/10.1016/j.bpj.2019.11.1672
+
+35. Mattei TA. The CRISPR-Cas9 Genome Editing System: Not as Precise as Previously Believed. World Neurosurgery. 2018;118:377-378. doi: 10.1016/j.wneu.2018.08.042
+
+36. https://doi.org/10.1534/genetics.115.175166
+
+37. Schröder, M. (2017). Is Income Inequality Related to Tolerance for Inequality?. Social Justice Research, 30(1), 23-47. https://doi.org/10.1007/s11211-016-0276-8
+
+38. Ariyanto D, Maulana Firdaus G, Aryista Dewi A, Gilang Jhuniantara IM. How Self Control and Situational Pressure Influence the Tendency to Receive Gratification: An Experimental Study. International Journal of Criminology and Sociology. 2022;9:400-414. doi: 10.6000/1929-4409.2020.09.39
+
+39. Income Mobility Breeds Tolerance for Income Inequality
+
+40. Donald Trump’s “Political Incorrectness”: Neoliberalism as Frontstage Racism on Social Media
+
+41. https://doi.org/10.22453/lsj-021.2.233-251
+
+42. https://doi.org/10.22453/lsj-021.2.211-229
+
+43. Brebrić Z, Ljubin Golub T, Rijavec M. Predicting Gender Differences in School Achievement and Social Acceptance: The Role of Delay of Gratification. Drustvena istrazivanja. 2020;29(1):1-21. doi: 10.5559/di.29.1.01
+
+44. Li S, Phang CW, Ling H. Self-gratification and self-discrepancy in purchase of digital items. Industrial Management & Data Systems. 2019;119(8):1608-1624. doi: 10.1108/imds-10-2018-0434
+
+45. 郭莎 (2020). 讨论分层护理在高血压合并心脑血管危险因素中的应用. 实用医学研究, 2(2). https://doi.org/10.36012/pmr.v2i2.1808
+
+46. 王超峰. 洛伐他汀治疗早期糖尿病肾病的疗效观察. Central Plains Medical Journal. 2009;36(20):76-77. doi: 10.3760/cma.j.issn.1674-4756.2009.20.055
+
+47. 张国栋, & 窦长武 (2019). 颅内未破裂动脉瘤的诊断治疗现状及研究进展. 亚洲临床医学杂志, 2(2), 36. https://doi.org/10.26549/yzlcyxzz.v2i2.1768
+
+48. 李 佳. 分析中医内科治疗胃食管反流病的临床效果[J]. 内科诊疗与进展, 2022, 3(1): 52-54. DOI: 10.37155/2717-5693-0301-22
+
+49. 李合玲 (2014). 左卡尼汀治疗2型糖尿病肾病的疗效. Central Plains Medical Journal, 41(17), 66-67. https://doi.org/10.3760/cma.j.issn.1674-4756.2014.17.028
+
+50. 伯斋 于. 黄芪在中医内科临床应用的体会[J]. 中医药研究前沿, 2020, 2(1). DOI: 10.32629/fcmr.v2i1.1540
+
+51. Pinato, D. J., Gramenitskaya, D., Altmann, D. M., Boyton, R. J., Mullish, B. H., Marchesi, J. R., & Bower, M. (2020). Antibiotic therapy and outcome from immune-checkpoint inhibitors. Journal for ImmunoTherapy of Cancer, 7(1). https://doi.org/10.1186/s40425-019-0775-x
+
+52. George, D. (2017). Dose Response Study of Intrathecal Morphine for Off-Pump Coronary Artery Bypass Grafting: a pilot Prospective Randomized Double-Blinded Controlled Clinical Trial. Journal of Cardiology & Cardiovascular Therapy, 3(2). https://doi.org/10.19080/jocct.2017.03.555611
+
+53. Pais, M., Pai, M. V., Kamath, A., Bhat, R., Bhat, P., & Joisa, G. H. (2021). A Randomized Controlled Trial on the Efficacy of Integrated Yoga on Pregnancy Outcome. Holistic Nursing Practice, 35(5), 100-110. https://doi.org/10.1097/hnp.0000000000000472
+
+54. Akyala, A. I., Verhaar, A. P., & Peppelenbosch, M. P. (2018). Immune checkpoint inhibition in gastric cancer: A systematic review. Journal of Cellular Immunotherapy, 4(2), 100-110. https://doi.org/10.1016/j.jocit.2018.05.001
+
+55. Hankey, G. J. (2016). The benefits of aspirin in early secondary stroke prevention. Nature, 388(10042), 312-314. https://doi.org/10.1016/s0140-6736(16)30511-6
+
+56. Hankey, G. J. (2023). Does thrombolysis add value to thrombectomy for acute ischaemic stroke?. The Lancet, 402(10406), 938-939. https://doi.org/10.1016/s0140-6736(23)01202-4
+
+57. Iso, H. (2023). Convex Aggregation for Opinion Summarization. Journal of Natural Language Processing, 29(1), 264-269. https://doi.org/10.5715/jnlp.29.264
+
+58. Gu, Y., & Hu, Y. (2020). Extractive Summarization with Very Deep Pretrained Language Model. International Journal of Artificial Intelligence & Applications, 10(02), 27-32. https://doi.org/10.5121/ijaia.2019.10203
+
+59. Tang, W., Liang, C., Wu, J., & Xie, Y. (2023). Distributed impulsive control consensus for a class of unknown nonlinear multi-agent systems based on event-triggered scheme. Nature, 49, 101352. https://doi.org/10.1016/j.nahs.2023.101352
+
+60. Nurhadi, M., & Purnomo, J. (2022). IMPLEMENTATION OF IMAGE CLASSIFICATION USING CONVOLUTIONAL NEURAL NETWORK (CNN) ALGORITHM ON VEHICLES IMAGES. ASEAN Journal of Systems Engineering, 9(1). https://doi.org/10.22146/ajse.v6i1.72411
+
+61. Smith, J., He, J., Liu, Y., Liu, L., Zhao, Y., & Jin, Y. (2021). Security-Driven Placement and Routing Tools for Electromagnetic Side-Channel Protection. IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems, 40(6), 1077-1089. https://doi.org/10.1109/tcad.2020.3024938
+
+62. Smith, J., Martin, M. V., & Liscano, R. (2016). Evaluating Hamming Distance as a Metric for the Detection of CRC-based Side-channel Communications in MANETs. Procedia Computer Science, 83, 433-440. https://doi.org/10.1016/j.procs.2016.04.206
+
+63. Poh, H. S., Joshi, S. K., Cerè, A., Cabello, A., & Kurtsiefer, C. (2016). Testing quantum theory in a photon pair experiment. Nature. https://doi.org/10.1117/2.1201601.006293
+
+64. Sabze, T., & Cheraghchi, H. (2017). Effect of chiral selective tunneling on quantum transport in magnetic topological-insulator thin films. Physical Review B, 96(15). https://doi.org/10.1103/physrevb.96.155441
+
+65. Jiang, Y., Fan, X. L., & Huang, Q. G. (2023). Search for stochastic gravitational-wave background from string cosmology with Advanced LIGO and Virgo's O1∼O3 data. Nature, 2023(04), 024. https://doi.org/10.1088/1475-7516/2023/04/024
+
+66. Carlson, E. K. (2020). An Intrinsically Magnetic Topological Insulator. Nature, 13. https://doi.org/10.1103/physics.13.s119
+
+67. Anonymous (2020). Interrupting Flow in a 2D Topological Insulator. Physics, 12. https://doi.org/10.1103/physics.12.s1
+
+68. Ghosh, S., & Pramanik, S. (2021). Structural diversity, functional aspects and future therapeutic applications of human gut microbiome. Nature, 203(9), 5281-5308. https://doi.org/10.1007/s00203-021-02516-y
+
+69. Meng, F., & Kurgan, L. (2016). Computational Prediction of Protein Secondary Structure from Sequence. Current Protocols in Protein Science, 86(1). https://doi.org/10.1002/cpps.10
+
+70. Chang, E. (2023). Exploiting the human gut microbiome for novel therapeutics. Journal of High School Science, 6(3). https://doi.org/10.64336/001c.38540
+
+71. de Chadarevian, S. (2019). John Kendrew and myoglobin: Protein structure determination in the 1950s. Protein Science, 27(6), 1136-1143. https://doi.org/10.1002/pro.3417
+
+72. Smith, J., & Rathore, R. S. (2024). Categorization of hotspots into three types – weak, moderate and strong to distinguish protein–protein
+            <i>versus</i>
+            protein–peptide interactions. Journal of Biomolecular Structure and Dynamics, 42(18), 9348-9360. https://doi.org/10.1080/07391102.2023.2252077
+
+73. Karanikolas, P., & Zografakis, S. (2016). Greek farm households: income inequality, poverty and distributional impact of farm income. Social Cohesion and Development, 3(1). https://doi.org/10.12681/scad.8899
+
+74. Smith, J., & Stakėnas, J. (2020). Labor market reforms and the monetary policy environment. European Economic Review, 128, 103509. https://doi.org/10.1016/j.euroecorev.2020.103509
+
+75. Smith, J., & von Sikorski, C. (2021). The role of (social) media in political polarization: a systematic review. Annals of the International Communication Association, 45(3), 188-206. https://doi.org/10.1080/23808985.2021.1976070
+
+76. Weinert, T., King, J. A., Böldt, L., Gronow, F., Roessner, V., & Ehrlich, S. (2023). Increased self‐reported delay of gratification in acutely underweight, but not remitted anorexia nervosa. International Journal of Eating Disorders, 55(1), 135-140. https://doi.org/10.1002/eat.23644
+
+77. Quisenberry, A. J., Eddy, C. R., Patterson, D. L., Franck, C. T., & Bickel, W. K. (2016). Regret Expression and Social Learning Increases Delay to Sexual Gratification. PLOS ONE, 10(8), e0135977. https://doi.org/10.1371/journal.pone.0135977
+
+78. 王伟, 陈洪波, 尹淑凤, & 冯静 (2006). 丹参粉针剂治疗2型糖尿病肾病疗效观察. Zhongguo jiceng yiyao, 13(12), 2050-2051. https://doi.org/10.3760/cma.j.issn.1008-6706.2006.12.065
+
+79. 司徒高锋 (2023). 沙库巴曲缬沙坦钠片治疗高血压患者疗效观察. 临床医学与护理, 1(2), 100-110. https://doi.org/10.33142/cmn.v1i2.11047
+
+80. 琳雷 (2022). 心脏康复护理对心肌梗死介入治疗后患者心理状态的影响. 临床医学前沿, 4(6), 68-70. https://doi.org/10.37155/2661-4766-0406-24
+
+81. Kesselheim AS, Cresswell K. Implementing learning health systems in the UK NHS. BMJ. 2017; 357: j2449. doi: 10.1136/bmj.j2449
+
+82. Niska R, Hane CA, Castillo RC. Development and validation of the XGBoost prediction model for stroke risk: a large-scale electronic health record-based cohort study. J Stroke Cerebrovasc Dis. 2018;27(9):2413-2422. doi: 10.1016/j.jstrokecerebrovasdis.2018.04.010
+
+83. Chen, A. C., Martin, A. J., Choy, B., Fernandez-Penas, P., & Dalziell, R. A. (2021). A systematic review of the relationship between sunscreen use and the prevention of melanoma and non-melanoma skin cancer. European Journal of Dermatology, 31(1), 1-9. PMID: 33635047
+
+84. Kwon, H. H., Yoon, J. Y., Park, S. Y., Min, S., Suh, D. H., & Kim, J. H. (2015). A comprehensive study on the association between diet and skin aging in Korean women. Journal of the American Academy of Dermatology, 73(2), 242-250. PMID: 26183923
+
+85. Telfer, N. R., Colver, G. B., Morton, C. A., & British Association of Dermatologists Therapy Guidelines and Audit Subcommittee. (2009). Guidelines for the management of basal cell carcinoma. British Journal of Dermatology, 161(4), 643-659. PMID: 19663808
+
+86. 梁鳳珍、洪媛媛、林英輝. 心率偏低是否影響身心健康？. 華人心臟雜誌, 2017, 29(3)：221-228.
+
+87. 郭卉芬、王永年. 不同運動方式對心跳的影響及其健康效益. 中國科技資訊, 2018, 23(17)：18-19.
+
+88. Kallajoki M, et al. Homocysteine and bone metabolism. Osteoporos Int. 2002 Oct;13(10):822-7. PMID: 12352394
+
+89. Wang, F. (2018). The labour shortage in China: Causes and implications. Journal of Asian Economics, 29(6), 1-13.
+
+90. Chen, X. (2018). The sharing economy and its impacts on employment and labor. Journal of Business and Economics, 9(8), 647-656.
+
+91. Eichengreen, B., & O’Rourke, K. H. (2009). The protectionist roots of America’s first minimum wage law. The Journal of Economic History, 69(03), 813-841.
+
+92. Garcia, A., Rodriguez, N., & Espinoza, J. (2020). The Effectiveness of Online Laboratory Instruction in Undergraduate Biology Courses. Journal of Educational Technology Development and Exchange, 3(1), 1-14.
+
+93. Flynn, M. (2014). The use of unmanned aerial vehicles in military operations: A review of the literature. Journal of Military and Strategic Studies, 16(2), 1-19.
+
+94. Kivisto, A., & Rantala, M. (2015). Gun control and violent crime: Evidence from across the world. Journal of Criminological Research, Policy and Practice, 1(1), 39-50.
+
+95. Liu, Y., Huang, Y., Liu, X., & Wu, T. (2016). The effect of dental care on the risk of cardiovascular disease and stroke: A systematic review and meta-analysis. Scientific Reports, 6, 1-10.
+
+96. Zhang, L., & Wang, Q. (2022). A unified neural-symbolic framework for automatic literature verification in multilingual academic writing. Journal of Imaginary Computational Linguistics, 18(3), 45–62.
+
+97. 李明、王芳. 基于深度学习的课堂注意力监测研究[J]. 虚构教育研究, 2021, 8(2): 11-20.
+
+98. Hawthorne, P. L., Reed, M. C., & Okonkwo, T. (2024). A stochastic theory of citation laundering in generative scholarly drafts. Journal of Fictional Scientometrics, 7(2), 88–104.
+
+99. 赵强, 孙丽. 量子纠缠在中小学课业减负中的应用初探[J]. 虚构物理与教育, 2023, 12(4): 1-9.
+
+100. Nguyen, T. H., & Patel, R. (2021). Cross-lingual citation graphs for detecting fabricated biomedical claims. Proceedings of the Imaginary Conference on Computational Integrity, 4, 201–218.

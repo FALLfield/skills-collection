@@ -1,0 +1,34 @@
+\begin{table}[b]
+ % \vspace{0.5cm}
+    \centering
+    \caption{Summary of evaluation sequences. 
+    \#W and \#S denote the number of visible walls and distinct navigable spaces (rooms and corridors), respectively. Area, Length ($L$), and Duration ($D$) are in $m^2$, $m$, and $s$.
+    CS1--CS3-Furn are distinct construction sites at different completion stages; office1 and office2 are separate buildings with multiple sequences each. }
+    \begin{tabular}{l|l|c|c|c|c|c}
+        \toprule
+            \textbf{Env.} & \textbf{Sequence} & \textbf{\#W} & \textbf{\#S} & \textbf{Area ($\mathbf{m}^2$)} & \textbf{L (m)} & \textbf{D(s)} \\
+        \midrule
+        \multirow{8}{*}{\shortstack{\textbf{Offices}}} 
+            & office1-1 & 10 & 4 & 100 & 90 & 670 \\
+            & office1-2 & 12 & 3 & 109 & 48 & 265 \\
+            & office1-3 & 12 & 4 & 113 & 99 & 524 \\
+            & office1-4 & 6 & 2 & 54 & 37 & 169 \\
+        \cmidrule(lr){2-7}
+            & office2-1 & 10 & 3 & 168 & 68 & 268 \\
+            & office2-2 & 10 & 3 & 168 & 73 & 370 \\
+            & office2-3 & 10 & 3 & 70 & 41 & 172 \\
+            & office2-4 & 4 & 4 & 40 & 53 & 260 \\
+        \midrule
+        \multirow{3}{*}{\shortstack{\textbf{Constr.}\\\textbf{Sites}}} 
+            & CS1       & 16 & 5 & 48 & 51 & 377 \\
+        \cmidrule(lr){2-7}
+            & CS2-Mid   & 17 & 5 & 68 & 46 & 215 \\
+        \cmidrule(lr){2-7}
+            & CS3-Furn  & 13 & 4 & 95 & 30 & 180 \\
+        \midrule
+            \multicolumn{2}{c|}{\textbf{Total}} & 120 & 40 & 1033 & 642 & 3470 \\
+        \bottomrule
+    \end{tabular}
+    \label{tbl_dataset}
+\end{table}
+

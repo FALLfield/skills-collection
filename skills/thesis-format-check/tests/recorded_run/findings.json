@@ -1,0 +1,214 @@
+{
+  "rules": "rules/example_rules.json",
+  "input": "tests/sample_thesis.docx",
+  "output": "tests/official_run/annotated.docx",
+  "summary": "tests/official_run/summary.md",
+  "disclaimer": "本文件是虚构示例规则，不冒充任何真实学校的学位论文规范，仅用于演示如何把检查项写成结构化规则，以及如何对照规则检查 docx。真实使用时，请用你自己学校的规范改写成同结构的规则文件；规范里有口径之争的条目请放入 pending，不要写成自动检查。",
+  "school_name": "示例大学（虚构）",
+  "n_findings": 20,
+  "n_comments_written": 20,
+  "data_stays_local": true,
+  "external_calls": [],
+  "findings": [
+    {
+      "key": "margin:1:right",
+      "category": "margin",
+      "message": "【页边距】第 1 节右边距为 2.00 cm，规范要求 3.17 cm（公差 0.05 cm）。",
+      "paragraph_text": "示例大学（虚构）",
+      "paragraph_index": 0,
+      "section": 1,
+      "side": "right",
+      "anchor": ""
+    },
+    {
+      "key": "margin:2:top",
+      "category": "margin",
+      "message": "【页边距】第 2 节上边距为 2.00 cm，规范要求 2.54 cm（公差 0.05 cm）。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": 2,
+      "side": "top",
+      "anchor": ""
+    },
+    {
+      "key": "margin:2:left",
+      "category": "margin",
+      "message": "【页边距】第 2 节左边距为 2.54 cm，规范要求 3.17 cm（公差 0.05 cm）。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": 2,
+      "side": "left",
+      "anchor": ""
+    },
+    {
+      "key": "font_cn:22",
+      "category": "font_cn",
+      "message": "【字体】正文中文字体为「楷体」，规范要求「宋体」。",
+      "paragraph_text": "【E04】本段故意将中文字体设为楷体，以对照规范中的宋体要求。其余字号、行距和缩进保持正确。",
+      "paragraph_index": 22,
+      "section": null,
+      "side": null,
+      "anchor": "【E04】本段故意将中文字体设为楷体，以对照规范中的宋体要求。其余字号、行距和缩"
+    },
+    {
+      "key": "font_size:23",
+      "category": "font_size",
+      "message": "【字号】正文字号为 14 磅，规范要求 12 磅。",
+      "paragraph_text": "【E05】本段故意将字号设为 14 磅，以对照规范中的 12 磅要求。中文字体仍为宋体，行距和缩进保持正确。",
+      "paragraph_index": 23,
+      "section": null,
+      "side": null,
+      "anchor": "【E05】本段故意将字号设为 14 磅，以对照规范中的 12 磅要求。中文字体仍"
+    },
+    {
+      "key": "line_spacing:24",
+      "category": "line_spacing",
+      "message": "【行距】正文行距为 1 倍，规范要求 1.5 倍。",
+      "paragraph_text": "【E09】本段故意使用单倍行距，以对照规范中的 1.5 倍行距要求。中文字体和字号保持正确，并保留首行缩进。",
+      "paragraph_index": 24,
+      "section": null,
+      "side": null,
+      "anchor": "【E09】本段故意使用单倍行距，以对照规范中的 1.5 倍行距要求。中文字体和字"
+    },
+    {
+      "key": "indent:25",
+      "category": "indent",
+      "message": "【首行缩进】正文首行缩进约为 0.0 字符，规范要求 2 字符。",
+      "paragraph_text": "【E10】本段故意取消首行缩进，以对照规范中 2 字符缩进的要求。字体、字号和行距保持正确。",
+      "paragraph_index": 25,
+      "section": null,
+      "side": null,
+      "anchor": "【E10】本段故意取消首行缩进，以对照规范中 2 字符缩进的要求。字体、字号和行"
+    },
+    {
+      "key": "heading_font:1:20",
+      "category": "heading_font",
+      "message": "【标题字体】1 级标题「第1章 绪论」中文字体为「宋体」，规范要求「黑体」。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": null,
+      "side": null,
+      "anchor": "第1章 绪论"
+    },
+    {
+      "key": "heading_size:1:20",
+      "category": "heading_size",
+      "message": "【标题字号】1 级标题「第1章 绪论」字号为 14 磅，规范要求 16 磅。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": null,
+      "side": null,
+      "anchor": "第1章 绪论"
+    },
+    {
+      "key": "heading_bold:2:27",
+      "category": "heading_bold",
+      "message": "【标题加粗】2 级标题「1.1 研究背景」未加粗，规范要求加粗。",
+      "paragraph_text": "1.1 研究背景",
+      "paragraph_index": 27,
+      "section": null,
+      "side": null,
+      "anchor": "1.1 研究背景"
+    },
+    {
+      "key": "heading_number_seq:1:42",
+      "category": "heading_number_seq",
+      "message": "【标题编号】章号不连续：在「第二章 方法」（2）之后出现「第4章 结论」（4），缺 3。",
+      "paragraph_text": "第4章 结论",
+      "paragraph_index": 42,
+      "section": null,
+      "side": null,
+      "anchor": "第4章 结论"
+    },
+    {
+      "key": "heading_number_seq:2:29",
+      "category": "heading_number_seq",
+      "message": "【标题编号】2 级编号不连续：在「1.1 研究背景」之后出现「1.3 研究意义」，缺 1.2。",
+      "paragraph_text": "1.3 研究意义",
+      "paragraph_index": 29,
+      "section": null,
+      "side": null,
+      "anchor": "1.3 研究意义"
+    },
+    {
+      "key": "caption_size:figure:34",
+      "category": "caption_size",
+      "message": "【题注字号】「图 5  虚构的示意图，题注故意使用 12 磅字号【E15】」字号为 12 磅，规范要求 10.5 磅。",
+      "paragraph_text": "图 5  虚构的示意图，题注故意使用 12 磅字号【E15】",
+      "paragraph_index": 34,
+      "section": null,
+      "side": null,
+      "anchor": "图 5  虚构的示意图，题注故意使用 12 磅字号【E15】"
+    },
+    {
+      "key": "caption_format:table:41",
+      "category": "caption_format",
+      "message": "【题注格式】「表一  虚构的实验结果（编号故意不用阿拉伯数字）【E14】」编号不是阿拉伯数字，规范要求「表1」这类格式。",
+      "paragraph_text": "表一  虚构的实验结果（编号故意不用阿拉伯数字）【E14】",
+      "paragraph_index": 41,
+      "section": null,
+      "side": null,
+      "anchor": "表一  虚构的实验结果（编号故意不用阿拉伯数字）【E14】"
+    },
+    {
+      "key": "caption_seq:figure:33",
+      "category": "caption_seq",
+      "message": "【题注编号】图题号不连续：在 2 之后出现 4，缺 3。",
+      "paragraph_text": "图 4  虚构的示意图，题号故意从 2 跳到 4【E13】",
+      "paragraph_index": 33,
+      "section": null,
+      "side": null,
+      "anchor": "图 4  虚构的示意图，题号故意从 2 跳到 4【E13】"
+    },
+    {
+      "key": "header:2",
+      "category": "header",
+      "message": "【页眉】第 2 节（正文）页眉为「错误的页眉文字」，规范要求含「示例大学本科毕业论文」。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": 2,
+      "side": null,
+      "anchor": ""
+    },
+    {
+      "key": "page_number_missing:2",
+      "category": "page_number_missing",
+      "message": "【页码】第 2 节（正文）页眉页脚未发现 PAGE 域，规范要求正文有页码。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": 2,
+      "side": null,
+      "anchor": ""
+    },
+    {
+      "key": "page_number_restart:2",
+      "category": "page_number_restart",
+      "message": "【页码分节】第 2 节（正文）页码起始为未设置，规范要求从 1 重新起编。",
+      "paragraph_text": "第1章 绪论",
+      "paragraph_index": 20,
+      "section": 2,
+      "side": null,
+      "anchor": ""
+    },
+    {
+      "key": "toc:not_automatic",
+      "category": "toc",
+      "message": "【目录】未发现自动目录域（TOC 域）。规范要求使用 Word 自动目录，而不是手工敲出来的目录文字。",
+      "paragraph_text": "目录",
+      "paragraph_index": 11,
+      "section": null,
+      "side": null,
+      "anchor": "目录"
+    },
+    {
+      "key": "reference_year:46",
+      "category": "reference_year",
+      "message": "【参考文献】「[2] 李四. 另一项完全虚构的研究[J]. 示例学报, 8(1): 10-15」未发现四位年份（19xx 或 20xx）。",
+      "paragraph_text": "[2] 李四. 另一项完全虚构的研究[J]. 示例学报, 8(1): 10-15.【E20】",
+      "paragraph_index": 46,
+      "section": null,
+      "side": null,
+      "anchor": "[2] 李四. 另一项完全虚构的研究[J]. 示例学报, 8(1): 10-15"
+    }
+  ]
+}

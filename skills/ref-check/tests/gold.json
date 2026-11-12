@@ -1,0 +1,145 @@
+{
+  "note": "每条的 expected 是本轮验收的预期状态。来源必须可核对。自造样本只作对照，不能单独作为可上架依据。",
+  "items": [
+    {
+      "id": 1,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "source": "Crossref 记录 DOI 10.1016/j.numecd.2017.04.004；published-print 2017-06，27(6):504-517。本轮实测拉取。"
+    },
+    {
+      "id": 2,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "source": "Crossref DOI 10.1109/cvpr.2016.90，2016，pp. 770-778。"
+    },
+    {
+      "id": 3,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "source": "Crossref DOI 10.1038/nature16961，Nature 529(7587):484-489，2016。"
+    },
+    {
+      "id": 4,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "source": "Crossref DOI 10.18653/v1/n19-1423，2019，pp. 4171-4186。"
+    },
+    {
+      "id": 5,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "source": "Crossref DOI 10.1111/j.1365-2133.2008.08666.x，British Journal of Dermatology 159(1):35-48，2008。"
+    },
+    {
+      "id": 6,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "source": "OpenAlex 记录 https://api.openalex.org/works/doi:10.3760/cma.j.issn.1673-4904.2010.34.031 （Crossref 对该 DOI 返回 404，用来测 OpenAlex 回退与中文条目）。作者 李巧元、柳景华；2010；33(34):74-76。"
+    },
+    {
+      "id": 7,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["year"],
+      "source": "在第 2 条真实条目上把年份改为 2018。自造改错，仅作对照。"
+    },
+    {
+      "id": 8,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["pages"],
+      "source": "在第 3 条真实条目上把页码改为 100-110。自造改错，仅作对照。"
+    },
+    {
+      "id": 9,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["authors"],
+      "source": "在第 4 条真实条目上把第一作者改为 Smith, J.。自造改错，仅作对照。"
+    },
+    {
+      "id": 10,
+      "group": "self_fabricated",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "source": "本轮自造的英文对照样本，期刊名 Journal of Imaginary Computational Linguistics 不存在。不能作为可上架依据。"
+    },
+    {
+      "id": 11,
+      "group": "self_fabricated",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "source": "本轮自造的中文对照样本。按设计，中文查不到只标「查无此文」并说明覆盖不足，不升格为「疑似编造」。不能作为可上架依据。"
+    },
+    {
+      "id": 12,
+      "group": "public_ai_fake",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["doi", "authors", "year", "journal"],
+      "source": "JAMA Network Open 2023;6(8):e2327647（https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2808058）Table 2 所列 GPT-4 虚构条目。题名与 Scobie & Castle-Clarke, Learning Health Systems, DOI 10.1002/lrh2.10209 相近；所给 DOI 10.1136/bmj.j2449 实际指向 Doshi, BMJ 2017。"
+    },
+    {
+      "id": 13,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "source": "同上 JAMA Network Open Table 2。DOI 10.1016/j.jstrokecerebrovasdis.2018.04.010 实际指向 Lu et al. 关于斑块分布的另一篇文章（2018;27(8):2243-2249）。"
+    },
+    {
+      "id": 14,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "source": "Cureus 15(5):e39238（https://www.cureus.com/articles/158289-high-rates-of-fabricated-and-inaccurate-references-in-chatgpt-generated-medical-content 及 PDF https://assets.cureus.com/uploads/original_article/pdf/158289/20230618-23404-wiiz34.pdf）Figure 1：Chen et al. 被原文判定为虚构。PMID 33635047 在 PubMed/Europe PMC 指向另一篇材料化学文章。"
+    },
+    {
+      "id": 15,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "source": "同上 Cureus Figure 1：Kwon et al. 被原文判定为虚构。PMID 26183923 指向另一篇生物质气化文章。"
+    },
+    {
+      "id": 16,
+      "group": "public_ai_fake",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["year", "volume", "issue", "pages", "pmid"],
+      "source": "同上 Cureus Figure 1：Telfer et al. 被原文判定为真实文献但年份、卷期、页码、PMID 不准确。Crossref 中正确记录为 2008;159(1):35-48，DOI 10.1111/j.1365-2133.2008.08666.x。PMID 19663808 指向植物科学文章。"
+    },
+    {
+      "id": 17,
+      "group": "public_ai_fake",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "source": "台湾大学图书馆《ChatGPT自动生成的参考文献真假難辨，不可不慎！》（https://tul.blog.ntu.edu.tw/archives/31819）文内截图 chatgpt-error-1.png 第 1 条。馆员查多馆目录、国家图书馆、华艺、CNKI 与 Google 均无此中文期刊。本工具公开库同样应查无；因中文覆盖不足，只标查无此文，不升格为疑似编造。"
+    },
+    {
+      "id": 18,
+      "group": "public_ai_fake",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "source": "同上台大图书馆截图第 2 条。"
+    },
+    {
+      "id": 19,
+      "group": "public_ai_fake",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["title"],
+      "source": "同上台大图书馆文内截图 chatgpt-error-2.png 第 2 条，馆员标注为错误。相近真实文章为 Böhm et al., European Heart Journal, DOI 10.1093/eurheartj/ehs250（2012）。若相似度不够到 RELATED 阈值，可接受为 not_found。"
+    },
+    {
+      "id": 20,
+      "group": "public_ai_fake",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": ["year"],
+      "source": "同上台大图书馆截图 chatgpt-error-2.png 第 1 条，页面标 2018 年。Crossref DOI 10.1016/j.numecd.2017.04.004 的 published-print 为 2017-06。馆员文中写「出版年應為2018年」，与 Crossref 印刷年不一致；本测试以 Crossref 为准，将 2018 视为年份不符。"
+    }
+  ]
+}

@@ -1,0 +1,4633 @@
+{
+  "note": "第 7 批 100 条。gold 在运行 check_refs.py 之前写好。构造种子 20261111-b7。每条 expected 依据独立来源（Crossref/OpenAlex 快照，或公开报道/自造说明），不是根据工具输出回填。自造与人为篡改只作对照，不能单独作为可上架依据。",
+  "batch": 7,
+  "seed": "20261111-b7",
+  "constructed_at": "2026-11-11 23:22:53 Asia/Macau（UTC+8）",
+  "items": [
+    {
+      "id": 1,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.jpedsurg.2023.10.062；2024，Journal of Pediatric Surgery。 原始快照：raw/crossref/medicine_10.1016_j.jpedsurg.2023.10.062.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.jpedsurg.2023.10.062",
+        "title": "The Outcome of Purse-string Versus Conventional Wound Closure Techniques in Patients Undergoing Stoma Reversal: A Randomized Controlled Trial",
+        "journal": "Journal of Pediatric Surgery",
+        "year": 2024,
+        "volume": "59",
+        "issue": "6",
+        "pages": "1186-1189",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ameer",
+            "given": "Assad"
+          },
+          {
+            "family": "Mirza",
+            "given": "Muhammad Bilal"
+          },
+          {
+            "family": "Talat",
+            "given": "Nabila"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.jpedsurg.2023.10.062",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=randomized+controlled+trial+cardiovascular+outcome&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2024&rows=25&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_j.jpedsurg.2023.10.062.json"
+      },
+      "cite": "https://doi.org/10.1016/j.jpedsurg.2023.10.062"
+    },
+    {
+      "id": 2,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s00262-024-03636-2；2024，Cancer Immunology, Immunotherapy。 原始快照：raw/crossref/medicine_10.1007_s00262-024-03636-2.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s00262-024-03636-2",
+        "title": "Synergistic combination therapy using cowpea mosaic virus intratumoral immunotherapy and Lag-3 checkpoint blockade",
+        "journal": "Cancer Immunology, Immunotherapy",
+        "year": 2024,
+        "volume": "73",
+        "issue": "3",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Karan",
+            "given": "Sweta"
+          },
+          {
+            "family": "Jung",
+            "given": "Eunkyeong"
+          },
+          {
+            "family": "Boone",
+            "given": "Christine"
+          },
+          {
+            "family": "Steinmetz",
+            "given": "Nicole F."
+          }
+        ],
+        "url": "https://doi.org/10.1007/s00262-024-03636-2",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=cancer+immunotherapy+checkpoint&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1007_s00262-024-03636-2.json"
+      },
+      "cite": "https://doi.org/10.1007/s00262-024-03636-2"
+    },
+    {
+      "id": 3,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "vancouver",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.2217/imt-2020-0230；2021，Immunotherapy。 原始快照：raw/crossref/medicine_10.2217_imt-2020-0230.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.2217/imt-2020-0230",
+        "title": "The Safety and Efficacy of Immune-Checkpoint Inhibitors in Patients with Cancer and Pre-Existing Autoimmune Diseases",
+        "journal": "Immunotherapy",
+        "year": 2021,
+        "volume": "13",
+        "issue": "6",
+        "pages": "527-539",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Wu",
+            "given": "Chunlan"
+          },
+          {
+            "family": "Zhong",
+            "given": "Li"
+          },
+          {
+            "family": "Wu",
+            "given": "Qing"
+          },
+          {
+            "family": "Lin",
+            "given": "Shaowei"
+          },
+          {
+            "family": "Xie",
+            "given": "Xianhe"
+          }
+        ],
+        "url": "https://doi.org/10.2217/imt-2020-0230",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=cancer+immunotherapy+checkpoint&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/medicine_10.2217_imt-2020-0230.json"
+      },
+      "cite": "Wu C, Zhong L, Wu Q, Lin S, Xie X. The Safety and Efficacy of Immune-Checkpoint Inhibitors in Patients with Cancer and Pre-Existing Autoimmune Diseases. Immunotherapy. 2021;13(6):527-539. doi: 10.2217/imt-2020-0230"
+    },
+    {
+      "id": 4,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "ieee",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.7759/cureus.19946；2021，Cureus。 原始快照：raw/crossref/medicine_10.7759_cureus.19946.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.7759/cureus.19946",
+        "title": "Simulated Randomized Controlled Trial to Learn Critical Appraisal (SiRCA): A Randomized Controlled Study of Effectiveness Among Undergraduate Medical Students",
+        "journal": "Cureus",
+        "year": 2021,
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Basheer",
+            "given": "Aneesh"
+          },
+          {
+            "family": "Iqbal",
+            "given": "Nayyar"
+          },
+          {
+            "family": "Prabakaran",
+            "given": "Stalin"
+          },
+          {
+            "family": "Simiyon",
+            "given": "Manjula"
+          },
+          {
+            "family": "Anandan",
+            "given": "Velavan"
+          }
+        ],
+        "url": "https://doi.org/10.7759/cureus.19946",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=randomized+controlled+trial+cardiovascular+outcome&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2024&rows=25&offset=168",
+        "raw_path": "raw/crossref/medicine_10.7759_cureus.19946.json"
+      },
+      "cite": "A. Basheer, N. Iqbal, S. Prabakaran, M. Simiyon, and V. Anandan, \"Simulated Randomized Controlled Trial to Learn Critical Appraisal (SiRCA): A Randomized Controlled Study of Effectiveness Among Undergraduate Medical Students,\" Cureus, 2021, doi: 10.7759/cureus.19946."
+    },
+    {
+      "id": 5,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "mla",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1111/acps.12647；2017，Acta Psychiatrica Scandinavica。 原始快照：raw/crossref/medicine_10.1111_acps.12647.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1111/acps.12647",
+        "title": "A systematic review of trial registration and selective outcome reporting in psychotherapy randomized controlled trials",
+        "journal": "Acta Psychiatrica Scandinavica",
+        "year": 2017,
+        "volume": "135",
+        "issue": "1",
+        "pages": "65-77",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Bradley",
+            "given": "H. A."
+          },
+          {
+            "family": "Rucklidge",
+            "given": "J. J."
+          },
+          {
+            "family": "Mulder",
+            "given": "R. T."
+          }
+        ],
+        "url": "https://doi.org/10.1111/acps.12647",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=randomized+controlled+trial+cardiovascular+outcome&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2024&rows=25&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1111_acps.12647.json"
+      },
+      "cite": "Bradley, H. A., et al. \"A systematic review of trial registration and selective outcome reporting in psychotherapy randomized controlled trials.\" Acta Psychiatrica Scandinavica, vol. 135, no. 1, 2017, pp. 65-77. https://doi.org/10.1111/acps.12647"
+    },
+    {
+      "id": 6,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.2217/imt-2017-0073；2017，Immunotherapy。 原始快照：raw/crossref/medicine_10.2217_imt-2017-0073.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.2217/imt-2017-0073",
+        "title": "Five New Therapies or Just One New Treatment? A Critical Look at Immune Checkpoint Inhibition in Urothelial Cancer",
+        "journal": "Immunotherapy",
+        "year": 2017,
+        "volume": "9",
+        "issue": "10",
+        "pages": "781-784",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Shah",
+            "given": "Amishi Y"
+          },
+          {
+            "family": "Gao",
+            "given": "Jianjun"
+          },
+          {
+            "family": "Siefker-Radtke",
+            "given": "Arlene O"
+          }
+        ],
+        "url": "https://doi.org/10.2217/imt-2017-0073",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=cancer+immunotherapy+checkpoint&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/medicine_10.2217_imt-2017-0073.json"
+      },
+      "cite": "https://doi.org/10.2217/imt-2017-0073"
+    },
+    {
+      "id": 7,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "ieee",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/s0140-6736(20)32264-9；2020，The Lancet。 原始快照：raw/crossref/medicine_10.1016_s0140-6736_20_32264-9.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(20)32264-9",
+        "title": "Clinical trial reporting",
+        "journal": "The Lancet",
+        "year": 2020,
+        "volume": "396",
+        "issue": "10261",
+        "pages": "1489",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ulug",
+            "given": "Pinar"
+          },
+          {
+            "family": "Powell",
+            "given": "Janet T"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(20)32264-9",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_20_32264-9.json"
+      },
+      "cite": "P. Ulug and J. T. Powell, \"Clinical trial reporting,\" The Lancet, vol. 396, no. 10261, p. 1489, 2020, doi: 10.1016/s0140-6736(20)32264-9."
+    },
+    {
+      "id": 8,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "pmid_only",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/s0140-6736(16)00175-6；PMID 26869571；2016，The Lancet。 原始快照：raw/crossref/medicine_10.1016_s0140-6736_16_00175-6.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(16)00175-6",
+        "title": "Prophylactic antibiotics to reduce pneumonia after acute stroke",
+        "journal": "The Lancet",
+        "year": 2016,
+        "volume": "387",
+        "issue": "10017",
+        "pages": "432-433",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Neugebauer",
+            "given": "Hermann"
+          },
+          {
+            "family": "Lindner-Pfleghar",
+            "given": "Beate"
+          },
+          {
+            "family": "Jüttler",
+            "given": "Eric"
+          },
+          {
+            "family": "Ludolph",
+            "given": "Albert C"
+          },
+          {
+            "family": "Riecker",
+            "given": "Axel"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(16)00175-6",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_16_00175-6.json",
+        "pmid": "26869571",
+        "pmid_lookup": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI%3A%2210.1016%2Fs0140-6736%2816%2900175-6%22&format=json&pageSize=1"
+      },
+      "cite": "PMID: 26869571"
+    },
+    {
+      "id": 9,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "mla",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.22533/at.ed.1593992304129；2023，International Journal of Health Science。 原始快照：raw/crossref/medicine_10.22533_at.ed.1593992304129.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.22533/at.ed.1593992304129",
+        "title": "ANALYSIS OF THE ANTIDEPRESSANT POTENTIAL OF PHYSICAL EXERCISE PRACTICE, MEDIATED BY NEUROPLASTICITY, IN PATIENTS WITH MAJOR DEPRESSIVE DISORDER: A SYSTEMATIC REVIEW ARTICLE",
+        "journal": "International Journal of Health Science",
+        "year": 2023,
+        "volume": "3",
+        "issue": "99",
+        "pages": "2-25",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Naves",
+            "given": "Leonardo Carrijo"
+          },
+          {
+            "family": "Melo",
+            "given": "Luan Alves Marques de"
+          },
+          {
+            "family": "Anjos",
+            "given": "Lucas Damião"
+          },
+          {
+            "family": "Assunção",
+            "given": "Luis Fernando Rodrigues"
+          }
+        ],
+        "url": "https://doi.org/10.22533/at.ed.1593992304129",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.22533_at.ed.1593992304129.json"
+      },
+      "cite": "Naves, Leonardo Carrijo, et al. \"ANALYSIS OF THE ANTIDEPRESSANT POTENTIAL OF PHYSICAL EXERCISE PRACTICE, MEDIATED BY NEUROPLASTICITY, IN PATIENTS WITH MAJOR DEPRESSIVE DISORDER: A SYSTEMATIC REVIEW ARTICLE.\" International Journal of Health Science, vol. 3, no. 99, 2023, pp. 2-25. https://doi.org/10.22533/at.ed.1593992304129"
+    },
+    {
+      "id": 10,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.ejca.2021.06.036；2021，European Journal of Cancer。 原始快照：raw/crossref/medicine_10.1016_j.ejca.2021.06.036.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.ejca.2021.06.036",
+        "title": "Myalgias upon PD-1 checkpoint blockade: Think of immunotherapy induced hypothyroid myopathy",
+        "journal": "European Journal of Cancer",
+        "year": 2021,
+        "volume": "155",
+        "issue": null,
+        "pages": "38-41",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "He",
+            "given": "Jian"
+          },
+          {
+            "family": "Xu",
+            "given": "Jiang"
+          },
+          {
+            "family": "Gao",
+            "given": "Jin"
+          },
+          {
+            "family": "Qian",
+            "given": "Liting"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.ejca.2021.06.036",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=cancer+immunotherapy+checkpoint&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_j.ejca.2021.06.036.json"
+      },
+      "cite": "He, J., Xu, J., Gao, J., & Qian, L. (2021). Myalgias upon PD-1 checkpoint blockade: Think of immunotherapy induced hypothyroid myopathy. European Journal of Cancer, 155, 38-41. https://doi.org/10.1016/j.ejca.2021.06.036"
+    },
+    {
+      "id": 11,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "vancouver",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s11432-020-3239-2；2022，Science China Information Sciences。 原始快照：raw/crossref/cs_10.1007_s11432-020-3239-2.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s11432-020-3239-2",
+        "title": "Observer-based distributed consensus for nonlinear multi-agent systems with limited data rate",
+        "journal": "Science China Information Sciences",
+        "year": 2022,
+        "volume": "65",
+        "issue": "9",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Zhang",
+            "given": "Jing"
+          },
+          {
+            "family": "Liu",
+            "given": "Shuai"
+          },
+          {
+            "family": "Zhang",
+            "given": "Xianfu"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s11432-020-3239-2",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1007_s11432-020-3239-2.json"
+      },
+      "cite": "Zhang J, Liu S, Zhang X. Observer-based distributed consensus for nonlinear multi-agent systems with limited data rate. Science China Information Sciences. 2022;65(9). doi: 10.1007/s11432-020-3239-2"
+    },
+    {
+      "id": 12,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s41635-017-0023-0；2017，Journal of Hardware and Systems Security。 原始快照：raw/crossref/cs_10.1007_s41635-017-0023-0.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s41635-017-0023-0",
+        "title": "Reducing Side-Channel Leakage of Encryption Engines Using Integrated Low-Dropout Voltage Regulators",
+        "journal": "Journal of Hardware and Systems Security",
+        "year": 2017,
+        "volume": "1",
+        "issue": "4",
+        "pages": "340-355",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Singh",
+            "given": "Arvind"
+          },
+          {
+            "family": "Kar",
+            "given": "Monodeep"
+          },
+          {
+            "family": "Mathew",
+            "given": "Sanu"
+          },
+          {
+            "family": "Rajan",
+            "given": "Anand"
+          },
+          {
+            "family": "De",
+            "given": "Vivek"
+          },
+          {
+            "family": "Mukhopadhyay",
+            "given": "Saibal"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s41635-017-0023-0",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=computer+security+side+channel&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1007_s41635-017-0023-0.json"
+      },
+      "cite": "Singh, A., Kar, M., Mathew, S., Rajan, A., De, V., & Mukhopadhyay, S. (2017). Reducing Side-Channel Leakage of Encryption Engines Using Integrated Low-Dropout Voltage Regulators. Journal of Hardware and Systems Security, 1(4), 340-355. https://doi.org/10.1007/s41635-017-0023-0"
+    },
+    {
+      "id": 13,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "vancouver",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s11431-015-5987-9；2016，Science China Technological Sciences。 原始快照：raw/crossref/cs_10.1007_s11431-015-5987-9.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s11431-015-5987-9",
+        "title": "Distributed consensus for multiple Euler-Lagrange systems: An event-triggered approach",
+        "journal": "Science China Technological Sciences",
+        "year": 2016,
+        "volume": "59",
+        "issue": "1",
+        "pages": "33-44",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Huang",
+            "given": "Na"
+          },
+          {
+            "family": "Duan",
+            "given": "ZhiSheng"
+          },
+          {
+            "family": "Zhao",
+            "given": "Yu"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s11431-015-5987-9",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1007_s11431-015-5987-9.json"
+      },
+      "cite": "Huang N, Duan Z, Zhao Y. Distributed consensus for multiple Euler-Lagrange systems: An event-triggered approach. Science China Technological Sciences. 2016;59(1):33-44. doi: 10.1007/s11431-015-5987-9"
+    },
+    {
+      "id": 14,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "title_only",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1109/lcsys.2021.3128152；2022，IEEE Control Systems Letters。 原始快照：raw/crossref/cs_10.1109_lcsys.2021.3128152.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1109/lcsys.2021.3128152",
+        "title": "Consensus-Based Distributed Estimation in the Presence of Heterogeneous, Time-Invariant Delays",
+        "journal": "IEEE Control Systems Letters",
+        "year": 2022,
+        "volume": "6",
+        "issue": null,
+        "pages": "1598-1603",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Doostmohammadian",
+            "given": "Mohammadreza"
+          },
+          {
+            "family": "Khan",
+            "given": "Usman A."
+          },
+          {
+            "family": "Pirani",
+            "given": "Mohammad"
+          },
+          {
+            "family": "Charalambous",
+            "given": "Themistoklis"
+          }
+        ],
+        "url": "https://doi.org/10.1109/lcsys.2021.3128152",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1109_lcsys.2021.3128152.json"
+      },
+      "cite": "Consensus-Based Distributed Estimation in the Presence of Heterogeneous, Time-Invariant Delays"
+    },
+    {
+      "id": 15,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.5715/jnlp.31.763；2024，Journal of Natural Language Processing。 原始快照：raw/crossref/cs_10.5715_jnlp.31.763.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.5715/jnlp.31.763",
+        "title": "Advances in Language Processing in the Financial and Economic Domain",
+        "journal": "Journal of Natural Language Processing",
+        "year": 2024,
+        "volume": "31",
+        "issue": "2",
+        "pages": "763-768",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Sakaji",
+            "given": "Hiroki"
+          },
+          {
+            "family": "Nakagawa",
+            "given": "Kei"
+          }
+        ],
+        "url": "https://doi.org/10.5715/jnlp.31.763",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.5715_jnlp.31.763.json"
+      },
+      "cite": "https://doi.org/10.5715/jnlp.31.763"
+    },
+    {
+      "id": 16,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1088/1742-6596/1549/5/052011；2020，Journal of Physics: Conference Series。 原始快照：raw/crossref/cs_10.1088_1742-6596_1549_5_052011.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1088/1742-6596/1549/5/052011",
+        "title": "Hyperspectral Image Classification of Convolutional Neural Network Combined with Valuable Samples",
+        "journal": "Journal of Physics: Conference Series",
+        "year": 2020,
+        "volume": "1549",
+        "issue": "5",
+        "pages": "052011",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Hu",
+            "given": "Lixin"
+          },
+          {
+            "family": "Luo",
+            "given": "Xiaobo"
+          },
+          {
+            "family": "Wei",
+            "given": "Yufan"
+          }
+        ],
+        "url": "https://doi.org/10.1088/1742-6596/1549/5/052011",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1088_1742-6596_1549_5_052011.json"
+      },
+      "cite": "https://doi.org/10.1088/1742-6596/1549/5/052011"
+    },
+    {
+      "id": 17,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s00521-020-04933-4；2021，Neural Computing and Applications。 原始快照：raw/crossref/cs_10.1007_s00521-020-04933-4.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s00521-020-04933-4",
+        "title": "CT image classification based on convolutional neural network",
+        "journal": "Neural Computing and Applications",
+        "year": 2021,
+        "volume": "33",
+        "issue": "14",
+        "pages": "8191-8200",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Zhang",
+            "given": "Yuezhong"
+          },
+          {
+            "family": "Wang",
+            "given": "Shi"
+          },
+          {
+            "family": "Zhao",
+            "given": "Honghua"
+          },
+          {
+            "family": "Guo",
+            "given": "Zhenhua"
+          },
+          {
+            "family": "Sun",
+            "given": "Dianmin"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s00521-020-04933-4",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1007_s00521-020-04933-4.json"
+      },
+      "cite": "Zhang, Y., Wang, S., Zhao, H., Guo, Z., & Sun, D. (2021). CT image classification based on convolutional neural network. Neural Computing and Applications, 33(14), 8191-8200. https://doi.org/10.1007/s00521-020-04933-4"
+    },
+    {
+      "id": 18,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1609/aaai.v37i9.26255；2023，Proceedings of the AAAI Conference on Artificial Intelligence。 原始快照：raw/crossref/cs_10.1609_aaai.v37i9.26255.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1609/aaai.v37i9.26255",
+        "title": "A Survey on Model Compression and Acceleration for Pretrained Language Models",
+        "journal": "Proceedings of the AAAI Conference on Artificial Intelligence",
+        "year": 2023,
+        "volume": "37",
+        "issue": "9",
+        "pages": "10566-10575",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Xu",
+            "given": "Canwen"
+          },
+          {
+            "family": "McAuley",
+            "given": "Julian"
+          }
+        ],
+        "url": "https://doi.org/10.1609/aaai.v37i9.26255",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1609_aaai.v37i9.26255.json"
+      },
+      "cite": "https://doi.org/10.1609/aaai.v37i9.26255"
+    },
+    {
+      "id": 19,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "bibtex",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.rineng.2021.100225；2021，Results in Engineering。 原始快照：raw/crossref/cs_10.1016_j.rineng.2021.100225.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.rineng.2021.100225",
+        "title": "A noise robust convolutional neural network for image classification",
+        "journal": "Results in Engineering",
+        "year": 2021,
+        "volume": "10",
+        "issue": null,
+        "pages": "100225",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Momeny",
+            "given": "Mohammad"
+          },
+          {
+            "family": "Latif",
+            "given": "Ali Mohammad"
+          },
+          {
+            "family": "Agha Sarram",
+            "given": "Mehdi"
+          },
+          {
+            "family": "Sheikhpour",
+            "given": "Razieh"
+          },
+          {
+            "family": "Zhang",
+            "given": "Yu Dong"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.rineng.2021.100225",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1016_j.rineng.2021.100225.json"
+      },
+      "cite": "@article{Momeny2021,\n  title={A noise robust convolutional neural network for image classification},\n  author={Momeny, Mohammad and Latif, Ali Mohammad and Agha Sarram, Mehdi and Sheikhpour, Razieh and Zhang, Yu Dong},\n  journal={Results in Engineering},\n  year={2021},\n  volume={10},\n  pages={100225},\n  doi={10.1016/j.rineng.2021.100225}\n}"
+    },
+    {
+      "id": 20,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "gbt",
+      "field": "cs",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1109/tac.2016.2628643；2017，IEEE Transactions on Automatic Control。 原始快照：raw/crossref/cs_10.1109_tac.2016.2628643.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1109/tac.2016.2628643",
+        "title": "Distributed Adaptive Consensus Output Regulation of Network-Connected Heterogeneous Unknown Linear Systems on Directed Graphs",
+        "journal": "IEEE Transactions on Automatic Control",
+        "year": 2017,
+        "volume": "62",
+        "issue": "9",
+        "pages": "4683-4690",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ding",
+            "given": "Zhengtao"
+          }
+        ],
+        "url": "https://doi.org/10.1109/tac.2016.2628643",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1109_tac.2016.2628643.json"
+      },
+      "cite": "Ding Z. Distributed Adaptive Consensus Output Regulation of Network-Connected Heterogeneous Unknown Linear Systems on Directed Graphs[J]. IEEE Transactions on Automatic Control, 2017, 62(9): 4683-4690. DOI: 10.1109/tac.2016.2628643"
+    },
+    {
+      "id": 21,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "gbt",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1103/physics.15.s135；2022，Physics。 原始快照：raw/crossref/physics_10.1103_physics.15.s135.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1103/physics.15.s135",
+        "title": "A Quantum Entanglement Assembly Line",
+        "journal": "Physics",
+        "year": 2022,
+        "volume": "15",
+        "issue": null,
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Schirber",
+            "given": "Michael"
+          }
+        ],
+        "url": "https://doi.org/10.1103/physics.15.s135",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=quantum+entanglement+photon+experiment&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1103_physics.15.s135.json"
+      },
+      "cite": "Schirber M. A Quantum Entanglement Assembly Line[J]. Physics, 2022, 15. DOI: 10.1103/physics.15.s135"
+    },
+    {
+      "id": 22,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "vancouver",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1103/physrevb.105.115402；2022，Physical Review B。 原始快照：raw/crossref/physics_10.1103_physrevb.105.115402.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1103/physrevb.105.115402",
+        "title": "Edge spin transport in the disordered two-dimensional topological insulator \nWTe2",
+        "journal": "Physical Review B",
+        "year": 2022,
+        "volume": "105",
+        "issue": "11",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Copenhaver",
+            "given": "Justin"
+          },
+          {
+            "family": "Väyrynen",
+            "given": "Jukka I."
+          }
+        ],
+        "url": "https://doi.org/10.1103/physrevb.105.115402",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=topological+insulator+electronic+transport&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1103_physrevb.105.115402.json"
+      },
+      "cite": "Copenhaver J, Väyrynen JI. Edge spin transport in the disordered two-dimensional topological insulator \nWTe2. Physical Review B. 2022;105(11). doi: 10.1103/physrevb.105.115402"
+    },
+    {
+      "id": 23,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "doi_only",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s11128-022-03497-7；2022，Quantum Information Processing。 原始快照：raw/crossref/physics_10.1007_s11128-022-03497-7.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s11128-022-03497-7",
+        "title": "Genuine entanglement, distillability and quantum information masking under noise",
+        "journal": "Quantum Information Processing",
+        "year": 2022,
+        "volume": "21",
+        "issue": "5",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Hu",
+            "given": "Mengyao"
+          },
+          {
+            "family": "Chen",
+            "given": "Lin"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s11128-022-03497-7",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=quantum+entanglement+photon+experiment&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1007_s11128-022-03497-7.json"
+      },
+      "cite": "https://doi.org/10.1007/s11128-022-03497-7"
+    },
+    {
+      "id": 24,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "gbt",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s11128-021-03179-w；2021，Quantum Information Processing。 原始快照：raw/crossref/physics_10.1007_s11128-021-03179-w.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s11128-021-03179-w",
+        "title": "Entanglement assisted training algorithm for supervised quantum classifiers",
+        "journal": "Quantum Information Processing",
+        "year": 2021,
+        "volume": "20",
+        "issue": "8",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Adhikary",
+            "given": "Soumik"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s11128-021-03179-w",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=quantum+entanglement+photon+experiment&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1007_s11128-021-03179-w.json"
+      },
+      "cite": "Adhikary S. Entanglement assisted training algorithm for supervised quantum classifiers[J]. Quantum Information Processing, 2021, 20(8). DOI: 10.1007/s11128-021-03179-w"
+    },
+    {
+      "id": 25,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "ieee",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1103/physrevd.98.083007；2018，Physical Review D。 原始快照：raw/crossref/physics_10.1103_physrevd.98.083007.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1103/physrevd.98.083007",
+        "title": "Gravitational-wave astrophysics with effective-spin measurements: Asymmetries and selection biases",
+        "journal": "Physical Review D",
+        "year": 2018,
+        "volume": "98",
+        "issue": "8",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ng",
+            "given": "Ken K. Y."
+          },
+          {
+            "family": "Vitale",
+            "given": "Salvatore"
+          },
+          {
+            "family": "Zimmerman",
+            "given": "Aaron"
+          },
+          {
+            "family": "Chatziioannou",
+            "given": "Katerina"
+          },
+          {
+            "family": "Gerosa",
+            "given": "Davide"
+          },
+          {
+            "family": "Haster",
+            "given": "Carl-Johan"
+          }
+        ],
+        "url": "https://doi.org/10.1103/physrevd.98.083007",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1103_physrevd.98.083007.json"
+      },
+      "cite": "K. K. Y. Ng, S. Vitale, A. Zimmerman, K. Chatziioannou, D. Gerosa, and C. J. Haster, \"Gravitational-wave astrophysics with effective-spin measurements: Asymmetries and selection biases,\" Physical Review D, vol. 98, no. 8, 2018, doi: 10.1103/physrevd.98.083007."
+    },
+    {
+      "id": 26,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "mla",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1088/2053-1583/aaf702；2019，2D Materials。 原始快照：raw/crossref/physics_10.1088_2053-1583_aaf702.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1088/2053-1583/aaf702",
+        "title": "Thermoelectric transport in two-dimensional topological insulator state based on HgTe quantum well",
+        "journal": "2D Materials",
+        "year": 2019,
+        "volume": "6",
+        "issue": "1",
+        "pages": "014001",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Gusev",
+            "given": "G M"
+          },
+          {
+            "family": "Raichev",
+            "given": "O E"
+          },
+          {
+            "family": "Olshanetsky",
+            "given": "E B"
+          },
+          {
+            "family": "Levin",
+            "given": "A D"
+          },
+          {
+            "family": "Kvon",
+            "given": "Z D"
+          },
+          {
+            "family": "Mikhailov",
+            "given": "N N"
+          },
+          {
+            "family": "Dvoretsky",
+            "given": "S A"
+          }
+        ],
+        "url": "https://doi.org/10.1088/2053-1583/aaf702",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=topological+insulator+electronic+transport&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1088_2053-1583_aaf702.json"
+      },
+      "cite": "Gusev, G M, et al. \"Thermoelectric transport in two-dimensional topological insulator state based on HgTe quantum well.\" 2D Materials, vol. 6, no. 1, 2019, p. 014001. https://doi.org/10.1088/2053-1583/aaf702"
+    },
+    {
+      "id": 27,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "mla",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1088/0256-307x/35/12/127501；2018，Chinese Physics Letters。 原始快照：raw/crossref/physics_10.1088_0256-307x_35_12_127501.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1088/0256-307x/35/12/127501",
+        "title": "Magnetic and topological transitions in three-dimensional topological Kondo insulator",
+        "journal": "Chinese Physics Letters",
+        "year": 2018,
+        "volume": "35",
+        "issue": "12",
+        "pages": "127501",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Li",
+            "given": "Huan"
+          },
+          {
+            "family": "Wang",
+            "given": "Zhi-Yong"
+          },
+          {
+            "family": "Zheng",
+            "given": "Xiao-Jun"
+          },
+          {
+            "family": "Liu",
+            "given": "Yu"
+          },
+          {
+            "family": "Zhong",
+            "given": "Yin"
+          }
+        ],
+        "url": "https://doi.org/10.1088/0256-307x/35/12/127501",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=topological+insulator+electronic+transport&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1088_0256-307x_35_12_127501.json"
+      },
+      "cite": "Li, Huan, et al. \"Magnetic and topological transitions in three-dimensional topological Kondo insulator.\" Chinese Physics Letters, vol. 35, no. 12, 2018, p. 127501. https://doi.org/10.1088/0256-307x/35/12/127501"
+    },
+    {
+      "id": 28,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "vancouver",
+      "field": "physics",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1029/2017eo076723；2017，Eos。 原始快照：raw/crossref/physics_10.1029_2017eo076723.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1029/2017eo076723",
+        "title": "Ten Earth-Sized Planets Found by Exoplanet-Hunting Telescope",
+        "journal": "Eos",
+        "year": 2017,
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Wendel",
+            "given": "JoAnna"
+          }
+        ],
+        "url": "https://doi.org/10.1029/2017eo076723",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=exoplanet+transit+atmosphere&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1029_2017eo076723.json"
+      },
+      "cite": "Wendel J. Ten Earth-Sized Planets Found by Exoplanet-Hunting Telescope. Eos. 2017. doi: 10.1029/2017eo076723"
+    },
+    {
+      "id": 29,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "bibtex",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.3791/60253-v；2019，Journal of Visualized Experiments。 原始快照：raw/crossref/biology_10.3791_60253-v.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.3791/60253-v",
+        "title": "Silencing the Spark: CRISPR/Cas9 Genome Editing in Weakly Electric Fish",
+        "journal": "Journal of Visualized Experiments",
+        "year": 2019,
+        "volume": null,
+        "issue": "152",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Constantinou",
+            "given": "Savvas  J."
+          },
+          {
+            "family": "Nguyen",
+            "given": "Linh"
+          },
+          {
+            "family": "Kirschbaum",
+            "given": "Frank"
+          },
+          {
+            "family": "Salazar",
+            "given": "Vielka  L."
+          },
+          {
+            "family": "Gallant",
+            "given": "Jason R."
+          }
+        ],
+        "url": "https://doi.org/10.3791/60253-v",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=CRISPR+Cas9+genome+editing+mammalian&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.3791_60253-v.json"
+      },
+      "cite": "@article{Constantinou2019,\n  title={Silencing the Spark: CRISPR/Cas9 Genome Editing in Weakly Electric Fish},\n  author={Constantinou, Savvas  J. and Nguyen, Linh and Kirschbaum, Frank and Salazar, Vielka  L. and Gallant, Jason R.},\n  journal={Journal of Visualized Experiments},\n  year={2019},\n  number={152},\n  doi={10.3791/60253-v}\n}"
+    },
+    {
+      "id": 30,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1097/mot.0000000000000840；2021，Current Opinion in Organ Transplantation。 原始快照：raw/crossref/biology_10.1097_mot.0000000000000840.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1097/mot.0000000000000840",
+        "title": "Dissecting the human kidney allograft transcriptome: single-cell RNA sequencing",
+        "journal": "Current Opinion in Organ Transplantation",
+        "year": 2021,
+        "volume": "26",
+        "issue": "1",
+        "pages": "43-51",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Varma",
+            "given": "Elly"
+          },
+          {
+            "family": "Luo",
+            "given": "Xunrong"
+          },
+          {
+            "family": "Muthukumar",
+            "given": "Thangamani"
+          }
+        ],
+        "url": "https://doi.org/10.1097/mot.0000000000000840",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1097_mot.0000000000000840.json"
+      },
+      "cite": "Varma, E., Luo, X., & Muthukumar, T. (2021). Dissecting the human kidney allograft transcriptome: single-cell RNA sequencing. Current Opinion in Organ Transplantation, 26(1), 43-51. https://doi.org/10.1097/mot.0000000000000840"
+    },
+    {
+      "id": 31,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "bibtex",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.chom.2023.07.006；2023，Cell Host & Microbe。 原始快照：raw/crossref/biology_10.1016_j.chom.2023.07.006.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.chom.2023.07.006",
+        "title": "When microbes go missing: Understanding the impact of diversity loss within the gut microbiome",
+        "journal": "Cell Host & Microbe",
+        "year": 2023,
+        "volume": "31",
+        "issue": "8",
+        "pages": "1249-1251",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Sprockett",
+            "given": "Daniel D."
+          },
+          {
+            "family": "Coyte",
+            "given": "Katharine Z."
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.chom.2023.07.006",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1016_j.chom.2023.07.006.json"
+      },
+      "cite": "@article{Sprockett2023,\n  title={When microbes go missing: Understanding the impact of diversity loss within the gut microbiome},\n  author={Sprockett, Daniel D. and Coyte, Katharine Z.},\n  journal={Cell Host & Microbe},\n  year={2023},\n  volume={31},\n  number={8},\n  pages={1249-1251},\n  doi={10.1016/j.chom.2023.07.006}\n}"
+    },
+    {
+      "id": 32,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "title_only",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.joca.2022.02.475；2022，Osteoarthritis and Cartilage。 原始快照：raw/crossref/biology_10.1016_j.joca.2022.02.475.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.joca.2022.02.475",
+        "title": "AUTOMATED CELL TYPE IDENTIFICATION FOR SINGLE-CELL RNA SEQUENCING ANALYSIS OF WHOLE MOUSE KNEE JOINTS",
+        "journal": "Osteoarthritis and Cartilage",
+        "year": 2022,
+        "volume": "30",
+        "issue": null,
+        "pages": "S353-S354",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Leale",
+            "given": "D.M."
+          },
+          {
+            "family": "Mitchell",
+            "given": "K."
+          },
+          {
+            "family": "Yik",
+            "given": "J.H."
+          },
+          {
+            "family": "Haudenschild",
+            "given": "D.R."
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.joca.2022.02.475",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1016_j.joca.2022.02.475.json"
+      },
+      "cite": "AUTOMATED CELL TYPE IDENTIFICATION FOR SINGLE-CELL RNA SEQUENCING ANALYSIS OF WHOLE MOUSE KNEE JOINTS"
+    },
+    {
+      "id": 33,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "ieee",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.cont.2022.100315；2022，Continence。 原始快照：raw/crossref/biology_10.1016_j.cont.2022.100315.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.cont.2022.100315",
+        "title": "226 INTEGRATING SINGLE-CELL RNA SEQUENCING WITH SPATIAL TRANSCRIPTOMICS REVEALS IMMUNE LANDSCAPE FOR INTERSTITIAL CYSTITIS",
+        "journal": "Continence",
+        "year": 2022,
+        "volume": "2",
+        "issue": null,
+        "pages": "100315",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Liao",
+            "given": "P"
+          },
+          {
+            "family": "De-yi",
+            "given": "L"
+          },
+          {
+            "family": "Hong",
+            "given": "S"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.cont.2022.100315",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1016_j.cont.2022.100315.json"
+      },
+      "cite": "P. Liao, L. De-yi, and S. Hong, \"226 INTEGRATING SINGLE-CELL RNA SEQUENCING WITH SPATIAL TRANSCRIPTOMICS REVEALS IMMUNE LANDSCAPE FOR INTERSTITIAL CYSTITIS,\" Continence, vol. 2, p. 100315, 2022, doi: 10.1016/j.cont.2022.100315."
+    },
+    {
+      "id": 34,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "mla",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s11120-016-0238-x；2016，Photosynthesis Research。 原始快照：raw/crossref/biology_10.1007_s11120-016-0238-x.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s11120-016-0238-x",
+        "title": "Excitation relaxation dynamics and energy transfer in pigment–protein complexes of a dinoflagellate, revealed by ultrafast fluorescence spectroscopy",
+        "journal": "Photosynthesis Research",
+        "year": 2016,
+        "volume": "130",
+        "issue": "1-3",
+        "pages": "183-191",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Tanaka",
+            "given": "Kazunori"
+          },
+          {
+            "family": "Iida",
+            "given": "Satoko"
+          },
+          {
+            "family": "Takaichi",
+            "given": "Shinichi"
+          },
+          {
+            "family": "Mimuro",
+            "given": "Mamoru"
+          },
+          {
+            "family": "Murakami",
+            "given": "Akio"
+          },
+          {
+            "family": "Akimoto",
+            "given": "Seiji"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s11120-016-0238-x",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=photosynthesis+protein+structure&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1007_s11120-016-0238-x.json"
+      },
+      "cite": "Tanaka, Kazunori, et al. \"Excitation relaxation dynamics and energy transfer in pigment–protein complexes of a dinoflagellate, revealed by ultrafast fluorescence spectroscopy.\" Photosynthesis Research, vol. 130, no. 1-3, 2016, pp. 183-191. https://doi.org/10.1007/s11120-016-0238-x"
+    },
+    {
+      "id": 35,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "gbt",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.3791/59773；2019，Journal of Visualized Experiments。 原始快照：raw/crossref/biology_10.3791_59773.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.3791/59773",
+        "title": "A Double Humanized BLT-mice Model Featuring a Stable Human-Like Gut Microbiome and Human Immune System",
+        "journal": "Journal of Visualized Experiments",
+        "year": 2019,
+        "volume": null,
+        "issue": "150",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Daharsh",
+            "given": "Lance"
+          },
+          {
+            "family": "Zhang",
+            "given": "Jianshui"
+          },
+          {
+            "family": "Ramer-Tait",
+            "given": "Amanda"
+          },
+          {
+            "family": "Li",
+            "given": "Qingsheng"
+          }
+        ],
+        "url": "https://doi.org/10.3791/59773",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.3791_59773.json"
+      },
+      "cite": "Daharsh L, Zhang J, Ramer-Tait A, 等. A Double Humanized BLT-mice Model Featuring a Stable Human-Like Gut Microbiome and Human Immune System[J]. Journal of Visualized Experiments, 2019. DOI: 10.3791/59773"
+    },
+    {
+      "id": 36,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1186/s40168-021-01114-w；2021，Microbiome。 原始快照：raw/crossref/biology_10.1186_s40168-021-01114-w.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1186/s40168-021-01114-w",
+        "title": "HumGut: a comprehensive human gut prokaryotic genomes collection filtered by metagenome data",
+        "journal": "Microbiome",
+        "year": 2021,
+        "volume": "9",
+        "issue": "1",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Hiseni",
+            "given": "Pranvera"
+          },
+          {
+            "family": "Rudi",
+            "given": "Knut"
+          },
+          {
+            "family": "Wilson",
+            "given": "Robert C."
+          },
+          {
+            "family": "Hegge",
+            "given": "Finn Terje"
+          },
+          {
+            "family": "Snipen",
+            "given": "Lars"
+          }
+        ],
+        "url": "https://doi.org/10.1186/s40168-021-01114-w",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1186_s40168-021-01114-w.json"
+      },
+      "cite": "Hiseni, P., Rudi, K., Wilson, R. C., Hegge, F. T., & Snipen, L. (2021). HumGut: a comprehensive human gut prokaryotic genomes collection filtered by metagenome data. Microbiome, 9(1). https://doi.org/10.1186/s40168-021-01114-w"
+    },
+    {
+      "id": 37,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "title_only",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.sysconle.2015.01.001；2015，Systems & Control Letters。 原始快照：raw/crossref/social_10.1016_j.sysconle.2015.01.001.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.sysconle.2015.01.001",
+        "title": "Combination of sign inverting and delay scheduling control concepts for multiple-delay dynamics",
+        "journal": "Systems & Control Letters",
+        "year": 2015,
+        "volume": "77",
+        "issue": null,
+        "pages": "55-62",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Gao",
+            "given": "Qingbin"
+          },
+          {
+            "family": "Kammer",
+            "given": "Ayhan S."
+          },
+          {
+            "family": "Zalluhoglu",
+            "given": "Umut"
+          },
+          {
+            "family": "Olgac",
+            "given": "Nejat"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.sysconle.2015.01.001",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=self-control+delay+of+gratification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1016_j.sysconle.2015.01.001.json"
+      },
+      "cite": "Combination of sign inverting and delay scheduling control concepts for multiple-delay dynamics"
+    },
+    {
+      "id": 38,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.euroecorev.2018.03.004；2018，European Economic Review。 原始快照：raw/crossref/social_10.1016_j.euroecorev.2018.03.004.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.euroecorev.2018.03.004",
+        "title": "Discrimination as favoritism: The private benefits and social costs of in-group favoritism in an experimental labor market",
+        "journal": "European Economic Review",
+        "year": 2018,
+        "volume": "104",
+        "issue": null,
+        "pages": "220-236",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Dickinson",
+            "given": "David L."
+          },
+          {
+            "family": "Masclet",
+            "given": "David"
+          },
+          {
+            "family": "Peterle",
+            "given": "Emmanuel"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.euroecorev.2018.03.004",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query.container-title=American+Economic+Review&query=labor+market&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=12&offset=168",
+        "raw_path": "raw/crossref/social_10.1016_j.euroecorev.2018.03.004.json"
+      },
+      "cite": "Dickinson, D. L., Masclet, D., & Peterle, E. (2018). Discrimination as favoritism: The private benefits and social costs of in-group favoritism in an experimental labor market. European Economic Review, 104, 220-236. https://doi.org/10.1016/j.euroecorev.2018.03.004"
+    },
+    {
+      "id": 39,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "gbt",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s12555-013-0118-5；2014，International Journal of Control, Automation and Systems。 原始快照：raw/crossref/social_10.1007_s12555-013-0118-5.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s12555-013-0118-5",
+        "title": "New Delay-dependent stability criteria for neutral systems with time-varying delay using delay-decomposition approach",
+        "journal": "International Journal of Control, Automation and Systems",
+        "year": 2014,
+        "volume": "12",
+        "issue": "4",
+        "pages": "786-793",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ge",
+            "given": "Chao"
+          },
+          {
+            "family": "Hua",
+            "given": "Chang-Chun"
+          },
+          {
+            "family": "Guan",
+            "given": "Xin-Ping"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s12555-013-0118-5",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=self-control+delay+of+gratification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1007_s12555-013-0118-5.json"
+      },
+      "cite": "Ge C, Hua CC, Guan XP. New Delay-dependent stability criteria for neutral systems with time-varying delay using delay-decomposition approach[J]. International Journal of Control, Automation and Systems, 2014, 12(4): 786-793. DOI: 10.1007/s12555-013-0118-5"
+    },
+    {
+      "id": 40,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "ieee",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.47191/ijsshr/v4-i4-18；2021，International Journal of Social Science and Human Research。 原始快照：raw/crossref/social_10.47191_ijsshr_v4-i4-18.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.47191/ijsshr/v4-i4-18",
+        "title": "Encouraging Popular Political Participation and Effective Election Monitoring Through Whatsapp Social Media Platforms",
+        "journal": "International Journal of Social Science and Human Research",
+        "year": 2021,
+        "volume": "04",
+        "issue": "04",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Peter .C",
+            "given": "Ikegbunam,"
+          }
+        ],
+        "url": "https://doi.org/10.47191/ijsshr/v4-i4-18",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.47191_ijsshr_v4-i4-18.json"
+      },
+      "cite": "I. Peter .C, \"Encouraging Popular Political Participation and Effective Election Monitoring Through Whatsapp Social Media Platforms,\" International Journal of Social Science and Human Research, vol. 04, no. 04, 2021, doi: 10.47191/ijsshr/v4-i4-18."
+    },
+    {
+      "id": 41,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "mla",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1093/sf/soz013；2019，Social Forces。 原始快照：raw/crossref/social_10.1093_sf_soz013.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1093/sf/soz013",
+        "title": "The Contribution of National Income Inequality to Regional Economic Divergence",
+        "journal": "Social Forces",
+        "year": 2019,
+        "volume": "98",
+        "issue": "2",
+        "pages": "622-648",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Manduca",
+            "given": "Robert A"
+          }
+        ],
+        "url": "https://doi.org/10.1093/sf/soz013",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=income+inequality+social+mobility&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1093_sf_soz013.json"
+      },
+      "cite": "Manduca, Robert A. \"The Contribution of National Income Inequality to Regional Economic Divergence.\" Social Forces, vol. 98, no. 2, 2019, pp. 622-648. https://doi.org/10.1093/sf/soz013"
+    },
+    {
+      "id": 42,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1007/s11205-023-03068-y；2023，Social Indicators Research。 原始快照：raw/crossref/social_10.1007_s11205-023-03068-y.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1007/s11205-023-03068-y",
+        "title": "Income Inequality and Environmental Degradation in Middle-Income Countries: A Test of Two Competing Hypotheses",
+        "journal": "Social Indicators Research",
+        "year": 2023,
+        "volume": "166",
+        "issue": "2",
+        "pages": "299-321",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ali",
+            "given": "Ibrahim Mohamed Ali"
+          }
+        ],
+        "url": "https://doi.org/10.1007/s11205-023-03068-y",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=income+inequality+social+mobility&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1007_s11205-023-03068-y.json"
+      },
+      "cite": "Ali, I. M. A. (2023). Income Inequality and Environmental Degradation in Middle-Income Countries: A Test of Two Competing Hypotheses. Social Indicators Research, 166(2), 299-321. https://doi.org/10.1007/s11205-023-03068-y"
+    },
+    {
+      "id": 43,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "vancouver",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.1016/j.appet.2019.104341；2019，Appetite。 原始快照：raw/crossref/social_10.1016_j.appet.2019.104341.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.appet.2019.104341",
+        "title": "Time spent looking at food during a delay of gratification task is positively associated with children's consumption at ad libitum laboratory meals",
+        "journal": "Appetite",
+        "year": 2019,
+        "volume": "141",
+        "issue": null,
+        "pages": "104341",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Lundquist",
+            "given": "Ella"
+          },
+          {
+            "family": "Austen",
+            "given": "Marielle"
+          },
+          {
+            "family": "Bermudez",
+            "given": "Maria"
+          },
+          {
+            "family": "Rubin",
+            "given": "Carter"
+          },
+          {
+            "family": "Bruce",
+            "given": "Amanda S."
+          },
+          {
+            "family": "Masterson",
+            "given": "Travis D."
+          },
+          {
+            "family": "Keller",
+            "given": "Kathleen L."
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.appet.2019.104341",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=self-control+delay+of+gratification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1016_j.appet.2019.104341.json"
+      },
+      "cite": "Lundquist E, Austen M, Bermudez M, Rubin C, Bruce AS, Masterson TD, et al. Time spent looking at food during a delay of gratification task is positively associated with children's consumption at ad libitum laboratory meals. Appetite. 2019;141:104341. doi: 10.1016/j.appet.2019.104341"
+    },
+    {
+      "id": 44,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "bibtex",
+      "field": "social",
+      "language": "en",
+      "source": "crossref 记录 DOI 10.5964/jspp.v7i1.1090；2019，Journal of Social and Political Psychology。 原始快照：raw/crossref/social_10.5964_jspp.v7i1.1090.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.5964/jspp.v7i1.1090",
+        "title": "Moral polarization and out-party hostility in the US political context",
+        "journal": "Journal of Social and Political Psychology",
+        "year": 2019,
+        "volume": "7",
+        "issue": "1",
+        "pages": "213-245",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Tappin",
+            "given": "Ben M."
+          },
+          {
+            "family": "McKay",
+            "given": "Ryan T."
+          }
+        ],
+        "url": "https://doi.org/10.5964/jspp.v7i1.1090",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.5964_jspp.v7i1.1090.json"
+      },
+      "cite": "@article{Tappin2019,\n  title={Moral polarization and out-party hostility in the US political context},\n  author={Tappin, Ben M. and McKay, Ryan T.},\n  journal={Journal of Social and Political Psychology},\n  year={2019},\n  volume={7},\n  number={1},\n  pages={213-245},\n  doi={10.5964/jspp.v7i1.1090}\n}"
+    },
+    {
+      "id": 45,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "ieee",
+      "field": "chinese",
+      "language": "zh",
+      "source": "crossref 记录 DOI 10.26549/yzlcyxzz.v3i7.6224；2021，亚洲临床医学杂志。 原始快照：raw/crossref/chinese_10.26549_yzlcyxzz.v3i7.6224.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.26549/yzlcyxzz.v3i7.6224",
+        "title": "血管内介入治疗技术在缺血性脑血管疾病中的应用效果",
+        "journal": "亚洲临床医学杂志",
+        "year": 2021,
+        "volume": "3",
+        "issue": "7",
+        "pages": "29",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "王",
+            "given": "城"
+          }
+        ],
+        "url": "https://doi.org/10.26549/yzlcyxzz.v3i7.6224",
+        "field": "chinese",
+        "query_url": "https://api.crossref.org/works?query=%E5%86%A0%E7%8A%B6%E5%8A%A8%E8%84%89+%E4%BB%8B%E5%85%A5%E6%B2%BB%E7%96%97&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2012%2Cuntil-pub-date%3A2024&rows=15&offset=168",
+        "raw_path": "raw/crossref/chinese_10.26549_yzlcyxzz.v3i7.6224.json"
+      },
+      "cite": "王城, \"血管内介入治疗技术在缺血性脑血管疾病中的应用效果,\" 亚洲临床医学杂志, vol. 3, no. 7, p. 29, 2021, doi: 10.26549/yzlcyxzz.v3i7.6224."
+    },
+    {
+      "id": 46,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "apa",
+      "field": "chinese",
+      "language": "zh",
+      "source": "crossref 记录 DOI 10.33142/cmn.v2i2.14068；2024，临床医学与护理。 原始快照：raw/crossref/chinese_10.33142_cmn.v2i2.14068.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.33142/cmn.v2i2.14068",
+        "title": "厄贝沙坦+美托洛尔在高血压治疗中的效果观察及有效率影响分析",
+        "journal": "临床医学与护理",
+        "year": 2024,
+        "volume": "2",
+        "issue": "2",
+        "pages": "1",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "孙",
+            "given": "嘉晨"
+          }
+        ],
+        "url": "https://doi.org/10.33142/cmn.v2i2.14068",
+        "field": "chinese",
+        "query_url": "https://api.crossref.org/works?query=%E9%AB%98%E8%A1%80%E5%8E%8B+%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2012%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/chinese_10.33142_cmn.v2i2.14068.json"
+      },
+      "cite": "孙嘉晨 (2024). 厄贝沙坦+美托洛尔在高血压治疗中的效果观察及有效率影响分析. 临床医学与护理, 2(2), 1. https://doi.org/10.33142/cmn.v2i2.14068"
+    },
+    {
+      "id": 47,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "gbt",
+      "field": "chinese",
+      "language": "zh",
+      "source": "openalex 记录 DOI 10.3760/cma.j.issn.1674-2907.2006.10.030；2006，Zhonghua xiandai huli zazhi。 原始快照：raw/openalex/chinese_10.3760_cma.j.issn.1674-2907.2006.10.030.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "openalex",
+        "doi": "10.3760/cma.j.issn.1674-2907.2006.10.030",
+        "pmid": null,
+        "title": "黄五酊湿敷治疗糖尿病性II期褥疮的疗效观察",
+        "journal": "Zhonghua xiandai huli zazhi",
+        "year": 2006,
+        "volume": "12",
+        "issue": "10",
+        "pages": "933-933",
+        "type": "article",
+        "authors": [
+          {
+            "family": "莫永兰",
+            "given": ""
+          },
+          {
+            "family": "黄柳妮",
+            "given": ""
+          }
+        ],
+        "url": "http://rs.yiigle.com/CN115682200610/506232.htm",
+        "openalex_id": "https://openalex.org/W3029014051",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E7%B3%96%E5%B0%BF%E7%97%85+%E6%B2%BB%E7%96%97+%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%85%A7&per-page=20&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.3760_cma.j.issn.1674-2907.2006.10.030.json"
+      },
+      "cite": "莫永兰, 黄柳妮. 黄五酊湿敷治疗糖尿病性II期褥疮的疗效观察[J]. Zhonghua xiandai huli zazhi, 2006, 12(10): 933-933. DOI: 10.3760/cma.j.issn.1674-2907.2006.10.030"
+    },
+    {
+      "id": 48,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "bibtex",
+      "field": "chinese",
+      "language": "zh",
+      "source": "openalex 记录 DOI 10.61369/mrp.8047；2024，Medical Research and Practice。 原始快照：raw/openalex/chinese_10.61369_mrp.8047.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "openalex",
+        "doi": "10.61369/mrp.8047",
+        "pmid": null,
+        "title": "中医药治疗糖尿病并发症（如糖尿病肾病）的临床观察与机制研究",
+        "journal": "Medical Research and Practice",
+        "year": 2024,
+        "volume": "2",
+        "issue": "8",
+        "pages": "113-113",
+        "type": "article",
+        "authors": [
+          {
+            "family": "强 王",
+            "given": ""
+          }
+        ],
+        "url": "https://doi.org/10.61369/mrp.8047",
+        "openalex_id": "https://openalex.org/W4412685331",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E4%B8%AD%E5%8C%BB%E8%8D%AF+%E4%B8%B4%E5%BA%8A+%E7%96%97%E6%95%88&per-page=15&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.61369_mrp.8047.json"
+      },
+      "cite": "@article{强王2024,\n  title={中医药治疗糖尿病并发症（如糖尿病肾病）的临床观察与机制研究},\n  author={强 王},\n  journal={Medical Research and Practice},\n  year={2024},\n  volume={2},\n  number={8},\n  pages={113-113},\n  doi={10.61369/mrp.8047}\n}"
+    },
+    {
+      "id": 49,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "bibtex",
+      "field": "chinese",
+      "language": "zh",
+      "source": "openalex 记录 DOI 10.3760/cma.j.issn.1008-1372.2006.11.029；2006，中国医师杂志。 原始快照：raw/openalex/chinese_10.3760_cma.j.issn.1008-1372.2006.11.029.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "openalex",
+        "doi": "10.3760/cma.j.issn.1008-1372.2006.11.029",
+        "pmid": null,
+        "title": "重型颅脑损伤中西医结合治疗的临床研究",
+        "journal": "中国医师杂志",
+        "year": 2006,
+        "volume": "8",
+        "issue": "11",
+        "pages": "1510-1511",
+        "type": "article",
+        "authors": [
+          {
+            "family": "李卫贤",
+            "given": ""
+          },
+          {
+            "family": "魏璐城",
+            "given": ""
+          },
+          {
+            "family": "邝英桥",
+            "given": ""
+          },
+          {
+            "family": "沈礼芹",
+            "given": ""
+          },
+          {
+            "family": "郭建杰",
+            "given": ""
+          },
+          {
+            "family": "李志强",
+            "given": ""
+          }
+        ],
+        "url": "http://rs.yiigle.com/CN431274200611/273645.htm",
+        "openalex_id": "https://openalex.org/W3028961880",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E4%B8%AD%E5%8C%BB%E8%8D%AF+%E4%B8%B4%E5%BA%8A+%E7%96%97%E6%95%88&per-page=15&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.3760_cma.j.issn.1008-1372.2006.11.029.json"
+      },
+      "cite": "@article{李卫贤2006,\n  title={重型颅脑损伤中西医结合治疗的临床研究},\n  author={李卫贤 and 魏璐城 and 邝英桥 and 沈礼芹 and 郭建杰 and 李志强},\n  journal={中国医师杂志},\n  year={2006},\n  volume={8},\n  number={11},\n  pages={1510-1511},\n  doi={10.3760/cma.j.issn.1008-1372.2006.11.029}\n}"
+    },
+    {
+      "id": 50,
+      "group": "real",
+      "expected": "verified",
+      "expect_mismatch_fields": [],
+      "format": "title_only",
+      "field": "chinese",
+      "language": "zh",
+      "source": "openalex 记录 DOI 10.70693/cjmsr.v1i2.1101；2025，中国医学科学研究。 原始快照：raw/openalex/chinese_10.70693_cjmsr.v1i2.1101.json。",
+      "why_expected": "从 Crossref 或 OpenAlex 拉取的真实记录，按库中字段抄录或只保留 DOI/题名/PMID。应标已验证并展示库中记录。",
+      "record": {
+        "source": "openalex",
+        "doi": "10.70693/cjmsr.v1i2.1101",
+        "pmid": null,
+        "title": "关于中医芳香疗法治疗失眠的研究进展",
+        "journal": "中国医学科学研究",
+        "year": 2025,
+        "volume": "1",
+        "issue": "2",
+        "pages": "8-15",
+        "type": "article",
+        "authors": [
+          {
+            "family": "霈欣 王",
+            "given": ""
+          },
+          {
+            "family": "佳利 柴",
+            "given": ""
+          },
+          {
+            "family": "婉樱 陈",
+            "given": ""
+          },
+          {
+            "family": "瀛 王",
+            "given": ""
+          }
+        ],
+        "url": "https://doi.org/10.70693/cjmsr.v1i2.1101",
+        "openalex_id": "https://openalex.org/W4411662550",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E4%B8%AD%E5%8C%BB%E8%8D%AF+%E4%B8%B4%E5%BA%8A+%E7%96%97%E6%95%88&per-page=15&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.70693_cjmsr.v1i2.1101.json"
+      },
+      "cite": "关于中医芳香疗法治疗失眠的研究进展"
+    },
+    {
+      "id": 51,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "tamper": "journal",
+      "tamper_note": "把期刊从「The Lancet」改为「Nature」。",
+      "source": "在真实 crossref 记录 DOI 10.1016/s0140-6736(20)30815-1 上人为篡改。把期刊从「The Lancet」改为「Nature」。 原始快照：raw/crossref/medicine_10.1016_s0140-6736_20_30815-1.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(20)30815-1",
+        "title": "The history of the RTS,S/AS01 malaria vaccine trial",
+        "journal": "The Lancet",
+        "year": 2020,
+        "volume": "395",
+        "issue": "10233",
+        "pages": "1336-1337",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Keating",
+            "given": "Conrad"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(20)30815-1",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_20_30815-1.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(20)30815-1",
+        "title": "The history of the RTS,S/AS01 malaria vaccine trial",
+        "journal": "Nature",
+        "year": 2020,
+        "volume": "395",
+        "issue": "10233",
+        "pages": "1336-1337",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Keating",
+            "given": "Conrad"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(20)30815-1",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_20_30815-1.json"
+      },
+      "cite": "Keating, C. (2020). The history of the RTS,S/AS01 malaria vaccine trial. Nature, 395(10233), 1336-1337. https://doi.org/10.1016/s0140-6736(20)30815-1"
+    },
+    {
+      "id": 52,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "tamper": "doi",
+      "tamper_note": "把 DOI 的一位数字从 10.1016/s0140-6736(23)01313-2 改为 10.1016/s0140-6736(23)01313-3。 已独立查询 Crossref：改动后的 DOI 返回 404，并不指向另一篇文章。",
+      "source": "在真实 crossref 记录 DOI 10.1016/s0140-6736(23)01313-2 上人为篡改。把 DOI 的一位数字从 10.1016/s0140-6736(23)01313-2 改为 10.1016/s0140-6736(23)01313-3。 已独立查询 Crossref：改动后的 DOI 返回 404，并不指向另一篇文章。 原始快照：raw/crossref/medicine_10.1016_s0140-6736_23_01313-2.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(23)01313-2",
+        "title": "Will the results from the AdaptResponse trial boost CRT use?",
+        "journal": "The Lancet",
+        "year": 2023,
+        "volume": "402",
+        "issue": "10408",
+        "pages": "1110-1112",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Linde",
+            "given": "Cecilia"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(23)01313-2",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_23_01313-2.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(23)01313-3",
+        "title": "Will the results from the AdaptResponse trial boost CRT use?",
+        "journal": "The Lancet",
+        "year": 2023,
+        "volume": "402",
+        "issue": "10408",
+        "pages": "1110-1112",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Linde",
+            "given": "Cecilia"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(23)01313-2",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_23_01313-2.json",
+        "doi_exists_after_flip": false
+      },
+      "cite": "Linde, C. (2023). Will the results from the AdaptResponse trial boost CRT use?. The Lancet, 402(10408), 1110-1112. https://doi.org/10.1016/s0140-6736(23)01313-3"
+    },
+    {
+      "id": 53,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "tamper": "doi",
+      "tamper_note": "把 DOI 的一位数字从 10.1016/j.jpsychires.2023.01.043 改为 10.1016/j.jpsychires.2023.01.044。 改动后的 DOI 在 Crossref 也能解析（指向另一记录），因此除 DOI 不符外，也可能被判为 DOI 冲突；gold 仍定为 field_mismatch，预期不符字段含 doi。",
+      "source": "在真实 crossref 记录 DOI 10.1016/j.jpsychires.2023.01.043 上人为篡改。把 DOI 的一位数字从 10.1016/j.jpsychires.2023.01.043 改为 10.1016/j.jpsychires.2023.01.044。 改动后的 DOI 在 Crossref 也能解析（指向另一记录），因此除 DOI 不符外，也可能被判为 DOI 冲突；gold 仍定为 field_mismatch，预期不符字段含 doi。 原始快照：raw/crossref/medicine_10.1016_j.jpsychires.2023.01.043.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.jpsychires.2023.01.043",
+        "title": "The impact of age on antidepressant response: A mega-analysis of individuals with major depressive disorder",
+        "journal": "Journal of Psychiatric Research",
+        "year": 2023,
+        "volume": "159",
+        "issue": null,
+        "pages": "266-273",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Strawn",
+            "given": "Jeffrey R."
+          },
+          {
+            "family": "Mills",
+            "given": "Jeffrey A."
+          },
+          {
+            "family": "Suresh",
+            "given": "Vikram"
+          },
+          {
+            "family": "Mayes",
+            "given": "Taryn"
+          },
+          {
+            "family": "Gentry",
+            "given": "Melanie T."
+          },
+          {
+            "family": "Trivedi",
+            "given": "Madhukar"
+          },
+          {
+            "family": "Croarkin",
+            "given": "Paul E."
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.jpsychires.2023.01.043",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_j.jpsychires.2023.01.043.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/j.jpsychires.2023.01.044",
+        "title": "The impact of age on antidepressant response: A mega-analysis of individuals with major depressive disorder",
+        "journal": "Journal of Psychiatric Research",
+        "year": 2023,
+        "volume": "159",
+        "issue": null,
+        "pages": "266-273",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Strawn",
+            "given": "Jeffrey R."
+          },
+          {
+            "family": "Mills",
+            "given": "Jeffrey A."
+          },
+          {
+            "family": "Suresh",
+            "given": "Vikram"
+          },
+          {
+            "family": "Mayes",
+            "given": "Taryn"
+          },
+          {
+            "family": "Gentry",
+            "given": "Melanie T."
+          },
+          {
+            "family": "Trivedi",
+            "given": "Madhukar"
+          },
+          {
+            "family": "Croarkin",
+            "given": "Paul E."
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.jpsychires.2023.01.043",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_j.jpsychires.2023.01.043.json",
+        "doi_exists_after_flip": true
+      },
+      "cite": "Strawn, J. R., Mills, J. A., Suresh, V., Mayes, T., Gentry, M. T., Trivedi, M., & Croarkin, P. E. (2023). The impact of age on antidepressant response: A mega-analysis of individuals with major depressive disorder. Journal of Psychiatric Research, 159, 266-273. https://doi.org/10.1016/j.jpsychires.2023.01.044"
+    },
+    {
+      "id": 54,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "tamper": "doi",
+      "tamper_note": "把 DOI 的一位数字从 10.1016/s0140-6736(16)30847-9 改为 10.1016/s0140-6736(16)30847-0。 已独立查询 Crossref：改动后的 DOI 返回 404，并不指向另一篇文章。",
+      "source": "在真实 crossref 记录 DOI 10.1016/s0140-6736(16)30847-9 上人为篡改。把 DOI 的一位数字从 10.1016/s0140-6736(16)30847-9 改为 10.1016/s0140-6736(16)30847-0。 已独立查询 Crossref：改动后的 DOI 返回 404，并不指向另一篇文章。 原始快照：raw/crossref/medicine_10.1016_s0140-6736_16_30847-9.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(16)30847-9",
+        "title": "Ovarian cancer screening: UKCTOCS trial",
+        "journal": "The Lancet",
+        "year": 2016,
+        "volume": "387",
+        "issue": "10038",
+        "pages": "2602",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Sasieni",
+            "given": "Peter D"
+          },
+          {
+            "family": "Duffy",
+            "given": "Stephen W"
+          },
+          {
+            "family": "Cuzick",
+            "given": "Jack"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(16)30847-9",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_16_30847-9.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/s0140-6736(16)30847-0",
+        "title": "Ovarian cancer screening: UKCTOCS trial",
+        "journal": "The Lancet",
+        "year": 2016,
+        "volume": "387",
+        "issue": "10038",
+        "pages": "2602",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Sasieni",
+            "given": "Peter D"
+          },
+          {
+            "family": "Duffy",
+            "given": "Stephen W"
+          },
+          {
+            "family": "Cuzick",
+            "given": "Jack"
+          }
+        ],
+        "url": "https://doi.org/10.1016/s0140-6736(16)30847-9",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query.container-title=The+Lancet&query=stroke+trial&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1016_s0140-6736_16_30847-9.json",
+        "doi_exists_after_flip": false
+      },
+      "cite": "Sasieni, P. D., Duffy, S. W., & Cuzick, J. (2016). Ovarian cancer screening: UKCTOCS trial. The Lancet, 387(10038), 2602. https://doi.org/10.1016/s0140-6736(16)30847-0"
+    },
+    {
+      "id": 55,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2022 改为 2023。",
+      "source": "在真实 crossref 记录 DOI 10.23736/s2724-6612.21.02129-1 上人为篡改。把年份从 2022 改为 2023。 原始快照：raw/crossref/medicine_10.23736_s2724-6612.21.02129-1.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.23736/s2724-6612.21.02129-1",
+        "title": "Irritability, not sad low mood, predicts inattention in children and adolescents with major depressive disorder with and without persistent depressive disorder",
+        "journal": "Minerva Psychiatry",
+        "year": 2022,
+        "volume": "62",
+        "issue": "4",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "VANCE",
+            "given": "Alasdair"
+          },
+          {
+            "family": "WINTHER",
+            "given": "Jo"
+          }
+        ],
+        "url": "https://doi.org/10.23736/s2724-6612.21.02129-1",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.23736_s2724-6612.21.02129-1.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.23736/s2724-6612.21.02129-1",
+        "title": "Irritability, not sad low mood, predicts inattention in children and adolescents with major depressive disorder with and without persistent depressive disorder",
+        "journal": "Minerva Psychiatry",
+        "year": 2023,
+        "volume": "62",
+        "issue": "4",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "VANCE",
+            "given": "Alasdair"
+          },
+          {
+            "family": "WINTHER",
+            "given": "Jo"
+          }
+        ],
+        "url": "https://doi.org/10.23736/s2724-6612.21.02129-1",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.23736_s2724-6612.21.02129-1.json"
+      },
+      "cite": "VANCE, A., & WINTHER, J. (2023). Irritability, not sad low mood, predicts inattention in children and adolescents with major depressive disorder with and without persistent depressive disorder. Minerva Psychiatry, 62(4). https://doi.org/10.23736/s2724-6612.21.02129-1"
+    },
+    {
+      "id": 56,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "medicine",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2024 改为 2023。",
+      "source": "在真实 crossref 记录 DOI 10.1002/npr2.12376 上人为篡改。把年份从 2024 改为 2023。 原始快照：raw/crossref/medicine_10.1002_npr2.12376.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1002/npr2.12376",
+        "title": "Newer antidepressant for Japanese adults with major depressive disorder: A systematic review and meta‐analysis",
+        "journal": "Neuropsychopharmacology Reports",
+        "year": 2024,
+        "volume": "44",
+        "issue": "1",
+        "pages": "216-220",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Kishi",
+            "given": "Taro"
+          },
+          {
+            "family": "Sakuma",
+            "given": "Kenji"
+          },
+          {
+            "family": "Hatano",
+            "given": "Masakazu"
+          },
+          {
+            "family": "Matsuda",
+            "given": "Yuki"
+          },
+          {
+            "family": "Esumi",
+            "given": "Satoru"
+          },
+          {
+            "family": "Miyake",
+            "given": "Nobumi"
+          },
+          {
+            "family": "Miura",
+            "given": "Itaru"
+          },
+          {
+            "family": "Hori",
+            "given": "Hikaru"
+          },
+          {
+            "family": "Kato",
+            "given": "Masaki"
+          },
+          {
+            "family": "Iwata",
+            "given": "Nakao"
+          }
+        ],
+        "url": "https://doi.org/10.1002/npr2.12376",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1002_npr2.12376.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1002/npr2.12376",
+        "title": "Newer antidepressant for Japanese adults with major depressive disorder: A systematic review and meta‐analysis",
+        "journal": "Neuropsychopharmacology Reports",
+        "year": 2023,
+        "volume": "44",
+        "issue": "1",
+        "pages": "216-220",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Kishi",
+            "given": "Taro"
+          },
+          {
+            "family": "Sakuma",
+            "given": "Kenji"
+          },
+          {
+            "family": "Hatano",
+            "given": "Masakazu"
+          },
+          {
+            "family": "Matsuda",
+            "given": "Yuki"
+          },
+          {
+            "family": "Esumi",
+            "given": "Satoru"
+          },
+          {
+            "family": "Miyake",
+            "given": "Nobumi"
+          },
+          {
+            "family": "Miura",
+            "given": "Itaru"
+          },
+          {
+            "family": "Hori",
+            "given": "Hikaru"
+          },
+          {
+            "family": "Kato",
+            "given": "Masaki"
+          },
+          {
+            "family": "Iwata",
+            "given": "Nakao"
+          }
+        ],
+        "url": "https://doi.org/10.1002/npr2.12376",
+        "field": "medicine",
+        "query_url": "https://api.crossref.org/works?query=major+depressive+disorder+antidepressant&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/medicine_10.1002_npr2.12376.json"
+      },
+      "cite": "Kishi, T., Sakuma, K., Hatano, M., Matsuda, Y., Esumi, S., Miyake, N., Miura, I., Hori, H., Kato, M., & Iwata, N. (2023). Newer antidepressant for Japanese adults with major depressive disorder: A systematic review and meta‐analysis. Neuropsychopharmacology Reports, 44(1), 216-220. https://doi.org/10.1002/npr2.12376"
+    },
+    {
+      "id": 57,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2023 改为 2024。",
+      "source": "在真实 crossref 记录 DOI 10.5715/jnlp.30.1116 上人为篡改。把年份从 2023 改为 2024。 原始快照：raw/crossref/cs_10.5715_jnlp.30.1116.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.5715/jnlp.30.1116",
+        "title": "Symposium on Japanese Diachronic Corpora 2023",
+        "journal": "Journal of Natural Language Processing",
+        "year": 2023,
+        "volume": "30",
+        "issue": "3",
+        "pages": "1116-1121",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ogiso",
+            "given": "Toshinobu"
+          }
+        ],
+        "url": "https://doi.org/10.5715/jnlp.30.1116",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.5715_jnlp.30.1116.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.5715/jnlp.30.1116",
+        "title": "Symposium on Japanese Diachronic Corpora 2023",
+        "journal": "Journal of Natural Language Processing",
+        "year": 2024,
+        "volume": "30",
+        "issue": "3",
+        "pages": "1116-1121",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Ogiso",
+            "given": "Toshinobu"
+          }
+        ],
+        "url": "https://doi.org/10.5715/jnlp.30.1116",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.5715_jnlp.30.1116.json"
+      },
+      "cite": "Ogiso, T. (2024). Symposium on Japanese Diachronic Corpora 2023. Journal of Natural Language Processing, 30(3), 1116-1121. https://doi.org/10.5715/jnlp.30.1116"
+    },
+    {
+      "id": 58,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "tamper": "pages",
+      "tamper_note": "把页码从 228-233 改为 100-110。",
+      "source": "在真实 crossref 记录 DOI 10.14710/jtsiskom.2020.13733 上人为篡改。把页码从 228-233 改为 100-110。 原始快照：raw/crossref/cs_10.14710_jtsiskom.2020.13733.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.14710/jtsiskom.2020.13733",
+        "title": "Maturity classification of cacao through spectrogram and convolutional neural network",
+        "journal": "Jurnal Teknologi dan Sistem Komputer",
+        "year": 2020,
+        "volume": "8",
+        "issue": "3",
+        "pages": "228-233",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Bueno",
+            "given": "Gilbert E."
+          },
+          {
+            "family": "Valenzuela",
+            "given": "Kristine A."
+          },
+          {
+            "family": "Arboleda",
+            "given": "Edwin R."
+          }
+        ],
+        "url": "https://doi.org/10.14710/jtsiskom.2020.13733",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.14710_jtsiskom.2020.13733.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.14710/jtsiskom.2020.13733",
+        "title": "Maturity classification of cacao through spectrogram and convolutional neural network",
+        "journal": "Jurnal Teknologi dan Sistem Komputer",
+        "year": 2020,
+        "volume": "8",
+        "issue": "3",
+        "pages": "100-110",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Bueno",
+            "given": "Gilbert E."
+          },
+          {
+            "family": "Valenzuela",
+            "given": "Kristine A."
+          },
+          {
+            "family": "Arboleda",
+            "given": "Edwin R."
+          }
+        ],
+        "url": "https://doi.org/10.14710/jtsiskom.2020.13733",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.14710_jtsiskom.2020.13733.json"
+      },
+      "cite": "Bueno, G. E., Valenzuela, K. A., & Arboleda, E. R. (2020). Maturity classification of cacao through spectrogram and convolutional neural network. Jurnal Teknologi dan Sistem Komputer, 8(3), 100-110. https://doi.org/10.14710/jtsiskom.2020.13733"
+    },
+    {
+      "id": 59,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "tamper": "authors",
+      "tamper_note": "把第一作者从「Battilotti, S.」改为「Smith, J.」。",
+      "source": "在真实 crossref 记录 DOI 10.1016/j.automatica.2021.109589 上人为篡改。把第一作者从「Battilotti, S.」改为「Smith, J.」。 原始快照：raw/crossref/cs_10.1016_j.automatica.2021.109589.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.automatica.2021.109589",
+        "title": "A stability with optimality analysis of consensus-based distributed filters for discrete-time linear systems",
+        "journal": "Automatica",
+        "year": 2021,
+        "volume": "129",
+        "issue": null,
+        "pages": "109589",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Battilotti",
+            "given": "Stefano"
+          },
+          {
+            "family": "Cacace",
+            "given": "Filippo"
+          },
+          {
+            "family": "d’Angelo",
+            "given": "Massimiliano"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.automatica.2021.109589",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1016_j.automatica.2021.109589.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/j.automatica.2021.109589",
+        "title": "A stability with optimality analysis of consensus-based distributed filters for discrete-time linear systems",
+        "journal": "Automatica",
+        "year": 2021,
+        "volume": "129",
+        "issue": null,
+        "pages": "109589",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "John"
+          },
+          {
+            "family": "Cacace",
+            "given": "Filippo"
+          },
+          {
+            "family": "d’Angelo",
+            "given": "Massimiliano"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.automatica.2021.109589",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=distributed+systems+consensus+replication&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/cs_10.1016_j.automatica.2021.109589.json"
+      },
+      "cite": "Smith, J., Cacace, F., & d’Angelo, M. (2021). A stability with optimality analysis of consensus-based distributed filters for discrete-time linear systems. Automatica, 129, 109589. https://doi.org/10.1016/j.automatica.2021.109589"
+    },
+    {
+      "id": 60,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2024 改为 2023。",
+      "source": "在真实 crossref 记录 DOI 10.1109/taslp.2024.3451977 上人为篡改。把年份从 2024 改为 2023。 原始快照：raw/crossref/cs_10.1109_taslp.2024.3451977.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1109/taslp.2024.3451977",
+        "title": "Improving Non-Autoregressive Translation Quality With Pretrained Language Model, Embedding Distillation and Upsampling Strategy for CTC",
+        "journal": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+        "year": 2024,
+        "volume": "32",
+        "issue": null,
+        "pages": "4121-4133",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Syu",
+            "given": "Shen-sian"
+          },
+          {
+            "family": "Xie",
+            "given": "Juncheng"
+          },
+          {
+            "family": "Lee",
+            "given": "Hung-yi"
+          }
+        ],
+        "url": "https://doi.org/10.1109/taslp.2024.3451977",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1109_taslp.2024.3451977.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1109/taslp.2024.3451977",
+        "title": "Improving Non-Autoregressive Translation Quality With Pretrained Language Model, Embedding Distillation and Upsampling Strategy for CTC",
+        "journal": "IEEE/ACM Transactions on Audio, Speech, and Language Processing",
+        "year": 2023,
+        "volume": "32",
+        "issue": null,
+        "pages": "4121-4133",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Syu",
+            "given": "Shen-sian"
+          },
+          {
+            "family": "Xie",
+            "given": "Juncheng"
+          },
+          {
+            "family": "Lee",
+            "given": "Hung-yi"
+          }
+        ],
+        "url": "https://doi.org/10.1109/taslp.2024.3451977",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1109_taslp.2024.3451977.json"
+      },
+      "cite": "Syu, S. S., Xie, J., & Lee, H. Y. (2023). Improving Non-Autoregressive Translation Quality With Pretrained Language Model, Embedding Distillation and Upsampling Strategy for CTC. IEEE/ACM Transactions on Audio, Speech, and Language Processing, 32, 4121-4133. https://doi.org/10.1109/taslp.2024.3451977"
+    },
+    {
+      "id": 61,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "tamper": "journal",
+      "tamper_note": "把期刊从「Journal of Natural Language Processing」改为「Nature」。",
+      "source": "在真实 crossref 记录 DOI 10.5715/jnlp.26.231 上人为篡改。把期刊从「Journal of Natural Language Processing」改为「Nature」。 原始快照：raw/crossref/cs_10.5715_jnlp.26.231.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.5715/jnlp.26.231",
+        "title": "Neural Network-based Chinese Joint Syntactic Analysis",
+        "journal": "Journal of Natural Language Processing",
+        "year": 2019,
+        "volume": "26",
+        "issue": "1",
+        "pages": "231-258",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Kurita",
+            "given": "Shuhei"
+          },
+          {
+            "family": "Kawahara",
+            "given": "Daisuke"
+          },
+          {
+            "family": "Kurohashi",
+            "given": "Sadao"
+          }
+        ],
+        "url": "https://doi.org/10.5715/jnlp.26.231",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.5715_jnlp.26.231.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.5715/jnlp.26.231",
+        "title": "Neural Network-based Chinese Joint Syntactic Analysis",
+        "journal": "Nature",
+        "year": 2019,
+        "volume": "26",
+        "issue": "1",
+        "pages": "231-258",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Kurita",
+            "given": "Shuhei"
+          },
+          {
+            "family": "Kawahara",
+            "given": "Daisuke"
+          },
+          {
+            "family": "Kurohashi",
+            "given": "Sadao"
+          }
+        ],
+        "url": "https://doi.org/10.5715/jnlp.26.231",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=natural+language+processing+pretrained+language+model&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2019%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.5715_jnlp.26.231.json"
+      },
+      "cite": "Kurita, S., Kawahara, D., & Kurohashi, S. (2019). Neural Network-based Chinese Joint Syntactic Analysis. Nature, 26(1), 231-258. https://doi.org/10.5715/jnlp.26.231"
+    },
+    {
+      "id": 62,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "format": "apa",
+      "field": "cs",
+      "language": "en",
+      "tamper": "journal",
+      "tamper_note": "把期刊从「Information Sciences」改为「Nature」。",
+      "source": "在真实 crossref 记录 DOI 10.1016/j.ins.2022.07.040 上人为篡改。把期刊从「Information Sciences」改为「Nature」。 原始快照：raw/crossref/cs_10.1016_j.ins.2022.07.040.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.ins.2022.07.040",
+        "title": "Fitness landscape analysis of convolutional neural network architectures for image classification",
+        "journal": "Information Sciences",
+        "year": 2022,
+        "volume": "609",
+        "issue": null,
+        "pages": "711-726",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Rodrigues",
+            "given": "Nuno M."
+          },
+          {
+            "family": "Malan",
+            "given": "Katherine M."
+          },
+          {
+            "family": "Ochoa",
+            "given": "Gabriela"
+          },
+          {
+            "family": "Vanneschi",
+            "given": "Leonardo"
+          },
+          {
+            "family": "Silva",
+            "given": "Sara"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.ins.2022.07.040",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1016_j.ins.2022.07.040.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/j.ins.2022.07.040",
+        "title": "Fitness landscape analysis of convolutional neural network architectures for image classification",
+        "journal": "Nature",
+        "year": 2022,
+        "volume": "609",
+        "issue": null,
+        "pages": "711-726",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Rodrigues",
+            "given": "Nuno M."
+          },
+          {
+            "family": "Malan",
+            "given": "Katherine M."
+          },
+          {
+            "family": "Ochoa",
+            "given": "Gabriela"
+          },
+          {
+            "family": "Vanneschi",
+            "given": "Leonardo"
+          },
+          {
+            "family": "Silva",
+            "given": "Sara"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.ins.2022.07.040",
+        "field": "cs",
+        "query_url": "https://api.crossref.org/works?query=convolutional+neural+network+image+classification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=20&offset=168",
+        "raw_path": "raw/crossref/cs_10.1016_j.ins.2022.07.040.json"
+      },
+      "cite": "Rodrigues, N. M., Malan, K. M., Ochoa, G., Vanneschi, L., & Silva, S. (2022). Fitness landscape analysis of convolutional neural network architectures for image classification. Nature, 609, 711-726. https://doi.org/10.1016/j.ins.2022.07.040"
+    },
+    {
+      "id": 63,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "physics",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2021 改为 2022。",
+      "source": "在真实 crossref 记录 DOI 10.3390/quantum3030035 上人为篡改。把年份从 2021 改为 2022。 原始快照：raw/crossref/physics_10.3390_quantum3030035.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.3390/quantum3030035",
+        "title": "The Measure Aspect of Quantum Uncertainty, of Entanglement, and the Associated Entropies",
+        "journal": "Quantum Reports",
+        "year": 2021,
+        "volume": "3",
+        "issue": "3",
+        "pages": "534-548",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Horváth",
+            "given": "Ivan"
+          }
+        ],
+        "url": "https://doi.org/10.3390/quantum3030035",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=quantum+entanglement+photon+experiment&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.3390_quantum3030035.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.3390/quantum3030035",
+        "title": "The Measure Aspect of Quantum Uncertainty, of Entanglement, and the Associated Entropies",
+        "journal": "Quantum Reports",
+        "year": 2022,
+        "volume": "3",
+        "issue": "3",
+        "pages": "534-548",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Horváth",
+            "given": "Ivan"
+          }
+        ],
+        "url": "https://doi.org/10.3390/quantum3030035",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=quantum+entanglement+photon+experiment&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.3390_quantum3030035.json"
+      },
+      "cite": "Horváth, I. (2022). The Measure Aspect of Quantum Uncertainty, of Entanglement, and the Associated Entropies. Quantum Reports, 3(3), 534-548. https://doi.org/10.3390/quantum3030035"
+    },
+    {
+      "id": 64,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "format": "apa",
+      "field": "physics",
+      "language": "en",
+      "tamper": "doi",
+      "tamper_note": "把 DOI 的一位数字从 10.1103/physrevd.103.084001 改为 10.1103/physrevd.103.084002。 改动后的 DOI 在 Crossref 也能解析（指向另一记录），因此除 DOI 不符外，也可能被判为 DOI 冲突；gold 仍定为 field_mismatch，预期不符字段含 doi。",
+      "source": "在真实 crossref 记录 DOI 10.1103/physrevd.103.084001 上人为篡改。把 DOI 的一位数字从 10.1103/physrevd.103.084001 改为 10.1103/physrevd.103.084002。 改动后的 DOI 在 Crossref 也能解析（指向另一记录），因此除 DOI 不符外，也可能被判为 DOI 冲突；gold 仍定为 field_mismatch，预期不符字段含 doi。 原始快照：raw/crossref/physics_10.1103_physrevd.103.084001.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1103/physrevd.103.084001",
+        "title": "Possibility of primordial black holes as the source of gravitational wave events in the advanced LIGO detector",
+        "journal": "Physical Review D",
+        "year": 2021,
+        "volume": "103",
+        "issue": "8",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Khalouei",
+            "given": "E."
+          },
+          {
+            "family": "Ghodsi",
+            "given": "H."
+          },
+          {
+            "family": "Rahvar",
+            "given": "S."
+          },
+          {
+            "family": "Abedi",
+            "given": "J."
+          }
+        ],
+        "url": "https://doi.org/10.1103/physrevd.103.084001",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1103_physrevd.103.084001.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1103/physrevd.103.084002",
+        "title": "Possibility of primordial black holes as the source of gravitational wave events in the advanced LIGO detector",
+        "journal": "Physical Review D",
+        "year": 2021,
+        "volume": "103",
+        "issue": "8",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Khalouei",
+            "given": "E."
+          },
+          {
+            "family": "Ghodsi",
+            "given": "H."
+          },
+          {
+            "family": "Rahvar",
+            "given": "S."
+          },
+          {
+            "family": "Abedi",
+            "given": "J."
+          }
+        ],
+        "url": "https://doi.org/10.1103/physrevd.103.084001",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1103_physrevd.103.084001.json",
+        "doi_exists_after_flip": true
+      },
+      "cite": "Khalouei, E., Ghodsi, H., Rahvar, S., & Abedi, J. (2021). Possibility of primordial black holes as the source of gravitational wave events in the advanced LIGO detector. Physical Review D, 103(8). https://doi.org/10.1103/physrevd.103.084002"
+    },
+    {
+      "id": 65,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "format": "apa",
+      "field": "physics",
+      "language": "en",
+      "tamper": "pages",
+      "tamper_note": "把页码从 151-154 改为 100-110。",
+      "source": "在真实 crossref 记录 DOI 10.1016/j.ssc.2017.12.009 上人为篡改。把页码从 151-154 改为 100-110。 原始快照：raw/crossref/physics_10.1016_j.ssc.2017.12.009.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.ssc.2017.12.009",
+        "title": "Spin-polarized charge transport in HgTe/CdTe quantum well topological insulator under a ferromagnetic metal strip",
+        "journal": "Solid State Communications",
+        "year": 2018,
+        "volume": "270",
+        "issue": null,
+        "pages": "151-154",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Wu",
+            "given": "Zhenhua"
+          },
+          {
+            "family": "Luo",
+            "given": "Kun"
+          },
+          {
+            "family": "Yu",
+            "given": "Jiahan"
+          },
+          {
+            "family": "Wu",
+            "given": "Xiaobo"
+          },
+          {
+            "family": "Lin",
+            "given": "Liangzhong"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.ssc.2017.12.009",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=topological+insulator+electronic+transport&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1016_j.ssc.2017.12.009.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/j.ssc.2017.12.009",
+        "title": "Spin-polarized charge transport in HgTe/CdTe quantum well topological insulator under a ferromagnetic metal strip",
+        "journal": "Solid State Communications",
+        "year": 2018,
+        "volume": "270",
+        "issue": null,
+        "pages": "100-110",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Wu",
+            "given": "Zhenhua"
+          },
+          {
+            "family": "Luo",
+            "given": "Kun"
+          },
+          {
+            "family": "Yu",
+            "given": "Jiahan"
+          },
+          {
+            "family": "Wu",
+            "given": "Xiaobo"
+          },
+          {
+            "family": "Lin",
+            "given": "Liangzhong"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.ssc.2017.12.009",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=topological+insulator+electronic+transport&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1016_j.ssc.2017.12.009.json"
+      },
+      "cite": "Wu, Z., Luo, K., Yu, J., Wu, X., & Lin, L. (2018). Spin-polarized charge transport in HgTe/CdTe quantum well topological insulator under a ferromagnetic metal strip. Solid State Communications, 270, 100-110. https://doi.org/10.1016/j.ssc.2017.12.009"
+    },
+    {
+      "id": 66,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "format": "apa",
+      "field": "physics",
+      "language": "en",
+      "tamper": "authors",
+      "tamper_note": "把第一作者从「Kaufer, S.」改为「Smith, J.」。",
+      "source": "在真实 crossref 记录 DOI 10.1088/1361-6382/aa7119 上人为篡改。把第一作者从「Kaufer, S.」改为「Smith, J.」。 原始快照：raw/crossref/physics_10.1088_1361-6382_aa7119.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1088/1361-6382/aa7119",
+        "title": "Demonstration of the optical AC coupling technique at the advanced LIGO gravitational wave detector",
+        "journal": "Classical and Quantum Gravity",
+        "year": 2017,
+        "volume": "34",
+        "issue": "14",
+        "pages": "145001",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Kaufer",
+            "given": "Steffen"
+          },
+          {
+            "family": "Kasprzack",
+            "given": "Marie"
+          },
+          {
+            "family": "Frolov",
+            "given": "Valera"
+          },
+          {
+            "family": "Willke",
+            "given": "Benno"
+          }
+        ],
+        "url": "https://doi.org/10.1088/1361-6382/aa7119",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1088_1361-6382_aa7119.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1088/1361-6382/aa7119",
+        "title": "Demonstration of the optical AC coupling technique at the advanced LIGO gravitational wave detector",
+        "journal": "Classical and Quantum Gravity",
+        "year": 2017,
+        "volume": "34",
+        "issue": "14",
+        "pages": "145001",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "John"
+          },
+          {
+            "family": "Kasprzack",
+            "given": "Marie"
+          },
+          {
+            "family": "Frolov",
+            "given": "Valera"
+          },
+          {
+            "family": "Willke",
+            "given": "Benno"
+          }
+        ],
+        "url": "https://doi.org/10.1088/1361-6382/aa7119",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.1088_1361-6382_aa7119.json"
+      },
+      "cite": "Smith, J., Kasprzack, M., Frolov, V., & Willke, B. (2017). Demonstration of the optical AC coupling technique at the advanced LIGO gravitational wave detector. Classical and Quantum Gravity, 34(14), 145001. https://doi.org/10.1088/1361-6382/aa7119"
+    },
+    {
+      "id": 67,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "format": "apa",
+      "field": "physics",
+      "language": "en",
+      "tamper": "authors",
+      "tamper_note": "把第一作者从「Petrov, N.」改为「Smith, J.」。",
+      "source": "在真实 crossref 记录 DOI 10.3390/s21051877 上人为篡改。把第一作者从「Petrov, N.」改为「Smith, J.」。 原始快照：raw/crossref/physics_10.3390_s21051877.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.3390/s21051877",
+        "title": "Small-Sized Interferometer with Fabry–Perot Resonators for Gravitational Wave Detection",
+        "journal": "Sensors",
+        "year": 2021,
+        "volume": "21",
+        "issue": "5",
+        "pages": "1877",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Petrov",
+            "given": "Nikolai"
+          },
+          {
+            "family": "Pustovoit",
+            "given": "Vladislav"
+          }
+        ],
+        "url": "https://doi.org/10.3390/s21051877",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.3390_s21051877.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.3390/s21051877",
+        "title": "Small-Sized Interferometer with Fabry–Perot Resonators for Gravitational Wave Detection",
+        "journal": "Sensors",
+        "year": 2021,
+        "volume": "21",
+        "issue": "5",
+        "pages": "1877",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "John"
+          },
+          {
+            "family": "Pustovoit",
+            "given": "Vladislav"
+          }
+        ],
+        "url": "https://doi.org/10.3390/s21051877",
+        "field": "physics",
+        "query_url": "https://api.crossref.org/works?query=gravitational+wave+detection+ligo&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/physics_10.3390_s21051877.json"
+      },
+      "cite": "Smith, J., & Pustovoit, V. (2021). Small-Sized Interferometer with Fabry–Perot Resonators for Gravitational Wave Detection. Sensors, 21(5), 1877. https://doi.org/10.3390/s21051877"
+    },
+    {
+      "id": 68,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2020 改为 2021。",
+      "source": "在真实 crossref 记录 DOI 10.1080/17474124.2020.1780912 上人为篡改。把年份从 2020 改为 2021。 原始快照：raw/crossref/biology_10.1080_17474124.2020.1780912.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1080/17474124.2020.1780912",
+        "title": "The Integrative Human microbiome project: a mile stone in the understanding of the gut microbiome",
+        "journal": "Expert Review of Gastroenterology & Hepatology",
+        "year": 2020,
+        "volume": "14",
+        "issue": "8",
+        "pages": "639-642",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Voth",
+            "given": "Elida"
+          },
+          {
+            "family": "Khanna",
+            "given": "Sahil"
+          }
+        ],
+        "url": "https://doi.org/10.1080/17474124.2020.1780912",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1080_17474124.2020.1780912.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1080/17474124.2020.1780912",
+        "title": "The Integrative Human microbiome project: a mile stone in the understanding of the gut microbiome",
+        "journal": "Expert Review of Gastroenterology & Hepatology",
+        "year": 2021,
+        "volume": "14",
+        "issue": "8",
+        "pages": "639-642",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Voth",
+            "given": "Elida"
+          },
+          {
+            "family": "Khanna",
+            "given": "Sahil"
+          }
+        ],
+        "url": "https://doi.org/10.1080/17474124.2020.1780912",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1080_17474124.2020.1780912.json"
+      },
+      "cite": "Voth, E., & Khanna, S. (2021). The Integrative Human microbiome project: a mile stone in the understanding of the gut microbiome. Expert Review of Gastroenterology & Hepatology, 14(8), 639-642. https://doi.org/10.1080/17474124.2020.1780912"
+    },
+    {
+      "id": 69,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "tamper": "authors",
+      "tamper_note": "把第一作者从「You, X.」改为「Smith, J.」。",
+      "source": "在真实 crossref 记录 DOI 10.1080/19490976.2023.2192546 上人为篡改。把第一作者从「You, X.」改为「Smith, J.」。 原始快照：raw/crossref/biology_10.1080_19490976.2023.2192546.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1080/19490976.2023.2192546",
+        "title": "Bifidobacterium longum\n                    subsp.\n                    infantis\n                    utilizes human milk urea to recycle nitrogen within the infant gut microbiome",
+        "journal": "Gut Microbes",
+        "year": 2023,
+        "volume": "15",
+        "issue": "1",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "You",
+            "given": "Xiaomeng"
+          },
+          {
+            "family": "Rani",
+            "given": "Asha"
+          },
+          {
+            "family": "Özcan",
+            "given": "Ezgi"
+          },
+          {
+            "family": "Lyu",
+            "given": "Yang"
+          },
+          {
+            "family": "Sela",
+            "given": "David A."
+          }
+        ],
+        "url": "https://doi.org/10.1080/19490976.2023.2192546",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1080_19490976.2023.2192546.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1080/19490976.2023.2192546",
+        "title": "Bifidobacterium longum\n                    subsp.\n                    infantis\n                    utilizes human milk urea to recycle nitrogen within the infant gut microbiome",
+        "journal": "Gut Microbes",
+        "year": 2023,
+        "volume": "15",
+        "issue": "1",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "John"
+          },
+          {
+            "family": "Rani",
+            "given": "Asha"
+          },
+          {
+            "family": "Özcan",
+            "given": "Ezgi"
+          },
+          {
+            "family": "Lyu",
+            "given": "Yang"
+          },
+          {
+            "family": "Sela",
+            "given": "David A."
+          }
+        ],
+        "url": "https://doi.org/10.1080/19490976.2023.2192546",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1080_19490976.2023.2192546.json"
+      },
+      "cite": "Smith, J., Rani, A., Özcan, E., Lyu, Y., & Sela, D. A. (2023). Bifidobacterium longum\n                    subsp.\n                    infantis\n                    utilizes human milk urea to recycle nitrogen within the infant gut microbiome. Gut Microbes, 15(1). https://doi.org/10.1080/19490976.2023.2192546"
+    },
+    {
+      "id": 70,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "tamper": "authors",
+      "tamper_note": "把第一作者从「Hindson, J.」改为「Smith, J.」。",
+      "source": "在真实 crossref 记录 DOI 10.1038/s41575-021-00428-2 上人为篡改。把第一作者从「Hindson, J.」改为「Smith, J.」。 原始快照：raw/crossref/biology_10.1038_s41575-021-00428-2.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1038/s41575-021-00428-2",
+        "title": "Single-cell RNA sequencing of early-relapse hepatocellular carcinoma",
+        "journal": "Nature Reviews Gastroenterology & Hepatology",
+        "year": 2021,
+        "volume": "18",
+        "issue": "3",
+        "pages": "150-150",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Hindson",
+            "given": "Jordan"
+          }
+        ],
+        "url": "https://doi.org/10.1038/s41575-021-00428-2",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1038_s41575-021-00428-2.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1038/s41575-021-00428-2",
+        "title": "Single-cell RNA sequencing of early-relapse hepatocellular carcinoma",
+        "journal": "Nature Reviews Gastroenterology & Hepatology",
+        "year": 2021,
+        "volume": "18",
+        "issue": "3",
+        "pages": "150-150",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "John"
+          }
+        ],
+        "url": "https://doi.org/10.1038/s41575-021-00428-2",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1038_s41575-021-00428-2.json"
+      },
+      "cite": "Smith, J. (2021). Single-cell RNA sequencing of early-relapse hepatocellular carcinoma. Nature Reviews Gastroenterology & Hepatology, 18(3), 150-150. https://doi.org/10.1038/s41575-021-00428-2"
+    },
+    {
+      "id": 71,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "tamper": "pages",
+      "tamper_note": "把页码从 208-211 改为 100-110。",
+      "source": "在真实 crossref 记录 DOI 10.3904/kjm.2023.98.5.208 上人为篡改。把页码从 208-211 改为 100-110。 原始快照：raw/crossref/biology_10.3904_kjm.2023.98.5.208.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.3904/kjm.2023.98.5.208",
+        "title": "Human Immunodeficiency Virus Infection and Gut Microbiota: A Review on Gut Microbiome Associated with Immune Activation and Metabolic Diseases",
+        "journal": "The Korean Journal of Medicine",
+        "year": 2023,
+        "volume": "98",
+        "issue": "5",
+        "pages": "208-211",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Joo",
+            "given": "Eun-Jeong"
+          }
+        ],
+        "url": "https://doi.org/10.3904/kjm.2023.98.5.208",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.3904_kjm.2023.98.5.208.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.3904/kjm.2023.98.5.208",
+        "title": "Human Immunodeficiency Virus Infection and Gut Microbiota: A Review on Gut Microbiome Associated with Immune Activation and Metabolic Diseases",
+        "journal": "The Korean Journal of Medicine",
+        "year": 2023,
+        "volume": "98",
+        "issue": "5",
+        "pages": "100-110",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Joo",
+            "given": "Eun-Jeong"
+          }
+        ],
+        "url": "https://doi.org/10.3904/kjm.2023.98.5.208",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=gut+microbiome+diversity+human&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.3904_kjm.2023.98.5.208.json"
+      },
+      "cite": "Joo, E. J. (2023). Human Immunodeficiency Virus Infection and Gut Microbiota: A Review on Gut Microbiome Associated with Immune Activation and Metabolic Diseases. The Korean Journal of Medicine, 98(5), 100-110. https://doi.org/10.3904/kjm.2023.98.5.208"
+    },
+    {
+      "id": 72,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "biology",
+      "language": "en",
+      "tamper": "year",
+      "tamper_note": "把年份从 2021 改为 2022。",
+      "source": "在真实 crossref 记录 DOI 10.1016/j.csbj.2021.10.027 上人为篡改。把年份从 2021 改为 2022。 原始快照：raw/crossref/biology_10.1016_j.csbj.2021.10.027.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1016/j.csbj.2021.10.027",
+        "title": "Automatic cell type identification methods for single-cell RNA sequencing",
+        "journal": "Computational and Structural Biotechnology Journal",
+        "year": 2021,
+        "volume": "19",
+        "issue": null,
+        "pages": "5874-5887",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Xie",
+            "given": "Bingbing"
+          },
+          {
+            "family": "Jiang",
+            "given": "Qin"
+          },
+          {
+            "family": "Mora",
+            "given": "Antonio"
+          },
+          {
+            "family": "Li",
+            "given": "Xuri"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.csbj.2021.10.027",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1016_j.csbj.2021.10.027.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1016/j.csbj.2021.10.027",
+        "title": "Automatic cell type identification methods for single-cell RNA sequencing",
+        "journal": "Computational and Structural Biotechnology Journal",
+        "year": 2022,
+        "volume": "19",
+        "issue": null,
+        "pages": "5874-5887",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Xie",
+            "given": "Bingbing"
+          },
+          {
+            "family": "Jiang",
+            "given": "Qin"
+          },
+          {
+            "family": "Mora",
+            "given": "Antonio"
+          },
+          {
+            "family": "Li",
+            "given": "Xuri"
+          }
+        ],
+        "url": "https://doi.org/10.1016/j.csbj.2021.10.027",
+        "field": "biology",
+        "query_url": "https://api.crossref.org/works?query=single-cell+RNA+sequencing+atlas&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2017%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/biology_10.1016_j.csbj.2021.10.027.json"
+      },
+      "cite": "Xie, B., Jiang, Q., Mora, A., & Li, X. (2022). Automatic cell type identification methods for single-cell RNA sequencing. Computational and Structural Biotechnology Journal, 19, 5874-5887. https://doi.org/10.1016/j.csbj.2021.10.027"
+    },
+    {
+      "id": 73,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "tamper": "pages",
+      "tamper_note": "把页码从 2369-2378 改为 100-110。",
+      "source": "在真实 crossref 记录 DOI 10.1080/00207179.2019.1707288 上人为篡改。把页码从 2369-2378 改为 100-110。 原始快照：raw/crossref/social_10.1080_00207179.2019.1707288.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1080/00207179.2019.1707288",
+        "title": "State feedback control and delay estimation for LTI system with unknown input-delay",
+        "journal": "International Journal of Control",
+        "year": 2021,
+        "volume": "94",
+        "issue": "9",
+        "pages": "2369-2378",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Deng",
+            "given": "Yang"
+          },
+          {
+            "family": "Léchappé",
+            "given": "Vincent"
+          },
+          {
+            "family": "Moulay",
+            "given": "Emmanuel"
+          },
+          {
+            "family": "Plestan",
+            "given": "Franck"
+          }
+        ],
+        "url": "https://doi.org/10.1080/00207179.2019.1707288",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=self-control+delay+of+gratification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1080_00207179.2019.1707288.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1080/00207179.2019.1707288",
+        "title": "State feedback control and delay estimation for LTI system with unknown input-delay",
+        "journal": "International Journal of Control",
+        "year": 2021,
+        "volume": "94",
+        "issue": "9",
+        "pages": "100-110",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Deng",
+            "given": "Yang"
+          },
+          {
+            "family": "Léchappé",
+            "given": "Vincent"
+          },
+          {
+            "family": "Moulay",
+            "given": "Emmanuel"
+          },
+          {
+            "family": "Plestan",
+            "given": "Franck"
+          }
+        ],
+        "url": "https://doi.org/10.1080/00207179.2019.1707288",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=self-control+delay+of+gratification&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2014%2Cuntil-pub-date%3A2022&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1080_00207179.2019.1707288.json"
+      },
+      "cite": "Deng, Y., Léchappé, V., Moulay, E., & Plestan, F. (2021). State feedback control and delay estimation for LTI system with unknown input-delay. International Journal of Control, 94(9), 100-110. https://doi.org/10.1080/00207179.2019.1707288"
+    },
+    {
+      "id": 74,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "tamper": "journal",
+      "tamper_note": "把期刊从「American Economic Review」改为「Nature」。",
+      "source": "在真实 crossref 记录 DOI 10.1257/aer.20180607 上人为篡改。把期刊从「American Economic Review」改为「Nature」。 原始快照：raw/crossref/social_10.1257_aer.20180607.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1257/aer.20180607",
+        "title": "Seasonal Liquidity, Rural Labor Markets, and Agricultural Production",
+        "journal": "American Economic Review",
+        "year": 2020,
+        "volume": "110",
+        "issue": "11",
+        "pages": "3351-3392",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Fink",
+            "given": "Günther"
+          },
+          {
+            "family": "Jack",
+            "given": "B. Kelsey"
+          },
+          {
+            "family": "Masiye",
+            "given": "Felix"
+          }
+        ],
+        "url": "https://doi.org/10.1257/aer.20180607",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query.container-title=American+Economic+Review&query=labor+market&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=12&offset=168",
+        "raw_path": "raw/crossref/social_10.1257_aer.20180607.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1257/aer.20180607",
+        "title": "Seasonal Liquidity, Rural Labor Markets, and Agricultural Production",
+        "journal": "Nature",
+        "year": 2020,
+        "volume": "110",
+        "issue": "11",
+        "pages": "3351-3392",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Fink",
+            "given": "Günther"
+          },
+          {
+            "family": "Jack",
+            "given": "B. Kelsey"
+          },
+          {
+            "family": "Masiye",
+            "given": "Felix"
+          }
+        ],
+        "url": "https://doi.org/10.1257/aer.20180607",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query.container-title=American+Economic+Review&query=labor+market&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=12&offset=168",
+        "raw_path": "raw/crossref/social_10.1257_aer.20180607.json"
+      },
+      "cite": "Fink, G., Jack, B. K., & Masiye, F. (2020). Seasonal Liquidity, Rural Labor Markets, and Agricultural Production. Nature, 110(11), 3351-3392. https://doi.org/10.1257/aer.20180607"
+    },
+    {
+      "id": 75,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "tamper": "doi",
+      "tamper_note": "把 DOI 的一位数字从 10.18502/kss.v4i7.6850 改为 10.18502/kss.v4i7.6851。 改动后的 DOI 在 Crossref 也能解析（指向另一记录），因此除 DOI 不符外，也可能被判为 DOI 冲突；gold 仍定为 field_mismatch，预期不符字段含 doi。",
+      "source": "在真实 crossref 记录 DOI 10.18502/kss.v4i7.6850 上人为篡改。把 DOI 的一位数字从 10.18502/kss.v4i7.6850 改为 10.18502/kss.v4i7.6851。 改动后的 DOI 在 Crossref 也能解析（指向另一记录），因此除 DOI 不符外，也可能被判为 DOI 冲突；gold 仍定为 field_mismatch，预期不符字段含 doi。 原始快照：raw/crossref/social_10.18502_kss.v4i7.6850.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.18502/kss.v4i7.6850",
+        "title": "Does Financial Technology Affect Income Inequality in Indonesia?",
+        "journal": "KnE Social Sciences",
+        "year": 2020,
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Dian Saraswati",
+            "given": "Birgitta"
+          },
+          {
+            "family": "Maski",
+            "given": "Ghozali"
+          },
+          {
+            "family": "Kalug",
+            "given": "David"
+          },
+          {
+            "family": "Kresna Sakti",
+            "given": "Rachmad"
+          }
+        ],
+        "url": "https://doi.org/10.18502/kss.v4i7.6850",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=income+inequality+social+mobility&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.18502_kss.v4i7.6850.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.18502/kss.v4i7.6851",
+        "title": "Does Financial Technology Affect Income Inequality in Indonesia?",
+        "journal": "KnE Social Sciences",
+        "year": 2020,
+        "volume": null,
+        "issue": null,
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Dian Saraswati",
+            "given": "Birgitta"
+          },
+          {
+            "family": "Maski",
+            "given": "Ghozali"
+          },
+          {
+            "family": "Kalug",
+            "given": "David"
+          },
+          {
+            "family": "Kresna Sakti",
+            "given": "Rachmad"
+          }
+        ],
+        "url": "https://doi.org/10.18502/kss.v4i7.6850",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=income+inequality+social+mobility&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2015%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.18502_kss.v4i7.6850.json",
+        "doi_exists_after_flip": true
+      },
+      "cite": "Dian Saraswati, B., Maski, G., Kalug, D., & Kresna Sakti, R. (2020). Does Financial Technology Affect Income Inequality in Indonesia?. KnE Social Sciences. https://doi.org/10.18502/kss.v4i7.6851"
+    },
+    {
+      "id": 76,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "tamper": "authors",
+      "tamper_note": "把第一作者从「Shin, J.」改为「Smith, J.」。",
+      "source": "在真实 crossref 记录 DOI 10.1177/20563051221086233 上人为篡改。把第一作者从「Shin, J.」改为「Smith, J.」。 原始快照：raw/crossref/social_10.1177_20563051221086233.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1177/20563051221086233",
+        "title": "Mask-Wearing as a Partisan Issue: Social Identity and Communication of Party Norms on Social Media Among Political Elites",
+        "journal": "Social Media + Society",
+        "year": 2022,
+        "volume": "8",
+        "issue": "1",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Shin",
+            "given": "Jieun"
+          },
+          {
+            "family": "Yang",
+            "given": "Aimei"
+          },
+          {
+            "family": "Liu",
+            "given": "Wenlin"
+          },
+          {
+            "family": "Min Kim",
+            "given": "Hye"
+          },
+          {
+            "family": "Zhou",
+            "given": "Alvin"
+          },
+          {
+            "family": "Sun",
+            "given": "Jingyi"
+          }
+        ],
+        "url": "https://doi.org/10.1177/20563051221086233",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1177_20563051221086233.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1177/20563051221086233",
+        "title": "Mask-Wearing as a Partisan Issue: Social Identity and Communication of Party Norms on Social Media Among Political Elites",
+        "journal": "Social Media + Society",
+        "year": 2022,
+        "volume": "8",
+        "issue": "1",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Smith",
+            "given": "John"
+          },
+          {
+            "family": "Yang",
+            "given": "Aimei"
+          },
+          {
+            "family": "Liu",
+            "given": "Wenlin"
+          },
+          {
+            "family": "Min Kim",
+            "given": "Hye"
+          },
+          {
+            "family": "Zhou",
+            "given": "Alvin"
+          },
+          {
+            "family": "Sun",
+            "given": "Jingyi"
+          }
+        ],
+        "url": "https://doi.org/10.1177/20563051221086233",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1177_20563051221086233.json"
+      },
+      "cite": "Smith, J., Yang, A., Liu, W., Min Kim, H., Zhou, A., & Sun, J. (2022). Mask-Wearing as a Partisan Issue: Social Identity and Communication of Party Norms on Social Media Among Political Elites. Social Media + Society, 8(1). https://doi.org/10.1177/20563051221086233"
+    },
+    {
+      "id": 77,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "format": "apa",
+      "field": "social",
+      "language": "en",
+      "tamper": "journal",
+      "tamper_note": "把期刊从「Political Communication」改为「Nature」。",
+      "source": "在真实 crossref 记录 DOI 10.1080/10584609.2020.1753866 上人为篡改。把期刊从「Political Communication」改为「Nature」。 原始快照：raw/crossref/social_10.1080_10584609.2020.1753866.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.1080/10584609.2020.1753866",
+        "title": "Raising the Floor or Closing the Gap? How Media Choice and Media Content Impact Political Knowledge",
+        "journal": "Political Communication",
+        "year": 2020,
+        "volume": "37",
+        "issue": "5",
+        "pages": "719-740",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Leeper",
+            "given": "Thomas J."
+          }
+        ],
+        "url": "https://doi.org/10.1080/10584609.2020.1753866",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1080_10584609.2020.1753866.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.1080/10584609.2020.1753866",
+        "title": "Raising the Floor or Closing the Gap? How Media Choice and Media Content Impact Political Knowledge",
+        "journal": "Nature",
+        "year": 2020,
+        "volume": "37",
+        "issue": "5",
+        "pages": "719-740",
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "Leeper",
+            "given": "Thomas J."
+          }
+        ],
+        "url": "https://doi.org/10.1080/10584609.2020.1753866",
+        "field": "social",
+        "query_url": "https://api.crossref.org/works?query=political+polarization+social+media&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2016%2Cuntil-pub-date%3A2023&rows=15&offset=168",
+        "raw_path": "raw/crossref/social_10.1080_10584609.2020.1753866.json"
+      },
+      "cite": "Leeper, T. J. (2020). Raising the Floor or Closing the Gap? How Media Choice and Media Content Impact Political Knowledge. Nature, 37(5), 719-740. https://doi.org/10.1080/10584609.2020.1753866"
+    },
+    {
+      "id": 78,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "format": "apa",
+      "field": "chinese",
+      "language": "zh",
+      "tamper": "year",
+      "tamper_note": "把年份从 2026 改为 2025。",
+      "source": "在真实 openalex 记录 DOI 10.67606/15vcobdo 上人为篡改。把年份从 2026 改为 2025。 原始快照：raw/openalex/chinese_10.67606_15vcobdo.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "openalex",
+        "doi": "10.67606/15vcobdo",
+        "pmid": null,
+        "title": "达格列净联合胰岛素治疗2型糖尿病的临床效果",
+        "journal": "国际临床与研究",
+        "year": 2026,
+        "volume": "1",
+        "issue": "1",
+        "pages": "22-24",
+        "type": "article",
+        "authors": [
+          {
+            "family": "陈杰",
+            "given": ""
+          }
+        ],
+        "url": "https://doi.org/10.67606/15vcobdo",
+        "openalex_id": "https://openalex.org/W7172493079",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E7%B3%96%E5%B0%BF%E7%97%85+%E6%B2%BB%E7%96%97+%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%85%A7&per-page=20&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.67606_15vcobdo.json"
+      },
+      "cited_record": {
+        "source": "openalex",
+        "doi": "10.67606/15vcobdo",
+        "pmid": null,
+        "title": "达格列净联合胰岛素治疗2型糖尿病的临床效果",
+        "journal": "国际临床与研究",
+        "year": 2025,
+        "volume": "1",
+        "issue": "1",
+        "pages": "22-24",
+        "type": "article",
+        "authors": [
+          {
+            "family": "陈杰",
+            "given": ""
+          }
+        ],
+        "url": "https://doi.org/10.67606/15vcobdo",
+        "openalex_id": "https://openalex.org/W7172493079",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E7%B3%96%E5%B0%BF%E7%97%85+%E6%B2%BB%E7%96%97+%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%85%A7&per-page=20&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.67606_15vcobdo.json"
+      },
+      "cite": "陈杰 (2025). 达格列净联合胰岛素治疗2型糖尿病的临床效果. 国际临床与研究, 1(1), 22-24. https://doi.org/10.67606/15vcobdo"
+    },
+    {
+      "id": 79,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "format": "apa",
+      "field": "chinese",
+      "language": "zh",
+      "tamper": "doi",
+      "tamper_note": "把 DOI 的一位数字从 10.3760/cma.j.issn.1673-4904.2011.27.027 改为 10.3760/cma.j.issn.1673-4904.2011.27.028。 已独立查询 Crossref：改动后的 DOI 返回 404，并不指向另一篇文章。",
+      "source": "在真实 openalex 记录 DOI 10.3760/cma.j.issn.1673-4904.2011.27.027 上人为篡改。把 DOI 的一位数字从 10.3760/cma.j.issn.1673-4904.2011.27.027 改为 10.3760/cma.j.issn.1673-4904.2011.27.028。 已独立查询 Crossref：改动后的 DOI 返回 404，并不指向另一篇文章。 原始快照：raw/openalex/chinese_10.3760_cma.j.issn.1673-4904.2011.27.027.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "openalex",
+        "doi": "10.3760/cma.j.issn.1673-4904.2011.27.027",
+        "pmid": null,
+        "title": "胰岛素治疗2型糖尿病患者的健教育体会",
+        "journal": "Chin J Postgrad Med",
+        "year": 2011,
+        "volume": "34",
+        "issue": "27",
+        "pages": "61-63",
+        "type": "article",
+        "authors": [
+          {
+            "family": "蒙雪兰",
+            "given": ""
+          }
+        ],
+        "url": "http://rs.yiigle.com/CN115455201127/551883.htm",
+        "openalex_id": "https://openalex.org/W3031281261",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E7%B3%96%E5%B0%BF%E7%97%85+%E6%B2%BB%E7%96%97+%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%85%A7&per-page=20&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.3760_cma.j.issn.1673-4904.2011.27.027.json"
+      },
+      "cited_record": {
+        "source": "openalex",
+        "doi": "10.3760/cma.j.issn.1673-4904.2011.27.028",
+        "pmid": null,
+        "title": "胰岛素治疗2型糖尿病患者的健教育体会",
+        "journal": "Chin J Postgrad Med",
+        "year": 2011,
+        "volume": "34",
+        "issue": "27",
+        "pages": "61-63",
+        "type": "article",
+        "authors": [
+          {
+            "family": "蒙雪兰",
+            "given": ""
+          }
+        ],
+        "url": "http://rs.yiigle.com/CN115455201127/551883.htm",
+        "openalex_id": "https://openalex.org/W3031281261",
+        "field": "chinese",
+        "query_url": "https://api.openalex.org/works?search=%E7%B3%96%E5%B0%BF%E7%97%85+%E6%B2%BB%E7%96%97+%E9%9A%8F%E6%9C%BA%E5%AF%B9%E7%85%A7&per-page=20&mailto=refcheck%40localhost&page=7",
+        "raw_path": "raw/openalex/chinese_10.3760_cma.j.issn.1673-4904.2011.27.027.json",
+        "doi_exists_after_flip": false
+      },
+      "cite": "蒙雪兰 (2011). 胰岛素治疗2型糖尿病患者的健教育体会. Chin J Postgrad Med, 34(27), 61-63. https://doi.org/10.3760/cma.j.issn.1673-4904.2011.27.028"
+    },
+    {
+      "id": 80,
+      "group": "tampered",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "format": "apa",
+      "field": "chinese",
+      "language": "zh",
+      "tamper": "journal",
+      "tamper_note": "把期刊从「水电水利」改为「中华内科杂志」。",
+      "source": "在真实 crossref 记录 DOI 10.32629/hwr.v4i3.2857 上人为篡改。把期刊从「水电水利」改为「中华内科杂志」。 原始快照：raw/crossref/chinese_10.32629_hwr.v4i3.2857.json。自造改错，仅作对照。",
+      "why_expected": "真实文献被改了一个关键字段，题名仍应能对上，应标信息部分不符，并标出被改的字段。",
+      "record": {
+        "source": "crossref",
+        "doi": "10.32629/hwr.v4i3.2857",
+        "title": "浅谈特高压直流线路工程大截面导线压接质量管控",
+        "journal": "水电水利",
+        "year": 2020,
+        "volume": "4",
+        "issue": "3",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "张",
+            "given": "志晓"
+          }
+        ],
+        "url": "https://doi.org/10.32629/hwr.v4i3.2857",
+        "field": "chinese",
+        "query_url": "https://api.crossref.org/works?query=%E9%AB%98%E8%A1%80%E5%8E%8B+%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2012%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/chinese_10.32629_hwr.v4i3.2857.json"
+      },
+      "cited_record": {
+        "source": "crossref",
+        "doi": "10.32629/hwr.v4i3.2857",
+        "title": "浅谈特高压直流线路工程大截面导线压接质量管控",
+        "journal": "中华内科杂志",
+        "year": 2020,
+        "volume": "4",
+        "issue": "3",
+        "pages": null,
+        "type": "journal-article",
+        "authors": [
+          {
+            "family": "张",
+            "given": "志晓"
+          }
+        ],
+        "url": "https://doi.org/10.32629/hwr.v4i3.2857",
+        "field": "chinese",
+        "query_url": "https://api.crossref.org/works?query=%E9%AB%98%E8%A1%80%E5%8E%8B+%E6%B5%81%E8%A1%8C%E7%97%85%E5%AD%A6&filter=type%3Ajournal-article%2Cfrom-pub-date%3A2012%2Cuntil-pub-date%3A2024&rows=20&offset=168",
+        "raw_path": "raw/crossref/chinese_10.32629_hwr.v4i3.2857.json"
+      },
+      "cite": "张志晓 (2020). 浅谈特高压直流线路工程大截面导线压接质量管控. 中华内科杂志, 4(3). https://doi.org/10.32629/hwr.v4i3.2857"
+    },
+    {
+      "id": 81,
+      "group": "public_ai_fake",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "doi",
+        "authors",
+        "year",
+        "journal"
+      ],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "JAMA Network Open 2023;6(8):e2327647 Table 2，作者将其列为 GPT-4 虚构条目。https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2808058 ；所给 DOI 10.1136/bmj.j2449 指向另一篇真实文章。",
+      "why_expected": "公开报道为虚构条目；题名接近一篇真实文章且 DOI 指向另一篇，按规则应标信息部分不符（或至少不得放行为已验证）。gold 定为 field_mismatch。",
+      "cite": "Kesselheim AS, Cresswell K. Implementing learning health systems in the UK NHS. BMJ. 2017; 357: j2449. doi: 10.1136/bmj.j2449"
+    },
+    {
+      "id": 82,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "同上 JAMA Network Open 2023;6(8):e2327647 Table 2。DOI 10.1016/j.jstrokecerebrovasdis.2018.04.010 实际指向 Lu 等关于动脉斑块的另一篇文章。",
+      "why_expected": "题名在库中无对应，DOI 指向另一篇完全不同的文献，按规则应标疑似编造。",
+      "cite": "Niska R, Hane CA, Castillo RC. Development and validation of the XGBoost prediction model for stroke risk: a large-scale electronic health record-based cohort study. J Stroke Cerebrovasc Dis. 2018;27(9):2413-2422. doi: 10.1016/j.jstrokecerebrovasdis.2018.04.010"
+    },
+    {
+      "id": 83,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Cureus 15(5):e39238 Figure 1，原文判定为虚构。https://www.cureus.com/articles/158289-high-rates-of-fabricated-and-inaccurate-references-in-chatgpt-generated-medical-content PMID 33635047 指向另一篇材料化学文章。",
+      "why_expected": "题名未找到且 PMID 指向另一篇文章，应标疑似编造。",
+      "cite": "Chen, A. C., Martin, A. J., Choy, B., Fernandez-Penas, P., & Dalziell, R. A. (2021). A systematic review of the relationship between sunscreen use and the prevention of melanoma and non-melanoma skin cancer. European Journal of Dermatology, 31(1), 1-9. PMID: 33635047"
+    },
+    {
+      "id": 84,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "同上 Cureus 15(5):e39238 Figure 1，原文判定为虚构。PMID 26183923 指向另一篇生物质气化文章。",
+      "why_expected": "题名未找到且 PMID 指向另一篇文章，应标疑似编造。",
+      "cite": "Kwon, H. H., Yoon, J. Y., Park, S. Y., Min, S., Suh, D. H., & Kim, J. H. (2015). A comprehensive study on the association between diet and skin aging in Korean women. Journal of the American Academy of Dermatology, 73(2), 242-250. PMID: 26183923"
+    },
+    {
+      "id": 85,
+      "group": "public_ai_fake",
+      "expected": "field_mismatch",
+      "expect_mismatch_fields": [
+        "year",
+        "volume",
+        "issue",
+        "pages",
+        "pmid"
+      ],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "同上 Cureus Figure 1：原文判定为真实文献但年份、卷期、页码、PMID 不准确。Crossref 正确记录为 2008;159(1):35–48，DOI 10.1111/j.1365-2133.2008.08666.x。",
+      "why_expected": "真实文章被改错字段，应标信息部分不符。",
+      "cite": "Telfer, N. R., Colver, G. B., Morton, C. A., & British Association of Dermatologists Therapy Guidelines and Audit Subcommittee. (2009). Guidelines for the management of basal cell carcinoma. British Journal of Dermatology, 161(4), 643-659. PMID: 19663808"
+    },
+    {
+      "id": 86,
+      "group": "public_ai_fake",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "zh",
+      "source": "台湾大学图书馆《ChatGPT自动生成的参考文献真假難辨，不可不慎！》https://tul.blog.ntu.edu.tw/archives/31819 截图 chatgpt-error-1.png 第 1 条；馆员在多馆目录中未找到该刊。",
+      "why_expected": "中文条目在 Crossref/OpenAlex 中找不到时只标查无此文，不能确认是假的（本工具不支持知网、万方）。",
+      "cite": "梁鳳珍、洪媛媛、林英輝. 心率偏低是否影響身心健康？. 華人心臟雜誌, 2017, 29(3)：221-228."
+    },
+    {
+      "id": 87,
+      "group": "public_ai_fake",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "zh",
+      "source": "同上台大图书馆截图第 2 条。",
+      "why_expected": "中文条目查不到只标查无此文。",
+      "cite": "郭卉芬、王永年. 不同運動方式對心跳的影響及其健康效益. 中國科技資訊, 2018, 23(17)：18-19."
+    },
+    {
+      "id": 88,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Alkaissi & McFarlane, Cureus 2023;15(2):e35179，《Artificial Hallucinations in ChatGPT: Implications in Scientific Writing》https://doi.org/10.7759/cureus.35179 。原文写明该题名不存在，PMID 12352394 指向 Grubb 等泌尿外科文章。",
+      "why_expected": "公开报道题名不存在且 PMID 张冠李戴，应标疑似编造。",
+      "cite": "Kallajoki M, et al. Homocysteine and bone metabolism. Osteoporos Int. 2002 Oct;13(10):822-7. PMID: 12352394"
+    },
+    {
+      "id": 89,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 31.06000000000001，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Geen, R. G. (2001). Human aggression. Annual Review of Psychology, 52, 21-41."
+    },
+    {
+      "id": 90,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 9.049999999999999，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Johnson, R. (2018). The influence of economic factors on the migration patterns of retirees. Journal of Economic Geography, 18(5), 857-875."
+    },
+    {
+      "id": 91,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 10.049999999999999，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Zhou, Y. (2010). One-child policy and its demographic consequences in China. Population and Development Review, 36(1), 125-141."
+    },
+    {
+      "id": 92,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 14.02，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Bowen, A., Chote, R., Emmerson, C., Frayne, C., Johnson, P., & Snower, D. J. (2016). The immediate economic impact of Brexit: Projections using a composite indicator. The National Institute Economic Review, 238(1), R1-R16."
+    },
+    {
+      "id": 93,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 17.030000000000005，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Harris, M. A., & Leaven, T. M. (2018). Enhancing teamwork and collaboration in undergraduate biology laboratories: A comparative examination of face-to-face and online group work. International Journal of Science Education, 40(7), 734-751."
+    },
+    {
+      "id": 94,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 18.040000000000006，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Miron, G., & Urschel, J. L. (2011). Charter school performance in Ohio. Journal of School Choice, 5(3), 427-447. https://doi.org/10.1080/15582159.2011.587810"
+    },
+    {
+      "id": 95,
+      "group": "public_ai_fake",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "Walters & Wilder, Scientific Reports 13:14045 (2023)，Supplementary Appendix 3 citation 25.040000000000006，字段「Work itself is fabricated」=1，类型为 article。https://doi.org/10.1038/s41598-023-41032-5 ；原始表见 tests/hundred/raw/sources/。",
+      "why_expected": "公开数据集标注该作品本身为编造的期刊论文（英文、信息完整），按规则应标疑似编造。",
+      "cite": "Nolan, D. (2001). The Effect of No-Fault Compensation on Personal Injury Litigation: A Comparative Study. Modern Law Review, 64(5), 646-672."
+    },
+    {
+      "id": 96,
+      "group": "self_fabricated",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "本测试集自造的英文对照样本。期刊 Journal of Imaginary Computational Linguistics 不存在。不能作为可上架依据。",
+      "why_expected": "英文信息完整但完全不存在，应标疑似编造。",
+      "cite": "Zhang, L., & Wang, Q. (2022). A unified neural-symbolic framework for automatic literature verification in multilingual academic writing. Journal of Imaginary Computational Linguistics, 18(3), 45–62."
+    },
+    {
+      "id": 97,
+      "group": "self_fabricated",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "zh",
+      "source": "本测试集自造的中文对照样本。不能作为可上架依据。",
+      "why_expected": "中文自造条目按设计标查无此文，不升格为疑似编造。",
+      "cite": "李明、王芳. 基于深度学习的课堂注意力监测研究[J]. 虚构教育研究, 2021, 8(2): 11-20."
+    },
+    {
+      "id": 98,
+      "group": "self_fabricated",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "本测试集自造的英文对照样本。不能作为可上架依据。",
+      "why_expected": "英文信息完整但完全不存在，应标疑似编造。",
+      "cite": "Hawthorne, P. L., Reed, M. C., & Okonkwo, T. (2024). A stochastic theory of citation laundering in generative scholarly drafts. Journal of Fictional Scientometrics, 7(2), 88–104."
+    },
+    {
+      "id": 99,
+      "group": "self_fabricated",
+      "expected": "not_found",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "zh",
+      "source": "本测试集自造的中文对照样本。不能作为可上架依据。",
+      "why_expected": "中文自造条目按设计标查无此文。",
+      "cite": "赵强, 孙丽. 量子纠缠在中小学课业减负中的应用初探[J]. 虚构物理与教育, 2023, 12(4): 1-9."
+    },
+    {
+      "id": 100,
+      "group": "self_fabricated",
+      "expected": "suspected_fabricated",
+      "expect_mismatch_fields": [],
+      "format": "as_published",
+      "field": "public_or_self",
+      "language": "en",
+      "source": "本测试集自造的英文对照样本。不能作为可上架依据。",
+      "why_expected": "英文信息完整但完全不存在，应标疑似编造。",
+      "cite": "Nguyen, T. H., & Patel, R. (2021). Cross-lingual citation graphs for detecting fabricated biomedical claims. Proceedings of the Imaginary Conference on Computational Integrity, 4, 201–218."
+    }
+  ]
+}

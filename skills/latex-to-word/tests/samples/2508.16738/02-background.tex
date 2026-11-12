@@ -1,0 +1,100 @@
+\section{Background}
+\label{sec:Background}
+
+\subsection{Zero-Knowledge Proofs}
+Today, the state-of-the-art ZKP protocols are zero-knowledge Succinct Non-interactive Arguments of Knowledge (zkSNARKs). They have three key properties:
+\begin{itemize}
+    \item {\textbf{zero-knowledge:}} The verifier learns nothing beyond the validity of the statement.
+    \item {\textbf{succinctness:}} The proof is short and verified quickly.
+    \item {\textbf{non-interactivity:}} The proof is a single message, eliminating the need for back-and-forth communication.
+\end{itemize}
+
+Modern zkSNARKs combine an Interactive Oracle Proof (IOP) and a Polynomial Commitment Scheme (PCS). The IOP encodes the witness and computation as polynomials, which the verifier checks via probabilistic queries. Applying the Fiat-Shamir heuristic~\cite{fiat_shamir} makes public-coin IOPs non-interactive. The PCS lets the prover commit to a polynomial and later open it at chosen points, ensuring both binding (the prover cannot change the committed polynomial) and hiding (nothing about the polynomial is revealed until it is opened).
+
+Different zkSNARKs balance proving time, proof size, and security assumptions based on their IOP and PCS designs. Groth16~\cite{groth16} offers fast verification and tiny proofs, ideal for blockchains, but requires a circuit-specific (i.e., per-application) trusted setup and scales poorly with circuit size. Code-based protocols~\cite{orion} use error-correcting codes and Merkle commitments to achieve transparency and post-quantum security, but at the cost of multi-megabyte proofs and slower verification. HyperPlonk~\cite{hyperplonk} trades off slightly larger proofs for universal setup and linear-time proving.
+
+
+\subsection{Multi-Scalar Multiplication}
+Multi-Scalar Multiplication (MSM) is a key kernel used in \textit{polynomial commitments} and relies on elliptic curve cryptography.
+MSMs involve computing a linear combination (i.e., dot product) of scalar and (2D or 3D) point pairs on an elliptic curve.
+Given scalars \( k_1, k_2, \ldots, k_n \) and corresponding elliptic curve points \( P_1, P_2, \ldots, P_n \), the goal is to efficiently compute $s = \sum_i k_iP_i$.
+MSMs are computationally intensive because each term \( k_iP_i \) involves a point-scalar multiplication -- a costly elliptic curve operation. 
+MSMs constitute a significant portion of the total runtime in many zkSNARKs, including Groth16 and HyperPlonk. 
+As a result, prior work has focused on accelerating MSMs using both application-specific and programmable platforms~\cite{szkp, pipezk, cuzk, gzkp, distmsm, priormsm, rezk}.
+Rather than computing each scalar multiplication directly, optimized approaches such as Pippenger’s algorithm~\cite{pippenger} are commonly employed.
+Pippenger’s algorithm improves efficiency by restructuring the computation to rely more heavily on faster operations like point addition and point doubling.
+
+\subsection{SumCheck}
+\label{sec:sumcheck_intro}
+SumCheck~\cite{sumcheck} is a round-based interactive protocol where a prover $\mathcal{P}$ convinces a verifier $\mathcal{V}$ that the sum of a multivariate polynomial, $f(X_1, \ldots,X_\mu)$, over the \textit{boolean hypercube} (all boolean values of $X_i \ldots X_\mu$) equals a claimed value $C$.
+The protocol proceeds in $\mu$ rounds, one per variable. 
+In round $i$, $\mathcal{P}$ sends a univariate polynomial
+\begin{equation*}
+    s_i(X_i) = \sum_{x_{i+1} \in \{0,1\}} \cdots \sum_{X_\mu \in \{0,1\}} 
+    f(r_1, \ldots, r_{i-1}, X_i, \ldots, X_\mu)
+\end{equation*}
+where $r_1, \ldots, r_{i-1}$ are $\mathcal{V}$’s random challenges from prior rounds. $\mathcal{V}$ checks that $s_i(0) + s_i(1)$ equals the previous round's claim (or the initial claim $C$ for round $1$).
+$\mathcal{V}$ then chooses a random field element $r_i$ and sends it to $\mathcal{P}$, who sets $X_i = r_i$ for the next round.
+After $\mu$ rounds, $\mathcal{V}$ evaluates $f$ at $(r_1, \ldots, r_\mu)$ and accepts if all checks pass.
+
+ZKPs execute SumCheck over \textit{multilinear extensions} (MLEs) -- polynomials with degree at most $1$ in each variable. MLEs represent multivariate functions compactly and, in hardware, can be stored as flat lookup tables indexed by binary inputs. Throughout this paper, we use the terms ``MLEs," ``MLE tables," and ``polynomials" interchangeably.
+
+\subsubsection{\textbf{Polynomials and Gates}}
+In ZKPs, polynomials encode and help enforce the correctness of the computation being proven. A popular encoding scheme is Plonk \cite{gabizon2019plonk}. Plonk's \textit{arithmetization} scheme converts the underlying computation into an arithmetic circuit consisting of gates. Plonk circuits support additions, multiplications, conditionality, and equality checks. They can be represented by the composite polynomial 
+\begin{equation*}
+\label{eq:plonk}
+    f_{plonk} = q_Lw_1 + q_Rw_2 + q_Mw_1w_2 - q_Ow_3 + q_C
+\end{equation*}
+The composite polynomial $f_{plonk}$ has 5 terms and a total of 8 unique, constituent polynomials.
+These constituent polynomials are the selectors (or enables) $q_i$ and witnesses $w_i$, and they are all multilinear.
+Notably, 
+% $f$
+$f_{plonk}$
+is not itself multilinear; rather, it is composed of multilinear polynomials.
+
+Each of these polynomials encodes a function of a multivariate input vector $X=[X_1, X_2, \ldots, X_\mu]$, which encodes the gate index in binary. For example, if $\mu = 3$, there are 8 gates, and gate index 3 would be represented by evaluating $f_{plonk}(1, 1, 0)$. For a multiply operation, we would set $q_M(1, 1, 0) = 1$, $q_O(1, 1, 0) = 1$ and the other enable polynomials to $0$. Then, gate 3 would execute correctly if and only if $f_{plonk}(1, 1, 0) = 0$, that is, 
+
+\begin{equation*}
+w_1(1,1,0)\cdot w_2(1,1,0) - w_3(1,1,0) = 0
+\end{equation*}
+Representing circuits as polynomials lends itself naturally to SumCheck-based provers where we can check (with additional constraints) that each gate $f_{plonk}(X)$ evaluates to $0$ and that
+\begin{equation*}
+\sum_X f_{plonk}(X) = 0 
+\end{equation*}
+
+\subsubsection{\textbf{High-degree, Expressive Gates}}
+The challenge of using Plonk gates is that all computations must be mapped to only what is supported by the Plonk polynomial, 
+similar to mapping program code to a RISC ISA.
+In some cases, this results in circuits that require millions ($>2^{20}$) of gates, and in turn, polynomials with millions of evaluations.
+Recent protocols and libraries ~\cite{halo2, hyperplonk} support \textit{expressive, high-degree} gates, which encode complex operations and significantly reduce gate count.
+For example, HyperPlonk’s \textit{Jellyfish} gate captures common patterns such as hashing; across benchmarks, it reduces gate counts by up to 32× compared to less expressive \textit{Vanilla} Plonk gates.
+Similarly, Halo2 uses custom gates for elliptic curve operations. However, these expressive gates increase the complexity of the SumCheck algorithm used to verify them.
+
+
+
+\subsubsection{\textbf{SumCheck on Multilinear Polynomial Products}}
+SumCheck over a single multilinear polynomial is relatively straightforward.
+Consider a polynomial $f(X_1, X_2, X_3)$ with $\mu = 3$ and its MLE table representation.
+In the first round, the prover computes the univariate polynomial $s_1(X_1)$ by summing entries with $X_1 = 0$ and $X_1 = 1$, yielding two evaluations $s_1(0)$ and $s_1(1)$ sent to the verifier.
+The prover then computes an \textit{MLE Update} by fixing $X_1$ to a random challenge $r_1$, typically generated by hashing the round evaluations (e.g., with SHA3).
+For each $(X_2, X_3)$, the entries $f(0, X_2, X_3)$ and $f(1, X_2, X_3)$ define a line
+in $X_1$, which is extrapolated to $r_1$: $f(r_1,X_2, X_3) = f(0, X_2, X_3)\cdot(1-r_1) + f(1, X_2, X_3)\cdot r_1$.
+This halves each MLE table before the next SumCheck round.
+
+In recent SumCheck-based ZKP protocols \cite{spartan, orion, hyperplonk, jolt}, we typically work with multi-term compositions of multilinear polynomials, like $f_{plonk}$ in \autoref{eq:plonk}. In these protocols, we are given \textit{only} the constituent polynomials and their composition structure, and then must perform SumCheck over the composition. These SumChecks are naturally more complicated.
+In general, to run SumCheck on a $d$-degree polynomial, we require $d+1$ evaluations for $s_i(X_i)$ after each $i^{th}$ round of SumCheck.
+For example, $f_{plonk}$'s overall degree is $3$, so \textit{$4$} evaluations are needed per SumCheck round.
+These evaluations must be computed for each individual MLE before computing term-wise products and summing across terms.
+
+\autoref{fig:SumCheck_dataflow_example} shows the dataflow for one polynomial product term.
+Each pair of entries in an MLE table actually represents the evaluations at $X_i = 0$ and $1$; these values are then \textit{extended} to $X_i = 2, \ldots, d$, using the same formula as MLE Update (hence multilinear \textit{extension}).
+Then, the extensions for all polynomials in a term are multiplied together.
+These products are summed down the MLE table, yielding $d+1$ values for a term.
+When there is more than one term, 
+this process will be repeated for each term, with the $d+1$ evaluations summed across terms to form the final polynomial $s_i(X_i)$ for round $i$.
+
+We now present our generalizable SumCheck accelerator.
+
+
+
+

@@ -1,0 +1,1980 @@
+{
+  "n": 100,
+  "n_ok": 95,
+  "n_bad": 5,
+  "by_group": {
+    "real": {
+      "n": 50,
+      "ok": 46,
+      "bad": 4
+    },
+    "tampered": {
+      "n": 30,
+      "ok": 30,
+      "bad": 0
+    },
+    "public_ai_fake": {
+      "n": 15,
+      "ok": 15,
+      "bad": 0
+    },
+    "self_fabricated": {
+      "n": 5,
+      "ok": 4,
+      "bad": 1
+    }
+  },
+  "zh": {
+    "n": 13,
+    "ok": 12,
+    "bad": 1,
+    "got": {
+      "verified": 6,
+      "field_mismatch": 3,
+      "not_found": 3,
+      "error": 1
+    },
+    "expected": {
+      "verified": 6,
+      "field_mismatch": 3,
+      "not_found": 4
+    }
+  },
+  "en": {
+    "n": 87,
+    "ok": 83,
+    "bad": 4
+  },
+  "api_failures": {
+    "n_status_error": 1,
+    "ids": [
+      97
+    ]
+  },
+  "public_ai_fake": {
+    "n": 15,
+    "not_verified": 15,
+    "ok": 15
+  },
+  "mismatches": [
+    {
+      "id": 1,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Zarate P, Ontiveros A, Velez J, Vales L, Ortega J. P354. Brain Hippocampal volume, Cortisol and C-Reactive Protein Levels Relationship With Antidepressant Response in Patients With Major Depressive Disorder. Biological Psychiatry. 2022;91(9):S230-S231. doi: 10.1016/j.biopsych.2022.02.590"
+    },
+    {
+      "id": 33,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Azadi-Chegeni F, Schiphorst C, Pandit A. In vivo NMR as a tool for probing molecular structure and dynamics in intact Chlamydomonas reinhardtii cells[J]. Photosynthesis Research, 2018, 135(1-3): 227-237. DOI: 10.1007/s11120-017-0412-9"
+    },
+    {
+      "id": 34,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "pages"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Guarnera, E., & Berezovsky, I. N. (2019). Toward Comprehensive Allosteric Control over Protein Activity. Structure, 27(5), 866-878.e1. https://doi.org/10.1016/j.str.2019.01.014"
+    },
+    {
+      "id": 38,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Kim Hani, & 정낙원 (2016). Exploring factors and consequences of political attitude polarization and animosity: focusing on communication, political participation and social capital. Journal of Political Communication, null(43), 45-82. https://doi.org/10.35731/kpca.2016..43.002"
+    },
+    {
+      "id": 97,
+      "group": "self_fabricated",
+      "field": "public_or_self",
+      "language": "zh",
+      "format": "as_published",
+      "expected": "not_found",
+      "got": "error",
+      "got_zh": "核查失败/无法下结论",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。"
+      ],
+      "cite": "李明、王芳. 基于深度学习的课堂注意力监测研究[J]. 虚构教育研究, 2021, 8(2): 11-20."
+    }
+  ],
+  "field_not_flagged": [],
+  "rows": [
+    {
+      "id": 1,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Zarate P, Ontiveros A, Velez J, Vales L, Ortega J. P354. Brain Hippocampal volume, Cortisol and C-Reactive Protein Levels Relationship With Antidepressant Response in Patients With Major Depressive Disorder. Biological Psychiatry. 2022;91(9):S230-S231. doi: 10.1016/j.biopsych.2022.02.590"
+    },
+    {
+      "id": 2,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Menon BK, Singh N, Sylaja PN. Tenecteplase use in patients with acute ischaemic stroke. The Lancet. 2023;401(10377):618-619. doi: 10.1016/s0140-6736(22)02633-2"
+    },
+    {
+      "id": 3,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.1158/1538-7445.am2024-3857"
+    },
+    {
+      "id": 4,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Musella, M., & Vitiello, A. (2019). The YOMEGA non-inferiority trial. The Lancet, 394(10207), 1412. https://doi.org/10.1016/s0140-6736(19)31875-6"
+    },
+    {
+      "id": 5,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "title_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Effectiveness of antepartum breathing exercises on the outcome of labour: A randomized controlled trial"
+    },
+    {
+      "id": 6,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Liu, C., Zhang, G., Xiang, K., Kim, Y., Lavoie, R. R., Lucien, F., & Wen, T. (2022). Targeting the immune checkpoint B7-H3 for next-generation cancer immunotherapy. Cancer Immunology, Immunotherapy, 71(7), 1549-1567. https://doi.org/10.1007/s00262-021-03097-x"
+    },
+    {
+      "id": 7,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.1161/circulationaha.119.043726"
+    },
+    {
+      "id": 8,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Sakamoto R, Higuchi A, Tsuda K, Tanimoto T, Kami M. Intensive speech and language therapy after stroke. The Lancet. 2017;390(10091):228. doi: 10.1016/s0140-6736(17)31800-7"
+    },
+    {
+      "id": 9,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "pmid_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "PMID: 36436425"
+    },
+    {
+      "id": 10,
+      "group": "real",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Larsen, T. B., & Nielsen, P. B. (2016). Stroke and mortality after atrial fibrillation—a global struggle. The Lancet, 388(10050), 1131-1132. https://doi.org/10.1016/s0140-6736(16)31274-0"
+    },
+    {
+      "id": 11,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Arase Y. Seeking an Ideal Phrase Alignment Method[J]. Journal of Natural Language Processing, 2021, 28(1): 270-275. DOI: 10.5715/jnlp.28.270"
+    },
+    {
+      "id": 12,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Asahara M. Between Reading Time and Clause Boundaries in Japanese—Wrap-up Effect in a Head-Final Language—. Journal of Natural Language Processing. 2019;26(2):301-327. doi: 10.5715/jnlp.26.301"
+    },
+    {
+      "id": 13,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Kumar, D., & N.A., P. (2022). Kidney image classification using transfer learning with convolutional neural network. International Journal of Computational Vision and Robotics, 1(1), 1. https://doi.org/10.1504/ijcvr.2022.10045127"
+    },
+    {
+      "id": 14,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Liu YL, Chen YK, Li WX, Zhang Y. Model design and parameter optimization of CNN for side-channel cryptanalysis. PeerJ Computer Science. 2022;7:e829. doi: 10.7717/peerj-cs.829"
+    },
+    {
+      "id": 15,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "title_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Penerapan Multi-Label Image Classification Menggunakan Metode Convolutional Neural Network (CNN) Untuk Sortir Botol Minuman"
+    },
+    {
+      "id": 16,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.33480/techno.v20i2.4666"
+    },
+    {
+      "id": 17,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Patel H, Upla KP. A shallow network for hyperspectral image classification using an autoencoder with convolutional neural network. Multimedia Tools and Applications. 2022;81(1):695-714. doi: 10.1007/s11042-021-11422-w"
+    },
+    {
+      "id": 18,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.5715/jnlp.27.133"
+    },
+    {
+      "id": 19,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Wu L, Weissbart L, Krček M, 等. Label Correlation in Deep Learning-Based Side-Channel Analysis[J]. IEEE Transactions on Information Forensics and Security, 2023, 18: 3849-3861. DOI: 10.1109/tifs.2023.3287728"
+    },
+    {
+      "id": 20,
+      "group": "real",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Traverso, S., Huguenin, K., Trestian, I., Erramilli, V., Laoutaris, N., & Papagiannaki, K. (2015). Social-Aware Replication in Geo-Diverse Online Systems. IEEE Transactions on Parallel and Distributed Systems, 26(2), 584-593. https://doi.org/10.1109/tpds.2014.2312197"
+    },
+    {
+      "id": 21,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Ghadiri H, Saffarzadeh A. Electron beam splitting at topological insulator surface states and a proposal for electronic Goos-Hänchen shift measurement[J]. Physical Review B, 2022, 105(8). DOI: 10.1103/physrevb.105.085415"
+    },
+    {
+      "id": 22,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Hamilton C, Rafikov RR. Anatomy of a Slow Merger: Dissecting Secularly Driven Inspirals of LIGO/Virgo Gravitational Wave Sources. The Astrophysical Journal. 2022;939(1):48. doi: 10.3847/1538-4357/ac93f6"
+    },
+    {
+      "id": 23,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Sokov, E. N., Sokova, I. A., Dyachenko, V. V., Rastegaev, D. A., Burdanov, A., Rusov, S. A., Benni, P., Shadick, S., Hentunen, V. P., Salisbury, M., Esseiva, N., Garlitz, J., Bretton, M., Ogmen, Y., Karavaev, Y., Ayiomamitis, A., Mazurenko, O., Alonso, D., & Velichko, S. F. (2018). Transit timing analysis of the exoplanet TrES-5 b. Possible existence of the exoplanet TrES-5 c. Monthly Notices of the Royal Astronomical Society, 480(1), 291-301. https://doi.org/10.1093/mnras/sty1615"
+    },
+    {
+      "id": 24,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Prasad, U. (2021). Gravitational-wave Background (GWB): A Breakthrough in Direct Detection. Scientific European, 4. https://doi.org/10.29198/scieu/2101121"
+    },
+    {
+      "id": 25,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.1134/s1063772918100025"
+    },
+    {
+      "id": 26,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Kim, K. Y., Nishida, M., Nozaki, M., Seo, M., Sugimoto, Y., & Tomiya, A. (2019). Entanglement after quantum quenches in Lifshitz scalar theories. Journal of Statistical Mechanics: Theory and Experiment, 2019(9), 093104. https://doi.org/10.1088/1742-5468/ab417f"
+    },
+    {
+      "id": 27,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Murciano, S., Ruggiero, P., & Calabrese, P. (2019). Entanglement and relative entropies for low-lying excited states in inhomogeneous one-dimensional quantum systems. Journal of Statistical Mechanics: Theory and Experiment, 2019(3), 034001. https://doi.org/10.1088/1742-5468/ab00ec"
+    },
+    {
+      "id": 28,
+      "group": "real",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Koll, L. M., Maikowski, L., Drescher, L., Witting, T., & Vrakking, M. J. J. (2022). Experimental Control of Quantum-Mechanical Entanglement in an Attosecond Pump-Probe Experiment. Physical Review Letters, 128(4). https://doi.org/10.1103/physrevlett.128.043201"
+    },
+    {
+      "id": 29,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Seki D, Errerd T, Hall LJ. The role of human milk fats in shaping neonatal development and the early life gut microbiota[J]. Microbiome Research Reports, 2023, 2(1): 8. DOI: 10.20517/mrr.2023.09"
+    },
+    {
+      "id": 30,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Mishra S, Looger LL, Porter LL. Inaccurate secondary structure predictions often indicate protein fold switching[J]. Protein Science, 2019, 28(8): 1487-1493. DOI: 10.1002/pro.3664"
+    },
+    {
+      "id": 31,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "pmid_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "PMID: 33828559"
+    },
+    {
+      "id": 32,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Haynie, D. T., & Xue, B. (2015). Superdomains in the protein structure hierarchy: The case of PTP‐C2. Protein Science, 24(5), 874-882. https://doi.org/10.1002/pro.2664"
+    },
+    {
+      "id": 33,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Azadi-Chegeni F, Schiphorst C, Pandit A. In vivo NMR as a tool for probing molecular structure and dynamics in intact Chlamydomonas reinhardtii cells[J]. Photosynthesis Research, 2018, 135(1-3): 227-237. DOI: 10.1007/s11120-017-0412-9"
+    },
+    {
+      "id": 34,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "pages"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Guarnera, E., & Berezovsky, I. N. (2019). Toward Comprehensive Allosteric Control over Protein Activity. Structure, 27(5), 866-878.e1. https://doi.org/10.1016/j.str.2019.01.014"
+    },
+    {
+      "id": 35,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.1182/blood-2018-08-835355"
+    },
+    {
+      "id": 36,
+      "group": "real",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Byrne, L. C. (2017). Check twice, cut once—Improved CRISPR-Cas9 genome editing accuracy. Science Translational Medicine, 9(411). https://doi.org/10.1126/scitranslmed.aap8165"
+    },
+    {
+      "id": 37,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Vanitcharearnthum V. Top income shares and inequality: Evidences from Thailand[J]. Kasetsart Journal of Social Sciences, 2017. DOI: 10.1016/j.kjss.2017.07.010"
+    },
+    {
+      "id": 38,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Kim Hani, & 정낙원 (2016). Exploring factors and consequences of political attitude polarization and animosity: focusing on communication, political participation and social capital. Journal of Political Communication, null(43), 45-82. https://doi.org/10.35731/kpca.2016..43.002"
+    },
+    {
+      "id": 39,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Ren Y, Tang R, Li M. The relationship between delay of gratification and work engagement: The mediating role of job satisfaction[J]. Heliyon, 2022, 8(8): e10111. DOI: 10.1016/j.heliyon.2022.e10111"
+    },
+    {
+      "id": 40,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Serrano Plata, L. J., Bonilla-Aranzales, J. K., Bonilla Machado, M. M., & Chenou, J. M. (2023). Silence is safer than speech: The utility of social media labeling in countering political polarization in peacebuilding contexts. Análisis Político, 36(106), 85-112. https://doi.org/10.15446/anpol.v36n106.111042"
+    },
+    {
+      "id": 41,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Simmen-Janevska K, Forstmeier S, Krammer S, 等. Does Trauma Impair Self-Control? Differences in Delaying Gratification Between Former Indentured Child Laborers and Nontraumatized Controls[J]. Violence and Victims, 2015, 30(6): 1068-1081. DOI: 10.1891/0886-6708.vv-d-13-00174"
+    },
+    {
+      "id": 42,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "gbt",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Spirina M. Poverty and Shared Prosperity in Russia: Income Dynamics and Social Inequality[J]. Journal of Economic Sociology, 2015, 16(3): 203-208. DOI: 10.17323/1726-3247-2015-3-203-208"
+    },
+    {
+      "id": 43,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.1093/ser/mwaa048"
+    },
+    {
+      "id": 44,
+      "group": "real",
+      "field": "social",
+      "language": "en",
+      "format": "title_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Linking Survey and Administrative Data to Measure Income, Inequality, and Mobility"
+    },
+    {
+      "id": 45,
+      "group": "real",
+      "field": "chinese",
+      "language": "zh",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "涛卢. 替奈普酶静脉溶栓治疗穿支动脉粥样硬化病的效果观察. 临床医学前沿. 2024;6(3):141-143. doi: 10.37155/2661-4766-0603-45"
+    },
+    {
+      "id": 46,
+      "group": "real",
+      "field": "chinese",
+      "language": "zh",
+      "format": "title_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "阿魏酸钠对糖尿病肾病保护作用的研究"
+    },
+    {
+      "id": 47,
+      "group": "real",
+      "field": "chinese",
+      "language": "zh",
+      "format": "doi_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "https://doi.org/10.37155/2661-4766-0604-48"
+    },
+    {
+      "id": 48,
+      "group": "real",
+      "field": "chinese",
+      "language": "zh",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "蒋庆耀. 苯那普利对糖尿病肾病的预防作用. Central Plains Medical Journal. 2003;30(10):49-50. doi: 10.3760/cma.j.issn.1674-4756.2003.10.054"
+    },
+    {
+      "id": 49,
+      "group": "real",
+      "field": "chinese",
+      "language": "zh",
+      "format": "title_only",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "糖尿病合并心脑血管病的临床内科治疗效果"
+    },
+    {
+      "id": 50,
+      "group": "real",
+      "field": "chinese",
+      "language": "zh",
+      "format": "vancouver",
+      "expected": "verified",
+      "got": "verified",
+      "got_zh": "已验证",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [],
+      "cite": "翟建梅, 甘信荣. 辛伐他汀对早期糖尿病肾病的疗效观察. Zhongguo linchuang shiyong yixue. 2010;4(08):134-135. doi: 10.3760/cma.j.issn1673-8799.2010.08.82"
+    },
+    {
+      "id": 51,
+      "group": "tampered",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "volume"
+      ],
+      "got_mismatch_fields": [
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Kejamurthy, P., & Devi, K. T. R. (2023). Immune checkpoint inhibitors and cancer immunotherapy by aptamers: an overview. Medical Oncology, 44(1). https://doi.org/10.1007/s12032-023-02267-4"
+    },
+    {
+      "id": 52,
+      "group": "tampered",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Chin, T., Huyghebaert, T., Svrcek, C., & Oluboka, O. (2023). Individualized antidepressant therapy in patients with major depressive disorder. Canadian Family Physician, 68(11), 807-814. https://doi.org/10.46747/cfp.6811807"
+    },
+    {
+      "id": 53,
+      "group": "tampered",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Smith, J. (2016). Trial registration records, updates, and protocols. The Lancet, 388(10042), 341-342. https://doi.org/10.1016/s0140-6736(16)30965-5"
+    },
+    {
+      "id": 54,
+      "group": "tampered",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "got_mismatch_fields": [
+        "journal"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Abu-Sbeih, H., Ali, F. S., Luo, W., Qiao, W., Raju, G. S., & Wang, Y. (2018). Importance of endoscopic and histological evaluation in the management of immune checkpoint inhibitor-induced colitis. Nature, 6(1). https://doi.org/10.1186/s40425-018-0411-1"
+    },
+    {
+      "id": 55,
+      "group": "tampered",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "got_mismatch_fields": [
+        "journal",
+        "pages"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Valdis, M., Chu, M. W., Schlachta, C., & Kiaii, B. (2016). Evaluation of robotic cardiac surgery simulation training: A randomized controlled trial. Nature, 151(6), 1498-1505.e2. https://doi.org/10.1016/j.jtcvs.2016.02.016"
+    },
+    {
+      "id": 56,
+      "group": "tampered",
+      "field": "medicine",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Smith, J., Ojima, E., & Satoh, H. (2023). Bloody pericardial effusion during chemotherapy with immune checkpoint inhibitors. Cancer Immunology, Immunotherapy, 72(2), 523-525. https://doi.org/10.1007/s00262-022-03261-x"
+    },
+    {
+      "id": 57,
+      "group": "tampered",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Cai, H., & Huang, J. (2018). Leader-following Attitude Consensus of Multiple Rigid Body Systems by an Adaptive Distributed Observer Approach. IFAC-PapersOnLine, 50(1), 15446-15451. https://doi.org/10.1016/j.ifacol.2017.08.1878"
+    },
+    {
+      "id": 58,
+      "group": "tampered",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "got_mismatch_fields": [
+        "doi"
+      ],
+      "field_ok": true,
+      "notes": [
+        "所给 DOI（10.1134/s1054661820010140）在 Crossref / OpenAlex 中无法解析。"
+      ],
+      "cite": "Singh, P., & Sehgal, P. (2020). Numbering and Classification of Panoramic Dental Images Using 6-Layer Convolutional Neural Network. Pattern Recognition and Image Analysis, 30(1), 125-133. https://doi.org/10.1134/s1054661820010140"
+    },
+    {
+      "id": 59,
+      "group": "tampered",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "JIN, X. B., WANG, S., WANG, G., YU, J., & WANG, F. (2018). Adapting Convolutional Neural Network to Multi-label Image Classification. DEStech Transactions on Engineering and Technology Research. https://doi.org/10.12783/dtetr/icamm2016/7342"
+    },
+    {
+      "id": 60,
+      "group": "tampered",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "got_mismatch_fields": [
+        "pages"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Priyanka, N., & Kumar, D. (2022). Kidney image classification using transfer learning with convolutional neural network. International Journal of Computational Vision and Robotics, 12(6), 100-110. https://doi.org/10.1504/ijcvr.2022.126499"
+    },
+    {
+      "id": 61,
+      "group": "tampered",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "got_mismatch_fields": [
+        "pages"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Ma, X., Hu, Y., & Li, M. (2024). Design of assessment algorithm and model for Chinese spoken language teaching based on natural language processing and knowledge graph. Theoretical and Natural Science, 36(1), 100-110. https://doi.org/10.54254/2753-8818/36/20240506"
+    },
+    {
+      "id": 62,
+      "group": "tampered",
+      "field": "cs",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "got_mismatch_fields": [
+        "journal"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Ji, Y., Zhou, H., & Zong, Q. (2020). DISTRIBUTED EVENT-TRIGGERED CONSENSUS CONTROL FOR NONLINEAR PURE-FEEDBACK MULTI-AGENT SYSTEMS. Nature, 35(5). https://doi.org/10.2316/j.2020.206-0364"
+    },
+    {
+      "id": 63,
+      "group": "tampered",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "got_mismatch_fields": [
+        "doi"
+      ],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《A polarimetric study of 9 PG quasars with the VLA》（2022，Monthly Notices of the Royal Astronomical Society）。验证链接：https://doi.org/10.1093/mnras/stac3691"
+      ],
+      "cite": "Sreejith, A. G., Fossati, L., Cubillos, P. E., Ambily, S., & France, K. (2022). Impact of Mg ii interstellar medium absorption on near-ultraviolet exoplanet transit measurements. Monthly Notices of the Royal Astronomical Society, 519(2), 2101-2118. https://doi.org/10.1093/mnras/stac3691"
+    },
+    {
+      "id": 64,
+      "group": "tampered",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Smith, J., Era, N., Iikawa, D., & Asada, H. (2018). Probing gravitational wave polarizations with Advanced LIGO, Advanced Virgo, and KAGRA. Physical Review D, 98(6). https://doi.org/10.1103/physrevd.98.064035"
+    },
+    {
+      "id": 65,
+      "group": "tampered",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Smith, J., & Shematovich, V. I. (2023). Approximate Calculation of the Thermal Loss of the Atmosphere of a Hot Exoplanet in a Low Orbit with Taking into Account the Ellipticity. Astrophysical Bulletin, 78(2), 217-224. https://doi.org/10.1134/s1990341323020098"
+    },
+    {
+      "id": 66,
+      "group": "tampered",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "got_mismatch_fields": [
+        "doi"
+      ],
+      "field_ok": true,
+      "notes": [
+        "所给 DOI（10.1088/1742-5468/ac258d）在 Crossref / OpenAlex 中无法解析。"
+      ],
+      "cite": "Alba, V., Bertini, B., Fagotti, M., Piroli, L., & Ruggiero, P. (2021). Generalized-hydrodynamic approach to inhomogeneous quenches: correlations, entanglement and quantum effects. Journal of Statistical Mechanics: Theory and Experiment, 2021(11), 114004. https://doi.org/10.1088/1742-5468/ac258d"
+    },
+    {
+      "id": 67,
+      "group": "tampered",
+      "field": "physics",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "got_mismatch_fields": [
+        "authors",
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Smith, J., Wyderka, N., & Gühne, O. (2020). Entanglement characterization using quantum designs. Quantum, 4, 325. https://doi.org/10.22331/q-2020-09-16-325"
+    },
+    {
+      "id": 68,
+      "group": "tampered",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Yang, J., Zhang, J., Na, S., Wang, Z., Li, H., Su, Y., Ji, L., Tang, X., Yang, J., & Xu, L. (2023). Integration of single-cell RNA sequencing and bulk RNA sequencing to reveal an immunogenic cell death-related 5-gene panel as a prognostic model for osteosarcoma. Frontiers in Immunology, 13. https://doi.org/10.3389/fimmu.2022.994034"
+    },
+    {
+      "id": 69,
+      "group": "tampered",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "got_mismatch_fields": [
+        "doi",
+        "volume"
+      ],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《Memory studies of chunking and decay of memory》（2023，Highlights in Science, Engineering and Technology）。验证链接：https://doi.org/10.54097/hset.v36i.5776"
+      ],
+      "cite": "Lin, J. (2023). Effect of Different Diets on Human Gut Microbiome Health. Highlights in Science, Engineering and Technology, 36, 702-708. https://doi.org/10.54097/hset.v36i.5776"
+    },
+    {
+      "id": 70,
+      "group": "tampered",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "got_mismatch_fields": [
+        "doi"
+      ],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《Statin use and reduced risk of biliary tract cancers in the UK Clinical Practice Research Datalink》（2019，Gut）。验证链接：https://doi.org/10.1136/gutjnl-2018-317504"
+      ],
+      "cite": "Dominguez-Bello, M. G., Godoy-Vitorino, F., Knight, R., & Blaser, M. J. (2019). Role of the microbiome in human development. Gut, 68(6), 1108-1114. https://doi.org/10.1136/gutjnl-2018-317504"
+    },
+    {
+      "id": 71,
+      "group": "tampered",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors"
+      ],
+      "got_mismatch_fields": [
+        "authors"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Smith, J., Bosch, E., Ekici, A. B., & Winterpacht, A. (2018). Characterization of germ cell differentiation in the male mouse through single-cell RNA sequencing. Scientific Reports, 8(1). https://doi.org/10.1038/s41598-018-24725-0"
+    },
+    {
+      "id": 72,
+      "group": "tampered",
+      "field": "biology",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "got_mismatch_fields": [
+        "journal"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Hayashi, A., & Tanaka, K. (2019). Short-Homology-Mediated CRISPR/Cas9-Based Method for Genome Editing in Fission Yeast. Nature, 9(4), 1153-1163. https://doi.org/10.1534/g3.118.200976"
+    },
+    {
+      "id": 73,
+      "group": "tampered",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "got_mismatch_fields": [
+        "journal"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Shimoni, E., Berger, A., & Eyal, T. (2022). Your pride is my goal: How the exposure to others’ positive emotional experience influences preschoolers’ delay of gratification. Nature, 217, 105356. https://doi.org/10.1016/j.jecp.2021.105356"
+    },
+    {
+      "id": 74,
+      "group": "tampered",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Yerrabati, S. (2024). Does vulnerable employment narrow income inequality? Evidence from developing countries. Journal of Income Distribution®. https://doi.org/10.25071/1874-6322.40538"
+    },
+    {
+      "id": 75,
+      "group": "tampered",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "journal"
+      ],
+      "got_mismatch_fields": [
+        "journal"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Falligant, J. M. (2020). Using Delay Fading Procedures to Increase Self-Control. Nature, 23(7), 457-462. https://doi.org/10.1080/17518423.2020.1764650"
+    },
+    {
+      "id": 76,
+      "group": "tampered",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "title",
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Passaretta, G., & Triventi, M. (2024). Inequality at the top. The gender earnings gap among the Italian educational elite. Research in Social Stratification and Mobility, 85, 100796. https://doi.org/10.1016/j.rssm.2023.100796"
+    },
+    {
+      "id": 77,
+      "group": "tampered",
+      "field": "social",
+      "language": "en",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "Fontana, M., Usai, M. C., Pellizzoni, S., & Passolunghi, M. C. (2022). Inhibitory Dimensions and Delay of Gratification: A Comparative Study on Individuals with Down Syndrome and Typically Developing Children. Brain Sciences, 11(5), 636. https://doi.org/10.3390/brainsci11050636"
+    },
+    {
+      "id": 78,
+      "group": "tampered",
+      "field": "chinese",
+      "language": "zh",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "pages"
+      ],
+      "got_mismatch_fields": [
+        "pages"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "陈素文, 余惠萍, & 陈焕萍 (2006). 中西医结合治疗带状疱疹后遗神经痛的临床疗效分析. Guoji yiyao weisheng daobao, 12(16), 100-110. https://doi.org/10.3760/cma.j.issn.1007-1245.2006.16.016"
+    },
+    {
+      "id": 79,
+      "group": "tampered",
+      "field": "chinese",
+      "language": "zh",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [],
+      "cite": "邹杰辉, & 叶秀芳 (2023). 全科医生高血压综合防治服务应用于社区原发性高血压患者中的效果. Medical Research and Practice, 2(10), 23. https://doi.org/10.61369/mrp.10007"
+    },
+    {
+      "id": 80,
+      "group": "tampered",
+      "field": "chinese",
+      "language": "zh",
+      "format": "apa",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "doi"
+      ],
+      "got_mismatch_fields": [
+        "doi"
+      ],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《病毒性脑炎脑电图、CT及MRI检查阳性检出率对比分析》（2004，中国综合临床）。验证链接：https://doi.org/10.3760/cma.j.issn.1008-6315.2004.07.014"
+      ],
+      "cite": "刘桂春 (2004). 黄芪注射液治疗糖尿病肾病的临床观察. 中国综合临床, 20(07), 601-602. https://doi.org/10.3760/cma.j.issn.1008-6315.2004.07.014"
+    },
+    {
+      "id": 81,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "authors",
+        "doi",
+        "journal",
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "authors",
+        "doi",
+        "journal",
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《US government website for collecting adverse events after vaccination is inaccessible to most users》（2017，BMJ）。验证链接：https://doi.org/10.1136/bmj.j2449"
+      ],
+      "cite": "Kesselheim AS, Cresswell K. Implementing learning health systems in the UK NHS. BMJ. 2017; 357: j2449. doi: 10.1136/bmj.j2449"
+    },
+    {
+      "id": 82,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《Plaque Distribution and Characteristics in Low-Grade Middle Cerebral Artery Stenosis and Its Clinical Relevance: A 3-Dimensional High-Resolution Magnetic Resonance Imaging Study》（2018，Journal of Stroke and Cerebrovascular Diseases）。验证链接：https://doi.org/10.1016/j.jstrokecerebrovasdis.2018.04.010",
+        "按题名未在 Crossref / OpenAlex 中找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。"
+      ],
+      "cite": "Niska R, Hane CA, Castillo RC. Development and validation of the XGBoost prediction model for stroke risk: a large-scale electronic health record-based cohort study. J Stroke Cerebrovasc Dis. 2018;27(9):2413-2422. doi: 10.1016/j.jstrokecerebrovasdis.2018.04.010"
+    },
+    {
+      "id": 83,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "你提供的 PMID 是真实的，但指向另一篇文章：《Preparation of Fe3O4@PMAA@Ni Microspheres towards the Efficient and Selective Enrichment of Histidine-Rich Proteins.》（2021，ACS Appl Mater Interfaces）。验证链接：https://doi.org/10.1021/acsami.0c19734",
+        "按题名未在 Crossref / OpenAlex 中找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。"
+      ],
+      "cite": "Chen, A. C., Martin, A. J., Choy, B., Fernandez-Penas, P., & Dalziell, R. A. (2021). A systematic review of the relationship between sunscreen use and the prevention of melanoma and non-melanoma skin cancer. European Journal of Dermatology, 31(1), 1-9. PMID: 33635047"
+    },
+    {
+      "id": 84,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "你提供的 PMID 是真实的，但指向另一篇文章：《Gasification of agricultural residues in a demonstrative plant: Vine pruning and rice husks.》（2015，Bioresour Technol）。验证链接：https://doi.org/10.1016/j.biortech.2015.07.016",
+        "按题名未在 Crossref / OpenAlex 中找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。"
+      ],
+      "cite": "Kwon, H. H., Yoon, J. Y., Park, S. Y., Min, S., Suh, D. H., & Kim, J. H. (2015). A comprehensive study on the association between diet and skin aging in Korean women. Journal of the American Academy of Dermatology, 73(2), 242-250. PMID: 26183923"
+    },
+    {
+      "id": 85,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "field_mismatch",
+      "got": "field_mismatch",
+      "got_zh": "信息部分不符",
+      "match": true,
+      "expect_mismatch_fields": [
+        "issue",
+        "pages",
+        "pmid",
+        "volume",
+        "year"
+      ],
+      "got_mismatch_fields": [
+        "issue",
+        "pages",
+        "pmid",
+        "volume",
+        "year"
+      ],
+      "field_ok": true,
+      "notes": [
+        "你提供的 PMID 是真实的，但指向另一篇文章：《Oxidation of methionine residues: the missing link between stress and signalling responses in plants.》（2009，Biochem J）。验证链接：https://doi.org/10.1042/bj20091063"
+      ],
+      "cite": "Telfer, N. R., Colver, G. B., Morton, C. A., & British Association of Dermatologists Therapy Guidelines and Audit Subcommittee. (2009). Guidelines for the management of basal cell carcinoma. British Journal of Dermatology, 161(4), 643-659. PMID: 19663808"
+    },
+    {
+      "id": 86,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "zh",
+      "format": "as_published",
+      "expected": "not_found",
+      "got": "not_found",
+      "got_zh": "查无此文",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref / OpenAlex 中未找到足够相似的记录。这两个库对中文期刊、学位论文、书籍的覆盖明显不足，「查无此文」不能等同于「一定是假的」，也不能据此确认是假的。请再查学校图书馆或 Google Scholar。本工具不支持需授权的中文商业文献库（不支持知网、万方）。"
+      ],
+      "cite": "梁鳳珍、洪媛媛、林英輝. 心率偏低是否影響身心健康？. 華人心臟雜誌, 2017, 29(3)：221-228."
+    },
+    {
+      "id": 87,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "zh",
+      "format": "as_published",
+      "expected": "not_found",
+      "got": "not_found",
+      "got_zh": "查无此文",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref / OpenAlex 中未找到足够相似的记录。这两个库对中文期刊、学位论文、书籍的覆盖明显不足，「查无此文」不能等同于「一定是假的」，也不能据此确认是假的。请再查学校图书馆或 Google Scholar。本工具不支持需授权的中文商业文献库（不支持知网、万方）。"
+      ],
+      "cite": "郭卉芬、王永年. 不同運動方式對心跳的影響及其健康效益. 中國科技資訊, 2018, 23(17)：18-19."
+    },
+    {
+      "id": 88,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "你提供的 PMID 是真实的，但指向另一篇文章：《Use of titanium staples during upper tract laparoscopic reconstructive surgery: initial experience.》（2002，J Urol）。验证链接：https://doi.org/10.1016/s0022-5347(05)64450-3",
+        "按题名未在 Crossref / OpenAlex 中找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。"
+      ],
+      "cite": "Kallajoki M, et al. Homocysteine and bone metabolism. Osteoporos Int. 2002 Oct;13(10):822-7. PMID: 12352394"
+    },
+    {
+      "id": 89,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Kolluru, R., Chen, W., & Fan, X. (2021). A comparative study of online and in-person laboratory instruction in undergraduate biology courses. Journal of Online Learning and Teaching, 7(2), 35-45."
+    },
+    {
+      "id": 90,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Chen, X., & Liang, Y. (2016). The relationship between course difficulty and student evaluations of instructors: A meta-analysis. Educational Research Review, 17, 1-13."
+    },
+    {
+      "id": 91,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "数据库中只有题名相近、但作者和来源都不符的记录，不能视为同一篇。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Eccles, J. S., & Barber, B. L. (1999). Taking time for development in adolescence. Annual Review of Psychology, 50(1), 631-658."
+    },
+    {
+      "id": 92,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Bessen, J. (2015). The Future of Work: How the Digital Revolution is Transforming the Labor Market. IZA World of Labor, (2015), No. 33."
+    },
+    {
+      "id": 93,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "所给 DOI（10.1016/j.jcrimjus.2016.12.005）在 Crossref / OpenAlex 中无法解析。",
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Hoffman, M. (2017). Police use of force: An examination of contemporary issues and tactics. Journal of Criminal Justice, 45(1), 1-10. https://doi.org/10.1016/j.jcrimjus.2016.12.005"
+    },
+    {
+      "id": 94,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "你提供的 DOI 是真实的，但指向另一篇文章：《Genome-wide gene expression perturbation induced by loss of C2 chromosome in allotetraploid Brassica napus L.》（2015，Frontiers in Plant Science）。验证链接：https://doi.org/10.3389/fpls.2015.00763",
+        "按题名未在 Crossref / OpenAlex 中找到对应文章，且所给 DOI 或 PMID 指向的是另一篇完全不同的文献。"
+      ],
+      "cite": "Chen, J., Liu, H., Wang, Y., & Wang, J. (2015). Advances in plant tissue culture and its applications in agriculture. Frontiers in Plant Science, 6, 763. https://doi.org/10.3389/fpls.2015.00763"
+    },
+    {
+      "id": 95,
+      "group": "public_ai_fake",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "所给 DOI（10.1016/j.nme.2021.100819）在 Crossref / OpenAlex 中无法解析。",
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Smith, K. L. (2021). The Development of Molten Salt Reactors: A Review of Progress and Challenges. Journal of Nuclear Materials and Energy, 20, 100819. https://doi.org/10.1016/j.nme.2021.100819"
+    },
+    {
+      "id": 96,
+      "group": "self_fabricated",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Zhang, L., & Wang, Q. (2022). A unified neural-symbolic framework for automatic literature verification in multilingual academic writing. Journal of Imaginary Computational Linguistics, 18(3), 45–62."
+    },
+    {
+      "id": 97,
+      "group": "self_fabricated",
+      "field": "public_or_self",
+      "language": "zh",
+      "format": "as_published",
+      "expected": "not_found",
+      "got": "error",
+      "got_zh": "核查失败/无法下结论",
+      "match": false,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "因网络或接口请求失败（超时、无法连接或 HTTP 429 等），本次核查失败，无法下结论。这与「各库都正常返回但没有匹配」不同，不能写成「查无此文」。"
+      ],
+      "cite": "李明、王芳. 基于深度学习的课堂注意力监测研究[J]. 虚构教育研究, 2021, 8(2): 11-20."
+    },
+    {
+      "id": 98,
+      "group": "self_fabricated",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Hawthorne, P. L., Reed, M. C., & Okonkwo, T. (2024). A stochastic theory of citation laundering in generative scholarly drafts. Journal of Fictional Scientometrics, 7(2), 88–104."
+    },
+    {
+      "id": 99,
+      "group": "self_fabricated",
+      "field": "public_or_self",
+      "language": "zh",
+      "format": "as_published",
+      "expected": "not_found",
+      "got": "not_found",
+      "got_zh": "查无此文",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref / OpenAlex 中未找到足够相似的记录。这两个库对中文期刊、学位论文、书籍的覆盖明显不足，「查无此文」不能等同于「一定是假的」，也不能据此确认是假的。请再查学校图书馆或 Google Scholar。本工具不支持需授权的中文商业文献库（不支持知网、万方）。"
+      ],
+      "cite": "赵强, 孙丽. 量子纠缠在中小学课业减负中的应用初探[J]. 虚构物理与教育, 2023, 12(4): 1-9."
+    },
+    {
+      "id": 100,
+      "group": "self_fabricated",
+      "field": "public_or_self",
+      "language": "en",
+      "format": "as_published",
+      "expected": "suspected_fabricated",
+      "got": "suspected_fabricated",
+      "got_zh": "疑似编造",
+      "match": true,
+      "expect_mismatch_fields": [],
+      "got_mismatch_fields": [],
+      "field_ok": true,
+      "notes": [
+        "在 Crossref、OpenAlex中都没有找到足够相似的记录。条目看起来信息完整，因此标为「疑似编造」。这不等于最终宣判：新刊、书籍、预印本、未收录会议论文也可能查不到。"
+      ],
+      "cite": "Nguyen, T. H., & Patel, R. (2021). Cross-lingual citation graphs for detecting fabricated biomedical claims. Proceedings of the Imaginary Conference on Computational Integrity, 4, 201–218."
+    }
+  ],
+  "got_counts": {
+    "field_mismatch": 36,
+    "verified": 46,
+    "suspected_fabricated": 14,
+    "not_found": 3,
+    "error": 1
+  },
+  "expected_counts": {
+    "verified": 50,
+    "field_mismatch": 32,
+    "suspected_fabricated": 14,
+    "not_found": 4
+  }
+}

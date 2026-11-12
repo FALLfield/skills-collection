@@ -1,0 +1,68 @@
+\section{Related Work}
+\label{sec:Related}
+
+\begin{table}[t]
+\centering
+\caption{Comparison of zkPHIRE with Prior ZKP Accelerators.\\N = NTT, S = SumCheck, M = MSM. Areas are in 7nm.}
+\label{tab:comp_table}
+\rowcolors{2}{rowgray}{white}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{>{\bfseries}l|c c c c}
+\hline
+\textbf{Metric} & \textbf{NoCap} & \textbf{SZKP+} & \textbf{zkSpeed+} & \textbf{zkPHIRE} \\
+\hline
+Workload & Scaled-up AES & \begin{tabular}[c]{@{}c@{}}Rollup 25\\Pvt Tx\end{tabular} & \begin{tabular}[c]{@{}c@{}}Rollup 25\\Pvt Tx\end{tabular} & \begin{tabular}[c]{@{}c@{}}Rollup 25\\Pvt Tx\end{tabular}
+\\
+Protocol & Spartan+Orion & Groth16 & HyperPlonk & HyperPlonk \\
+Main Kernels & N \& S & N \& M & S \& M & S \& M
+\\
+Gates & $2^{24}$ & $2^{24}$ & $2^{24}$ & $2^{19}$
+\\
+Encoding & R1CS & R1CS & \begin{tabular}[c]{@{}c@{}}Plonk\\ (Vanilla)\end{tabular} & \begin{tabular}[c]{@{}c@{}}Plonk\\ (Jellyfish)\end{tabular} \\
+Proof Size & 8.1 MB & 0.18 KB & 5.09 KB & 4.41 KB \\
+Setup & none & circuit-specific & universal & universal \\
+Prime & fixed & arbitrary & arbitrary & fixed \\
+Bitwidth & 64 & 255/381 & 255/381 & 255/381 \\
+SW Prover (s) & 94.2 & 51.18 & 145.5 & 6.161 \\
+HW Prover (ms) & 151.3 & 28.43 & 151.973 & 3.874 \\
+SW Verifier (ms) & 134 & 4.2 & 26 & 19 \\
+Chip Area (mm\textsuperscript{2}) & 38.73 & 353.2 & 366.46 & 294.32 \\
+\# Modmuls & 2432 & 1720 & 1206 & 2267 \\
+Modmul (mm\textsuperscript{2}) & 0.002 & 0.133 / 0.314 & 0.133 / 0.314 & 0.073/0.162 \\
+Power (W) & 62 & $>$220 & 171 & 202 \\
+\hline
+\end{tabular}
+}
+\end{table}
+
+
+Prior work on cryptographic acceleration has largely focused on Multi-Party Computation and Homomorphic Encryption \cite{kim2022_BTS, sharp, rpu, haac, karthik1, karthik2, ciflow, mo2023towards, ark, jha2024deepreshape, osiris, anaheim}.
+Research on ZKP acceleration is relatively newer, and has focused primarily on MSMs and NTTs~\cite{priormsm, distmsm, cuzk, rezk, legozk, unizk, pipezk, gzkp, gypso, MSMAC, tches_ntt_msm, zhang2025code, zhang2025micro, elastic_msm, sam, myosotis, graz, prophet}.
+The community has broadened its focus to include other ZKP kernels such as the SumCheck protocol and Merkle tree-based commitments.
+Prior work has explored accelerating these kernels on GPUs~\cite{batchzk} and ASICs~\cite{nocap, zkspeed2025}.
+We compare zkPHIRE with three ASICs that accelerate proof-generation end-to-end: SZKP, NoCap, and zkSpeed.
+
+\textbf{Protocol Acceleration}:
+\textbf{SZKP} is a Groth16~\cite{groth16} accelerator that speeds up all MSMs, including sparse G2 MSMs, achieving a geomean speedup of 493× over CPU. While a direct comparison is not apples-to-apples due to differing proof sizes and trusted setup assumptions, Groth16 and HyperPlonk target similar application domains requiring small, efficiently verifiable proofs. Unlike Groth16, HyperPlonk supports a universal setup and avoids an expensive trusted setup ceremony~\cite{ceremony}. Following zkSpeed, we report results for a scaled SZKP+ configuration that adopts more efficient MSMs and the BLS12-381 curve.
+\textbf{NoCap} accelerates Spartan+Orion proofs using a vector architecture. It relies on Merkle tree-based commitments, resulting in larger proofs and higher verifier costs, and is better suited for settings where proof succinctness is less critical or number of verifiers is small.
+\textbf{zkSpeed} is, to our knowledge, the only prior accelerator targeting HyperPlonk end-to-end, achieving a geometric mean speedup of 801× over CPU. For our comparison here, we use zkSpeed+ as we have done earlier. 
+
+\autoref{tab:comp_table} summarizes the comparison across the four accelerators and reports iso-workload performance numbers.
+We use numbers for a scaled-up AES workload from NoCap's evaluation as it has a similar number of gates to the Rollup 25 workload. 
+We use the same area scaling factors used by zkSpeed to scale our area and NoCap's area to 7nm.
+In our experiments, we assume a 1:1 mapping between R1CS constraints and Vanilla constraints. If Vanilla circuits require more constraints, zkPHIRE’s Jellyfish gains relative to Vanilla gates would be larger, scaling roughly linearly at iso-workload.
+zkPHIRE's proving time is 39$\times$, 7$\times$, and 39$\times$ faster than NoCap, SZKP+, and zkSpeed+, respectively.
+Jellyfish's advantages are application-dependent: not all workloads map efficiently to Jellyfish gates. In such cases, different custom gates (which zkPHIRE can support) may yield faster proving times. 
+Finally, while SZKP+ still yields the smallest proofs, it suffers from a major usability drawback due to the costly circuit-specific trusted setup.
+
+\textbf{Limitations of prior work}:
+Prior work \cite{nocap} accelerates SumCheck using vector processors, but vector-style reductions introduce significant overhead: reductions over length-$M$ vectors require $\log_2(M)$  serialized folding steps, repeated register-file accesses, and additional reductions for higher-degree extensions. zkPHIRE avoids these bottlenecks by using fused, tree-structured reduction pipelines with minimal data movement.
+While prior work \cite{nocap, legozk} can scale to workloads of $2^{30}$ constraints, their reliance on NTT-based matrix encodings introduces substantial latency overhead, e.g., off-chip transposes and recursive decompositions.
+In contrast, zkPHIRE has straightforward memory accesses, and given the streaming architecture, can scale well beyond $2^{30}$ constraints, as long as the working set fits in off-chip memory. For ZKML or other problems of this scale, zkPHIRE would need better data orchestration schemes (e.g. fetching from the cloud). We leave this for future work.
+
+\section{Conclusion}
+This paper presents zkPHIRE, the first accelerator to support programmable SumCheck for succinct proof generation at very large scales, enabling efficient ZKPs over custom, high-degree gates.
+On HyperPlonk baselines, zkPHIRE achieves iso-application geomean speedups of 
+$11.87\times$ over prior ASICs and $1486\times$ over CPU.
+Its design abstracts SumCheck into common primitives—updates, extensions, and products—and exploits parallelism within tables, across tables, and across evaluation products to scale across diverse polynomial structures.
+By streaming polynomial tables through compact scratchpads and coupling compute units via a Multifunction Forest, zkPHIRE improves resource sharing and reduces SRAM and datapath overheads. Finally, a systematic design-space exploration balances parallelism, area efficiency, and performance to support a wide range of polynomials and custom gate constructions.

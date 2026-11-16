@@ -27,7 +27,17 @@ python3 latex_to_word.py 论文目录或主.tex -o 论文.docx --report 清单.m
 
 打开生成的 `清单.md`。缺表、TeX 残片、未解析引用、源码 wraptable/wrapfigure 题注未进入 Word、以及「bib 中被引用的键数多于 docx 文献条数」（文献被静默丢弃）会自动列入「需手改」。「静默丢弃」比对只比条数，查不出文献已进文献表、但正文或题注里的引用处却丢了的情况。
 
-用法示例见 `examples/README.md`。Agent 用法见 `SKILL.md`。
+Agent 用法见 `SKILL.md`。
+
+## 案例
+
+三个可直接打开的案例在 [`examples/`](examples/)，均来自公开的 CC BY 4.0 论文源码上的记录跑次（完整输入在 `tests/samples/`，完整 docx 在 `tests/outputs/`）：
+
+1. [公式可编辑（arXiv:2509.13972）](examples/01_2509_equations/)：编号公式转为 Word 原生 OMML，并补题号 (1)–(8)。对比图：[compare.png](examples/01_2509_equations/compare.png)。
+2. [多栏表格（同一篇）](examples/02_2509_tables/)：表格进入 Word，与官方 PDF、裸 pandoc 对照。对比图：[compare.png](examples/02_2509_tables/compare.png)。
+3. [TikZ 降级（arXiv:2506.21734）](examples/03_2506_tikz/)：不能编译的 TikZ 留占位，并写进需手改清单。对比图：[compare.png](examples/03_2506_tikz/compare.png)。
+
+这些数字只说明在上述公开样例上的结果，不是准确率。
 
 ## 哈希如何复核
 

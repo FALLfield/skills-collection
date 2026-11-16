@@ -27,6 +27,13 @@ python3 check_thesis.py \
 
 把学校规范改写成规则的字段说明见 `rules/README.md`。Agent 侧的步骤见 `SKILL.md`。
 
+## 案例
+
+两个可直接打开的案例在 [`examples/`](examples/)，内容全部虚构，不是真实学生论文：
+
+1. [预埋 20 处错误](examples/01_official_sample/)：按虚构示例规则把格式问题写成 Word 批注。在这 20 处预先标注的错误上写出了 20 条对应批注（不是准确率）。对比图：[compare.png](examples/01_official_sample/compare.png)。
+2. [独立构造的 10 处问题](examples/02_independent_sample/)：用同一套规则检查另一份短篇稿件。在这 10 条预埋问题的样例上写出了 10 条问题批注。对比图：[compare.png](examples/02_independent_sample/compare.png)。
+
 若输入不是完好的 `.docx`，或规则文件不是合法的 JSON 对象，脚本会在 stderr 打印一行中文说明并以退出码 2 结束，不会打印 Python traceback。规则文件为 `{}`（未启用任何检查项）时，会提示「规则为空，未启用任何检查项，未执行格式检查」，不会写成「未发现问题」。
 
 ## 在预先公开的 20 处样例错误上的结果（不是准确率）

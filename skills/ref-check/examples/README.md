@@ -1,5 +1,11 @@
-`input_sample.txt` 是可以直接粘进 `ref-check.html` 或交给 `check_refs.py` 的 6 条示例（含真实文献、改错年份、以及公开报道过的问题条目）。
+# 案例
 
-`output_sample.html` / `output_sample.md` 是本轮对完整 20 条测试集跑出的报告，不是这 6 条的单独重跑结果。查看这 6 条对应的判定，请打开完整报告里的第 1、7、12、14、16、17 条，或自己再跑一遍 `input_sample.txt`。
+三个可直接打开的案例，均来自真实跑过的样例。数字只说明「在这些样例上的结果」，不是准确率。
 
-完整 20 条测试集和复现步骤在 `../tests/REPRODUCE.md`。不要把那次测试的计数写成准确率：20 条测试（其中 5 条为自造或改错的对照样本，其余为真实公开案例）：公开曝光的 9 条问题条目全部未被放行，其中 2 条中文只能标记查无此文。
+| 案例 | 解决了什么 | 输入 | 输出 | 对比图 / 截图 |
+|---|---|---|---|---|
+| [01 混合 6 条](01_mixed_six/) | 一次标出年份写错和问题条目；中文期刊只标「查无此文」 | [input.txt](01_mixed_six/input.txt) | [report.md](01_mixed_six/report.md) | [compare.png](01_mixed_six/compare.png) |
+| [02 预先标注 20 条](02_official_twenty/) | 对照事先写好的标签，给出带原文链接的完整报告 | [input.txt](02_official_twenty/input.txt) | [report.html](02_official_twenty/report.html) | [compare.png](02_official_twenty/compare.png) |
+| [03 只给 DOI](03_doi_only/) | 只有 DOI 也能查到真实文献，不会误标成疑似编造 | [input.txt](03_doi_only/input.txt) | [report.html](03_doi_only/report.html) | [compare.png](03_doi_only/compare.png) |
+
+根目录仍保留 `input_sample.txt`（与案例 1 相同）和记录跑次的 `output_sample.html` / `output_sample.md`（与案例 2 相同），方便旧链接。完整复现见 `tests/REPRODUCE.md`。

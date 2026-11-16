@@ -30,7 +30,7 @@ python3 check_refs.py references.txt --mailto you@school.edu -o report.html
 - **Suspected fabricated**: a complete English entry cannot be found; or the given DOI/PMID points to a completely different work; or a short, generic title collides with another real article in the same journal (the report includes a link to that record for you to check). **Do not treat this label alone as a finding of misconduct.**
 - **Check failed / no conclusion**: a network or API error (timeout, connection failure, HTTP 429). **This is not the same as “not found.”** Try again later.
 
-See `examples/input_sample.txt` for a sample list.
+See [`examples/`](examples/) for three worked examples (mixed list, the labelled 20-item set, and DOI-only input), each with input, the recorded report, and a screenshot.
 
 ## Results on pre-labelled samples (not an accuracy rate)
 

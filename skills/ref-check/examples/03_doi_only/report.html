@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>参考文献核查报告</title>
+<style>
+    :root { --fg:#1a1a1a; --muted:#5c5c5c; --line:#e6e2d8; }
+    * { box-sizing: border-box; }
+    body { margin:0; font: 16px/1.55 "Noto Sans CJK SC","Source Han Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+           color:var(--fg); background:#f7f4ee; }
+    main { max-width: 920px; margin: 0 auto; padding: 32px 20px 64px; }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    .lead { color: var(--muted); margin-bottom: 20px; }
+    .pills { display:flex; flex-wrap:wrap; gap:8px; margin: 12px 0 24px; }
+    .pill { border-radius:999px; padding:4px 12px; font-size:14px; }
+    .pill.verified { background:#e8f7ee; color:#1b7f3a; }
+    .pill.field_mismatch { background:#fff6e0; color:#8a5a00; }
+    .pill.not_found, .pill.suspected_fabricated { background:#fdecea; color:#8b1111; }
+    .pill.error { background:#eef0f6; color:#2c3a6b; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:14px;
+            padding:16px 18px; margin: 0 0 14px; border-left: 6px solid #ccc; }
+    .card.verified { border-left-color:#1b7f3a; }
+    .card.field_mismatch { border-left-color:#d89000; }
+    .card.not_found, .card.suspected_fabricated { border-left-color:#c42b1c; }
+    .card.error { border-left-color:#4a5c8c; }
+    header { display:flex; align-items:center; gap:10px; margin-bottom:8px; }
+    .mark { font-weight:700; font-size:1.2rem; }
+    .card.verified .mark, .card.verified .status { color:#1b7f3a; }
+    .card.field_mismatch .mark, .card.field_mismatch .status { color:#8a5a00; }
+    .card.not_found .mark, .card.not_found .status,
+    .card.suspected_fabricated .mark, .card.suspected_fabricated .status { color:#8b1111; }
+    .idx { color:var(--muted); font-size:13px; }
+    .status { font-weight:700; }
+    .raw { background:#faf8f3; padding:10px 12px; border-radius:8px; }
+    table.cmp { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+    table.cmp th, table.cmp td { border:1px solid var(--line); padding:6px 8px; vertical-align:top; }
+    table.cmp th { background:#faf8f3; text-align:left; }
+    .bad { color:#8b1111; white-space:nowrap; }
+    .tiny { color:var(--muted); font-weight:400; font-size:12px; }
+    .found { background:#e8f7ee; padding:10px 12px; border-radius:8px; margin:8px 0; }
+    .found .label { font-size:12px; color:#1b7f3a; margin-bottom:4px; }
+    .notes { color:#3a3a3a; }
+    .nearby { font-size:14px; color:var(--muted); }
+    a { color:#0b57d0; }
+    footer { color:var(--muted); font-size:13px; margin-top:24px; }
+    </style>
+</head>
+<body>
+<main>
+  <h1>参考文献核查报告</h1>
+  <p class="lead">共 2 条。查不到时不会编造替代条目。
+  「查无此文」或「疑似编造」都不等于最终宣判。中文期刊覆盖有限，不支持知网、万方，不能确认中文条目是否为假。
+  本次查询把题名或 DOI 发送给了 Crossref、OpenAlex、Europe PMC，没有上传全文。</p>
+  <div class="pills"><span class="pill verified">已验证 2</span></div>
+  <article class='card verified' id='ref-1'><header><span class='mark'>✓</span><span class='idx'>第 1 条</span><span class='status'>已验证</span></header><p class='raw'>https://doi.org/10.1038/nature16961</p><div class='found'><div class='label'>数据库中的对应/相近记录（不是替你编造的新条目）</div><div>《Mastering the game of Go with deep neural networks and tree search》（2016，Nature）</div><div><a href="https://doi.org/10.1038/nature16961" target="_blank" rel="noopener">https://doi.org/10.1038/nature16961</a></div></div></article><article class='card verified' id='ref-2'><header><span class='mark'>✓</span><span class='idx'>第 2 条</span><span class='status'>已验证</span></header><p class='raw'>10.1038/nature16961</p><div class='found'><div class='label'>数据库中的对应/相近记录（不是替你编造的新条目）</div><div>《Mastering the game of Go with deep neural networks and tree search》（2016，Nature）</div><div><a href="https://doi.org/10.1038/nature16961" target="_blank" rel="noopener">https://doi.org/10.1038/nature16961</a></div></div></article>
+  <footer>本报告对照 Crossref、OpenAlex、Europe PMC 生成。查询时会把题名或 DOI 发给这些公开学术数据库，不上传全文。核查时间以你运行脚本时为准。</footer>
+</main>
+</body>
+</html>

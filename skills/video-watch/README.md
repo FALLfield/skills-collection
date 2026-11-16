@@ -6,11 +6,11 @@
 
 让任意能跑命令行的 AI agent（Claude Code、Codex、Cursor、OpenClaw、Hermes、Gemini CLI 等均可）看懂画面和硬字幕，而不只是听口播。链接能直接下就全自动；不能下时，不会去绕过登录，而是请你任选一种简单做法。
 
-本目录是准备发布的副本，**尚未推送到任何公开仓库**。
+本目录对应 [skills-collection](https://github.com/FALLfield/skills-collection) 仓库中的 `skills/video-watch/`。
 
 仅用于学习分析自己有权查看的视频。本工具不登录、不代取 cookie、不从浏览器读取 cookie、不破解签名或 DRM、不去水印，也不接入用于绕过平台防护的开源工具。
 
-代码许可为 [MIT](LICENSE)。展示样例素材是中国新闻网《120秒回顾天和核心舱任务的精彩瞬间》，许可 **CC BY 3.0**（https://creativecommons.org/licenses/by/3.0 ），已署名；与代码许可不同，转载样例请保留署名。
+代码许可为 [MIT](LICENSE)。展示样例素材有两支，均已署名；与代码许可不同，转载样例请保留署名：中国新闻网《120秒回顾天和核心舱任务的精彩瞬间》，许可 **CC BY 3.0**（https://creativecommons.org/licenses/by/3.0 ）；中国新闻社《现场视频：神舟二十三号航天员首次集体亮相》，许可 **CC BY 4.0**（https://creativecommons.org/licenses/by/4.0 ）。
 
 ## 你需要准备什么
 
@@ -101,7 +101,12 @@ python scripts/fetch_help.py --url "https://..."
 - 一份分镜报告（`report.md` / `report.html` / `report.json` / `report_page.png`）和镜头节奏统计
 - 口播转写若能识别，会附在分镜旁边；转写失败时仍以画面和硬字幕为主
 
-展示样例在 `examples/output/`，效果图在 `visuals/`。该条口播转写为空，OCR 读出了发射时刻、舱体尺寸等写在画面上的信息。原视频文件不随仓库分发。
+展示样例在 [`examples/`](examples/)，效果图在 `visuals/`。原视频文件不随仓库分发。
+
+## 案例
+
+1. [天和核心舱 120 秒](examples/01_tianhe/)：口播转写为空时，仍能从画面读出发射时刻、舱体尺寸等硬字幕。在这支 121 秒样例上的结果：24 个镜头。对比图：[compare.png](examples/01_tianhe/compare.png)。
+2. [神舟二十三号亮相 32 秒](examples/02_shenzhou23/)：竖屏新闻短片拆成带时间码的联系图；口播转写错字较多，画面字仍可读出人名和籍贯。在这支 32 秒样例上的结果：6 个镜头。对比图：[compare.png](examples/02_shenzhou23/compare.png)。
 
 ## 局限请先看
 

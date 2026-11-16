@@ -101,7 +101,7 @@ See `DOWNLOADERS.md` for the tool comparison and for why some downloaders are no
 - A storyboard report (`report.md` / `report.html` / `report.json` / `report_page.png`) plus shot-pacing stats
 - A speech transcript next to each shot when recognition works; if it fails, the picture and burned-in captions still stand
 
-Samples live in `examples/output/` and `visuals/`. In the featured sample the speech transcript was empty; OCR still read the launch time and cabin dimensions off the screen. The original video file is not shipped in this repository.
+Worked examples are in [`examples/`](examples/) (Tianhe 120s and Shenzhou-23 32s), with commands, a report excerpt, and a contact-sheet image. Additional figures are in `visuals/`. Original video files are not shipped in this repository.
 
 ## Limitations
 

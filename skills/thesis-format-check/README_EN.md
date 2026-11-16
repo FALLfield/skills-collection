@@ -29,6 +29,11 @@ See `rules/README.md` for the rule fields, and `SKILL.md` for the agent-side ste
 
 If the input is not a valid `.docx`, or the rules file is not valid JSON or is not a JSON object, the script prints one line of Chinese on stderr and exits with code 2, without a Python traceback. If the rules file is `{}` (no checks enabled), it says that the rules are empty and that no check was run; it does not say “no problems found.”
 
+## Examples
+
+Two worked examples live in [`examples/`](examples/) (a fictional thesis with 20 planted issues, and a second short paper with 10). Each folder has the input `.docx`, the annotated output, a summary, and a before/after image. The documents are fictional and the rules do not represent any real university.
+
+
 ## Results on 20 planted sample errors (not an accuracy rate)
 
 A short fictional thesis (not a real student paper) and a list of 20 known errors were published and frozen before the test (2026-11-12 16:52:56 Asia/Macau, UTC+8; hashes in `tests/FROZEN.md`). The rules used are the fictional example. The same batch was not re-run to improve the numbers.

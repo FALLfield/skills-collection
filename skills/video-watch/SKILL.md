@@ -105,7 +105,7 @@ python scripts/fetch_help.py --url "https://..."
 
 先打开 `contact_sheet.png` 和 `timeline.png`（或 `report.html`）。先读硬字幕和画面，再看口播转写（可能为空或有错字）。没有打开联系图之前，不要填写真实的画面描述。
 
-展示样例在 `visuals/` 与 `examples/output/`（中国新闻网《120秒回顾天和核心舱任务的精彩瞬间》，CC BY 3.0，已署名）。三档决策图：`visuals/tier_flow.png`。失败时给用户的指引样例：`visuals/user_guidance.png`。
+展示样例在 `visuals/` 与 [`examples/`](examples/)（天和核心舱 120 秒，CC BY 3.0；神舟二十三号亮相 32 秒，CC BY 4.0，均已署名）。三档决策图：`visuals/tier_flow.png`。失败时给用户的指引样例：`visuals/user_guidance.png`。
 
 ## 参考
 

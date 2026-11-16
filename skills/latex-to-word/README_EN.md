@@ -10,6 +10,10 @@ Non-tex input, a missing path, or a broken tex file: one Chinese line on stderr,
 
 Entries in the `.bib` that have no `year` or `date` get `year = {n.d.}` so citeproc does not drop them silently. Cited keys are also `\nocite`d so a citation that lives only in a caption still reaches the bibliography. The report compares the number of cited keys that exist in the `.bib` with the number of bibliography items in the docx, and records a “silently dropped” manual-fix note if the docx is short. That check is count-only: it cannot catch a reference that is in the bibliography but whose in-text or caption citation is missing. Captions of `wraptable`/`wrapfigure` floats that do not appear in the docx are listed separately as needing a manual fix. The Word table count (`w:tbl` nodes, including nested ones) may exceed the number of LaTeX `table` floats, because subfigure grids, in-cell `tabular`s used for line breaks, and some figure placeholders are also counted as tables.
 
+## Examples
+
+Three worked examples live in [`examples/`](examples/): editable equations and tables from arXiv:2509.13972, and a TikZ fallback from arXiv:2506.21734. Each folder has the recorded checklist and a comparison image; full sources and docx files stay under `tests/`.
+
 ## Results on public source samples (not an accuracy rate)
 
 Figures are measured counts only. Three rounds were recorded; the same batch was not re-run to pad the numbers. After the second round, equation counts follow the official PDF’s **true numbered display equations** (in-text enumerations, volume numbers and years do not count). This package ships only the third-round outputs, in `tests/outputs/`. Official PDFs are not bundled: download them from the arXiv links and check the sha256 values in `tests/samples/LICENSE_AND_ATTRIBUTION.md`.

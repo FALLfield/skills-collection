@@ -1,14 +1,11 @@
-# 示例
+# 案例
 
-用附带的公开样例跑一次（arXiv:2509.13972，CC BY 4.0；署名见 `tests/samples/LICENSE_AND_ATTRIBUTION.md`）。默认命令会补公式题号：
+三个可直接打开的案例，均来自公开的 CC BY 4.0 论文源码上的记录跑次。完整输入在 `tests/samples/`，完整 docx 在 `tests/outputs/`。数字只说明「在这些公开样例上的结果」，不是准确率。
 
-```bash
-# 在本目录的上一级（包根）执行
-python3 latex_to_word.py tests/samples/2509.13972 -o examples/2509.13972.docx --report examples/2509.13972.清单.md
-```
+| 案例 | 解决了什么 | 清单 | 对比图 |
+|---|---|---|---|
+| [01 公式可编辑（2509.13972）](01_2509_equations/) | 编号公式转为 Word 原生 OMML，并补题号 | [清单.md](01_2509_equations/清单.md) | [compare.png](01_2509_equations/compare.png) |
+| [02 多栏表格（2509.13972）](02_2509_tables/) | 表格进入 Word，与官方 PDF、裸 pandoc 对照 | [清单.md](02_2509_tables/清单.md) | [compare.png](02_2509_tables/compare.png) |
+| [03 TikZ 降级（2506.21734）](03_2506_tikz/) | 不能编译的 TikZ 留占位，并写进需手改清单 | [清单.md](03_2506_tikz/清单.md) | [compare.png](03_2506_tikz/compare.png) |
 
-打开生成的 docx，抽查公式是否能在 Word 里编辑、是否有题号 (1)–(8)、正文是否出现「Equation 3」「Section III-C」「Table III」，以及文末是否有 24 条参考文献。对照清单看「需手改」。
-
-若只想看已经测过的结果：本包 `tests/outputs/2509.13972/` 是第三轮测试的产物（默认命令、整文件 sha256 跨目录可复核）。不必为凑数重跑。数字和含义写在根目录 `README.md`。
-
-与裸 pandoc 的差别见 `visuals/compare_2509.13972_eq.png`。TikZ 降级见 `visuals/compare_2506.21734_tikz.png`。
+署名与许可见 `tests/samples/LICENSE_AND_ATTRIBUTION.md`。更高分辨率的对比图还在 `visuals/`（体积较大）。

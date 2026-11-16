@@ -31,7 +31,15 @@ python3 check_refs.py references.txt --mailto you@school.edu -o report.html
 - **疑似编造**：英文条目写得很完整却完全找不到；或 DOI/PMID 指向另一篇完全不同的文章；或短通用题名撞上同刊另一篇真实文献（报告会附上该记录的原文链接，请人工核对）。**不能单凭这一条就下学术不端的结论。**
 - **核查失败/无法下结论**：网络或接口出错（超时、连不上、HTTP 429）。**不要把它理解成「查无此文」。** 稍后重试。
 
-示例输入见 `examples/input_sample.txt`。
+示例输入见 [`examples/`](examples/)。
+
+## 案例
+
+三个可直接打开的案例在 [`examples/`](examples/)：
+
+1. [混合 6 条](examples/01_mixed_six/)：一次标出年份写错和公开报道过的问题条目；中文期刊只标「查无此文」。对比图：[compare.png](examples/01_mixed_six/compare.png)。
+2. [预先标注的 20 条](examples/02_official_twenty/)：对照事先写好的标签给出带原文链接的完整报告。在这 20 条样例上的记录结果是已验证 6、信息部分不符 6、查无此文 4、疑似编造 4（不是准确率）。截图：[compare.png](examples/02_official_twenty/compare.png)。
+3. [只给 DOI](examples/03_doi_only/)：只有 DOI 也能对上公开库中的记录。在这 2 条样例上的结果：两条都已验证，指向同一篇 Nature 2016 论文。截图：[compare.png](examples/03_doi_only/compare.png)。
 
 ## 在预先标注样例上的结果（不是准确率）
 
